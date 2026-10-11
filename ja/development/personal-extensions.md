@@ -93,6 +93,18 @@ Browser Extension APIのバージョン5では、`marinara.context.get()`と`mar
 - `button`: 既定では上部バーのコンパクトな操作ボタン、または`chats`、`bots`、`characters`、`personas`、`lorebooks`、`presets`、`connections`、`agents`、`settings`の各画面にホストが描画する操作ボタンです。
 - `menu-item`: Extensionsメニュー内の操作として表示します
 - `panel`: Marinaraの信頼されたExtensionsサイドパネルを開く項目です
+- `command`: 同じ拡張機能のリビジョンにある既存の`button`、`menu-item`、`panel`を起動する、Command Centerの項目です。
+
+コマンドは`targetContributionId`を持ち、`onActivate`や`onEvent`のコールバックはありません。ホストは拡張ID、コンテンツハッシュ、コントリビューションIDで対象を解決します。対象が見つからない場合や、別のリビジョンの対象である場合はフェイルクローズします。たとえば次のように書きます。
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-panel",
+});
+```
 
 サイドパネルのボタンは`position: "header"`、`"before-content"`、`"after-content"`を受け付けます。上部バーのボタンでは`position`を省略します。アイコンはMarinaraのLucideアイコンカタログの、長さなどを制限したケバブケース名です。未対応の名前はパズルアイコンにフォールバックします。
 

@@ -74,7 +74,18 @@ const panel = marinara.ui.registerContribution({
 marinara.onCleanup(() => panel.remove());
 ```
 
-簡潔な操作には`kind: "button"`を、Extensionsメニューの操作には`kind: "menu-item"`を使います。ボタンの既定値は`surface: "top-bar"`です。代わりに`chats`、`bots`、`characters`、`personas`、`lorebooks`、`presets`、`connections`、`agents`、`settings`を対象とし、`position`を`header`、`before-content`、`after-content`に設定できます。`icon`にはMarinaraが対応するkebab-caseのLucideアイコン名を指定できます。どちらの操作も`onActivate`を呼び出します。`panel`は開かれたときに`onActivate`を呼び出し、そのボタンは全コントロールの現在値を添えて`onEvent`を呼び出します。ハンドルは種類別の更新に対応し、`button`は`label`、`description`、`icon`、`surface`、`position`、`menu-item`は`label`、`description`、`icon`、`panel`は`label`、`description`、`icon`、`elements`を受け取ります。すべて`remove()`に対応します。IDには英字、数字、`.`、`_`、`-`を使えます。
+簡潔な操作には`kind: "button"`を、Extensionsメニューの操作には`kind: "menu-item"`を使います。同じ拡張機能のリビジョンにある既存のコントリビューションを起動するCommand Centerの項目には、`kind: "command"`を使います。コマンドには`targetContributionId`が必須で、`onActivate`や`onEvent`は使えません。
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-settings",
+});
+```
+
+ホストがコマンドを解決するのは、対象の拡張IDとコンテンツハッシュが同じ場合だけです。対象が見つからない場合、別の拡張機能の対象の場合、古いリビジョンの対象の場合は、いずれもフェイルクローズします。ボタンの既定値は`surface: "top-bar"`です。代わりに`chats`、`bots`、`characters`、`personas`、`lorebooks`、`presets`、`connections`、`agents`、`settings`を対象とし、`position`を`header`、`before-content`、`after-content`に設定できます。`icon`にはMarinaraが対応するkebab-caseのLucideアイコン名を指定できます。どちらの操作も`onActivate`を呼び出します。`panel`は開かれたときに`onActivate`を呼び出し、そのボタンは全コントロールの現在値を添えて`onEvent`を呼び出します。ハンドルは種類別の更新に対応し、`button`は`label`、`description`、`icon`、`surface`、`position`、`menu-item`は`label`、`description`、`icon`、`panel`は`label`、`description`、`icon`、`elements`を受け取ります。すべて`remove()`に対応します。IDには英字、数字、`.`、`_`、`-`を使えます。
 
 次の例では、Presetsパネルの内容より上にネイティブ操作を配置します。
 

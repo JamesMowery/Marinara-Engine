@@ -50,7 +50,7 @@
 - **Confirm before deleting**: デフォルトでオンです。オンのあいだは、チャットやキャラクターなどを完全に削除する前にMarinaraが確認します。うっかり削除を防ぐため、オンのままにしておくことをおすすめします。
 - **Achievements**: デフォルトでオンです。オンにすると、ホーム画面に実績のボタンと解除の通知が表示されます。オフにすると、記録は裏で静かに続きます。[実績](../home/achievements.md)を参照してください。
 - **Music Player**: デフォルトでオンです。オンにすると、小さなMusic Playerが表示されます。[Music DJ](../media/music.md)を参照してください。
-- **Mini Mari surprise visits**: デフォルトでオンです。オンにすると、画面をスクロールしているときにChibi Professor Mariのメッセージがまれに現れます。じゃまに感じるときはオフにしてください。
+- **Search and Professor Mari settings**: **Open**を選ぶと、その設定ページに移動します。SearchとProfessor Mariの設定はすべてここにあり、5つのグループに分かれています。**Search**(欄の改善の提案、検索履歴)、**Quick answers**(**Quick answers in Search**、**Answer with**、**Wait after typing**)、**Professor Mari**(Ask Professor Mari from Search、権限モード、返信の候補チップ、変更カードの開き方、Enter sends to Professor Mari)、**Around the app**(Mini Professor Mari visits)、**Appearance**(Professor Mariの見た目。各パックに肖像が表示され、使用中のパックには**In use**と表示され、ロックされたパックにはロック解除までのプレイ時間が表示されます)です。Searchの歯車アイコンからも同じページが開きます。これらの設定を新しい名前か古い名前で検索すると、その設定へ直接移動します。
 
 ## Text Rules
 
@@ -104,7 +104,7 @@
 
 ## Message Tools
 
-**Message Tools**セクションは**Settings** > **Advanced** > **Message Tools**にあります。表示に関するトグルと、困ったときに役立つトグルが集まった場所です。以下のトグルはすべてデフォルトでオフです。それぞれの働きと、詳しいガイドは次の表のとおりです。
+**Message Tools**セクションは**Settings** > **Advanced** > **Message Tools**にあります。表示に関するトグルと、困ったときに役立つトグルが集まった場所です。以下のトグルはすべてデフォルトでオフですが、**Show "older messages not sent" note**(「送信されなかった古いメッセージ」の注記を表示)だけはオンです。それぞれの働きと、詳しいガイドは次の表のとおりです。
 
 | トグル | 働き | 詳しいガイド |
 | --- | --- | --- |
@@ -112,6 +112,7 @@
 | **Show model name on messages** | 返信を書いたAIモデルの名前を表示します。 | [メッセージの操作](../chats/messages.md) |
 | **Show token usage on messages** | メッセージごとに、プロンプトと返信のトークン数を表示します。 | [メッセージの操作](../chats/messages.md) |
 | **Show message numbers** | チャット内のメッセージに通し番号を表示します。 | [メッセージの操作](../chats/messages.md) |
+| **Show "older messages not sent" note** | 古いメッセージがプロンプトに収まらなかったときに、最新の返信の下に注記を表示します。長いチャットでこの注記を隠したいときはオフにします。途中で切れた返信や空の返信には、それぞれの注記が引き続き表示されます。 | [Peek Prompt](../chats/peek-prompt.md) |
 | **Guide swipes/regens with chat input** | 再生成のときに、入力欄の下書きを指示として使います。 | [ガイド付き生成とImpersonate](../chats/guided-and-impersonate.md) |
 | **Quick replies** | 送信ボタンの横に、下書きを作る別の操作を追加します。 | [ガイド付き生成とImpersonate](../chats/guided-and-impersonate.md) |
 | **Include reasoning in exports** | 表に出ない思考の部分を、チャットのエクスポートに含めます。 | [チャットのエクスポートとインポート](../chats/export-import.md) |
