@@ -74,7 +74,18 @@ const panel = marinara.ui.registerContribution({
 marinara.onCleanup(() => panel.remove());
 ```
 
-`kind: "button"` eignet sich für eine kompakte Aktion, `kind: "menu-item"` für eine Aktion im Extensions-Menü. Schaltflächen verwenden standardmäßig `surface: "top-bar"`. Alternativ können sie mit `position` auf `header`, `before-content` oder `after-content` die Flächen `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` oder `settings` ansteuern. `icon` akzeptiert von Marinara unterstützte Lucide-Namen in kebab-case. Beide Aktionsarten rufen `onActivate` auf. Ein `panel` ruft `onActivate` beim Öffnen auf; seine Schaltflächen rufen `onEvent` mit den aktuellen Werten aller Panel-Bedienelemente auf. Der Handle bietet je nach Art unterschiedliche Updates: `button` akzeptiert `label`, `description`, `icon`, `surface` und `position`; `menu-item` akzeptiert `label`, `description` und `icon`; `panel` akzeptiert `label`, `description`, `icon` und `elements`. Alle Handles unterstützen `remove()`. IDs dürfen Buchstaben, Zahlen sowie `.`, `_` und `-` enthalten.
+`kind: "button"` eignet sich für eine kompakte Aktion, `kind: "menu-item"` für eine Aktion im Extensions-Menü. Mit `kind: "command"` legst du einen Eintrag im Command Center an, der einen vorhandenen Beitrag aus derselben Revision der Erweiterung auslöst. Ein Befehl braucht `targetContributionId` und kann weder `onActivate` noch `onEvent` verwenden.
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-settings",
+});
+```
+
+Der Host löst einen Befehl nur auf, wenn das Ziel dieselbe Erweiterungs-ID und denselben Inhalts-Hash hat. Fehlende Ziele, Ziele aus anderen Erweiterungen und Ziele aus veralteten Revisionen werden abgelehnt. Schaltflächen verwenden standardmäßig `surface: "top-bar"`. Alternativ können sie mit `position` auf `header`, `before-content` oder `after-content` die Flächen `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` oder `settings` ansteuern. `icon` akzeptiert von Marinara unterstützte Lucide-Namen in kebab-case. Beide Aktionsarten rufen `onActivate` auf. Ein `panel` ruft `onActivate` beim Öffnen auf; seine Schaltflächen rufen `onEvent` mit den aktuellen Werten aller Panel-Bedienelemente auf. Der Handle bietet je nach Art unterschiedliche Updates: `button` akzeptiert `label`, `description`, `icon`, `surface` und `position`; `menu-item` akzeptiert `label`, `description` und `icon`; `panel` akzeptiert `label`, `description`, `icon` und `elements`. Alle Handles unterstützen `remove()`. IDs dürfen Buchstaben, Zahlen sowie `.`, `_` und `-` enthalten.
 
 Dieses Beispiel platziert eine native Aktion oberhalb des Inhalts im Presets-Bereich:
 

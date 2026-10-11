@@ -30,6 +30,8 @@ Im Game Mode ist dieser Abschnitt als deine Ingame-Party formuliert, er trägt a
 
 Der Einrichtungsassistent **New Chat** hat ein Feld **Your Persona**. Es nutzt dasselbe durchsuchbare Auswahlfenster samt Option **None**. Im Assistenten **New Game Setup** heißt dieses Feld stattdessen **Player's Persona**.
 
+In einem Roleplay-Chat kann eine Charakterkarte oben in diesem Auswahlfenster **Create your persona** (deine Persona erstellen) anbieten. Wähl diesen Eintrag, um die Fragen der Karte zu beantworten und eine neue Persona zu erhalten. Siehe [Interaktives Onboarding](interactive-onboarding.md).
+
 ## Der Quick Persona Switcher
 
 Ist ein Chat geöffnet, sitzt neben dem Nachrichtenfeld eine kleine runde Avatar-Schaltfläche: der **Quick Persona Switcher** (schneller Persona-Wechsel). Ohne gesetzte Persona zeigt der Tooltip (Kurzhinweis beim Draufzeigen) genau diesen Namen.
@@ -53,4 +55,5 @@ Wechselst du mitten im Chat die Persona, ändert das frühere Nachrichten nicht.
 ## Verwandte Anleitungen
 
 - [Nutzer-Personas: anlegen und bearbeiten](personas.md)
+- [Interaktives Onboarding](interactive-onboarding.md)
 - [Chat Settings im Überblick](../chats/chat-settings.md)

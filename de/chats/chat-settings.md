@@ -24,7 +24,7 @@ Am Computer kannst du die ausführlichen Hinweise zur Anordnung über ihr **X** 
 
 ## Das Aussehen der Chat-Fenster ändern
 
-Öffne **Settings > Appearance > App** (Einstellungen, Darstellung, App) und scrolle zu **Chat widget style** (Chat-Widget-Stil) unten in **App Style** (App-Stil). **Default** (Standard) behält das gewohnte Aussehen von Marinara bei. **Dottore** verbindet Eisblau und helles Metall mit technischer Schrift und abgeschrägten Ecken; **Mari** kombiniert Edelsteinblau und warmes Gold mit Märchenbuchschrift und bogenförmigen Rahmen. Beide passen sich dem hellen und dunklen Modus an und gestalten verschiebbare Schaltflächen, Fenster und aufklappbare Abschnitte in allen drei Chat-Modi.
+Öffne **Settings > Appearance > App** (Einstellungen, Darstellung, App) und scrolle zu **Chat widget style** (Chat-Widget-Stil) unten in **App Style** (App-Stil). **Default** (Standard) behält das gewohnte Aussehen von Marinara bei. **Dottore** verbindet Eisblau und helles Metall mit technischer Schrift und abgeschrägten Ecken; **Prof. Mari** kombiniert Edelsteinblau und warmes Gold mit Märchenbuchschrift und bogenförmigen Rahmen. Beide passen sich dem hellen und dunklen Modus an und gestalten verschiebbare Schaltflächen, Fenster und aufklappbare Abschnitte in allen drei Chat-Modi.
 
 Mit **Font** (Schrift), **Shape** (Form) und den drei Farbwählern unter den Presets kombinierst du diese Details nach Wunsch. Die Schriftliste enthält auch die in Marinara installierten Schriften. Wählst du ein Preset erneut, setzt es Schrift, Form und eigene Farben zurück. Fensterpositionen und gespeicherte Chat-Anordnungen bleiben erhalten. Diese Auswahl wird in deinen App-Einstellungen gespeichert und mit Browsern am selben Server synchronisiert.
 

@@ -93,6 +93,18 @@ Fähigkeiten stehen in den Nutzdaten der Erweiterung, werden mit jeder Revision 
 - `button`: standardmäßig eine kompakte Aktion in der oberen Leiste oder eine vom Host gerenderte Aktion auf der Oberfläche `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` oder `settings`;
 - `menu-item`: eine Aktion im Menü **Extensions**;
 - `panel`: ein Eintrag, der Marinaras vertrauenswürdiges **Extensions**-Panel öffnet.
+- `command`: ein Eintrag im Command Center, der einen vorhandenen `button`, `menu-item` oder `panel` aus derselben Revision der Erweiterung auslöst.
+
+Befehle enthalten `targetContributionId` und haben keinen `onActivate`- oder `onEvent`-Callback. Der Host löst das Ziel über Erweiterungs-ID, Inhalts-Hash und Beitrags-ID auf. Fehlt das Ziel oder stammt es aus einer anderen Revision, wird der Befehl abgelehnt. Zum Beispiel:
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-panel",
+});
+```
 
 Schaltflächen in Seitenpanels akzeptieren `position: "header"`, `"before-content"` oder `"after-content"`. Schaltflächen der oberen Leiste lassen `position` weg. Icons verwenden begrenzte Kebab-Case-Namen aus Marinaras Lucide-Katalog; nicht unterstützte Namen fallen auf das Puzzle-Symbol zurück.
 

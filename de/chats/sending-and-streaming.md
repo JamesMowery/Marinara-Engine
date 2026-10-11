@@ -25,6 +25,8 @@ Die Einstellung **Send on Enter** findest du unter **Settings** (Einstellungen) 
 | Conversations | On | Enter sendet die Nachricht |
 | Game | On | Enter sendet die Nachricht |
 
+Professor Mari hat einen eigenen Schalter, **Enter sends to Professor Mari** (Enter sendet an Professor Mari). Er liegt in den Einstellungen für Suche und Professor Mari unter **Settings** > **General** > **Search and Professor Mari settings** > **Open**.
+
 Ist der Schalter für einen Modus aus, fügt Enter stattdessen einen Zeilenumbruch ein. Die Nachricht schickst du dann per Klick auf **Send** ab. Bei Roleplay ist die Einstellung standardmäßig aus, weil Roleplay-Nachrichten oft lang sind und Zeilenumbrüche brauchen.
 
 ## Bilder und Dateien anhängen

@@ -6,15 +6,27 @@ Professor Mari ist die eingebaute Assistentin von Marinara Engine auf dem Home-B
 
 Professor Mari wohnt auf dem Home-Bildschirm. Der Home-Bildschirm ist das, was du siehst, solange kein Chat geöffnet ist.
 
-Halte Ausschau nach der Karte mit ihrer Pixel-Grafik und der Überschrift **Professor Mari**. Eine Statuszeile zeigt **Ready to help** („bereit zu helfen“), wenn sie nichts zu tun hat, und **Working on it...**, während sie arbeitet. Klick auf die Schaltfläche **Ask Professor Mari** (Professor Mari fragen), um ihr komplettes Chatfenster zu öffnen.
+Halte Ausschau nach der Karte mit ihrer Pixel-Grafik und der Überschrift **Professor Mari**. Eine Statuszeile zeigt **Ready to help** („bereit zu helfen“), wenn sie nichts zu tun hat, und **Working on it...**, während sie arbeitet. Klick auf die Schaltfläche **Ask Prof. Mari** (Prof. Mari fragen), um ihr komplettes Chatfenster zu öffnen.
 
 Mit ihr sprichst du in ganz normaler Sprache. Tipp eine Nachricht in das Feld und drück Enter zum Abschicken. Shift und Enter zusammen fügen stattdessen eine neue Zeile ein.
 
 Die allererste Nachricht an sie schaltet die Errungenschaft **Hello World** frei.
 
-## Was sie kann
+Ihren Zustand zeigt außerdem auf jedem Bildschirm eine dünne Linie am unteren Rand der oberen Leiste der App: Die Linie bewegt sich in Wellen, während Professor Mari arbeitet, wird grün, wenn sie fertig ist, golden, solange eine Freigabe wartet, und rot, wenn der letzte Durchlauf fehlgeschlagen ist. Sobald du ihren Chat öffnest, verschwindet sie wieder. Solange **Ask Professor Mari from Search** (Professor Mari aus der Suche fragen) ausgeschaltet ist, bleibt die Linie aus. Alle ihre Einstellungen findest du in den Einstellungen für Suche und Professor Mari: über das Zahnrad in der Suche oder unter **Settings** > **General** (Allgemein) > **Search and Professor Mari settings** (Einstellungen für Suche und Professor Mari) > **Open** (öffnen).
+
+## Professor Mari aus deiner aktuellen Arbeit heraus fragen
 
 Professor Mari ist mehr als ein Frage-Feld. Sie erklärt die App, hilft bei der Einrichtung und baut auf Zuruf Dinge für dich.
+
+Du kannst Professor Mari genau dort öffnen, wo du Hilfe brauchst. Diese Einstiegspunkte legen einen bearbeitbaren Entwurf an und hängen eine kleine, typisierte Zusammenfassung des Kontexts an. Den angehängten Kontext kannst du vor dem Absenden wieder entfernen.
+
+- Editoren für **Character**, **Persona**, **Lorebook** und **Preset**: Frag nach dem geöffneten Objekt oder nach einem ausgewählten Feld.
+- Antworten in der **FAQ**: Mit **Ask Prof. Mari** übernimmst du die gefundene Frage samt ihrer geschriebenen Antwort als Ausgangspunkt.
+- **Search** (Suche): Drück `Cmd/Ctrl+K`, wähl ein Ergebnis aus und nimm es dann mit **Ask Prof. Mari** in den Entwurf auf. Die Suche selbst schickt keine Anfrage an ein Modell, außer eine schnelle Antwort ist eingeschaltet – siehe **Quick answers in Search** (schnelle Antworten in der Suche) weiter unten.
+- **Recent Chats** (Letzte Chats) und andere Fehlerzustände: Mit **Ask Prof. Mari** neben **Retry** (wiederholen) übergibst du ihr die Fehlerbeschreibung und die gewünschte Reparatur.
+- Der normale Charakter-Chat mit Professor Mari und der Arbeitsbereich-Chat auf dem Home-Bildschirm nutzen dasselbe Übergabeformat.
+
+Die angehängten Elemente erscheinen als Chips **Aware of** (im Blick) über ihrem Nachrichtenfeld. Entferne ein Kontextelement, wenn es nicht passt. Größere Inhalte eines Objekts lädt Professor Mari erst nach dem Absenden auf dem Server nach, innerhalb des Kontextbudgets. Ein vollständiges Objekt bekommt sie nicht schon deshalb, weil du einen Editor geöffnet hast.
 
 Bei all dem kannst du sie um Hilfe bitten:
 
@@ -31,11 +43,27 @@ Bei all dem kannst du sie um Hilfe bitten:
 
 Bevor sie etwas bearbeitet, liest sie es; bei vagen Anfragen fragt sie die fehlenden Angaben nach. Für Bild-Aufgaben brauchst du vorher eine funktionierende Verbindung zur Bildgenerierung. Die legt sie nicht für dich an.
 
+## Schnelle Antworten in der Suche
+
+Tippst du eine Frage in die Suche und passt kein Ergebnis, kann Professor Mari eine kurze Antwort schreiben. Sie erscheint als Karte **Quick answer · Read-only** (schnelle Antwort, schreibgeschützt) unter der Zeile **Ask Prof. Mari**.
+
+- Eine schnelle Antwort umfasst bis zu drei Sätze aus den Marinara-Anleitungen. Professor Mari sieht dabei nur, was du getippt hast, und die Antwort ändert nichts.
+- Die Karte nennt die Anleitungen, auf die sich die Antwort stützt. Stellst du dieselbe Frage erneut, wird fünf Minuten lang eine gespeicherte Kopie verwendet.
+- Unter der Antwort stehen **Copy** (kopieren), **Answer again** (erneut antworten) und **Continue with Prof. Mari** (mit Prof. Mari weitermachen). **Continue with Prof. Mari** öffnet ihr Fenster in einem neuen Chat, der nach deiner Frage benannt ist, mit der schnellen Antwort als Anhang. Über **Ask Prof. Mari more…** (Prof. Mari mehr fragen) stellst du in ihrem Fenster eine Anschlussfrage. Schnelle Antworten selbst bieten keine Anschlussfragen.
+- Eine schnelle Antwort wartet, bis du aufhörst zu tippen. **Wait after typing** (nach dem Tippen warten) legt fest, wie lange die Suche wartet.
+- Wer antwortet, wählst du unter **Settings** > **General** > **Search and Professor Mari settings** > **Quick answers** (schnelle Antworten) > **Answer with** (antworten mit): ein lokales Modell, das du heruntergeladen hast, **Same as Prof. Mari** (dieselbe Verbindung wie Prof. Mari) oder eine andere Verbindung. Jede Antwort ist eine kurze Anfrage. Über eine kostenpflichtige Verbindung kann das Geld kosten.
+- Schlägt eine Antwort fehl, nennt die Karte den Grund, zum Beispiel, dass das Modell nicht geantwortet hat. **Try again** (erneut versuchen) und **Continue with Prof. Mari** stehen immer zur Verfügung. **Choose a model** (Modell wählen) erscheint nur, wenn ein API-Key oder ein Modell fehlt. Die eigene Meldung des Anbieters findest du unter **Details**.
+- Schnelle Antworten sind aus, bis du sie in derselben Gruppe mit **Quick answers in Search** einschaltest.
+
 ## Geführte Vorschlags-Chips
 
 In einem leeren Chat mit Professor Mari erleichtern Start-Chips wie **Create a Character**, **Create a Lorebook** und **Create a Persona** den Einstieg in häufige Aufgaben. Während einer geführten Erstellung oder Bearbeitung passen sich die Chips dem jeweils nächsten Schritt an. Ein Klick auf einen Chip füllt den Eingabe-Entwurf; diesen Entwurf kannst du vor dem Absenden noch bearbeiten.
 
 Geführte Abläufe stellen eine gezielte Frage nach der anderen, statt dir gleich ein langes Formular vorzusetzen.
+
+Bei einer vollständigen Anfrage zum Erstellen oder Bearbeiten kann Professor Mari einen begrenzten geführten Plan liefern. Jeder Schritt bietet eine kleine Auswahl an Vorschlägen. Wählst du einen davon, füllt er den aktuellen Entwurf, und der Plan rückt lokal einen Schritt weiter. Wechselst du zu einem anderen Vorschlag, bleibt dein Text im Entwurf erhalten. Der Plan gehört zum aktuellen Professor-Mari-Chat; ein Chatwechsel, ein Restart, das Stoppen eines Durchlaufs oder der Abschluss des Plans räumt veraltete Schritte deshalb ab. Fehlerhafte oder überzählige Vorschläge werden verworfen, und solange Professor Mari arbeitet, sind die Chips deaktiviert.
+
+Vorschläge gibt es nur in Chats mit Professor Mari. Andere Charaktere bekommen die Chips von Professor Mari nicht.
 
 ## Sie kann auch die Programmdateien der App lesen und bearbeiten
 
@@ -77,22 +105,22 @@ Damit sie ein Bild lesen kann, muss das Modell der gewählten Verbindung Bilder 
 
 ## Ihre Änderungen prüfen
 
-Bearbeitet Professor Mari etwas, das es schon gibt, speichert sie die Änderung sofort und zeigt anschließend eine Prüfkarte. So kannst du sie rückgängig machen, wenn dir das Ergebnis nicht gefällt.
+Ändert Professor Mari etwas, speichert sie die Änderung sofort und zeigt unter ihrer Antwort eine Änderungskarte. Die Karte listet jedes geänderte Feld auf. Bei einer Textänderung siehst du die alten und die neuen Wörter, bei einem Lorebook seine Einträge. Öffne **Show all** (alle anzeigen), um jedes Feld zu sehen. **Technical details** (technische Details) zeigt den rohen Befehl.
 
-Die Karte trägt den Titel **Review Mari's changes** (Maris Änderungen prüfen). Sie zeigt, was Mari getan hat und welche Daten davon betroffen waren. Dazu gibt es zwei Schaltflächen:
+Die Karte hat eine Aktion:
 
-- **Keep** bestätigt die Änderung. Du siehst die Meldung „Kept Mari's workspace change.“
-- **Restore** holt die zuvor gespeicherte Fassung zurück. Du siehst die Meldung „Restored the previous app data snapshot.“
+- **Undo** (rückgängig) holt die zuvor gespeicherte Fassung zurück. Jede Änderung lässt sich rückgängig machen, in jedem Berechtigungsmodus. Der Berechtigungsmodus entscheidet nur, ob sie vorher fragt.
+- Eine Änderung, die nicht gespeichert wurde, zeigt **Not saved** und den Grund. **Try again** bittet sie erneut darum.
+- Die Anzeige **Undo until** erscheint auf der Karte nur in den letzten 24 Stunden. Eine Kopie zum Rückgängigmachen hält bis zu 14 Tage, und nur die neuesten 50 werden aufbewahrt. Danach bleibt die Änderung bestehen, und auf der Karte steht **Undo closed**.
 
-Ein paar Dinge dazu:
+Anders ist es bei einer Änderung, die auf dich wartet. Eine zurückgehaltene Änderung (im Modus Manual oder bei einer Änderung an einer heiklen Datei oder einer Abhängigkeit) zeigt **Apply** (anwenden) und **Don't apply** (nicht anwenden). Eine Löschung zeigt **Delete** und **Put back** (zurücklegen). Die Suche listet ihre Änderungen nicht auf: Öffne Professor Mari, um sie anzusehen, anzuwenden oder rückgängig zu machen.
 
-- Neue Objekte, etwa ein frischer Charakter oder ein neues Lorebook, bekommen ebenfalls eine Prüfkarte. **Restore** entfernt sie wieder.
-- Eine Karte gehört zu dem Mari-Chat, in dem sie die Änderung vorgenommen hat. Ein neuer Chat beginnt ohne Karten anderer Chats. Wenn du einen Chat löschst, bleiben seine Änderungen erhalten, seine Karten werden entfernt. Eine Änderung über den Terminalbefehl `mari` gehört zu keinem Chat; ihre Karte erscheint deshalb in jedem Mari-Chat.
-- Eine Karte bleibt bis zu 14 Tage lang stehen, bis du **Keep** oder **Restore** wählst. Danach schließt sie sich von selbst und die Änderung bleibt erhalten.
-- Meldet **Restore**, dass die Daten nach Maris Änderung erneut geändert wurden, würde die Wiederherstellung diese neuere Fassung überschreiben. Wähle **Keep**, um die Karte zu schließen; die aktuellen Daten bleiben unverändert.
+- Eine Karte gehört zu dem Professor-Mari-Chat, in dem sie die Änderung vorgenommen hat. Ein neuer Chat beginnt ohne Karten anderer Chats. Wenn du einen Chat löschst, bleiben seine Änderungen erhalten, seine Karten werden entfernt. Eine Änderung über den Terminalbefehl `mari` gehört zu keinem Chat; ihre Karte erscheint deshalb in jedem Professor-Mari-Chat.
 - Eine Bearbeitung, die nichts ändern würde, wird nicht gespeichert und erhält keine Karte.
-- Mari kann ihre eigene Charakterkarte weder bearbeiten noch löschen. Marinara setzt sie bei jedem Start auf die integrierte Fassung zurück.
+- Professor Mari kann ihre eigene Charakterkarte weder bearbeiten noch löschen. Marinara setzt sie bei jedem Start auf die integrierte Fassung zurück.
 - Charaktere und Personas führen zusätzlich in ihren Editoren eine eigene Versionshistorie. Dort lässt sich als zweites Sicherheitsnetz eine ältere Fassung wiederherstellen.
+
+Erstellt oder aktualisiert Professor Mari einen Charakter, eine Persona, ein Lorebook oder ein Preset, kann das Ergebnis **Open** anzeigen. Damit öffnest du genau dieses Objekt, nachdem die App ihre Daten aktualisiert hat. Ein aktualisiertes Ergebnis kann zusätzlich **Review** (prüfen) anzeigen, wenn eine Prüfung aussteht. **Review** öffnet die Bedienelemente für die ausstehende Änderung. Neue Objekte haben meist keine Prüfung, weil dabei nichts Bestehendes überschrieben wurde.
 
 Zwei riskantere Änderungen warten, statt zuerst angewendet zu werden:
 
@@ -103,25 +131,25 @@ Wer eine Bibliothek freigibt, vertraut ihrem Code – Marinara importiert und f�
 
 ## Inhalte mit Decisions erstellen
 
-Mari kann **Activation questions** (Aktivierungsfragen) für Agenten, **Decision**-Aussagen für Lorebook-Einträge und bedingte Prompts in Presets, Karten, Lorebooks und Agenten-Prompts schreiben. Bevor sie solche Funktionen einführt, prüft sie das ausgewählte Decision-Modell. Eine Auswahl beschreibt die Konfiguration; sie beweist weder die Erreichbarkeit eines Anbieters noch, dass sich ein lokales Modell erfolgreich laden lässt.
+Professor Mari kann **Activation questions** (Aktivierungsfragen) für Agenten, **Decision**-Aussagen für Lorebook-Einträge und bedingte Prompts in Presets, Karten, Lorebooks und Agenten-Prompts schreiben. Bevor sie solche Funktionen einführt, prüft sie das ausgewählte Decision-Modell. Eine Auswahl beschreibt die Konfiguration; sie beweist weder die Erreichbarkeit eines Anbieters noch, dass sich ein lokales Modell erfolgreich laden lässt.
 
-Ohne ausgewähltes Decision-Modell führt sie bei gewöhnlichen Erstellungen und Bearbeitungen keine neuen Decision-Abhängigkeiten ein. Vorhandene Decision-Inhalte bleiben bei anderen Änderungen erhalten. Bittest du ausdrücklich um Decision-Inhalte, erklärt sie das jeweilige Ersatzverhalten und fragt einmal in diesem Mari-Chat, ob sie fortfahren soll. Das merkt sie sich auch nach erneutem Öffnen und in Gesprächen, die länger sind als ihr Fenster der jüngsten Nachrichten. Eine unbeantwortete Frage oder Ablehnung ist keine Erlaubnis.
+Ohne ausgewähltes Decision-Modell führt sie bei gewöhnlichen Erstellungen und Bearbeitungen keine neuen Decision-Abhängigkeiten ein. Vorhandene Decision-Inhalte bleiben bei anderen Änderungen erhalten. Bittest du ausdrücklich um Decision-Inhalte, erklärt sie das jeweilige Ersatzverhalten und fragt einmal in diesem Professor-Mari-Chat, ob sie fortfahren soll. Das merkt sie sich auch nach erneutem Öffnen und in Gesprächen, die länger sind als ihr Fenster der jüngsten Nachrichten. Eine unbeantwortete Frage oder Ablehnung ist keine Erlaubnis.
 
-Du kannst ihr sagen: **„Erinnere mich nicht mehr daran, ein Decision-Modell einzurichten.“** Sie hört im aktuellen Chat damit auf und kann diese Präferenz als Memory speichern. Mit **Keep & Enable** (behalten und aktivieren) gilt sie auch für künftige Chats. Deaktivieren oder Löschen dieses Memory hebt die dauerhafte Präferenz auf. Unterdrückte Einrichtungshinweise sind keine Einladung, gewöhnliche Aufträge um Decisions zu ergänzen.
+Du kannst ihr sagen: **„Erinnere mich nicht mehr daran, ein Decision-Modell einzurichten.“** Sie hört im aktuellen Chat damit auf und kann diese Präferenz als Memory speichern. Mit **Turn on** (einschalten) gilt sie auch für künftige Chats. Deaktivieren oder Löschen dieses Memory hebt die dauerhafte Präferenz auf. Unterdrückte Einrichtungshinweise sind keine Einladung, gewöhnliche Aufträge um Decisions zu ergänzen.
 
 Ist ein Modell ausgewählt, folgt sie deinen passenden aktivierten Memories und Skills. Enthalten diese keine Präferenz zur Erstellung solcher Inhalte, fragt sie, ob du Decisions verwenden und dir diese Antwort merken lassen möchtest. Du kannst zustimmen, ablehnen oder nur den aktuellen Auftrag erlauben. Ein Skill, der lediglich die Decision-Syntax erklärt, gilt nicht als Erlaubnis. Ein direkter Auftrag wie „ergänze diesen Eintrag um Decision-Aktivierung“ erlaubt dies bereits für diese Aufgabe.
 
 Standardmäßig setzt sie Decisions sparsam mit geeigneter Zeitsteuerung ein: **Sticky** oder **Cooldown** bei Lorebook-Einträgen, **Trigger Cadence** (Ausführungstakt) für Agentenaktivierung sowie `sticky`, `cooldown` oder `every` in Prompt-Bedingungen. Sticky und Cooldown verringern wiederholte Prüfungen nach einer positiven Aktivierung; sie verhindern keine wiederholten Prüfungen bei anhaltendem nein. `every` lässt Prüfungen zwischen den vorgesehenen Zügen aus und gilt dann als nein. Für flüchtige Ereignisse ist das daher nicht immer geeignet.
 
-Mari versucht außerdem, den frühen Teil des zusammengesetzten Prompts stabil zu halten. Bevor sie wechselnde Inhalte früh im Prompt oder Kontext mitten im Chatverlauf einfügt, fragt sie nach, sofern dein Auftrag oder eine aktivierte Präferenz diese Platzierung nicht bereits erlaubt. Eine allgemeine Regel „nach 1.000 Tokens sicher“ gibt es nicht: Die Cache-Wiederverwendung hängt von Anbieter, Modell und übereinstimmendem fertig zusammengesetztem Präfix ab. Die Zustimmung zu Decisions erlaubt solche Platzierungen nicht automatisch.
+Professor Mari versucht außerdem, den frühen Teil des zusammengesetzten Prompts stabil zu halten. Bevor sie wechselnde Inhalte früh im Prompt oder Kontext mitten im Chatverlauf einfügt, fragt sie nach, sofern dein Auftrag oder eine aktivierte Präferenz diese Platzierung nicht bereits erlaubt. Eine allgemeine Regel „nach 1.000 Tokens sicher“ gibt es nicht: Die Cache-Wiederverwendung hängt von Anbieter, Modell und übereinstimmendem fertig zusammengesetztem Präfix ab. Die Zustimmung zu Decisions erlaubt solche Platzierungen nicht automatisch.
 
-Die üblichen Berechtigungs- und Prüfregeln gelten weiterhin. Von Mari gespeicherte Memories bleiben aus, bis du sie aktivierst. Welche Inhalte die einzelnen Decision-Funktionen sehen, ihr Ersatzverhalten und Beispiele findest du unter [Decision-Modelle](../connections/decision-models.md), [Bedingte Prompts](../prompts/conditional-prompts.md), [Eigene Agenten](../agents/custom-agents.md#activation-questions) und [Lorebook-Einträge](../lorebooks/entries.md#decision-activation).
+Für ihre Bearbeitungen gelten weiterhin der übliche Berechtigungsmodus und die üblichen Prüfregeln. Von Professor Mari gespeicherte Memories bleiben aus, bis du sie aktivierst. Welche Inhalte die einzelnen Decision-Funktionen sehen, ihr Ersatzverhalten und Beispiele findest du unter [Decision-Modelle](../connections/decision-models.md), [Bedingte Prompts](../prompts/conditional-prompts.md), [Eigene Agenten](../agents/custom-agents.md#activation-questions) und [Lorebook-Einträge](../lorebooks/entries.md#decision-activation).
 
 ## Eigene Skills
 
 Ein Skill ist ein kurzes Anweisungsdokument, das du schreibst, um zu ändern, wie Professor Mari eine bestimmte Art von Anfrage behandelt.
 
-Klick auf die Schaltfläche **Skills** in ihrer Chat-Kopfzeile, um das Panel **Professor Mari Skills** zu öffnen. Von dort aus kannst du:
+Klick auf die Schaltfläche **Skills** in ihrer Chat-Kopfzeile, um das Panel **Professor Mari skills** zu öffnen. Von dort aus kannst du:
 
 - Auf **New** (neu) klicken, um einen Skill aus einer Vorlage zu starten.
 - Auf **Upload** (hochladen) klicken, um einen Skill aus einer `.md`- oder `.txt`-Datei hinzuzufügen.
@@ -136,7 +164,7 @@ Professor Mari merkt sich deine dauerhaften Vorlieben, damit du sie nicht in jed
 
 Eine Erinnerung bekommt sie auf zwei Wegen:
 
-- **Sag es ihr.** Zum Beispiel: „Merk dir, dass ich Lorebook-Einträge immer über den Namen des Charakters und seinen Spitznamen auslöse.“ Sie speichert das und zeigt dir eine Prüfkarte **Keep/Restore** mit dem genauen Wortlaut. Eine so gespeicherte Erinnerung ist zunächst **deaktiviert** (aus) und ändert nichts, bis du sie einschaltest. Dafür gibt es auf der Karte eine dritte Schaltfläche, **Keep & Enable**: speichern und sofort einschalten.
+- **Sag es ihr.** Zum Beispiel: „Merk dir, dass ich Lorebook-Einträge immer über den Namen des Charakters und seinen Spitznamen auslöse.“ Sie speichert das und zeigt dir eine Änderungskarte mit dem genauen Wortlaut. Eine so gespeicherte Erinnerung ist zunächst **deaktiviert** (aus) und ändert nichts, bis du sie einschaltest. Mit **Turn on** auf der Karte schaltest du sie sofort ein.
 - **Leg sie selbst an.** Klick auf die Schaltfläche **Memories** (Erinnerungen) in ihrer Chat-Kopfzeile, um das Panel **Memories** zu öffnen. Dort legst du Erinnerungen an, bearbeitest sie, schaltest sie ein oder aus und löschst sie. Über **Upload** wird außerdem der Inhalt einer `.md`- oder Textdatei zu einer Erinnerung.
 
 Sie speichert oder ändert eine Erinnerung nur, wenn **du** sie darum bittest – nie, weil etwas Gelesenes es ihr aufträgt: ein Charakter, ein Lorebook oder eine Datei.
@@ -163,7 +191,15 @@ Während sie arbeitet, erscheint in der Kopfzeile eine Schaltfläche **Stop**. E
 
 Lässt du ihr Chatfenster offen und wechselst dann auf eine andere Seite, folgt dir Professor Mari als kleine schwebende Blase.
 
-Auf dem Handy oder einem schmalen Bildschirm wird sie zu einem kleinen runden Avatar, den du herumziehen kannst. Ein Tipp darauf öffnet den vollen Chat wieder. Auf einem breiten Bildschirm erscheint ein kleines, verschiebbares **Ask Professor Mari**-Fenster. Beide Varianten haben ein Bedienelement, mit dem du die Blase für den Rest der Sitzung ausblendest.
+Auf dem Handy oder einem schmalen Bildschirm wird sie zu einem kleinen runden Avatar, den du herumziehen kannst. Ein Tipp darauf öffnet den vollen Chat wieder. Auf einem breiten Bildschirm erscheint ein kleines, verschiebbares **Ask Prof. Mari**-Fenster. Beide Varianten haben ein Bedienelement, mit dem du die Blase für den Rest der Sitzung ausblendest.
+
+## Vertrauens- und Wiederherstellungsstatus
+
+Öffne **Aware of** in der Kopfzeile von Professor Mari, um zu sehen, was mit deiner nächsten Nachricht mitgeht, was in diesem Professor-Mari-Chat bleibt und wie sie arbeitet: mit welchem Modell sie antwortet, wie groß das Kontextbudget ist und ob ihre Shell-Befehle in einer Sandbox laufen. Die Kopfzeile zeigt außerdem ausstehende Freigaben, Skills und Memories. Prüf das vor einer Anfrage, wenn du wissen musst, was Professor Mari lesen kann.
+
+Folgenreiche Änderungen im Arbeitsbereich hält Professor Mari hinter den bestehenden Freigabe- und Prüfregeln des Servers. **Aware of** gewährt keinen zusätzlichen Zugriff. Änderungen an heiklen Dateien und an Abhängigkeiten, Shell-Grenzen und die Prüfung der App-Daten setzt weiterhin der Server durch.
+
+Schlägt eine Anfrage fehl, behält der Chatverlauf den Fehlergrund und zeigt **Retry**, wenn sich die Anfrage erneut senden lässt. Behebe zuerst das angezeigte Problem mit Verbindung, Sandbox, Fähigkeit oder Fernzugriff und versuch es dann erneut. Ein erneuter Versuch startet nie stillschweigend aus einer Suche, der FAQ oder einem Fehlerzustand heraus. Er bleibt eine Aktion von dir.
 
 ## Die FAQ ist vom Chat getrennt
 
@@ -187,7 +223,10 @@ Professor Mari ist eine Helferin, nicht die vollständige Dokumentation. Behalte
 
 ## Fehlerbehebung
 
-- Gar keine Antwort: Prüfe über das Link-Symbol, ob eine Verbindung ausgewählt ist. Ist noch keine eingerichtet, öffne das Panel **Connections** und leg eine an.
+- Gar keine Antwort: Prüfe die Verbindung, die unter **Aware of** angezeigt wird, oder wähle über das Link-Symbol eine aus. Ist noch keine eingerichtet, öffne das Panel **Connections** und leg eine an.
+- Eine Übergabe enthält das falsche Objekt: Entferne das Kontextelement, starte neu oder wechsle in den richtigen Professor-Mari-Chat und öffne die Übergabe erneut an der Ausgangsstelle. Der Kontext gilt nur für die Übergabe und den aktuellen Professor-Mari-Chat.
+- Ein Ergebnis erscheint nicht in einem Editor: Nutze **Open** auf der Ergebniskarte. Möglicherweise hat Professor Mari den Befehl abgeschlossen, während die Objektliste veraltet war.
+- Eine Anfrage schlägt fehl: Lies den Fehlerstatus, behebe das genannte Einrichtungsproblem und nutze **Retry**. Frag Professor Mari nur dann erneut von der ursprünglichen Stelle aus, wenn der Kontext selbst nicht mehr stimmt.
 - Einblendmeldung „You haven't set up a connection yet“: Wähle im Dropdown-Menü hinter dem Link-Symbol eine Verbindung aus oder leg zuerst eine an.
 - Sie kann dein angehängtes Bild nicht lesen: Das Modell muss Bilder als Eingabe unterstützen. Wechsle zu einer Verbindung, deren Modell Bilder sehen kann.
 - Fandom-Abfragen schlagen fehl: Dafür braucht es eine Internetverbindung, denn Fandom ist eine externe Website.

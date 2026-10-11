@@ -23,7 +23,7 @@ Erledigt:
 
 Bewusst behalten für separate Kompatibilitäts- oder Produktarbeit:
 
-- `@rollup/wasm-node` und `Mari_point_down_left.png`;
+- `@rollup/wasm-node`;
 - Server-Exporte, die APIs außerhalb des Repos oder Test-Einstiegspunkte sein könnten;
 - die Zusammenführung von PNG-Parser und Tutorial-Geometrie;
 - die großflächigen Editor-/Composer- und Modul-Refactorings;
@@ -203,9 +203,7 @@ Den Test „kommt nur einmal im Text vor“ nicht pauschal auf `packages/shared`
 
 ## 5. Kandidat unter den statischen Assets
 
-`packages/client/public/sprites/mari/Mari_point_down_left.png` ist das einzige mitgelieferte Mari-Sprite, dessen Dateiname und Pfad nirgends im Repository auftauchen. Die benachbarten Mari-Assets werden referenziert.
-
-**Empfehlung (mittlere Sicherheit):** erst prüfen, dass keine Namenskonvention zur Laufzeit und kein extern erstelltes Theme die Datei direkt anspricht, dann entfernen und jede Mari-Pose in Tutorial und Onboarding im Browser kontrollieren. Öffentliche Assets lassen sich über zusammengesetzte URLs laden – fehlender Text allein reicht für hohe Sicherheit nicht aus.
+`packages/client/public/sprites/mari/Mari_point_down_left.png`, das einzige mitgelieferte Mari-Sprite, dessen Dateiname und Pfad nirgends im Repository auftauchten, wurde im Arbeitsschritt omnibar slice 38a entfernt.
 
 Mitgelieferte Game-Assets nicht anhand von Dateinamen-Suchen ausdünnen. Server-Seeder und Manifeste durchsuchen manche Asset-Ordner dynamisch.
 

@@ -6,7 +6,7 @@ In dieser Anleitung erfährst du, wie du das gesamte Erscheinungsbild von Marina
 
 ## Fertige Stile für Chat-Fenster
 
-Für eine schnelle Änderung ohne eigenen CSS-Code öffne **Settings > Appearance > App** (Einstellungen, Darstellung, App) und such **Chat widget style** (Chat-Widget-Stil) unten in **App Style** (App-Stil). **Dottore** gibt den Bedienelementen eisblaue Instrumentenrahmen, helle Metallkanten und abgeschrägte Ecken. **Mari** ergänzt goldgesäumte Märchenbuchrahmen, Edelsteinblau und Primogems an den Fenstertiteln. Seine Schaltflächen nutzen denselben Hintergrund wie die Fenster. Jedes Preset hat eine eigene Schrift, passt zum hellen und dunklen Modus und gestaltet Schaltflächen, Fenster und aufklappbare Abschnitte gemeinsam.
+Für eine schnelle Änderung ohne eigenen CSS-Code öffne **Settings > Appearance > App** (Einstellungen, Darstellung, App) und such **Chat widget style** (Chat-Widget-Stil) unten in **App Style** (App-Stil). **Dottore** gibt den Bedienelementen eisblaue Instrumentenrahmen, helle Metallkanten und abgeschrägte Ecken. **Prof. Mari** ergänzt goldgesäumte Märchenbuchrahmen, Edelsteinblau und Primogems an den Fenstertiteln. Seine Schaltflächen nutzen denselben Hintergrund wie die Fenster. Jedes Preset hat eine eigene Schrift, passt zum hellen und dunklen Modus und gestaltet Schaltflächen, Fenster und aufklappbare Abschnitte gemeinsam.
 
 Mit **Font** (Schrift) und **Shape** (Form) änderst du diese Details einzeln. **Preset font** (Preset-Schrift) und **Preset shape** (Preset-Form) folgen dem ausgewählten Stil.
 
@@ -26,7 +26,7 @@ Mit den drei Schaltern unter den Farbwählern überträgst du den Stil auf den r
 - **Apply preset shape** (Preset-Form anwenden) nutzt die gewählte Rahmenform für Roleplay-Nachrichten im klassischen und im Visual-Novel-Layout, das Game-Dialogfeld, Randbemerkungen, HUD-Widgets, Kartenpanel und Charakterbögen sowie Eingabefelder und Bedienelemente. Conversation-Nachrichten behalten ihre eigene Form.
 - **Apply preset colors** (Preset-Farben anwenden) nutzt die Rahmen-, Hintergrund- und Textfarben des Widgets für diese Bereiche, einschließlich Conversation-Nachrichten. Auch deine eigenen Farben und Farbverläufe gelten dort. Wörtliche Rede behält die eigene Dialogue Highlight Color des jeweiligen Charakters oder der jeweiligen Persona.
 
-Jeder Schalter ist anfangs aus und funktioniert unabhängig von den anderen. So kannst du etwa die Mari-Schrift mit den gewohnten Chatfarben kombinieren. Schaltest du eine Option aus, kehrt dieser Teil zur üblichen Chatgestaltung zurück. Die Auswahl eines anderen Presets behält deine Schalterstellungen bei. Professor Mari kann auch eigene Themes für diese Bereiche erstellen.
+Jeder Schalter ist anfangs aus und funktioniert unabhängig von den anderen. So kannst du etwa die Professor-Mari-Schrift mit den gewohnten Chatfarben kombinieren. Schaltest du eine Option aus, kehrt dieser Teil zur üblichen Chatgestaltung zurück. Die Auswahl eines anderen Presets behält deine Schalterstellungen bei. Professor Mari kann auch eigene Themes für diese Bereiche erstellen.
 
 Eigene CSS-Themes können diese Presets weiterhin überschreiben. Die öffentlichen Variablen für Fenster und Abschnitte weiter unten haben Vorrang vor den Preset-Farben. Nutze `--mari-window-font-family` für die Fensterschrift, `--mari-drawer-radius` für die Ecken der Abschnitte und `--mari-window-ornament: none`, um die Verzierung am Titel auszublenden. Um alle Preset-Verzierungen zu entfernen, wähle zuerst **Default**.
 

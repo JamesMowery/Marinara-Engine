@@ -50,7 +50,7 @@ Diesen Abschnitt findest du unter **Settings** > **General** > **App Behavior**.
 - **Confirm before deleting**: standardmäßig an. Ist der Schalter an, fragt Marinara nach, bevor ein Chat, ein Charakter oder ein anderes Element endgültig verschwindet. Lass ihn an, damit nichts versehentlich gelöscht wird.
 - **Achievements**: standardmäßig an. Ist der Schalter an, zeigt der Home-Bildschirm die Schaltfläche für Errungenschaften und meldet freigeschaltete Errungenschaften. Aus bleibt die Zählung im Hintergrund still. Siehe [Errungenschaften](../home/achievements.md).
 - **Music Player**: standardmäßig an. Ist der Schalter an, erscheint der kompakte Music Player. Siehe [Musik](../media/music.md).
-- **Mini Mari surprise visits**: standardmäßig an. Ist der Schalter an, taucht beim Scrollen gelegentlich eine Nachricht der Chibi-Professor-Mari auf. Schalte ihn aus, wenn das stört.
+- **Search and Professor Mari settings**: Wähle **Open** (Öffnen), um zu ihrer Einstellungsseite zu wechseln. Dort liegen alle Einstellungen für Suche und Professor Mari, aufgeteilt in fünf Gruppen: **Search** mit dem Angebot, ein Feld zu verbessern, und dem Suchverlauf; **Quick answers** mit **Quick answers in Search**, **Answer with** und **Wait after typing**; **Professor Mari** mit **Ask Professor Mari from Search**, dem Berechtigungsmodus, den Antwort-Chips, der Art, wie sich Änderungskarten öffnen, und **Enter sends to Professor Mari**; **Around the app** mit **Mini Professor Mari visits**; und **Appearance** für ihr Aussehen: Jedes Paket zeigt ihr Porträt, das aktive trägt **In use**, und bei einem gesperrten Paket siehst du, wie viel Spielzeit du bis zur Freischaltung schon gesammelt hast. Das Zahnrad in der Suche öffnet dieselbe Seite, und wenn du nach einer dieser Einstellungen suchst – unter ihrem neuen oder alten Namen –, landest du direkt bei ihr.
 
 ## Text Rules
 
@@ -104,7 +104,7 @@ Mehr dazu in [Nachrichtenaktionen](../chats/messages.md).
 
 ## Message Tools
 
-Den Abschnitt **Message Tools** findest du unter **Settings** > **Advanced** > **Message Tools**. Er bündelt Schalter für Anzeige und Reparatur. Alle Schalter unten sind standardmäßig aus. Die Tabelle zeigt, was sie bewirken und wo mehr dazu steht.
+Den Abschnitt **Message Tools** findest du unter **Settings** > **Advanced** > **Message Tools**. Er bündelt Schalter für Anzeige und Reparatur. Alle Schalter unten sind standardmäßig aus, außer **Show "older messages not sent" note** (Hinweis „ältere Nachrichten nicht gesendet“ anzeigen), der an ist. Die Tabelle zeigt, was sie bewirken und wo mehr dazu steht.
 
 | Schalter | Wirkung | Ausführliche Anleitung |
 | --- | --- | --- |
@@ -112,6 +112,7 @@ Den Abschnitt **Message Tools** findest du unter **Settings** > **Advanced** > *
 | **Show model name on messages** | Zeigt, welches KI-Modell die jeweilige Antwort geschrieben hat. | [Nachrichtenaktionen](../chats/messages.md) |
 | **Show token usage on messages** | Zeigt pro Nachricht die Tokens für Prompt und Antwort. | [Nachrichtenaktionen](../chats/messages.md) |
 | **Show message numbers** | Zeigt an jeder Nachricht im Chat eine Nummer. | [Nachrichtenaktionen](../chats/messages.md) |
+| **Show "older messages not sent" note** | Zeigt unter der neuesten Antwort einen Hinweis, wenn ältere Nachrichten nicht mehr in den Prompt gepasst haben. Ausgeschaltet bleibt dieser Hinweis in langen Chats verborgen. Eine abgeschnittene oder leere Antwort zeigt weiterhin ihren eigenen Hinweis. | [Peek Prompt](../chats/peek-prompt.md) |
 | **Guide swipes/regens with chat input** | Nutzt deinen aktuellen Entwurf als Vorgabe beim neu Generieren. | [Geführte Generierung und Impersonate](../chats/guided-and-impersonate.md) |
 | **Quick replies** | Ergänzt neben der Senden-Schaltfläche weitere Entwurfsaktionen. | [Geführte Generierung und Impersonate](../chats/guided-and-impersonate.md) |
 | **Include reasoning in exports** | Nimmt die verborgenen Denkschritte in Chat-Exporte auf. | [Chats exportieren und importieren](../chats/export-import.md) |

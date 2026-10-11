@@ -35,10 +35,11 @@ Oben rechts liegen diese Schaltflächen:
 
 Willst du den Editor mit ungespeicherter Arbeit verlassen, erscheint ein Hinweisbanner: `You have unsaved changes. Close without saving?` Zur Auswahl stehen **Keep editing**, **Discard & close** und **Save & close**.
 
-Der Editor ist in Tabs unterteilt. Auf einem breiten Bildschirm laufen sie links senkrecht herunter, auf einem schmalen werden sie zu einem scrollbaren Streifen am oberen Rand. Die Reihenfolge lautet **Metadata**, **Card**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** und **Advanced**.
+Der Editor ist in Tabs unterteilt. Auf einem breiten Bildschirm laufen sie links senkrecht herunter, auf einem schmalen werden sie zu einem scrollbaren Streifen am oberen Rand. Die Reihenfolge lautet **Metadata**, **Card**, **Onboarding**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** und **Advanced**.
 
 Diese Anleitung behandelt **Metadata**, **Card**, **Voice** und **Advanced** sowie Avatare und den Versionsverlauf. Für die übrigen Tabs gibt es eigene Anleitungen:
 
+- **Onboarding**: [Interaktives Onboarding](interactive-onboarding.md).
 - **Convo**: [Profile für den Conversation Mode](../conversation/profiles.md).
 - **Lorebook**: [Lorebooks mit Charakteren verknüpfen](../lorebooks/linking-to-characters.md).
 - **Sprites**: [Charakter-Sprites](sprites.md).
@@ -175,6 +176,7 @@ Hat sich der zugrunde liegende Text seit dem Vorschlag geändert, warnt dich die
 ## Verwandte Anleitungen
 
 - [Personas anlegen und bearbeiten](personas.md)
+- [Interaktives Onboarding](interactive-onboarding.md)
 - [Charakter-Sprites](sprites.md)
 - [Charakter- und Persona-Galerien](galleries.md)
 - [Charakterkarten importieren und exportieren](import-export.md)
