@@ -22,11 +22,11 @@ Puedes abrir Professor Mari desde el lugar donde necesitas ayuda. Estos puntos d
 
 - Editores de **Character** (Personaje), **Persona**, **Lorebook** y **Preset**: pregunta por el recurso abierto o por un campo seleccionado.
 - Respuestas de la **FAQ**: usa **Ask Prof. Mari** para incluir la pregunta encontrada y su respuesta escrita como punto de partida.
-- **Search** (Búsqueda): pulsa `Cmd/Ctrl+K`, selecciona un resultado y luego usa **Ask Prof. Mari** para incluir el resultado seleccionado en el borrador. Search no envía ninguna solicitud al modelo por su cuenta, salvo que una respuesta rápida esté activada; consulta **Quick answers in Search** (Respuestas rápidas en Search) más abajo.
+- **Search** (Búsqueda): pulsa `Cmd/Ctrl+K`, selecciona un resultado y luego usa **Ask Prof. Mari** para incluir el resultado seleccionado en el borrador. Search no envía ninguna solicitud al modelo por su cuenta, salvo que una respuesta breve esté activada; consulta **Quick answers in Search** (Respuestas breves en Search) más abajo.
 - **Recent Chats** (Chats recientes) y otros estados de error: usa **Ask Prof. Mari** junto a **Retry** (Reintentar) para enviar la descripción del error y la acción de reparación solicitada.
 - El chat normal con el personaje Professor Mari y el chat del área de trabajo de la pantalla de inicio usan el mismo formato de traspaso.
 
-Los elementos adjuntos aparecen como chips **Aware of** (Al tanto de) encima de su cuadro de mensaje. Quita un elemento de contexto cuando no sea relevante. Después de que envías el mensaje, Professor Mari resuelve en el servidor el contenido más extenso de los recursos, dentro del presupuesto de contexto. No recibe un recurso completo solo porque hayas abierto un editor.
+Los elementos adjuntos aparecen como chips **Aware of** (Al tanto de) encima de su cuadro de mensaje. Quita un elemento de contexto cuando no sea relevante. Después de que envíes el mensaje, Professor Mari resuelve en el servidor el contenido más extenso de los recursos, dentro del presupuesto de contexto. No recibe un recurso completo solo porque hayas abierto un editor.
 
 Pídele ayuda con cualquiera de estas tareas:
 
@@ -43,17 +43,17 @@ Pídele ayuda con cualquiera de estas tareas:
 
 Lee un elemento antes de editarlo, y te pide los detalles que faltan cuando tu solicitud es vaga. Para tareas de imagen necesitas tener antes configurada una conexión de generación de imágenes que funcione. Ella no crea una por ti.
 
-## Respuestas rápidas en Search
+## Respuestas breves en Search
 
-Cuando escribes una pregunta en Search y ningún resultado coincide, Professor Mari puede escribir una respuesta breve. Aparece como una tarjeta **Quick answer · Read-only** (Respuesta rápida · Solo lectura) debajo de la fila **Ask Prof. Mari**.
+Cuando escribes una pregunta en Search y ningún resultado coincide, Professor Mari puede escribir una respuesta breve. Aparece como una tarjeta **Quick answer · Read-only** (Respuesta breve · Solo lectura) debajo de la fila **Ask Prof. Mari**.
 
-- Una respuesta rápida tiene hasta tres frases sacadas de la documentación de Marinara. Ella solo ve lo que escribiste, y la respuesta no cambia nada.
+- Una respuesta breve tiene hasta tres frases sacadas de la documentación de Marinara. Ella solo ve lo que escribiste, y la respuesta no cambia nada.
 - La tarjeta nombra las páginas de la documentación que usó. Si repites la misma pregunta, se usa una copia guardada durante cinco minutos.
-- Debajo de la respuesta están **Copy** (Copiar), **Answer again** (Responder de nuevo) y **Continue with Prof. Mari** (Continuar con Professor Mari). **Continue with Prof. Mari** abre su ventana en un chat nuevo con el nombre de tu pregunta y con la respuesta rápida adjunta. Usa **Ask Prof. Mari more…** (Preguntar más a Professor Mari) para hacer una pregunta de seguimiento en su ventana. Las respuestas rápidas no tienen seguimiento propio.
-- Una respuesta rápida espera hasta que dejas de escribir. **Wait after typing** (Esperar después de escribir) define cuánto espera Search.
-- Elige quién responde en **Settings** > **General** > **Search and Professor Mari settings** > **Quick answers** (Respuestas rápidas) > **Answer with** (Responder con): un modelo local que hayas descargado, **Same as Prof. Mari** (la conexión que usa ella) u otra conexión. Cada respuesta es una solicitud breve. Una conexión de pago puede costar dinero.
+- Debajo de la respuesta están **Copy** (Copiar), **Answer again** (Responder de nuevo) y **Continue with Prof. Mari** (Continuar con Professor Mari). **Continue with Prof. Mari** abre su ventana en un chat nuevo con el nombre de tu pregunta y con la respuesta breve adjunta. Usa **Ask Prof. Mari more…** (Preguntar más a Professor Mari) para hacer una pregunta de seguimiento en su ventana. Las respuestas breves no tienen seguimiento propio.
+- Una respuesta breve espera hasta que dejes de escribir. **Wait after typing** (Esperar después de escribir) define cuánto espera Search.
+- Elige quién responde en **Settings** > **General** > **Search and Professor Mari settings** > **Quick answers** (Respuestas breves) > **Answer with** (Responder con): un modelo local que hayas descargado, **Same as Prof. Mari** (la conexión que usa ella) u otra conexión. Cada respuesta es una solicitud breve. Una conexión de pago puede costar dinero.
 - Si una respuesta falla, la tarjeta dice por qué, por ejemplo que el modelo no respondió. **Try again** (Intentar de nuevo) y **Continue with Prof. Mari** siempre están disponibles. **Choose a model** (Elegir un modelo) solo aparece cuando falta una API key o un modelo. El mensaje del propio proveedor está en **Details** (Detalles).
-- Las respuestas rápidas están desactivadas hasta que las activas con **Quick answers in Search** en el mismo grupo.
+- Las respuestas breves están desactivadas hasta que las actives con **Quick answers in Search** en el mismo grupo.
 
 ## Chips de sugerencia guiada
 
@@ -199,7 +199,7 @@ Abre **Aware of** en la cabecera de Professor Mari para ver qué acompaña a tu 
 
 Professor Mari mantiene los cambios importantes del área de trabajo detrás de las reglas de aprobación y revisión existentes del servidor. **Aware of** no concede acceso adicional. Los cambios en archivos sensibles, los cambios de dependencias, los límites del shell y la validación de los datos de la app se siguen aplicando en el servidor.
 
-Cuando una solicitud falla, la transcripción conserva el motivo del fallo y muestra **Retry** cuando la solicitud se puede volver a enviar. Corrige primero el problema que se muestra de conexión, entorno aislado, capacidad o acceso remoto, y luego vuelve a intentarlo. Un reintento no empieza en silencio desde una búsqueda, la FAQ o un estado de error. Sigue siendo una acción del usuario.
+Cuando una solicitud falla, la transcripción conserva el motivo del fallo y muestra **Retry** cuando la solicitud se puede volver a enviar. Corrige primero el problema de conexión, entorno aislado, capacidad o acceso remoto que se muestra, y luego vuelve a intentarlo. Un reintento no empieza en silencio desde una búsqueda, la FAQ o un estado de error. Sigue siendo una acción del usuario.
 
 ## Su FAQ está separada del chat
 
