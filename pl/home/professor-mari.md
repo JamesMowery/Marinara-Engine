@@ -6,15 +6,27 @@ Professor Mari to wbudowana asystentka aplikacji Marinara Engine, dostępna na e
 
 Professor Mari mieszka na ekranie głównym. Ekran główny to widok, który pojawia się wtedy, gdy żaden czat nie jest otwarty.
 
-Poszukaj karty z jej pikselowym obrazkiem i nagłówkiem **Professor Mari**. Linia stanu pokazuje **Ready to help**, kiedy asystentka czeka, albo **Working on it...**, kiedy pracuje. Kliknij przycisk **Ask Professor Mari** (zapytaj Professor Mari), żeby otworzyć pełne okno czatu.
+Poszukaj karty z jej pikselowym obrazkiem i nagłówkiem **Professor Mari**. Linia stanu pokazuje **Ready to help**, kiedy asystentka czeka, albo **Working on it...**, kiedy pracuje. Kliknij przycisk **Ask Prof. Mari** (zapytaj Professor Mari), żeby otworzyć pełne okno czatu.
 
 Rozmawiasz z nią zwykłym językiem. Wpisz wiadomość w polu, a potem naciśnij Enter, żeby ją wysłać. Shift i Enter razem dodają nową linię.
 
 Wysłanie pierwszej wiadomości odblokowuje osiągnięcie **Hello World**.
 
-## Co potrafi
+Jej stan pokazuje też na każdym ekranie cienka linia wzdłuż dolnej krawędzi górnego paska aplikacji: faluje, kiedy asystentka pracuje, robi się zielona, kiedy skończy, złota, kiedy czeka zatwierdzenie, albo czerwona, jeśli ostatnie zadanie się nie powiodło. Znika po otwarciu jej czatu. Linia jest wyłączona, gdy wyłączony jest przełącznik **Ask Professor Mari from Search** (pytania do Professor Mari z wyszukiwarki). Wszystkie jej ustawienia znajdują się w ustawieniach wyszukiwarki Search i asystentki Professor Mari: otwiera je ikona koła zębatego w wyszukiwarce Search albo ścieżka **Settings** (Ustawienia) > **General** > **Search and Professor Mari settings** (ustawienia wyszukiwarki i asystentki Professor Mari) > **Open** (otwarcie).
+
+## Pytanie do Professor Mari prosto z bieżącej pracy
 
 Professor Mari to coś więcej niż okienko na pytania. Wyjaśnia działanie aplikacji, pomaga w konfiguracji i tworzy różne rzeczy na życzenie.
+
+Asystentkę Professor Mari możesz otworzyć z miejsca, w którym potrzebujesz pomocy. Te punkty wejścia tworzą szkic do edycji i dołączają krótkie podsumowanie kontekstu z oznaczonym typem. Dołączony kontekst da się usunąć przed wysłaniem wiadomości.
+
+- Edytory **Character**, **Persona**, **Lorebook** i **Preset**: zapytaj o otwarty zasób albo o wybrane pole.
+- Odpowiedzi w **FAQ**: użyj **Ask Prof. Mari**, żeby dołączyć dopasowane pytanie i jego spisaną odpowiedź jako punkt wyjścia.
+- **Search** (wyszukiwarka): naciśnij `Cmd/Ctrl+K`, wybierz wynik, a potem użyj **Ask Prof. Mari**, żeby dołączyć wybrany wynik do szkicu. Sama wyszukiwarka Search nie wysyła żądania do modelu, chyba że włączona jest szybka odpowiedź – zobacz niżej sekcję **Quick answers in Search** (szybkie odpowiedzi w wyszukiwarce).
+- **Recent Chats** (ostatnie czaty) i inne stany błędu: użyj **Ask Prof. Mari** obok **Retry** (ponów), żeby wysłać opis błędu i żądaną naprawę.
+- Zwykły czat z postacią Professor Mari i czat przestrzeni roboczej na ekranie głównym używają tego samego formatu przekazania.
+
+Dołączone elementy pojawiają się nad polem wiadomości jako kafelki **Aware of** (o czym wie). Usuń element kontekstu, jeśli nie ma związku z prośbą. Większą treść zasobu Professor Mari pobiera na serwerze w ramach budżetu kontekstu, już po wysłaniu wiadomości. Nie dostaje pełnego zasobu tylko dlatego, że masz otwarty edytor.
 
 Poproś ją o pomoc przy dowolnej z tych rzeczy:
 
@@ -31,11 +43,27 @@ Poproś ją o pomoc przy dowolnej z tych rzeczy:
 
 Zanim coś zmieni, najpierw to czyta, a przy niejasnej prośbie dopytuje o brakujące szczegóły. Zadania graficzne wymagają wcześniej skonfigurowanego, działającego połączenia do generowania obrazów. Asystentka sama takiego połączenia nie utworzy.
 
+## Funkcja Quick answers in Search
+
+Kiedy wpiszesz pytanie w wyszukiwarce Search i żaden wynik nie pasuje, Professor Mari może napisać krótką odpowiedź. Pojawia się ona jako karta **Quick answer · Read-only** (szybka odpowiedź, tylko do odczytu) pod wierszem **Ask Prof. Mari**.
+
+- Szybka odpowiedź ma do trzech zdań opartych na dokumentacji aplikacji Marinara Engine. Asystentka widzi tylko wpisany przez ciebie tekst, a odpowiedź niczego nie zmienia.
+- Karta wymienia strony dokumentacji, z których korzysta odpowiedź. Powtórzone pytanie przez pięć minut korzysta z zapisanej kopii.
+- Pod odpowiedzią są przyciski **Copy** (kopiowanie), **Answer again** (ponowna odpowiedź) i **Continue with Prof. Mari** (kontynuacja z Professor Mari). **Continue with Prof. Mari** otwiera jej okno w nowym czacie nazwanym od twojego pytania, z dołączoną szybką odpowiedzią. Użyj **Ask Prof. Mari more…** (dalsze pytania do Professor Mari), żeby zadać pytanie uzupełniające w jej oknie. Szybkie odpowiedzi nie mają własnych pytań uzupełniających.
+- Szybka odpowiedź czeka, aż przestaniesz pisać. Ustawienie **Wait after typing** (czas oczekiwania po wpisaniu) określa, jak długo wyszukiwarka Search czeka.
+- Wybierz, kto odpowiada, w **Settings** > **General** > **Search and Professor Mari settings** > **Quick answers** (szybkie odpowiedzi) > **Answer with** (źródło odpowiedzi): pobrany model lokalny, **Same as Prof. Mari** (to samo połączenie, którego używa asystentka) albo inne połączenie. Każda odpowiedź to jedno krótkie żądanie. Płatne połączenie może generować koszty.
+- Jeśli odpowiedź się nie uda, karta podaje przyczynę, na przykład że model nie odpowiedział. Przyciski **Try again** (ponowna próba) i **Continue with Prof. Mari** są zawsze dostępne. **Choose a model** (wybór modelu) pojawia się tylko wtedy, gdy brakuje klucza albo modelu. Własny komunikat dostawcy znajduje się pod **Details** (szczegóły).
+- Szybkie odpowiedzi są wyłączone, dopóki nie włączysz ich przełącznikiem **Quick answers in Search** w tej samej grupie.
+
 ## Kafelki z podpowiedziami
 
 W pustym czacie z Professor Mari pojawiają się kafelki startowe, takie jak **Create a Character**, **Create a Lorebook** i **Create a Persona** – ułatwiają rozpoczęcie typowych zadań. W trakcie prowadzonego tworzenia lub edycji kafelki zmieniają się zgodnie z kolejnym krokiem. Kliknięty kafelek wypełnia treść pola wiadomości, a tę treść można jeszcze poprawić przed wysłaniem.
 
 Prowadzone kroki to jedno konkretne pytanie naraz, zamiast długiego formularza podanego od razu w całości.
+
+Przy pełnej prośbie o utworzenie lub edycję Professor Mari może zwrócić ograniczony plan prowadzony. Każdy krok ma niewielki zestaw podpowiedzi. Wybranie jednej z nich wypełnia bieżący szkic i lokalnie przesuwa plan do następnego kroku. Po zmianie podpowiedzi twój tekst zostaje w szkicu. Plan należy do bieżącego czatu z Professor Mari, więc przełączenie czatu, restart, zatrzymanie zadania albo ukończenie planu usuwa nieaktualne kroki. Wadliwe albo nadmiarowe podpowiedzi są odrzucane, a kafelki są nieaktywne, kiedy Professor Mari pracuje.
+
+Podpowiedzi są dostępne tylko w czatach z Professor Mari. Inne postacie nie dostają kafelków Professor Mari.
 
 ## Może też czytać i zmieniać pliki samej aplikacji
 
@@ -77,22 +105,22 @@ Asystentka przyjmuje obrazy, pliki PDF i popularne pliki tekstowe, takie jak `.t
 
 ## Sprawdzanie jej zmian
 
-Kiedy Professor Mari edytuje coś, co już istnieje, zapisuje zmianę od razu, a potem pokazuje kartę do zatwierdzenia. Dzięki temu efekt, który się nie podoba, da się cofnąć.
+Kiedy Professor Mari coś zmienia, od razu zapisuje zmianę i pokazuje pod swoją odpowiedzią kartę zmiany. Karta wymienia każde zmienione pole. Edycja tekstu pokazuje stare i nowe słowa, a lorebook pokazuje swoje wpisy. Otwórz **Show all** (pokaż wszystko), żeby zobaczyć każde pole. **Technical details** (szczegóły techniczne) pokazuje surowe polecenie.
 
-Karta nosi tytuł **Review Mari's changes**. Pokazuje, co asystentka zrobiła i jakich danych to dotyczyło. Ma dwa przyciski:
+Karta ma jedną akcję:
 
-- Przycisk **Keep** zatwierdza zmianę. Widać wtedy komunikat "Kept Mari's workspace change."
-- Przycisk **Restore** przywraca poprzednią zapisaną wersję. Widać wtedy komunikat "Restored the previous app data snapshot."
+- **Undo** (cofnięcie) przywraca poprzednią zapisaną wersję. Każdą zmianę da się cofnąć, w każdym trybie uprawnień. Tryb uprawnień decyduje tylko o tym, czy asystentka najpierw pyta.
+- Zmiana, której nie udało się zapisać, pokazuje **Not saved** (nie zapisano) i przyczynę. **Try again** prosi asystentkę o ponowną próbę.
+- Karta pokazuje **Undo until** (cofnięcie możliwe do) tylko w ostatnich 24 godzinach. Kopia do cofnięcia zostaje maksymalnie przez 14 dni i przechowywanych jest tylko 50 najnowszych. Potem zmiana zostaje, a karta pokazuje **Undo closed** (cofnięcie niedostępne).
 
-Kilka rzeczy warto wiedzieć:
+Inaczej jest ze zmianą, która czeka na ciebie. Wstrzymana zmiana (w trybie Manual albo zmiana pliku wrażliwego lub zależności) pokazuje **Apply** (zastosowanie) i **Don't apply** (rezygnacja z zastosowania). Usunięcie pokazuje **Delete** (usunięcie) i **Put back** (przywrócenie). Wyszukiwarka Search nie wyświetla jej zmian: otwórz asystentkę Professor Mari, żeby je zobaczyć, zastosować albo cofnąć.
 
-- Nowe elementy, takie jak świeża postać lub lorebook, też otrzymują kartę. **Restore** usuwa je ponownie.
-- Karta należy do czatu Mari, w którym dokonała zmiany. Nowy czat zaczyna się bez kart z innych czatów. Usunięcie czatu zachowuje jego zmiany i usuwa jego karty. Zmiana wykonana poleceniem `mari` w terminalu nie należy do żadnego czatu, więc jej karta pojawia się we wszystkich czatach Mari.
-- Karta pozostaje do naciśnięcia **Keep** lub **Restore**, maksymalnie przez 14 dni. Potem zamyka się sama, a zmiana zostaje.
-- Jeśli **Restore** informuje, że dane zmieniły się po zmianie Mari, od tego czasu coś je edytowało i przywrócenie nadpisałoby nowszą wersję. Naciśnij **Keep**, aby zamknąć kartę; bieżące dane pozostaną bez zmian.
+- Karta należy do czatu z Professor Mari, w którym asystentka dokonała zmiany. Nowy czat zaczyna się bez kart z innych czatów. Usunięcie czatu zachowuje jego zmiany i usuwa jego karty. Zmiana wykonana poleceniem `mari` w terminalu nie należy do żadnego czatu, więc jej karta pojawia się we wszystkich czatach z Professor Mari.
 - Edycja, która niczego by nie zmieniła, nie jest zapisywana i nie otrzymuje karty.
-- Mari nie może edytować ani usuwać własnej karty postaci. Przy każdym uruchomieniu aplikacja Marinara przywraca jej wbudowaną wersję.
+- Professor Mari nie może edytować ani usuwać własnej karty postaci. Przy każdym uruchomieniu aplikacja Marinara przywraca jej wbudowaną wersję.
 - Postacie i persony trzymają też własną historię wersji w swoich edytorach. Starszą wersję da się przywrócić właśnie tam, jako drugie zabezpieczenie.
+
+Kiedy Professor Mari tworzy albo aktualizuje postać, personę, lorebook lub preset, wynik może pokazywać przycisk **Open**. Użyj go, żeby otworzyć dokładnie ten zasób, gdy aplikacja odświeży dane. Zaktualizowany wynik może też pokazywać **Review** (przejrzyj), jeśli czeka przegląd. **Review** otwiera elementy sterujące oczekującą zmianą. Nowe elementy zwykle nie mają przeglądu, bo nie nadpisano żadnego istniejącego elementu.
 
 Dwie zmiany o większym ryzyku czekają na decyzję, zamiast zostać zastosowane od razu:
 
@@ -103,25 +131,25 @@ Zatwierdzenie biblioteki oznacza zaufanie jej kodowi, kiedy aplikacja Marinara E
 
 ## Tworzenie treści z decyzjami
 
-Mari może pisać **Activation questions** (pytania aktywacyjne) agentów, stwierdzenia **Decision** (decyzja) wpisów lorebooka i prompty warunkowe w presetach, kartach, lorebookach oraz promptach agentów. Przed wprowadzeniem tych funkcji sprawdza wybrany model decyzyjny. Wybrany model jest informacją o konfiguracji, nie dowodem dostępności dostawcy ani udanego uruchomienia modelu lokalnego.
+Professor Mari może pisać **Activation questions** (pytania aktywacyjne) agentów, stwierdzenia **Decision** (decyzja) wpisów lorebooka i prompty warunkowe w presetach, kartach, lorebookach oraz promptach agentów. Przed wprowadzeniem tych funkcji sprawdza wybrany model decyzyjny. Wybrany model jest informacją o konfiguracji, nie dowodem dostępności dostawcy ani udanego uruchomienia modelu lokalnego.
 
-Bez wybranego modelu nie dodaje nowych zależności od decyzji przy zwykłym tworzeniu i edycji. Istniejącą treść decyzyjną zachowuje przy niezwiązanych zmianach. Jeśli wyraźnie poprosisz o decyzje, wyjaśnia właściwe zachowanie zastępcze i raz w danym czacie Mari pyta, czy kontynuować. Zapis odpowiedzi przetrwa ponowne otwarcie czatu i rozmowy dłuższe niż jej okno ostatnich wiadomości. Brak odpowiedzi lub odmowa nie oznacza zgody.
+Bez wybranego modelu nie dodaje nowych zależności od decyzji przy zwykłym tworzeniu i edycji. Istniejącą treść decyzyjną zachowuje przy niezwiązanych zmianach. Jeśli wyraźnie poprosisz o decyzje, wyjaśnia właściwe zachowanie zastępcze i raz w danym czacie z Professor Mari pyta, czy kontynuować. Zapis odpowiedzi przetrwa ponowne otwarcie czatu i rozmowy dłuższe niż jej okno ostatnich wiadomości. Brak odpowiedzi lub odmowa nie oznacza zgody.
 
-Możesz powiedzieć **"Stop reminding me to set up a Decision model."** Przestaje przypominać w bieżącym czacie i może zapisać preferencję jako wspomnienie. Użyj **Keep & Enable** (zachowaj i włącz), żeby stosować ją też w przyszłych czatach. Wyłączenie lub usunięcie wspomnienia usuwa stałą preferencję. Wyłączenie przypomnień nie upoważnia jej do dodawania decyzji do zwykłych próśb.
+Możesz powiedzieć **"Stop reminding me to set up a Decision model."** Przestaje przypominać w bieżącym czacie i może zapisać preferencję jako wspomnienie. Użyj **Turn on** (włączenie), żeby stosować ją też w przyszłych czatach. Wyłączenie lub usunięcie wspomnienia usuwa stałą preferencję. Wyłączenie przypomnień nie upoważnia jej do dodawania decyzji do zwykłych próśb.
 
 Z wybranym modelem stosuje odpowiednie włączone wspomnienia i umiejętności. Jeśli nie określają preferencji tworzenia, pyta, czy używać decyzji i czy zapamiętać odpowiedź. Możesz je dopuścić, odrzucić lub zezwolić tylko dla bieżącego zadania. Umiejętność opisująca samą składnię nie oznacza zgody. Bezpośrednia prośba, taka jak "add Decision activation to this entry", już daje zgodę dla zadania.
 
 Domyślnie używa decyzji oszczędnie z odpowiednim sterowaniem czasem: **Sticky** (utrzymanie aktywności) lub **Cooldown** (przerwa) wpisów lorebooka, **Trigger Cadence** (częstotliwość uruchamiania) agentów oraz `sticky`, `cooldown` lub `every` warunków promptu. Sticky i Cooldown ograniczają ponowne sprawdzanie po pozytywnej aktywacji; nie zatrzymują sprawdzania przy ciągłym nie. `every` pomija sprawdzanie między zaplanowanymi turami i oznacza wtedy nie, więc nie zawsze pasuje do ulotnych zdarzeń.
 
-Mari stara się też utrzymać stabilny początek złożonego promptu. Pyta przed dodaniem zmiennej treści wcześnie w prompcie lub kontekstu wewnątrz historii czatu, chyba że instrukcja lub włączona preferencja już pozwala na takie umiejscowienie. Nie istnieje uniwersalna zasada "bezpiecznie po 1 000 tokenów": pamięć podręczna zależy od dostawcy, modelu i zgodnego wyrenderowanego początku. Zgoda na decyzje nie oznacza automatycznej zgody na te pozycje.
+Professor Mari stara się też utrzymać stabilny początek złożonego promptu. Pyta przed dodaniem zmiennej treści wcześnie w prompcie lub kontekstu wewnątrz historii czatu, chyba że instrukcja lub włączona preferencja już pozwala na takie umiejscowienie. Nie istnieje uniwersalna zasada "bezpiecznie po 1 000 tokenów": pamięć podręczna zależy od dostawcy, modelu i zgodnego wyrenderowanego początku. Zgoda na decyzje nie oznacza automatycznej zgody na te pozycje.
 
-Zwykły Permissions Mode i mechanizmy przeglądu nadal obowiązują przy edycji. Zapisywane wspomnienia są początkowo wyłączone, dopóki ich nie włączysz. Zakres danych, zachowania zastępcze i przykłady opisują [Modele decyzyjne](../connections/decision-models.md), [Prompty warunkowe](../prompts/conditional-prompts.md), [Własni agenci](../agents/custom-agents.md#activation-questions) i [Wpisy lorebooka](../lorebooks/entries.md#decision-activation).
+Zwykły tryb uprawnień i mechanizmy przeglądu nadal obowiązują przy edycji. Zapisywane wspomnienia są początkowo wyłączone, dopóki ich nie włączysz. Zakres danych, zachowania zastępcze i przykłady opisują [Modele decyzyjne](../connections/decision-models.md), [Prompty warunkowe](../prompts/conditional-prompts.md), [Własni agenci](../agents/custom-agents.md#activation-questions) i [Wpisy lorebooka](../lorebooks/entries.md#decision-activation).
 
 ## Własne dokumenty Skill
 
 Skill to krótki dokument z instrukcjami, który zmienia sposób obsługi pewnego rodzaju próśb przez Professor Mari.
 
-Kliknij przycisk **Skills** w nagłówku jej czatu, żeby otworzyć panel **Professor Mari Skills**. Można w nim:
+Kliknij przycisk **Skills** w nagłówku jej czatu, żeby otworzyć panel **Professor Mari skills**. Można w nim:
 
 - Kliknąć przycisk **New**, żeby zacząć nowy Skill z szablonu.
 - Kliknąć przycisk **Upload**, żeby dodać Skill z pliku `.md` albo `.txt`.
@@ -136,7 +164,7 @@ Professor Mari zapamiętuje stałe preferencje, więc nie trzeba ich powtarzać 
 
 Wspomnienie można jej przekazać na dwa sposoby:
 
-- **Powiedz jej o tym.** Wystarczy zdanie w stylu "zapamiętaj, że wpisy w lorebookach zawsze opieram na imieniu postaci i jej przezwisku". Asystentka zapisuje je i pokazuje kartę do zatwierdzenia **Keep/Restore** z dokładnym brzmieniem. Zapisane wspomnienie jest na starcie **wyłączone**, więc niczego nie zmienia, dopóki go nie włączysz. Karta ma wtedy trzeci przycisk, **Keep & Enable** (zachowaj i włącz), który zapisuje wspomnienie i od razu je włącza.
+- **Powiedz jej o tym.** Wystarczy zdanie w stylu "zapamiętaj, że wpisy w lorebookach zawsze opieram na imieniu postaci i jej przezwisku". Asystentka zapisuje je i pokazuje kartę zmiany z dokładnym brzmieniem. Zapisane wspomnienie jest na starcie **wyłączone**, więc niczego nie zmienia, dopóki go nie włączysz. Karta ma przycisk **Turn on**, który od razu je włącza.
 - **Dodaj je samodzielnie.** Kliknij przycisk **Memories** (wspomnienia) w nagłówku jej czatu, żeby otworzyć panel **Memories**. Można w nim tworzyć, edytować, włączać, wyłączać i usuwać wspomnienia. Przycisk **Upload** wczytuje plik `.md` albo zwykły plik tekstowy i zamienia jego treść we wspomnienie.
 
 Asystentka zapisuje albo zmienia wspomnienie tylko wtedy, gdy **ty** ją o to poprosisz. Nigdy nie robi tego dlatego, że tak nakazuje przeczytana przez nią treść: postać, lorebook albo plik.
@@ -163,7 +191,15 @@ Kiedy asystentka pracuje, w nagłówku pojawia się przycisk **Stop**. Kliknięc
 
 Jeśli okno jej czatu zostaje otwarte, a ty przechodzisz na inną stronę, Professor Mari może podążać za tobą jako mały pływający dymek.
 
-Na telefonie albo wąskim ekranie zmienia się w mały okrągły awatar, który da się przeciągać. Dotknięcie go otwiera pełny czat z powrotem. Na szerokim ekranie pojawia się małe przeciągalne okno **Ask Professor Mari**. Każda wersja ma element sterujący, który chowa dymek do końca sesji.
+Na telefonie albo wąskim ekranie zmienia się w mały okrągły awatar, który da się przeciągać. Dotknięcie go otwiera pełny czat z powrotem. Na szerokim ekranie pojawia się małe przeciągalne okno **Ask Prof. Mari**. Każda wersja ma element sterujący, który chowa dymek do końca sesji.
+
+## Zaufanie i odzyskiwanie po błędach
+
+Otwórz **Aware of** w nagłówku czatu z Professor Mari, żeby zobaczyć, co zostanie dołączone do następnej wiadomości, co zostaje w tym czacie z Professor Mari i jak asystentka działa: jakim modelem odpowiada, jaki ma budżet kontekstu i czy jej polecenia powłoki działają w piaskownicy. Nagłówek pokazuje też oczekujące zatwierdzenia, dokumenty Skill i wspomnienia. Sprawdź je przed prośbą, kiedy potrzebujesz wiedzieć, co Professor Mari może przeczytać.
+
+Professor Mari wprowadza istotne zmiany w przestrzeni roboczej wyłącznie w ramach istniejących reguł zatwierdzania i przeglądu po stronie serwera. **Aware of** nie daje dodatkowego dostępu. Zmiany plików wrażliwych, zmiany zależności, limity powłoki i walidację danych aplikacji nadal egzekwuje serwer.
+
+Kiedy prośba się nie uda, zapis rozmowy zachowuje przyczynę błędu i pokazuje **Retry**, jeśli prośbę da się wysłać ponownie. Najpierw usuń wskazany problem z połączeniem, piaskownicą, możliwościami albo dostępem zdalnym, a potem ponów prośbę. Ponowienie nie rusza po cichu z wyszukiwania, FAQ ani stanu błędu. Zawsze uruchamia je użytkownik.
 
 ## Sekcja FAQ działa osobno od czatu
 
@@ -187,7 +223,10 @@ Professor Mari to asystentka, a nie pełna dokumentacja. Pamiętaj o tych ograni
 
 ## Rozwiązywanie problemów
 
-- Brak jakiejkolwiek odpowiedzi: sprawdź, czy przy ikonie ogniwa wybrane jest połączenie. Jeśli żadnego nie ma, otwórz panel **Connections** i dodaj jedno.
+- Brak jakiejkolwiek odpowiedzi: sprawdź połączenie pokazane w **Aware of** albo wybierz je przy ikonie ogniwa. Jeśli żadnego nie ma, otwórz panel **Connections** i dodaj jedno.
+- Przekazanie zawiera niewłaściwy element: usuń element kontekstu, zacznij od nowa albo przełącz się na właściwy czat z Professor Mari i otwórz przekazanie ponownie z miejsca, z którego pochodzi. Kontekst obejmuje tylko dane przekazanie i bieżący czat z Professor Mari.
+- Wynik nie pojawia się w edytorze: użyj **Open** na karcie wyniku. Professor Mari mogła wykonać polecenie, kiedy lista zasobów była nieaktualna.
+- Prośba się nie udaje: przeczytaj stan błędu, popraw wskazany problem z konfiguracją i użyj **Retry**. Zapytaj Professor Mari ponownie z pierwotnego źródła tylko wtedy, gdy sam kontekst nie jest już poprawny.
 - Komunikat wyskakujący "You haven't set up a connection yet": wybierz połączenie z listy rozwijanej pod ikoną ogniwa albo najpierw jakieś dodaj.
 - Asystentka nie odczytuje dołączonego obrazu: model musi obsługiwać obrazy na wejściu. Przełącz się na połączenie, którego model widzi obrazy.
 - Wyszukiwanie w Fandom nie działa: wymaga ono dostępu do internetu, bo Fandom to zewnętrzna strona.

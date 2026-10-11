@@ -50,7 +50,7 @@ Ta sekcja znajduje się w **Settings** > **General** > **App Behavior**. Steruje
 - **Confirm before deleting**: domyślnie włączone. Marinara pyta wtedy o potwierdzenie, zanim trwale usunie czat, postać albo inny element. Zostaw włączone, żeby uniknąć przypadkowych usunięć.
 - **Achievements**: domyślnie włączone. Ekran Home pokazuje wtedy przycisk osiągnięć i komunikaty o odblokowaniu. Po wyłączeniu śledzenie działa po cichu. Zobacz [Osiągnięcia](../home/achievements.md).
 - **Music Player**: domyślnie włączone. Widoczny jest wtedy kompaktowy odtwarzacz Music Player. Zobacz [Muzyka](../media/music.md).
-- **Mini Mari surprise visits**: domyślnie włączone. Podczas przewijania może się wtedy pojawić rzadka wiadomość od postaci Chibi Professor Mari. Wyłącz, jeśli przeszkadza.
+- **Search and Professor Mari settings** (ustawienia wyszukiwarki i asystentki Professor Mari): wybierz **Open** (otwarcie), żeby przejść do strony tych ustawień. Znajdują się tam wszystkie ustawienia wyszukiwarki Search i asystentki Professor Mari, w pięciu grupach: **Search** (propozycja ulepszenia pola, historia wyszukiwania), **Quick answers** (**Quick answers in Search**, **Answer with**, **Wait after typing**), **Professor Mari** (Ask Professor Mari from Search, tryb uprawnień, kafelki pod odpowiedziami, sposób otwierania kart zmian, Enter sends to Professor Mari), **Around the app** (Mini Professor Mari visits) oraz **Appearance** (jej wygląd: każdy pakiet pokazuje jej portret, używany ma oznaczenie **In use**, a zablokowany pokazuje postęp twojego czasu gry w drodze do jego odblokowania). Tę samą stronę otwiera ikona koła zębatego w wyszukiwarce Search, a wyszukanie dowolnego z tych ustawień, po nowej albo starej nazwie, prowadzi prosto do niego.
 
 ## Text Rules
 
@@ -104,7 +104,7 @@ Więcej przeczytasz w przewodniku [Działania na wiadomości: edycja, usuwanie, 
 
 ## Message Tools
 
-Sekcja **Message Tools** (narzędzia wiadomości) znajduje się w **Settings** > **Advanced** > **Message Tools**. To zestaw przełączników wyświetlania i naprawy. Każdy z poniższych przełączników jest domyślnie wyłączony. Tabela pokazuje, co robi każdy z nich i gdzie przeczytasz więcej.
+Sekcja **Message Tools** (narzędzia wiadomości) znajduje się w **Settings** > **Advanced** > **Message Tools**. To zestaw przełączników wyświetlania i naprawy. Każdy z poniższych przełączników jest domyślnie wyłączony, z wyjątkiem przełącznika **Show "older messages not sent" note** (informacja o niewysłanych starszych wiadomościach), który jest włączony. Tabela pokazuje, co robi każdy z nich i gdzie przeczytasz więcej.
 
 | Przełącznik | Co robi | Pełny przewodnik |
 | --- | --- | --- |
@@ -112,6 +112,7 @@ Sekcja **Message Tools** (narzędzia wiadomości) znajduje się w **Settings** >
 | **Show model name on messages** | Pokazuje, który model AI napisał daną odpowiedź. | [Działania na wiadomości: edycja, usuwanie, swipe'y, ponowne generowanie](../chats/messages.md) |
 | **Show token usage on messages** | Pokazuje liczbę tokenów promptu i odpowiedzi przy każdej wiadomości. | [Działania na wiadomości: edycja, usuwanie, swipe'y, ponowne generowanie](../chats/messages.md) |
 | **Show message numbers** | Pokazuje numer przy każdej wiadomości w czacie. | [Działania na wiadomości: edycja, usuwanie, swipe'y, ponowne generowanie](../chats/messages.md) |
+| **Show "older messages not sent" note** | Pokazuje pod najnowszą odpowiedzią informację, gdy starsze wiadomości nie zmieściły się w prompcie. Wyłącz, żeby ukryć tę informację w długich czatach. Ucięta albo pusta odpowiedź nadal pokazuje własną informację. | [Peek Prompt: zobacz, co dostał model AI](../chats/peek-prompt.md) |
 | **Guide swipes/regens with chat input** | Traktuje bieżący szkic jako wskazówkę przy generowaniu ponownym. | [Sterowane generowanie i Impersonate](../chats/guided-and-impersonate.md) |
 | **Quick replies** | Dodaje dodatkowe akcje szkicu obok przycisku Send. | [Sterowane generowanie i Impersonate](../chats/guided-and-impersonate.md) |
 | **Include reasoning in exports** | Dołącza ukryte rozumowanie do eksportów czatu. | [Eksport i import czatów](../chats/export-import.md) |

@@ -25,6 +25,8 @@ Ustawienie **Send on Enter** znajduje się w sekcji **Input & Editing**, w zakł
 | Conversations | On | Enter wysyła wiadomość |
 | Game | On | Enter wysyła wiadomość |
 
+Asystentka Professor Mari ma własny przełącznik, **Enter sends to Professor Mari** (wysyłanie do Professor Mari klawiszem Enter), w ustawieniach wyszukiwarki Search i asystentki Professor Mari (**Settings** > **General** > **Search and Professor Mari settings** > **Open**).
+
 Kiedy przełącznik danego trybu jest wyłączony, Enter dodaje nową linię. Wiadomość wysyłasz wtedy przyciskiem **Send**. W trybie Roleplay opcja jest domyślnie wyłączona, bo wiadomości w tym trybie bywają długie i potrzebują podziału na linie.
 
 ## Załączanie obrazów i plików

@@ -93,6 +93,18 @@ Wywołanie `marinara.ui.showWindow({ title, elements, onEvent, onClose })` zwrac
 - `button`: domyślnie zwarta akcja na górnym pasku albo akcja renderowana przez hosta na powierzchni `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` lub `settings`;
 - `menu-item`: akcja w menu **Extensions**;
 - `panel`: wpis, który otwiera zaufany panel boczny **Extensions** aplikacji Marinara Engine.
+- `command`: wpis w oknie Command Center, który uruchamia istniejący `button`, `menu-item` lub `panel` z tej samej wersji rozszerzenia.
+
+Wkłady `command` zawierają `targetContributionId` i nie mają wywołań zwrotnych `onActivate` ani `onEvent`. Host rozwiązuje cel na podstawie identyfikatora rozszerzenia, skrótu treści i identyfikatora wkładu. Brakujący cel albo cel z innej wersji kończy się odmową. Na przykład:
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-panel",
+});
+```
 
 Przyciski panelu bocznego przyjmują `position: "header"`, `"before-content"` lub `"after-content"`. Przyciski górnego paska pomijają `position`. Ikony to ograniczone długością nazwy kebab-case z katalogu Lucide aplikacji Marinara; nieobsługiwane nazwy wracają do ikony puzzla.
 

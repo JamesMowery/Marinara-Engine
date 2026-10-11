@@ -923,3 +923,83 @@ These are documented choices for this catchup, not a claim of independent native
 - **Reset Noodle Timeline** now first appears in the new `## Translation`
   section, so its one-time gloss *(wyczyszczenie osi czasu Noodle)* sits there,
   parallel to the section gloss *(wyczyszczenie Noodle)*.
+
+## Professor Mari and Search, older-messages note, Re-scan scenes, interactive onboarding (2026-10-11)
+
+Cycle precedents from the #7382 / #7396 / #7372 / #7309 sync:
+
+- **Search** (the `Cmd/Ctrl+K` surface) takes the carrier **wyszukiwarka Search**
+  (w wyszukiwarce Search, z wyszukiwarki Search), R-13 style, so a search for the
+  English name still hits. A bold **Search** is glossed once as *(wyszukiwarka)*.
+  The developer name of the same surface in extension docs, **Command Center**,
+  stays English behind the carrier **okno Command Center**. Neither replaces
+  *wyszukiwarka dokumentacji* (the docs viewer search).
+- The section about the **Quick answers in Search** toggle is headed
+  `## Funkcja Quick answers in Search` (R-19 carrier plus control name), which keeps
+  the literal label searchable.
+- Prof. Mari rename: the bold labels **Ask Prof. Mari**, **Prof. Mari** (the chat
+  widget preset, unglossed like **Dottore**), **Continue with Prof. Mari**, **Same as
+  Prof. Mari** and **Ask Prof. Mari more…** stay byte-exact. Prose *Mari* becomes
+  *Professor Mari*; *a Professor Mari chat* is **czat z Professor Mari**. The
+  developer-doc *Mari sprite* in `development/code-cleanup-audit.md` stays *Mari*,
+  because English kept it.
+- Lowercase English *permissions mode* is **tryb uprawnień**; its mode names stay
+  English (**w trybie Manual**). The old prose *Permissions Mode* is retired.
+- Her review card is now a **karta zmiany** (change card). Glosses: **Undo**
+  *(cofnięcie)*, **Undo until** *(cofnięcie możliwe do)*, **Undo closed** *(cofnięcie
+  niedostępne)*, **Not saved** *(nie zapisano)*, **Turn on** *(włączenie)* (replaces
+  **Keep & Enable**), **Show all** *(pokaż wszystko)*, **Technical details**
+  *(szczegóły techniczne)*, **Apply** *(zastosowanie)*, **Don't apply** *(rezygnacja
+  z zastosowania)*, **Delete** *(usunięcie)*, **Put back** *(przywrócenie)* in the
+  restore-a-deleted-item sense (the window control in
+  `appearance/custom-css-themes.md` keeps *(włożenie z powrotem)*), **Open**
+  *(otwarcie)*, **Review** keeps *(przejrzyj)*, **Retry** *(ponów)* (as
+  **Retry connection** *(ponów połączenie)*), **Try again** *(ponowna próba)*,
+  **Aware of** *(o czym wie)*. A handoff is a **przekazanie**; a context item is an
+  **element kontekstu**.
+- Quick answers: **Quick answer · Read-only** *(szybka odpowiedź, tylko do
+  odczytu)*, **Quick answers** *(szybkie odpowiedzi)*, **Quick answers in Search**
+  *(szybkie odpowiedzi w wyszukiwarce)*, **Answer with** *(źródło odpowiedzi)*,
+  **Wait after typing** *(czas oczekiwania po wpisaniu)*, **Copy** *(kopiowanie)*,
+  **Answer again** *(ponowna odpowiedź)*, **Continue with Prof. Mari**
+  *(kontynuacja z Professor Mari)*, **Ask Prof. Mari more…** *(dalsze pytania do
+  Professor Mari)*, **Choose a model** *(wybór modelu)*, **Details** *(szczegóły)*.
+- Settings: **Search and Professor Mari settings** *(ustawienia wyszukiwarki i
+  asystentki Professor Mari)*; **Ask Professor Mari from Search** *(pytania do
+  Professor Mari z wyszukiwarki)*; **Enter sends to Professor Mari** *(wysyłanie do
+  Professor Mari klawiszem Enter)*, parallel to **Send on Enter** *(wysyłanie
+  klawiszem Enter)*. In the settings-overview group lists, the unbolded setting
+  names (Ask Professor Mari from Search, Enter sends to Professor Mari, Mini
+  Professor Mari visits) stay English, as in the source.
+- **Show "older messages not sent" note** keeps its straight ASCII quotes inside the
+  bold and is glossed *(informacja o niewysłanych starszych wiadomościach)*; the
+  note itself is an **informacja**.
+- `agents/memory.md`: *scene check* is **sprawdzenie sceny** (sprawdzenia scen),
+  matching the existing *Standalone scene check interval* gloss; the *scene-end
+  check* form *sprawdzenie końca sceny* is retired. *Scene starts* are **początki
+  scen**. **Re-scan scenes** *(ponowne skanowanie scen)*, **Re-scan** *(uruchomienie
+  skanowania)*; the section `### Ponowne skanowanie scen` has no anchor and sits
+  above the `optional-jev-decisions` / `optional-decision-model` anchors.
+- *Interactive onboarding* is **interaktywny onboarding** (onboardingu,
+  onboardingiem), declined like any assimilated loanword (R-20); the guide's H1 is
+  `# Interaktywny onboarding`, and links to it use that text. Do not use
+  *wprowadzenie*, which already names the first-run tour (`home/tutorial.md:7`).
+  Label glosses: **Interactive onboarding** *(interaktywny onboarding)*, **How
+  onboarding works** *(jak działa onboarding)*, **Onboarding Questions** *(pytania
+  onboardingu)*, **Add Question** *(dodanie pytania)*, **Help text for players**
+  *(tekst pomocy dla graczy)*, **Allow own answer** *(zezwolenie na własną
+  odpowiedź)*, **Write your own** *(własna odpowiedź)*, **Available variables**
+  *(dostępne zmienne)*, **Rendered preview** *(podgląd wyniku)*, **Create your
+  persona** *(utworzenie własnej persony)*, **Create persona** *(utworzenie
+  persony)*, **Your Persona** *(twoja persona)*, **Persona & Characters** *(persona i
+  postacie)*, **Value** *(wartość)* here (the preset editor's *(tekst wstawiany do
+  promptu)* describes a different target). **Variable Name**, **Question (shown to
+  user)** and **Multi-Select** reuse the `prompts/preset-variables.md` glosses.
+  **Options** is glossed lowercase *(opcje)* per RR-4, against the single older
+  *(Opcje)* at `prompts/preset-variables.md:32`. The wizard **Next** is *(dalej)*,
+  not the Card Browser page button's *(następna)*.
+- Residual 5 update: the three em dashes in the `extending/personal-extensions.md`
+  contribution-kinds paragraph became en dashes (R-99) when that paragraph was
+  rewritten for `kind: "command"`; that file no longer carries an em dash.
+
+These are documented choices for this sync, not a claim of independent native-reader review.

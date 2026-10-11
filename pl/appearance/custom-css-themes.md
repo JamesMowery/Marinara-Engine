@@ -6,7 +6,7 @@ Z tego przewodnika dowiesz się, jak zmienić cały wygląd aplikacji Marinara E
 
 ## Gotowe style okien czatu
 
-Aby zmienić wygląd bez pisania CSS, otwórz **Settings > Appearance > App** (ustawienia, wygląd, aplikacja) i znajdź **Chat widget style** (styl widgetów czatu) na dole sekcji **App Style** (styl aplikacji). **Dottore** nadaje kontrolkom czatu lodowoniebieskie ramki przywodzące na myśl aparaturę, jasne metalowe krawędzie i przycięte narożniki. **Mari** dodaje baśniowe ramki ze złotym wykończeniem, błękity kamieni szlachetnych i Primogemy przy tytułach okien. Przyciski tego presetu mają takie samo tło jak okna. Każdy preset ma własną czcionkę, działa w jasnym i ciemnym trybie i obejmuje przyciski, okna oraz rozwijane sekcje.
+Aby zmienić wygląd bez pisania CSS, otwórz **Settings > Appearance > App** (ustawienia, wygląd, aplikacja) i znajdź **Chat widget style** (styl widgetów czatu) na dole sekcji **App Style** (styl aplikacji). **Dottore** nadaje kontrolkom czatu lodowoniebieskie ramki przywodzące na myśl aparaturę, jasne metalowe krawędzie i przycięte narożniki. **Prof. Mari** dodaje baśniowe ramki ze złotym wykończeniem, błękity kamieni szlachetnych i Primogemy przy tytułach okien. Przyciski tego presetu mają takie samo tło jak okna. Każdy preset ma własną czcionkę, działa w jasnym i ciemnym trybie i obejmuje przyciski, okna oraz rozwijane sekcje.
 
 Opcje **Font** (czcionka) i **Shape** (kształt) pozwalają zmieniać te elementy osobno. **Preset font** (czcionka presetu) i **Preset shape** (kształt presetu) korzystają z wybranego stylu.
 
@@ -26,7 +26,7 @@ Aby przenieść ten wygląd na resztę czatu, użyj trzech przełączników pod 
 - **Apply preset shape** (zastosowanie kształtu presetu) stosuje wybrany kształt ramki w wiadomościach Roleplay w układzie klasycznym i visual novel, polu dialogowym Game, uwagach pobocznych, widgetach paska HUD, panelu mapy i kartach postaci, polach wpisywania oraz kontrolkach. Wiadomości Conversation zachowują swój kształt.
 - **Apply preset colors** (zastosowanie kolorów presetu) stosuje kolory obramowań, tła i tekstu widgetów w tych obszarach, także w wiadomościach Conversation. Uwzględnia też własne kolory i gradienty. Wypowiedzi w cudzysłowie zachowują kolor Dialogue Highlight Color ustawiony dla danej postaci lub persony.
 
-Każdy przełącznik jest początkowo wyłączony i działa niezależnie. Możesz na przykład użyć czcionki Mari, zachowując zwykłe kolory czatu. Wyłączenie przełącznika przywraca zwykły wygląd odpowiedniej części czatu. Wybranie innego presetu zachowuje ustawienia przełączników. Asystentka Professor Mari może też tworzyć własne motywy dla tych obszarów.
+Każdy przełącznik jest początkowo wyłączony i działa niezależnie. Możesz na przykład użyć czcionki Professor Mari, zachowując zwykłe kolory czatu. Wyłączenie przełącznika przywraca zwykły wygląd odpowiedniej części czatu. Wybranie innego presetu zachowuje ustawienia przełączników. Asystentka Professor Mari może też tworzyć własne motywy dla tych obszarów.
 
 Własne motywy CSS nadal mogą nadpisywać te presety. Opisane niżej publiczne zmienne okien i sekcji mają pierwszeństwo przed kolorami presetu. Zmienna `--mari-window-font-family` ustawia czcionkę okien, `--mari-drawer-radius` zmienia narożniki sekcji, a `--mari-window-ornament: none` ukrywa ozdobę przy tytule. Aby usunąć wszystkie ozdoby presetu, najpierw wybierz **Default**.
 

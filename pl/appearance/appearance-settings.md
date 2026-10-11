@@ -47,7 +47,7 @@ Naraz działa tylko jedna z tych opcji. Włączenie **RGB Mode** wyłącza **Acc
 
 ## Chat widget style
 
-Na dole sekcji **App Style** wybierz **Default** (domyślny), **Dottore** lub **Mari** dla przesuwanych przycisków, okien i sekcji czatu. Czcionkę, kształt ramki i trzy główne kolory można zmieniać osobno. Narzędzia wyboru kolorów obsługują też gradienty.
+Na dole sekcji **App Style** wybierz **Default** (domyślny), **Dottore** lub **Prof. Mari** dla przesuwanych przycisków, okien i sekcji czatu. Czcionkę, kształt ramki i trzy główne kolory można zmieniać osobno. Narzędzia wyboru kolorów obsługują też gradienty.
 
 **Button size (px)** (rozmiar przycisków w pikselach) zmienia rozmiar przesuwanych przycisków czatu i ich ikon bez zmiany ustawienia Display Size. Wpisz rozmiar od 32 do 96 pikseli. Zostaw pole puste lub użyj jego przycisku resetowania, aby zachować bieżący rozmiar domyślny. Rozmiar zapisuje się w preferencjach wyglądu i nie zmienia się po wybraniu innego presetu.
 

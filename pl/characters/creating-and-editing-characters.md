@@ -35,10 +35,11 @@ Po prawej stronie u góry są takie przyciski:
 
 Przy próbie wyjścia z niezapisaną pracą pojawia się baner o treści `You have unsaved changes. Close without saving?` Daje do wyboru **Keep editing**, **Discard & close** oraz **Save & close**.
 
-Edytor dzieli się na zakładki. Na szerokim ekranie biegną one wzdłuż lewej krawędzi. Na wąskim zamieniają się w przewijany pasek u góry. Zakładki po kolei to **Metadata**, **Card**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** i **Advanced**.
+Edytor dzieli się na zakładki. Na szerokim ekranie biegną one wzdłuż lewej krawędzi. Na wąskim zamieniają się w przewijany pasek u góry. Zakładki po kolei to **Metadata**, **Card**, **Onboarding**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** i **Advanced**.
 
 Ten przewodnik omawia zakładki **Metadata**, **Card**, **Voice** i **Advanced**, a do tego awatary i historię wersji. Pozostałe zakładki mają własne przewodniki:
 
+- **Onboarding**: [Interaktywny onboarding](interactive-onboarding.md).
 - **Convo**: [Profile w trybie Conversation Mode (nazwa wyświetlana, About Me, zachowanie)](../conversation/profiles.md).
 - **Lorebook**: [Podpinanie lorebooków do postaci i person](../lorebooks/linking-to-characters.md).
 - **Sprites**: [Sprite'y postaci](sprites.md).
@@ -175,6 +176,7 @@ Jeśli tekst zmienił się już po zgłoszeniu propozycji, aplikacja ostrzega, z
 ## Powiązane przewodniki
 
 - [Persony użytkownika: tworzenie i edycja](personas.md)
+- [Interaktywny onboarding](interactive-onboarding.md)
 - [Sprite'y postaci](sprites.md)
 - [Galerie postaci i person](galleries.md)
 - [Importowanie i eksportowanie kart postaci](import-export.md)
