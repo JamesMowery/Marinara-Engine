@@ -35,10 +35,11 @@
 
 При попытке уйти с несохраненной работой появляется предупреждение `You have unsaved changes. Close without saving?` В нем есть варианты **Keep editing**, **Discard & close** и **Save & close**.
 
-Редактор разделен на вкладки. На широком экране они идут по левому краю, на узком превращаются в прокручиваемую полосу сверху. Порядок вкладок такой: **Metadata**, **Card**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** и **Advanced**.
+Редактор разделен на вкладки. На широком экране они идут по левому краю, на узком превращаются в прокручиваемую полосу сверху. Порядок вкладок такой: **Metadata**, **Card**, **Onboarding**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** и **Advanced**.
 
 Это руководство разбирает вкладки **Metadata**, **Card**, **Voice** и **Advanced**, а также аватары и историю версий. У остальных вкладок есть свои руководства:
 
+- **Onboarding**: [Интерактивный онбординг](interactive-onboarding.md).
 - **Convo**: [Профили в режиме Conversation (отображаемое имя, "about me", поведение)](../conversation/profiles.md).
 - **Lorebook**: [Привязка лорбуков к персонажам](../lorebooks/linking-to-characters.md).
 - **Sprites**: [Спрайты персонажа (выражения лица и Full-body)](sprites.md).
@@ -175,6 +176,7 @@
 ## Смежные руководства
 
 - [Персоны: создание и редактирование](personas.md)
+- [Интерактивный онбординг](interactive-onboarding.md)
 - [Спрайты персонажа (выражения лица и Full-body)](sprites.md)
 - [Галереи персонажей и персон](galleries.md)
 - [Импорт и экспорт карточек персонажей](import-export.md)

@@ -93,6 +93,18 @@ Worker получает только:
 - `button`: компактное действие верхней панели по умолчанию либо действие, отрисованное хостом на поверхности `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` или `settings`;
 - `menu-item`: действие в меню **Extensions**;
 - `panel`: пункт, который открывает доверенную боковую панель **Extensions** приложения Marinara.
+- `command`: пункт Command Center, который активирует существующий `button`, `menu-item` или `panel` из той же ревизии расширения.
+
+Команды содержат `targetContributionId` и не имеют обратных вызовов `onActivate` или `onEvent`. Хост находит цель по идентификатору расширения, хешу содержимого и идентификатору вклада. Отсутствующая цель или цель из другой ревизии отклоняется. Например:
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-panel",
+});
+```
 
 Кнопки боковой панели принимают `position: "header"`, `"before-content"` или `"after-content"`. Кнопки верхней панели не указывают `position`. Значки задаются ограниченными именами kebab-case из каталога Lucide в Marinara; неподдерживаемое имя заменяется значком пазла.
 
