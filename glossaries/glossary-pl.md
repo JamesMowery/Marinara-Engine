@@ -1008,3 +1008,14 @@ Cycle precedents from the #7382 / #7396 / #7372 / #7309 sync:
   ("przez aplikację Marinara Engine", R-10); the file's other residual 11 uses stay.
 
 These are documented choices for this sync, not a claim of independent native-reader review.
+
+## DeepSeek provider (2026-10-11)
+
+- The reasoning level **Medium** is glossed *(średni)*, completing the Z.AI set
+  **Low** *(niski)*, **High** *(wysoki)*, **Maximum** *(maksymalny)*
+  (`connections/providers-reference.md:124`); `prompts/generation-parameters.md:43`
+  lists the levels unglossed.
+- *DeepSeek* stays undeclined behind **usługa DeepSeek** / **model DeepSeek**
+  (R-13). *The penalties* are **kary za powtórzenia**
+  (`prompts/generation-parameters.md:41`); **Verbosity**, **Top K** and **Top P**
+  stay unglossed behind the carriers **ustawienia** / **parametry**.

@@ -123,6 +123,19 @@ Ten sam wskaźnik znajduje się pod wskaźnikiem kontekstu w selektorze połącz
 
 **Z.AI** udostępnia modele GLM (GLM 5.3, GLM 5.3 Flash i starsze) przez własne API. Lista rozwijana **Model** zawiera aktualne modele GLM, a przycisk **Fetch Models from API** odświeża ją na podstawie twojego konta. Modele GLM 5.3 zawsze korzystają z rozumowania: ustawienie **Reasoning Effort** (poziom rozumowania) w presecie jest przeliczane na trzy poziomy obsługiwane przez usługę Z.AI: **Low** (niski), **High** (wysoki) i **Maximum** (maksymalny). Jeśli pozostawisz je nieustawione, usługa użyje swojego poziomu domyślnego, czyli **Maximum**. Domyślny adres bazowy prowadzi do punktu końcowego rozliczanego za zużycie. Plan Coding Plan w usłudze Z.AI korzysta z innego punktu końcowego, który zgodnie z zasadami dostawcy jest zarezerwowany dla narzędzi z jego listy, więc nie należy oczekiwać, że klucz tego planu zadziała tutaj.
 
+## DeepSeek
+
+- Skąd wziąć klucz: `https://platform.deepseek.com/api_keys`
+- Domyślny adres bazowy: `https://api.deepseek.com/v1`
+
+**DeepSeek** udostępnia własne modele czatu, `deepseek-flash` i `deepseek-v4-pro`. Po wklejeniu klucza lista rozwijana **Model** zawiera oba te modele, a przycisk **Fetch Models from API** odświeża ją na podstawie twojego konta.
+
+Usługa DeepSeek domyślnie korzysta z myślenia. Ustawienie **Reasoning Effort** używa tu własnych poziomów usługi DeepSeek – **Low**, **High** i **Maximum** – a **Off** (wyłączone) wyłącza myślenie w danym zapytaniu. Poziomu **Medium** (średni) nie ma: zapytanie o średni poziom usługa DeepSeek obsługuje jak **High**, więc Marinara oferuje **High** zamiast drugiego przycisku, który robiłby to samo. Myślenie modelu widać w odpowiedzi w zwykłym podglądzie myślenia.
+
+Część ustawień w panelu parametrów nie dotyczy usługi DeepSeek, więc panel je pomija, zamiast udawać, że działają. Należą do nich ustawienia **Verbosity** i **Top K** oraz kary za powtórzenia: usługa DeepSeek wycofała je i ignoruje. Parametry **Temperature** (losowość) i **Top P** tworzą parę – usługa DeepSeek używa naraz tylko jednego z nich, zależnie od tego, czy myśli – więc przy wyłączonym myśleniu widzisz **Temperature**, a przy włączonym **Top P**.
+
+Połącz się z usługą DeepSeek tutaj, zamiast kierować dostawcę **OpenAI** na adres usługi DeepSeek. Dostawca **OpenAI** oczekuje własnych modeli OpenAI, więc przy modelu DeepSeek ukrywa opcje generowania i nie wysyła prawie żadnego z twoich ustawień.
+
 ## Claude (Subscription)
 
 - Klucz API: brak. Zamiast tego logujesz się w lokalnym narzędziu.
