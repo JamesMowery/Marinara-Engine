@@ -479,8 +479,8 @@
     },
     {
       "path": "home/professor-mari.md",
-      "sha256": "6a92526217b6f8dbd8284aeea9c4e659473bc2f2924c0bce71caa0a8146e5d67",
-      "bytes": 61655
+      "sha256": "c95ef67b7e08e021a6bf1205a65f12ada983a7d15c2c63c26f5551d838e7df3c",
+      "bytes": 61753
     },
     {
       "path": "home/tutorial.md",
@@ -684,8 +684,8 @@
     },
     {
       "path": "settings/settings-overview.md",
-      "sha256": "dce632121bcee0e160c21dabd4c4d4c77a216716531bdbd11ed121a60626c29d",
-      "bytes": 27313
+      "sha256": "ac83ad8974552a91a6ac6e05446f5d48a33a6b13e4fbecb5d9c73e40360bb33a",
+      "bytes": 27405
     }
   ]
 }
