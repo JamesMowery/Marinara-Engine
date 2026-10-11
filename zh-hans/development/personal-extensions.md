@@ -93,6 +93,18 @@ worker 能拿到的只有：
 - `button`：默认是顶栏的紧凑操作项，也可以是由宿主渲染在 `chats`、`bots`、`characters`、`personas`、`lorebooks`、`presets`、`connections`、`agents` 或 `settings` 界面的操作项；
 - `menu-item`：Extensions 菜单里的一个操作项；
 - `panel`：一个入口，点开后进入 Marinara 受信任的 Extensions 侧边面板。
+- `command`：Command Center(命令中心) 里的一个条目，用来激活同一扩展修订版本中已有的 `button`、`menu-item` 或 `panel`。
+
+命令包含 `targetContributionId`，没有 `onActivate` 或 `onEvent` 回调。宿主按扩展 ID、内容哈希和贡献项 ID 解析目标。目标缺失或来自其他修订版本时，按拒绝方式失败。例如：
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-panel",
+});
+```
 
 侧栏按钮接受 `position: "header"`、`"before-content"` 或 `"after-content"`。顶栏按钮省略 `position`。图标使用 Marinara 的 Lucide 图标目录中受限的 kebab-case 名称；不支持的名称会回退到拼图图标。
 

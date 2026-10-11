@@ -605,3 +605,38 @@ The bare result is described with 按原样发出, the same phrase as the **NONE
 | Save translator defaults (chat **Translation** settings button) | 保存翻译默认设置 | `chat.translation.defaults.save` has no zh-Hans string, so the button renders in English. "translator defaults" in prose is **翻译默认设置**; the pack already uses 默认设置 for saved defaults. |
 
 **Translate** keeps (翻译) and a hidden translation is 隐藏, matching **Hide translation**(隐藏译文) in `integrations/message-translation.md`. A translation shown under a post is **译文**. These are translation choices, not a new native-reader review.
+
+## Professor Mari, Search and interactive onboarding (2026-10-11)
+
+Cycle precedent for the #7382, #7396, #7372 and #7309 sync. None of these labels has a zh-Hans string except where noted, so they render in English.
+
+| English label or term | Gloss / rendering | Note |
+| --- | --- | --- |
+| Ask Prof. Mari | 问问 Professor Mari | Same gloss as **Ask Professor Mari** (§5.4). The gloss spells out the product name; it is never 询问 Mari 教授. |
+| Prof. Mari (chat widget style preset) | no gloss | A style name, like **Dottore**. |
+| Search (the `Cmd/Ctrl+K` feature) | Latin **Search** in prose; first plain mention Search(搜索栏) | The settings group **Search** takes (搜索). A lowercase "a search" is 搜索. |
+| Search and Professor Mari settings | Search 与 Professor Mari 设置 | Also the prose name of the settings page. |
+| Ask Professor Mari from Search | 从 Search 问问 Professor Mari | |
+| Quick answers / quick answer | 快速回答 | **Quick answers in Search** is (Search 中的快速回答), also the heading; **Quick answer · Read-only** is (快速回答，只读). |
+| Answer again / Continue with Prof. Mari / Ask Prof. Mari more… | 重新回答 / 和 Professor Mari 接着聊 / 继续问 Professor Mari | |
+| Wait after typing / Answer with / Same as Prof. Mari | 输入后等待 / 回答使用 / 与 Professor Mari 相同 | |
+| Try again / Retry | 再试一次 / 重试 | Kept distinct although the app uses 重试 for both. |
+| Choose a model | 选择模型 | |
+| Aware of | 已知晓 | The context chips are 小标签. |
+| change card | 改动卡片 | Replaces the retired Keep/Restore 审查卡片. |
+| Show all / Technical details / Undo / Not saved | 全部显示 / 技术细节 / 撤销 / 未保存 | |
+| Undo until / Undo closed | 可撤销至 / 已无法撤销 | |
+| Apply / Don't apply / Put back / Open / Review / Turn on | 应用 / 不应用 / 放回 / 打开 / 审查 / 开启 | **Review** follows `home/professor-mari.md`'s 审查 for reviewing changes. |
+| permissions mode (prose) | 权限模式 | Manual mode is Manual 模式. |
+| Enter sends to Professor Mari | 按 Enter 发送给 Professor Mari | |
+| Mini Professor Mari visits / Around the app / In use | 迷你 Professor Mari 来访 / 应用各处 / 使用中 | An appearance pack is a 形象包. |
+| Command Center | 命令中心 | An extension revision is a 修订版本; "fails closed" is 按拒绝方式失败, as in `development/game-rulesets-and-sheets-implementation.md`. |
+| Show "older messages not sent" note | 显示“较早消息未发送”提示 | The label keeps its straight ASCII quotes; the gloss uses the pack's curly quotes. |
+| Re-scan scenes / Re-scan | 重新扫描场景 / 重新扫描 | 重新扫描 matches **Rescan** in `game/game-assets.md`. |
+| scene check / scene change / scene starts | 场景检查 / 场景变化 / 场景起点 | `agents/memory.md` no longer uses 场景结束检查. Out-of-character is 戏外. |
+| interactive onboarding | 交互式引导 | Never 新手引导, which is the app tutorial (`home/tutorial.md`). The **Onboarding** tab and the **Interactive onboarding** switch both take (交互式引导). |
+| How onboarding works / Onboarding Questions / Add Question | 交互式引导的用法 / 引导问题 / 添加问题 | |
+| Help text for players / Allow own answer / Write your own | 给玩家的说明文字 / 允许自己作答 / 自己填写 | |
+| Create your persona / Create persona / Your Persona | 创建你的用户角色 / 创建用户角色 / 你的用户角色 | A persona template is a 用户角色模板; the player is the 玩家. |
+
+Reused glosses: **Variable Name**(变量名), **Question (shown to user)**(向用户展示的提问), **Options**(选项), **Value**(值) and **Multi-Select**(多选) from `prompts/preset-variables.md`; **Available variables**(可用变量) and **Rendered preview**(渲染预览) from `prompts/prompt-overrides.md`; **Persona & Characters**(用户角色与角色) from `roleplay/getting-started.md`. These are translation choices, not a new native-reader review.

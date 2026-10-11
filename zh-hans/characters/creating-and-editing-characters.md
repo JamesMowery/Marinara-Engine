@@ -35,10 +35,11 @@ Character Editor 会把聊天区域换成一整页的工作区，顶部横贯的
 
 如果改动还没保存就想离开，会出现一条提示：`You have unsaved changes. Close without saving?`，并给出 **Keep editing**(继续编辑)、**Discard & close**(放弃并关闭) 和 **Save & close**(保存并关闭) 三个选择。
 
-编辑器分成若干选项卡。屏幕够宽时，选项卡竖排在左侧；屏幕较窄时，它们变成顶部一条可横向滚动的条。选项卡依次是 **Metadata**、**Card**、**Convo**(对话)、**Lorebook**(世界书)、**Sprites**(立绘)、**Gallery**(图库)、**Colors**(颜色)、**Voice**、**Stats**(属性) 和 **Advanced**。
+编辑器分成若干选项卡。屏幕够宽时，选项卡竖排在左侧；屏幕较窄时，它们变成顶部一条可横向滚动的条。选项卡依次是 **Metadata**、**Card**、**Onboarding**(交互式引导)、**Convo**(对话)、**Lorebook**(世界书)、**Sprites**(立绘)、**Gallery**(图库)、**Colors**(颜色)、**Voice**、**Stats**(属性) 和 **Advanced**。
 
 本指南讲 **Metadata**、**Card**、**Voice**、**Advanced**，以及头像和版本历史。其余选项卡各有专门的指南：
 
+- **Onboarding**：[交互式引导](interactive-onboarding.md)。
 - **Convo**：[Conversation Mode 个人资料](../conversation/profiles.md)。
 - **Lorebook**：[把世界书关联到角色](../lorebooks/linking-to-characters.md)。
 - **Sprites**：[角色立绘](sprites.md)。
@@ -175,6 +176,7 @@ Character Editor 会把聊天区域换成一整页的工作区，顶部横贯的
 ## 相关指南
 
 - [用户角色：创建与编辑](personas.md)
+- [交互式引导](interactive-onboarding.md)
 - [角色立绘](sprites.md)
 - [角色与用户角色图库](galleries.md)
 - [导入和导出角色卡](import-export.md)
