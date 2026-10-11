@@ -123,6 +123,19 @@ NanoGPTが現在報告できない割り当ては、未使用ではなく**不�
 
 **Z.AI**は、GLMモデル(GLM 5.3、GLM 5.3 Flash、およびそれ以前のモデル)を独自のAPIで提供しています。**Model**ドロップダウンには現在のGLMモデルが表示され、**Fetch Models from API**でアカウントから一覧を更新できます。GLM 5.3モデルは常に推論を行います。プリセットの**Reasoning Effort**(推論の強度)は、Z.AIが受け付ける**Low**(低)、**High**(高)、**Maximum**(最大)の3段階に対応付けられます。未設定の場合は、Z.AIのデフォルトである**Maximum**が使われます。デフォルトのBase URLは従量課金用のエンドポイントです。Z.AIのCoding Planは別のエンドポイントを使い、利用規約では指定の一覧にあるツール専用とされています。そのため、この接続でCoding Planのキーが動作することは想定されていません。
 
+## DeepSeek
+
+- キーの入手先: `https://platform.deepseek.com/api_keys`
+- デフォルトのBase URL: `https://api.deepseek.com/v1`
+
+**DeepSeek**は、独自のチャットモデルである`deepseek-flash`と`deepseek-v4-pro`を提供しています。キーを貼り付けると**Model**ドロップダウンにこれらのモデルが表示され、**Fetch Models from API**でアカウントから一覧を更新できます。
+
+DeepSeekはデフォルトで思考します。**Reasoning Effort**(推論の強度)には、DeepSeek独自の段階である**Low**(低)、**High**(高)、**Maximum**(最大)を使います。**Off**(オフ)にすると、そのリクエストでは思考を行いません。**Medium**はありません。DeepSeekは中程度の指定をHighとして処理するため、同じ動作になる2つ目のボタンを置く代わりに、MarinaraはHighを用意しています。思考の内容は、いつもの思考表示で返信に表示されます。
+
+パラメーターパネルの設定には、DeepSeekに適用されないものがあります。パネルはそれらを効くように見せかけるのではなく、表示から外します。**Verbosity**、**Top K**、各種ペナルティーもその一部です。DeepSeekはこれらを廃止しており、指定しても無視します。**Temperature**(温度)と**Top P**は対になっています。DeepSeekは、思考しているかどうかに応じて一度にどちらか一方しか使いません。そのため、思考がオフのときは**Temperature**が、オンのときは**Top P**が表示されます。
+
+DeepSeekにつなぐときは、**OpenAI**プロバイダーにDeepSeekのURLを指定するのではなく、このプロバイダーを使ってください。OpenAIプロバイダーはOpenAI自身のモデルを前提としているため、DeepSeekのモデルでは生成の設定項目が非表示になり、設定のほとんどが送信されません。
+
 ## Claude (Subscription)
 
 - APIキー: 不要です。代わりにローカルのツールにサインインします。
