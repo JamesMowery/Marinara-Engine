@@ -25,6 +25,8 @@ El ajuste **Send on Enter** está en **Settings** (Configuración), en la pesta�
 | Conversations | On | Enter envía el mensaje |
 | Game | On | Enter envía el mensaje |
 
+Professor Mari tiene su propio interruptor, **Enter sends to Professor Mari** (Enter envía a Professor Mari), en los ajustes de Search y Professor Mari (**Settings** > **General** > **Search and Professor Mari settings** > **Open**).
+
 Cuando el interruptor de un modo está desactivado, pulsar Enter agrega una línea nueva en su lugar. Luego haces clic en **Send** para publicar el mensaje. Roleplay está desactivado de forma predeterminada porque los mensajes de roleplay suelen ser largos y necesitan saltos de línea.
 
 ## Adjuntar imágenes y archivos

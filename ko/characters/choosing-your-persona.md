@@ -30,6 +30,8 @@ Game Mode(게임 모드)에서는 이 섹션이 게임 내 파티라는 형태�
 
 New Chat 설정 마법사에는 **Your Persona** 입력란이 있습니다. 여기서도 같은 검색형 선택 창과 **None** 항목을 씁니다. New Game Setup 마법사에서는 같은 입력란의 이름이 **Player's Persona**(플레이어 페르소나)입니다.
 
+Roleplay(롤플레이) 채팅에서는 캐릭터 카드가 이 선택 창 맨 위에 **Create your persona**(내 페르소나 만들기)를 제공할 수 있습니다. 이 항목을 고르면 카드의 질문에 답해 새 페르소나를 만듭니다. [대화형 온보딩](interactive-onboarding.md)을 참고하세요.
+
 ## Quick Persona Switcher
 
 채팅을 열면 메시지 입력란 근처에 작고 둥근 아바타 버튼이 생깁니다. 이것이 **Quick Persona Switcher**(빠른 페르소나 전환기)입니다. 페르소나를 지정하지 않은 상태에서는 툴팁에 이 이름이 표시됩니다.
@@ -53,4 +55,5 @@ Game Mode에서는 New Game Setup 마법사에서 페르소나를 선택합니�
 ## 관련 가이드
 
 - [사용자 페르소나: 만들기 및 편집](personas.md)
+- [대화형 온보딩](interactive-onboarding.md)
 - [채팅 설정 개요](../chats/chat-settings.md)

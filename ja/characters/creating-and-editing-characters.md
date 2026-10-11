@@ -35,10 +35,11 @@ Character Editorは、チャット領域を全画面の作業スペースに置�
 
 保存していない変更がある状態で画面を離れようとすると、`You have unsaved changes. Close without saving?`というバナーが表示されます。選べるのは**Keep editing**(編集を続ける)、**Discard & close**(破棄して閉じる)、**Save & close**(保存して閉じる)の3つです。
 
-エディターはタブに分かれています。画面幅が広いときはタブが左側に縦に並び、狭いときは上部で横スクロールする帯になります。タブは順に**Metadata**、**Card**、**Convo**、**Lorebook**、**Sprites**、**Gallery**、**Colors**、**Voice**、**Stats**、**Advanced**です。
+エディターはタブに分かれています。画面幅が広いときはタブが左側に縦に並び、狭いときは上部で横スクロールする帯になります。タブは順に**Metadata**、**Card**、**Onboarding**、**Convo**、**Lorebook**、**Sprites**、**Gallery**、**Colors**、**Voice**、**Stats**、**Advanced**です。
 
 このガイドで説明するのは**Metadata**、**Card**、**Voice**、**Advanced**の4つのタブと、アバター、バージョン履歴です。ほかのタブにはそれぞれ専用のガイドがあります。
 
+- **Onboarding**: [対話式オンボーディング](interactive-onboarding.md)。
 - **Convo**: [Conversationモードのプロフィール](../conversation/profiles.md)。
 - **Lorebook**: [ロアブックをキャラクターやペルソナに結び付ける](../lorebooks/linking-to-characters.md)。
 - **Sprites**: [キャラクターのスプライト(表情と全身)](sprites.md)。
@@ -175,6 +176,7 @@ Roleplayのチャット中、任意のエージェントが場面の展開に合
 ## 関連ガイド
 
 - [ペルソナの作成と編集](personas.md)
+- [対話式オンボーディング](interactive-onboarding.md)
 - [キャラクターのスプライト(表情と全身)](sprites.md)
 - [キャラクターとペルソナのギャラリー](galleries.md)
 - [キャラクターカードのインポートとエクスポート](import-export.md)

@@ -24,7 +24,7 @@ Na komputerze kliknij **X** obok wskazówek dotyczących układu, z podpowiedzi�
 
 ## Zmiana wyglądu okien czatu
 
-Otwórz **Settings > Appearance > App** (ustawienia, wygląd, aplikacja) i przewiń do **Chat widget style** (styl widgetów czatu) na dole sekcji **App Style** (styl aplikacji). **Default** (domyślny) zachowuje znajomy wygląd aplikacji Marinara Engine. **Dottore** łączy lodowe błękity i jasny metal z techniczną czcionką i przyciętymi narożnikami; **Mari** zestawia błękity kamieni szlachetnych i ciepłe złoto z baśniową czcionką i łukowatymi ramkami. Oba style dostosowują się do jasnego i ciemnego trybu oraz obejmują przesuwane przyciski, okna i rozwijane sekcje we wszystkich trzech trybach czatu.
+Otwórz **Settings > Appearance > App** (ustawienia, wygląd, aplikacja) i przewiń do **Chat widget style** (styl widgetów czatu) na dole sekcji **App Style** (styl aplikacji). **Default** (domyślny) zachowuje znajomy wygląd aplikacji Marinara Engine. **Dottore** łączy lodowe błękity i jasny metal z techniczną czcionką i przyciętymi narożnikami; **Prof. Mari** zestawia błękity kamieni szlachetnych i ciepłe złoto z baśniową czcionką i łukowatymi ramkami. Oba style dostosowują się do jasnego i ciemnego trybu oraz obejmują przesuwane przyciski, okna i rozwijane sekcje we wszystkich trzech trybach czatu.
 
 Użyj opcji **Font** (czcionka), **Shape** (kształt) i trzech narzędzi wyboru kolorów pod presetami, aby dopasować wygląd. Lista czcionek zawiera też te zainstalowane w aplikacji Marinara Engine. Ponowne wybranie presetu przywraca jego czcionkę, kształt i kolory. Nie zmienia to położenia okien ani zapisanych układów czatów. Te wybory zapisują się w preferencjach aplikacji i synchronizują z przeglądarkami połączonymi z tym samym serwerem.
 

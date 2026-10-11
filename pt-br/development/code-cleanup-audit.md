@@ -23,7 +23,7 @@ Concluído:
 
 Mantido de propósito, para um trabalho separado de compatibilidade ou de produto:
 
-- `@rollup/wasm-node` e `Mari_point_down_left.png`;
+- `@rollup/wasm-node`;
 - exports do servidor que podem ser APIs usadas fora do repositório ou pontos de acesso para testes;
 - a unificação do parser de PNG e da geometria dos tutoriais;
 - as refatorações amplas do editor/compositor e dos módulos grandes;
@@ -203,9 +203,7 @@ Não aplique esse teste de "uma única ocorrência textual" em massa ao `package
 
 ## 5. Candidato entre os arquivos estáticos
 
-O arquivo `packages/client/public/sprites/mari/Mari_point_down_left.png` é o único sprite da Mari empacotado cujo nome de arquivo e caminho não aparecem em lugar nenhum do repositório. Os arquivos vizinhos da Mari têm referência.
-
-**Recomendação (confiança média):** verifique se nenhuma convenção de nomes em tempo de execução e nenhum tema feito por terceiros o endereça diretamente, depois remova o arquivo e confira no navegador todas as poses da Mari nos tutoriais e na introdução. Arquivos públicos podem ser carregados por URLs montadas em código, então a ausência no texto não basta para alta confiança.
+O arquivo `packages/client/public/sprites/mari/Mari_point_down_left.png`, o único sprite da Mari empacotado cujo nome de arquivo e caminho não apareciam em lugar nenhum do repositório, foi removido pela omnibar slice 38a.
 
 Não use busca por nome de arquivo para podar os arquivos de jogo empacotados. Alguns semeadores e manifestos do servidor varrem certas pastas de arquivos de forma dinâmica.
 

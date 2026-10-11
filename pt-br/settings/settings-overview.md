@@ -50,7 +50,7 @@ Esta seção fica em **Settings** > **General** > **App Behavior**. Ela controla
 - **Confirm before deleting**: ativado por padrão. Quando está ativo, Marinara pergunta antes de excluir para sempre um chat, um personagem ou outro item. Mantenha ativo para evitar exclusões por engano.
 - **Achievements**: ativado por padrão. Quando está ativo, a tela inicial mostra o botão de conquistas e os avisos de conquista desbloqueada. Quando está desativado, o acompanhamento continua em silêncio. Veja [Conquistas](../home/achievements.md).
 - **Music Player**: ativado por padrão. Quando está ativo, o player de música compacto aparece. Veja [Música](../media/music.md).
-- **Mini Mari surprise visits**: ativado por padrão. Quando está ativo, uma mensagem rara da Chibi Professor Mari pode surgir enquanto você rola a tela. Desative se isso atrapalhar.
+- **Search and Professor Mari settings**: selecione **Open** (abrir) para ir à página dessas configurações. Todas as configurações da busca e da Professor Mari ficam ali, em cinco grupos: **Search** (busca: oferecer melhorias para um campo, histórico de buscas), **Quick answers** (respostas rápidas: **Quick answers in Search**, **Answer with**, **Wait after typing**), **Professor Mari** (Ask Professor Mari from Search, modo de permissões, sugestões de resposta, como os cards de mudança abrem, Enter sends to Professor Mari), **Around the app** (pelo aplicativo: Mini Professor Mari visits) e **Appearance** (aparência: o visual dela; cada pacote mostra o retrato dela, o que está em uso mostra **In use** e um pacote bloqueado mostra o seu tempo de jogo para desbloqueá-lo). A engrenagem da busca abre a mesma página, e buscar qualquer uma dessas configurações, pelo nome novo ou pelo antigo, leva você direto até ela.
 
 ## Text Rules
 
@@ -104,7 +104,7 @@ Saiba mais em [Ações de mensagem](../chats/messages.md).
 
 ## Message Tools
 
-A seção **Message Tools** fica em **Settings** > **Advanced** > **Message Tools**. Ela reúne botões liga/desliga de exibição e de correção. Todos os botões abaixo vêm desativados por padrão. A tabela mostra o que cada um faz e onde ler mais.
+A seção **Message Tools** fica em **Settings** > **Advanced** > **Message Tools**. Ela reúne botões liga/desliga de exibição e de correção. Todos os botões abaixo vêm desativados por padrão, exceto **Show "older messages not sent" note** (mostrar o aviso de mensagens antigas não enviadas), que vem ativado. A tabela mostra o que cada um faz e onde ler mais.
 
 | Botão liga/desliga | O que faz | Guia completo |
 | --- | --- | --- |
@@ -112,6 +112,7 @@ A seção **Message Tools** fica em **Settings** > **Advanced** > **Message Tool
 | **Show model name on messages** | Mostra qual modelo de IA escreveu cada resposta. | [Ações de mensagem](../chats/messages.md) |
 | **Show token usage on messages** | Mostra a contagem de tokens de prompt e de resposta por mensagem. | [Ações de mensagem](../chats/messages.md) |
 | **Show message numbers** | Mostra um número em cada mensagem do chat. | [Ações de mensagem](../chats/messages.md) |
+| **Show "older messages not sent" note** | Mostra um aviso abaixo da resposta mais recente quando as mensagens mais antigas não couberam no prompt. Desative para esconder esse aviso em chats longos. Uma resposta cortada ou vazia continua mostrando o próprio aviso. | [Peek Prompt](../chats/peek-prompt.md) |
 | **Guide swipes/regens with chat input** | Usa o rascunho atual como direção quando você regenera. | [Geração guiada e Impersonate](../chats/guided-and-impersonate.md) |
 | **Quick replies** | Acrescenta ações de rascunho alternativas ao lado do botão Send. | [Geração guiada e Impersonate](../chats/guided-and-impersonate.md) |
 | **Include reasoning in exports** | Inclui o raciocínio oculto nas exportações de chat. | [Exportar e importar chats](../chats/export-import.md) |

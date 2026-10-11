@@ -23,7 +23,7 @@ Zrobione:
 
 Świadomie zachowane do osobnych prac nad zgodnością lub produktem:
 
-- `@rollup/wasm-node` i `Mari_point_down_left.png`;
+- `@rollup/wasm-node`;
 - eksporty serwera, które mogą być API używanym poza repozytorium albo punktami zaczepienia dla testów;
 - scalenie parsera PNG i geometrii samouczka;
 - szerokie refaktoryzacje edytora/pola wiadomości oraz dużych modułów;
@@ -203,9 +203,7 @@ Nie stosuj testu "jedno wystąpienie w tekście" hurtowo do `packages/shared`: e
 
 ## 5. Kandydat wśród zasobów statycznych
 
-`packages/client/public/sprites/mari/Mari_point_down_left.png` to jedyny dołączony sprite Mari, do którego nazwy ani ścieżki nic w repozytorium się nie odwołuje. Sąsiednie zasoby Mari mają odwołania.
-
-**Rekomendacja (średnia pewność):** sprawdź, czy żadna konwencja nazewnicza działająca w czasie działania ani zewnętrznie napisany motyw nie sięga po ten plik bezpośrednio, następnie usuń go i obejrzyj w przeglądarce każdą pozę Mari z samouczka i wdrożenia. Zasoby publiczne mogą być ładowane przez adresy URL składane w kodzie, więc sam brak w tekście nie wystarcza do wysokiej pewności.
+Plik `packages/client/public/sprites/mari/Mari_point_down_left.png`, jedyny dołączony sprite Mari, do którego nazwy ani ścieżki nic w repozytorium się nie odwoływało, został usunięty w ramach zmiany omnibar slice 38a.
 
 Nie przycinaj dołączonych zasobów trybu Game Mode na podstawie wyszukiwania po nazwach plików. Skrypty zasilające serwer i manifesty przeglądają część folderów z zasobami dynamicznie.
 

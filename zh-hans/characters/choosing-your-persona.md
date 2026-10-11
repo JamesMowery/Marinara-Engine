@@ -30,6 +30,8 @@
 
 New Chat 设置向导里有一个 **Your Persona** 输入框，用的是同一个可搜索的选择器，同样带 **None** 选项。在 New Game Setup 向导里，这个输入框叫 **Player's Persona**。
 
+在 Roleplay(角色扮演) 聊天里，角色卡可以在这个选择器顶部提供 **Create your persona**(创建你的用户角色)。选中它，回答角色卡的问题，就能得到一个新的用户角色。见[交互式引导](interactive-onboarding.md)。
+
 ## 快速切换用户角色
 
 聊天打开之后，输入框附近会有一个圆形的小头像按钮，这就是 **Quick Persona Switcher**(快速切换用户角色)。没有设用户角色时，它的悬停提示显示的就是这个名字。
@@ -53,4 +55,5 @@ New Chat 设置向导里有一个 **Your Persona** 输入框，用的是同一�
 ## 相关指南
 
 - [用户角色：创建与编辑](personas.md)
+- [交互式引导](interactive-onboarding.md)
 - [聊天设置总览](../chats/chat-settings.md)

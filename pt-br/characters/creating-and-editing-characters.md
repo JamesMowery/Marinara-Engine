@@ -35,10 +35,11 @@ No canto superior direito ficam estes botões:
 
 Se você tentar sair com trabalho não salvo, aparece um aviso com o texto `You have unsaved changes. Close without saving?` Ele oferece as opções **Keep editing**, **Discard & close** e **Save & close**.
 
-O editor é dividido em abas. Em tela larga, as abas descem pelo lado esquerdo. Em tela estreita, elas viram uma faixa rolável no topo. As abas, na ordem, são **Metadata**, **Card**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** e **Advanced**.
+O editor é dividido em abas. Em tela larga, as abas descem pelo lado esquerdo. Em tela estreita, elas viram uma faixa rolável no topo. As abas, na ordem, são **Metadata**, **Card**, **Onboarding**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** e **Advanced**.
 
 Este guia explica as abas **Metadata**, **Card**, **Voice** e **Advanced**, além dos avatares e do histórico de versões. As outras abas têm guias próprios:
 
+- **Onboarding**: [Onboarding interativo](interactive-onboarding.md).
 - **Convo**: [Perfis do Conversation Mode](../conversation/profiles.md).
 - **Lorebook**: [Vincular lorebooks a personagens e personas](../lorebooks/linking-to-characters.md).
 - **Sprites**: [Sprites de personagem](sprites.md).
@@ -175,6 +176,7 @@ Se o texto original mudou depois que a proposta foi criada, o aplicativo avisa a
 ## Guias relacionados
 
 - [Personas do usuário: criar e editar](personas.md)
+- [Onboarding interativo](interactive-onboarding.md)
 - [Sprites de personagem](sprites.md)
 - [Galerias de personagem e de persona](galleries.md)
 - [Importar e exportar cards de personagem](import-export.md)

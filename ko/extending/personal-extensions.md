@@ -74,7 +74,18 @@ const panel = marinara.ui.registerContribution({
 marinara.onCleanup(() => panel.remove());
 ```
 
-간단한 동작에는 `kind: "button"`을, Extensions 메뉴 동작에는 `kind: "menu-item"`을 쓰세요. 버튼의 기본값은 `surface: "top-bar"`입니다. 대신 `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents`, `settings`를 대상으로 삼고 `position`을 `header`, `before-content`, `after-content`로 설정할 수 있습니다. `icon`에는 Marinara가 지원하는 kebab-case Lucide 아이콘 이름을 쓸 수 있습니다. 두 동작 모두 `onActivate`를 호출합니다. `panel`은 열릴 때 `onActivate`를 호출하며 버튼은 모든 패널 컨트롤의 현재 값과 함께 `onEvent`를 호출합니다. 핸들은 종류별 업데이트를 지원합니다. `button`은 `label`, `description`, `icon`, `surface`, `position`을, `menu-item`은 `label`, `description`, `icon`을, `panel`은 `label`, `description`, `icon`, `elements`를 받습니다. 모든 핸들은 `remove()`를 지원합니다. ID에는 영문자, 숫자, `.`, `_`, `-`를 넣을 수 있습니다.
+간단한 동작에는 `kind: "button"`을, Extensions 메뉴 동작에는 `kind: "menu-item"`을 쓰세요. 같은 확장 리비전에 있는 기존 기여를 실행하는 Command Center 항목에는 `kind: "command"`를 쓰세요. 명령에는 `targetContributionId`가 필요하며 `onActivate`나 `onEvent`를 쓸 수 없습니다.
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-settings",
+});
+```
+
+호스트는 대상의 확장 ID와 콘텐츠 해시가 같을 때만 명령의 대상을 찾습니다. 대상이 없거나, 다른 확장에 속하거나, 오래된 리비전이면 안전하게 실패합니다. 버튼의 기본값은 `surface: "top-bar"`입니다. 대신 `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents`, `settings`를 대상으로 삼고 `position`을 `header`, `before-content`, `after-content`로 설정할 수 있습니다. `icon`에는 Marinara가 지원하는 kebab-case Lucide 아이콘 이름을 쓸 수 있습니다. 두 동작 모두 `onActivate`를 호출합니다. `panel`은 열릴 때 `onActivate`를 호출하며 버튼은 모든 패널 컨트롤의 현재 값과 함께 `onEvent`를 호출합니다. 핸들은 종류별 업데이트를 지원합니다. `button`은 `label`, `description`, `icon`, `surface`, `position`을, `menu-item`은 `label`, `description`, `icon`을, `panel`은 `label`, `description`, `icon`, `elements`를 받습니다. 모든 핸들은 `remove()`를 지원합니다. ID에는 영문자, 숫자, `.`, `_`, `-`를 넣을 수 있습니다.
 
 다음 예시는 Presets 패널 내용 위에 네이티브 동작을 배치합니다.
 

@@ -93,6 +93,18 @@ Las capacidades se declaran en la carga de la extensión, se guardan con cada re
 - `button`: una acción compacta en la barra superior de forma predeterminada, o una acción renderizada por el host en la superficie `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` o `settings`;
 - `menu-item`: una acción en el menú Extensions;
 - `panel`: una entrada que abre el panel lateral de confianza Extensions de Marinara.
+- `command`: una entrada del Command Center que activa un `button`, `menu-item` o `panel` existente de la misma revisión de la extensión.
+
+Los comandos contienen `targetContributionId` y no tienen callback `onActivate` ni `onEvent`. El host resuelve el destino por ID de extensión, hash de contenido e ID de contribución. Un destino que falta o un destino de otra revisión falla de forma cerrada. Por ejemplo:
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-panel",
+});
+```
 
 Los botones de panel lateral admiten `position: "header"`, `"before-content"` o `"after-content"`. Los de la barra superior omiten `position`. Los iconos son nombres kebab-case con límites del catálogo de iconos Lucide de Marinara; los nombres no admitidos usan el icono de rompecabezas.
 

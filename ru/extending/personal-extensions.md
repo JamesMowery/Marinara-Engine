@@ -74,7 +74,18 @@ const panel = marinara.ui.registerContribution({
 marinara.onCleanup(() => panel.remove());
 ```
 
-Значение `kind: "button"` создает компактное действие, а `kind: "menu-item"` — действие в меню Extensions. По умолчанию кнопки используют `surface: "top-bar"`. Они также могут выбирать `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` или `settings`, задав `position` как `header`, `before-content` или `after-content`. Поле `icon` принимает любое поддерживаемое Marinara имя значка Lucide в kebab-case. Оба вида действий вызывают `onActivate`. Панель (`panel`) вызывает `onActivate` при открытии, а ее кнопки вызывают `onEvent` с текущими значениями элементов. Обработчик поддерживает обновления по виду: `button` принимает `label`, `description`, `icon`, `surface` и `position`; `menu-item` — `label`, `description` и `icon`; `panel` — `label`, `description`, `icon` и `elements`. Все обработчики поддерживают `remove()`. В идентификаторах допустимы буквы, цифры, `.`, `_` и `-`.
+Значение `kind: "button"` создает компактное действие, а `kind: "menu-item"` – действие в меню Extensions. Значение `kind: "command"` создает пункт Command Center, который активирует существующий элемент интерфейса из той же версии расширения. Команде обязательно нужен `targetContributionId`, и она не может использовать `onActivate` или `onEvent`.
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-settings",
+});
+```
+
+Хост находит цель команды, только если у цели тот же идентификатор расширения и тот же хеш содержимого. Отсутствующие цели, цели из другого расширения и цели из устаревшей версии отклоняются. По умолчанию кнопки используют `surface: "top-bar"`. Они также могут выбирать `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` или `settings`, задав `position` как `header`, `before-content` или `after-content`. Поле `icon` принимает любое поддерживаемое Marinara имя значка Lucide в kebab-case. Оба вида действий вызывают `onActivate`. Панель (`panel`) вызывает `onActivate` при открытии, а ее кнопки вызывают `onEvent` с текущими значениями элементов. Обработчик поддерживает обновления по виду: `button` принимает `label`, `description`, `icon`, `surface` и `position`; `menu-item` – `label`, `description` и `icon`; `panel` – `label`, `description`, `icon` и `elements`. Все обработчики поддерживают `remove()`. В идентификаторах допустимы буквы, цифры, `.`, `_` и `-`.
 
 Этот пример помещает нативное действие над содержимым панели Presets:
 

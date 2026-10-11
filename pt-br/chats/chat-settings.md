@@ -24,7 +24,7 @@ No computador, clique no **X** ao lado das dicas de layout (**Hide these tips fo
 
 ## Mudar a aparência das janelas do chat
 
-Abra **Settings > Appearance > App** (Configurações > Aparência > Aplicativo) e procure **Chat widget style** (estilo dos widgets do chat), no fim de **App Style**. **Default** mantém o visual habitual do Marinara. **Dottore** combina azuis gelados e metal claro com letras de estilo técnico e cantos recortados; **Mari** combina azuis de pedras preciosas e dourado quente com letras de conto de fadas e molduras arqueadas. Ambos se adaptam aos modos claro e escuro e mudam o visual dos botões móveis, das janelas e das seções expansíveis nos três modos de chat.
+Abra **Settings > Appearance > App** (Configurações > Aparência > Aplicativo) e procure **Chat widget style** (estilo dos widgets do chat), no fim de **App Style**. **Default** mantém o visual habitual do Marinara. **Dottore** combina azuis gelados e metal claro com letras de estilo técnico e cantos recortados; **Prof. Mari** combina azuis de pedras preciosas e dourado quente com letras de conto de fadas e molduras arqueadas. Ambos se adaptam aos modos claro e escuro e mudam o visual dos botões móveis, das janelas e das seções expansíveis nos três modos de chat.
 
 Use **Font** (fonte), **Shape** (forma) e os três seletores de cor abaixo dos presets para combinar outras opções. As fontes instaladas no Marinara também aparecem na lista. Escolher um preset novamente redefine a fonte, a forma e as cores personalizadas. Essas escolhas não movem as janelas nem alteram os layouts salvos. Elas ficam nas preferências do aplicativo e sincronizam com os navegadores conectados ao mesmo servidor.
 

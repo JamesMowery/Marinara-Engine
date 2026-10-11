@@ -67,6 +67,8 @@ Otwórz postać w edytorze, a potem kliknij przycisk **Export character** (ekspo
 
 Wybierz **Marinara Native**, jeśli chcesz zachować wszystko. Wybierz jeden z formatów **Compatible**, jeśli plik trafia do innego narzędzia. Oba formaty zgodne pomijają dodatki charakterystyczne dla aplikacji Marinara Engine, takie jak sprite'y i obrazy z galerii. Niepuste pola **Backstory** (historia postaci) i **Appearance** (wygląd) są dopisywane do standardowego pola Description, żeby inne aplikacje odczytujące format V2 zachowały te informacje o postaci. Pola te są usuwane z eksportowanych rozszerzeń, aby nie dublowały się przy ponownym imporcie. Zapisana karta pozostaje bez zmian; format **Marinara Native** zachowuje osobne pola.
 
+[Interaktywny onboarding](interactive-onboarding.md) zapisany w karcie zostaje zachowany w formatach **Marinara Native** i **Compatible PNG Card**, więc karta nadal zadaje swoje pytania, gdy ktoś zaimportuje ją do aplikacji Marinara Engine. Format **Compatible JSON** go pomija.
+
 ## Eksportowanie wielu postaci naraz
 
 Całą partię postaci da się wyeksportować jako jeden plik zip.

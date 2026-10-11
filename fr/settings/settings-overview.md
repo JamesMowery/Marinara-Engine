@@ -50,7 +50,7 @@ Cette section se trouve dans **Settings** > **General** > **App Behavior**. Elle
 - **Confirm before deleting** (confirmer avant de supprimer) : activé par défaut. Marinara demande alors confirmation avant de supprimer définitivement un chat, un personnage ou un autre élément. Garde ce réglage actif pour éviter les suppressions accidentelles.
 - **Achievements** (succès) : activé par défaut. L'écran d'accueil affiche alors le bouton des succès et les avis de déblocage. Une fois désactivé, le suivi continue en silence. Voir [Succès](../home/achievements.md).
 - **Music Player** (lecteur de musique) : activé par défaut. Le lecteur de musique compact s'affiche alors. Voir [Musique](../media/music.md).
-- **Mini Mari surprise visits** (visites surprises de Mini Mari) : activé par défaut. Un rare message de Chibi Professor Mari peut alors apparaître pendant que tu fais défiler la page. Désactive-le s'il te gêne.
+- **Search and Professor Mari settings** (réglages de Search et de Professor Mari) : choisis **Open** (ouvrir) pour aller à leur page de réglages. Tous les réglages de Search (la recherche de l'application) et de Professor Mari s'y trouvent, en cinq groupes : **Search** (proposer d'améliorer un champ, historique de recherche), **Quick answers** (réponses rapides : **Quick answers in Search**, **Answer with**, **Wait after typing**), **Professor Mari** (Ask Professor Mari from Search, mode de permissions, pastilles de réponse, ouverture des encarts de modification, Enter sends to Professor Mari), **Around the app** (dans le reste de l'application : Mini Professor Mari visits) et **Appearance** (son apparence : chaque pack affiche son portrait, celui qui est utilisé indique **In use**, et un pack verrouillé affiche ton temps de jeu en vue de le débloquer). L'icône d'engrenage dans Search ouvre la même page, et rechercher l'un de ces réglages, sous son nouveau ou son ancien nom, t'y amène directement.
 
 ## Text Rules
 
@@ -104,7 +104,7 @@ Pour en savoir plus, voir [Actions sur les messages](../chats/messages.md).
 
 ## Message Tools
 
-La section **Message Tools** (outils de message) se trouve dans **Settings** > **Advanced** > **Message Tools**. C'est le point central des interrupteurs d'affichage et de réparation. Chacun d'eux est désactivé par défaut. Le tableau indique ce que fait chaque interrupteur et où en lire davantage.
+La section **Message Tools** (outils de message) se trouve dans **Settings** > **Advanced** > **Message Tools**. C'est le point central des interrupteurs d'affichage et de réparation. Chacun d'eux est désactivé par défaut, sauf **Show "older messages not sent" note** (afficher la note "anciens messages non envoyés"), qui est activé. Le tableau indique ce que fait chaque interrupteur et où en lire davantage.
 
 | Interrupteur | Ce qu'il fait | Guide complet |
 | --- | --- | --- |
@@ -112,6 +112,7 @@ La section **Message Tools** (outils de message) se trouve dans **Settings** > *
 | **Show model name on messages** | Indique quel modèle d'IA a écrit chaque réponse. | [Actions sur les messages](../chats/messages.md) |
 | **Show token usage on messages** | Affiche le nombre de tokens du prompt et de la réponse pour chaque message. | [Actions sur les messages](../chats/messages.md) |
 | **Show message numbers** | Affiche un numéro sur chaque message du chat. | [Actions sur les messages](../chats/messages.md) |
+| **Show "older messages not sent" note** | Affiche une note sous la réponse la plus récente quand des messages plus anciens n'ont pas tenu dans le prompt. Désactive-le pour masquer cette note dans les longs chats. Une réponse coupée ou vide affiche toujours sa propre note. | [Peek Prompt](../chats/peek-prompt.md) |
 | **Guide swipes/regens with chat input** | Utilise ton brouillon en cours comme consigne quand tu régénères. | [Génération guidée et Impersonate](../chats/guided-and-impersonate.md) |
 | **Quick replies** | Ajoute des actions de brouillon alternatives à côté du bouton d'envoi. | [Génération guidée et Impersonate](../chats/guided-and-impersonate.md) |
 | **Include reasoning in exports** | Ajoute le raisonnement masqué aux exports de chat. | [Exporter et importer des chats](../chats/export-import.md) |

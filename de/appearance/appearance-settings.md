@@ -47,7 +47,7 @@ Beides gleichzeitig geht nicht. **RGB Mode** einzuschalten deaktiviert **Accent 
 
 ## Chat widget style
 
-Unten in **App Style** wählst du **Default** (Standard), **Dottore** oder **Mari** für verschiebbare Chat-Schaltflächen, Fenster und Abschnitte. Schrift, Rahmenform und die drei Hauptfarben kannst du einzeln ändern. Die Farbwähler unterstützen auch Farbverläufe.
+Unten in **App Style** wählst du **Default** (Standard), **Dottore** oder **Prof. Mari** für verschiebbare Chat-Schaltflächen, Fenster und Abschnitte. Schrift, Rahmenform und die drei Hauptfarben kannst du einzeln ändern. Die Farbwähler unterstützen auch Farbverläufe.
 
 **Button size (px)** (Schaltflächengröße in Pixeln) ändert verschiebbare Chat-Schaltflächen und ihre Symbole, ohne Display Size zu ändern. Gib eine Größe von 32 bis 96 Pixeln ein. Lass das Feld leer oder nutze seine Schaltfläche zum Zurücksetzen, um den aktuellen Standard beizubehalten. Die Größe wird mit deinen Darstellungseinstellungen gespeichert und bleibt beim Wechsel des Presets gleich.
 

@@ -592,3 +592,42 @@ Glosses for the Character Editor's **Voice** tab (`characters/creating-and-editi
 ## Noodle post translation (2026-10-03)
 
 `noodle/settings.md` glosses the Noodle **Translation** switch as **Translate posts automatically**(게시물 자동 번역). `ko.json` has no key for it yet, so the gloss follows the shipped "X 자동 번역" pattern of `ui.chatSettings.translationsection.autoTranslateResponses` (응답 자동 번역). **Save translator defaults**(번역기 기본값 저장) is byte-exact `chat.translation.defaults.save`; **Translate** and **Translation** keep (번역). Google Translate stays Latin and takes 를 (트랜슬레이트, no batchim). Re-check the switch gloss once `ko.json` ships the key. This is a translation choice, not a new native-reader review.
+
+## Professor Mari, Search, onboarding and Re-scan (2026-10-11)
+
+Cycle precedent for #7382, #7396, #7372 and #7309 (`home/professor-mari.md`, `settings/settings-overview.md`, `chats/sending-and-streaming.md`, `agents/memory.md`, the new `characters/interactive-onboarding.md` and the three guides that link it). None of the new `omnibar.*`, `commandCenter.*`, `ui.chat.marichangereceipt.*` or `ui.characters.onboarding.*` keys has a `ko.json` value yet, so these glosses follow the nearest shipped strings. Re-check them once `ko.json` ships the keys.
+
+| English | Translation |
+| --- | --- |
+| **Ask Prof. Mari** | **Ask Prof. Mari**(Professor Mari에게 묻기), the old **Ask Professor Mari** gloss kept so search still finds it. Particle 를/는 (마리). |
+| **Prof. Mari** (chat widget style) | No gloss; particle 는 (마리) |
+| Search (the search surface) | Latin `Search`, glossed once per file as `Search(검색)`; particles 는/가/를 (서치, no batchim). Lowercase "a search" stays 검색 |
+| **Search and Professor Mari settings** | **Search and Professor Mari settings**(검색 및 Professor Mari 설정); prose name 검색 및 Professor Mari 설정 |
+| quick answer | 빠른 답변. **Quick answers in Search**(검색의 빠른 답변), also the section heading; **Quick answers**(빠른 답변); **Quick answer · Read-only**(빠른 답변 · 읽기 전용) |
+| **Answer with** / **Wait after typing** / **Answer again** | (답변 모델) / (입력 후 대기 시간) / (다시 답변) |
+| **Ask Prof. Mari more…** / **Copy** / **Details** | (Professor Mari에게 더 묻기…), keeping the label's U+2026 / (복사) / (세부 정보) |
+| **Continue with Prof. Mari** / **Same as Prof. Mari** | (Professor Mari와 계속하기) / (Professor Mari와 동일), on the `ko.json` "서술자와 동일" pattern |
+| **Ask Professor Mari from Search** / **Enter sends to Professor Mari** | (검색에서 Professor Mari에게 묻기) / (Enter로 Professor Mari에게 전송) |
+| Setting names the English lists unbolded (`settings/settings-overview.md`, the **Professor Mari** and **Around the app** groups) | English kept, unbolded, with the gloss (§5 rule 6): `Ask Professor Mari from Search(검색에서 Professor Mari에게 묻기)`, `Enter sends to Professor Mari(Enter로 Professor Mari에게 전송)`, `Mini Professor Mari visits(Mini Mari의 깜짝 방문)`, the last byte-exact `ko.json` `settings.controls.miniMari.label`. Descriptions in the same lists (permissions mode, reply chips) are plain Korean |
+| **Around the app** / **In use** / **Choose a model** | (앱 곳곳에서) / (사용 중) / (모델 선택) |
+| **Aware of** | **Aware of**(알고 있는 내용). `en.json` now names that panel "Context"; the docs keep **Aware of** |
+| change card | 변경 카드 |
+| **Undo** / **Not saved** / **Undo until** / **Undo closed** | (되돌리기) / (저장되지 않음) / (되돌리기 기한) / (되돌리기 종료) |
+| **Apply** / **Don't apply** / **Put back** | (적용) / (적용 안 함), as `ko.json` renders "Don't Apply" / (되돌려 놓기), kept apart from **Undo**(되돌리기) |
+| **Show all** / **Technical details** / **Turn on** | (모두 보기) / (기술 세부 정보) / (켜기) |
+| **Retry** / **Try again** | both (다시 시도), as `ko.json` `home.recentChats.retry` and most `tryAgain` keys render them |
+| permissions mode (lowercase, in prose) | 권한 모드. The English dropped the capitalised "Permissions Mode", so prose no longer keeps it Latin |
+| handoff / entry point / resource (a character, persona, lorebook or preset) | 전달 / 진입점 / 항목 |
+| Command Center | Latin, no gloss; a `command` contribution is 명령 |
+| interactive onboarding | **대화형 온보딩**, following `ko.json`'s 대화형 for "interactive" (`대화형 선택지`). H1 `# 대화형 온보딩`, link text `[대화형 온보딩]`. This 대화형 is not the `**Conversation**(대화)` mode |
+| **Onboarding** / **Interactive onboarding** / **How onboarding works** / **Onboarding Questions** | (온보딩) / (대화형 온보딩) / (온보딩 작동 방식) / (온보딩 질문) |
+| **Add Question** / **Help text for players** / **Allow own answer** / **Write your own** | (질문 추가; particle 을, 퀘스천) / (플레이어용 도움말) / (직접 답변 허용) / (직접 작성) |
+| **Create your persona** / **Create persona** | (내 페르소나 만들기) / (페르소나 만들기, byte-exact `ko.json` `ui.modals.createpersonamodal.createPersona`) |
+| **Your Persona** | No gloss. `ko.json` renders it 당신의 페르소나, and 당신 is banned (§1); this follows `characters/choosing-your-persona.md` |
+| **None** (Stay anonymous) | **None**(없음, 익명 유지), the comma form of §5 rule 8 |
+| **Show "older messages not sent" note** | **Show "older messages not sent" note**("전송되지 않은 이전 메시지" 안내 표시); the label keeps its straight ASCII quotes, and so does the gloss |
+| scene check | 장면 검사 (`agents/memory.md`, `connections/decision-models.md`). 장면 종료 확인 survives only in `chats/peek-prompt.md:91`, where English still says "scene-end check" |
+| scene starts (selected in diagnostics) | 장면 시작 지점 |
+| **Re-scan scenes** / **Re-scan** | (장면 다시 검사) / (다시 검사); particles 를 (신스) / 을 (리스캔) |
+
+**Gloss placement when a label is already glossed later in the file.** A new, earlier mention of a label that the file already glosses further down stays bare, so each label still has exactly one gloss per file (§5 rule 5). This applies to **Settings** and **Delete** in `home/professor-mari.md` (**General** has no later gloss there, so its first mention takes (일반)), to **Use Decision model** in the new Re-scanning section of `agents/memory.md`, and to the new Message Tools table row in `settings/settings-overview.md`, whose label is glossed in the intro sentence just above. These are translation choices, not a new native-reader review.

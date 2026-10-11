@@ -25,6 +25,8 @@
 | Conversations | On | Enterでメッセージを送信 |
 | Game | On | Enterでメッセージを送信 |
 
+Professor Mariには専用のトグル**Enter sends to Professor Mari**(EnterでProfessor Mariに送信)があります。SearchとProfessor Mariの設定(**Settings** > **General** > **Search and Professor Mari settings** > **Open**)で切り替えます。
+
 モードのトグルがオフのときは、Enterを押すと改行が入ります。この場合は**Send**をクリックしてメッセージを投稿します。Roleplayのメッセージは長くなりやすく改行が必要になるため、Roleplayだけはデフォルトでオフです。
 
 ## 画像やファイルを添付する

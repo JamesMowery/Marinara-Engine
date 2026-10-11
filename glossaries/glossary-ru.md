@@ -534,7 +534,7 @@ deliberate, reviewable change rather than as a drive-by.
 | `agents/custom-agents.md:113` | 1 | `**Image Connection** — переопределяет подключение` |
 | `agents/custom-agents.md:114` | 1 | `**Camera button** — немедленно создает изображение` |
 | `development/file-storage.md:31` | **6** | one very long paragraph; the dashes head a run of appositive `— по чату; … — по персонажу; …` clauses. Rewriting it needs care, not a character swap |
-| `extending/personal-extensions.md:67` | **3** | `` `kind: "menu-item"` — действие в меню Extensions ``, plus two more in the `button` / `menu-item` / `panel` field run |
+| ~~`extending/personal-extensions.md:67`~~ | ~~**3**~~ | **Resolved 2026-10-11**: the #7312 mirror rewrote this paragraph, so its three dashes became en dashes (` – `). |
 
 `lorebooks/entries.md:189` holds the 14th em dash but is **not** a residual: it sits inside an
 English in-fiction `Content:` literal, which stays English by design (§6).
@@ -680,3 +680,19 @@ Precedent from the #7023 mirror (`noodle/settings.md`, section `## Раздел 
 - Translator defaults are **настройки перевода по умолчанию**; the chat button **Save translator defaults** is glossed **(сохранить настройки перевода по умолчанию)**. `ui/ru.json` has no key for it.
 - **Translate** keeps the pack's **(перевести)** gloss (`chats/messages.md:15`, `integrations/message-translation.md:91`); Noodle's **Translation** section is glossed **(перевод)**, like the chat section. **Translate posts automatically** follows this file's convention for field bullets: no gloss, the sentence explains it.
 - Target language stays **язык перевода** (`integrations/message-translation.md:30`). Refreshing the timeline stays **обновление ленты**; page reload is **перезагрузка страницы**, to keep it apart from the Noodle refresh.
+
+## Professor Mari and Search, Re-scan scenes, interactive onboarding (2026-10-11)
+
+Precedent from the #7382 / #7396 / #7372 / #7309 mirror (`home/professor-mari.md`, `settings/settings-overview.md`, `agents/memory.md`, the new `characters/interactive-onboarding.md` and the files that link to it):
+
+- Prose that said "Mari" now says **Professor Mari**, as English does. Bold labels stay byte-exact: **Ask Prof. Mari**, **Prof. Mari**, **Continue with Prof. Mari**, **Same as Prof. Mari**, **Ask Prof. Mari more…** (U+2026, as `omnibar.aside.followUp.placeholder`). Glosses give the full name: **Ask Prof. Mari** (спросить Professor Mari), **Continue with Prof. Mari** (продолжить с Professor Mari). The sprite family in `development/code-cleanup-audit.md` stays **спрайт Mari**, as English keeps it.
+- The `Cmd/Ctrl+K` Search feature is **поиск** in prose; the bold **Search** takes the gloss (поиск). "The Search and Professor Mari settings" in prose is **настройки поиска и Professor Mari**; the bold **Search and Professor Mari settings** is glossed (настройки поиска и Professor Mari) once per file.
+- Quick answer is **быстрый ответ**; **Quick answers in Search** is glossed (быстрые ответы в поиске). The section heading is translated (`## Быстрые ответы в поиске`), so the pack has one fewer literal `Quick answers in Search` than English. Nothing links to the heading.
+- Professor Mari's change card is **карточка изменений**. It replaces **карточка проверки**, which named the removed Keep/Restore card. **Turn on** (включить) replaces **Keep & Enable**. **Undo** is glossed (отменить). The status strings **Not saved**, **Undo until** and **Undo closed** take no gloss (§5 Pattern B).
+- Permissions mode in prose is **режим разрешений**, and Manual mode is **режим Manual**. The context budget is **лимит контекста**, following `agents/memory.md`. A handoff is **передача**, and the **Aware of** chips are **плашки** glossed (в курсе).
+- **Command Center** stays Latin behind a carrier noun (**пункт Command Center**) with no gloss. A UI contribution is **вклад** in `development/` and **элемент интерфейса** in `extending/`. A revision is **ревизия** in `development/` and **версия** in `extending/`, matching each file. "Fail closed" is **отклоняется**, as in `development/multiplayer.md`.
+- Scene check is **проверка сцен**, and the scene-end form **проверка конца сцены** is gone from `agents/memory.md`. `chats/peek-prompt.md:91` still uses it because its English is unchanged. Scene starts are **начала сцен**, a scene change is **смена сцены**, and re-scanning is **повторное сканирование**. **Re-scan scenes** is glossed (просканировать сцены заново) and **Re-scan** (просканировать заново). A scene-break line is **строка-разделитель сцен**, and out-of-character keeps the pack's **вне роли**.
+- Interactive onboarding is the loanword **интерактивный онбординг**, which declines (онбординга, онбордингом), as in the de, es, pl and pt-br packs. The H1 and every link text read `Интерактивный онбординг`. The **Onboarding** tab is glossed (онбординг). A persona template is **шаблон персоны**, and player is **игрок**. Question-editor glosses reuse `prompts/preset-variables.md`: **Variable Name** (имя переменной), **Question (shown to user)** (вопрос, который видит пользователь), **Options** (варианты) and **Multi-Select** (выбор нескольких вариантов). **Value** is glossed (значение) here, because it fills the persona rather than a prompt.
+- **Show "older messages not sent" note** keeps straight ASCII quotes inside the bold and is glossed (показывать пометку о неотправленных старых сообщениях).
+
+These are documented translation choices from this sync, not an independent native-reader review.

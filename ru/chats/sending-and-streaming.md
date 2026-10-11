@@ -25,6 +25,8 @@
 | Conversations | On | Enter отправляет сообщение |
 | Game | On | Enter отправляет сообщение |
 
+У Professor Mari свой переключатель – **Enter sends to Professor Mari** (Enter отправляет сообщение Professor Mari) – в настройках поиска и Professor Mari (**Settings** > **General** > **Search and Professor Mari settings** > **Open**).
+
 Когда переключатель режима выключен, Enter вставляет перевод строки. Сообщение в этом случае отправляется кнопкой **Send**. Для режима Roleplay параметр выключен по умолчанию, потому что сообщения там часто длинные и переносы строк им нужны.
 
 ## Вложение изображений и файлов

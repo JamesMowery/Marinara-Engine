@@ -1,6 +1,6 @@
 {
   "language": "zh-hans",
-  "sourceCommit": "f018feac5dfafd71ac8c387661d41d5a7266dcf3",
+  "sourceCommit": "10b82e5bd47e",
   "files": [
     {
       "path": "CONFIGURATION.md",
@@ -64,13 +64,13 @@
     },
     {
       "path": "agents/memory.md",
-      "sha256": "4b98f8a27ce45e04efa5a2ecbadd7390e6ae18f8e7df002017dbba52a734db1b",
-      "bytes": 41159
+      "sha256": "2612141f4a69fe7f716c8a1955f1cd8facac6224be82cfac8049d7ca4deee303",
+      "bytes": 42377
     },
     {
       "path": "appearance/appearance-settings.md",
-      "sha256": "79bee45afd1a5b846f995ba83bab637ae92053dcb0396e1cd593800200fe4b9b",
-      "bytes": 10811
+      "sha256": "1862e8840b6c85231b8ee0d260703860c2b463b404c3b4da1fc627960a37f626",
+      "bytes": 10817
     },
     {
       "path": "appearance/card-css-theming.md",
@@ -84,8 +84,8 @@
     },
     {
       "path": "appearance/custom-css-themes.md",
-      "sha256": "bd0d389ea3334cc7b752a9c74adf67b5058d835af6c77162974545c96b8a374f",
-      "bytes": 20937
+      "sha256": "dee2ee32e16a6e3df3fe7e5bfab6b04cd92838794bb45b459ef2876a71639977",
+      "bytes": 20953
     },
     {
       "path": "appearance/fonts.md",
@@ -99,8 +99,8 @@
     },
     {
       "path": "characters/choosing-your-persona.md",
-      "sha256": "deea2f8f65df9f908d58ea4c2d896cfd1959f9e8629c2bdac1c5d4c0cf7b15c7",
-      "bytes": 3282
+      "sha256": "519d36bdfe158370219764d2ab94423b7aa61eff598b696edc303c3b222e55da",
+      "bytes": 3596
     },
     {
       "path": "characters/colors-and-stats.md",
@@ -109,8 +109,8 @@
     },
     {
       "path": "characters/creating-and-editing-characters.md",
-      "sha256": "4c6d5defee872ddfdbec6332ee2ddbe4eb976688f910c36e1e3fe1bb14811c21",
-      "bytes": 14209
+      "sha256": "43544b8b0c5e7a9345b5d26b2b15a0794759299a69da900ebf685a34b58cae80",
+      "bytes": 14357
     },
     {
       "path": "characters/galleries.md",
@@ -119,8 +119,13 @@
     },
     {
       "path": "characters/import-export.md",
-      "sha256": "aeef346b07080562eeae387ee09121c6c949d41e6af5d7c80cc382e9883acb48",
-      "bytes": 5797
+      "sha256": "52d61b46a47a40ac7378aa6a56d45042f45518380abfe000db3a01afbdb7f222",
+      "bytes": 6033
+    },
+    {
+      "path": "characters/interactive-onboarding.md",
+      "sha256": "02036ad051b96cd018fdff82106dda9f39a398ff9573c1649647c7ee17824510",
+      "bytes": 6513
     },
     {
       "path": "characters/library-organization.md",
@@ -144,8 +149,8 @@
     },
     {
       "path": "chats/chat-settings.md",
-      "sha256": "843dbc56b2e203c7a1166e5db103acb52c588dc84196912b30a9b52aaff7b474",
-      "bytes": 20479
+      "sha256": "b02d4196596dc6b4ad4abfb1a4f73e171045c639ed3fc53ec958b35280dcef66",
+      "bytes": 20485
     },
     {
       "path": "chats/connected-chats.md",
@@ -184,8 +189,8 @@
     },
     {
       "path": "chats/sending-and-streaming.md",
-      "sha256": "bee0942fa973ab94098528c0ae5c728e927d7e1f9aad90b07b5f5bbe13fd2d0e",
-      "bytes": 9411
+      "sha256": "3c0fa53b77e66399cf449782e02d8e4f402d6617e7203fb870ff4e755003b5ee",
+      "bytes": 9696
     },
     {
       "path": "chats/settings-profiles.md",
@@ -309,8 +314,8 @@
     },
     {
       "path": "development/code-cleanup-audit.md",
-      "sha256": "3a7efc6fda99d89704a3f2e948c967a60aceac32465bae6487183ac1976bab6d",
-      "bytes": 26503
+      "sha256": "d0ff114d5fb473d2a56358f3f02ee1225f3a94b6215feffd7d116e17fd6c26fb",
+      "bytes": 26122
     },
     {
       "path": "development/file-storage.md",
@@ -389,8 +394,8 @@
     },
     {
       "path": "development/personal-extensions.md",
-      "sha256": "2fcbe6c1d6d124cbfa0d06ac97fbb1c55aec92603acce4a798a6c4f953f194fa",
-      "bytes": 15001
+      "sha256": "e44157943f7e138b78421f7e1e90200b71279e4e97625c391b6e85a77aa0ee86",
+      "bytes": 15543
     },
     {
       "path": "extending/custom-tools.md",
@@ -399,8 +404,8 @@
     },
     {
       "path": "extending/personal-extensions.md",
-      "sha256": "aec26e36e49cc1ffdb886b5cc849a70ebe9613749c121d5ec356628f5b3eccab",
-      "bytes": 17021
+      "sha256": "f25a7e3480cf7c1f2c3fd4dab7645cbff60f1cb424aece87ab0305ff07ef110f",
+      "bytes": 17594
     },
     {
       "path": "extending/regex-scripts.md",
@@ -474,8 +479,8 @@
     },
     {
       "path": "home/professor-mari.md",
-      "sha256": "c42b9209f8ec11619aff4734c3b6095c10c1861ac6a30dfabb41515ba41c18e9",
-      "bytes": 19329
+      "sha256": "0f601492fc1282827506ecdde8db6a03925782554c6981b23d8578c79ecbe842",
+      "bytes": 26075
     },
     {
       "path": "home/tutorial.md",
@@ -679,8 +684,8 @@
     },
     {
       "path": "settings/settings-overview.md",
-      "sha256": "9e471f3d7f4b7063f2da5ad81419dd4d2ee886208e7c5ef73ae2b4669f9404c4",
-      "bytes": 12178
+      "sha256": "3c4b59fd74fcf18fabeadbfeafa71b528f45b6f827666cdd199f18b765998cc4",
+      "bytes": 13520
     }
   ]
 }

@@ -30,6 +30,8 @@ En Game Mode, cette section est présentée comme ton équipe en jeu, mais elle 
 
 L'assistant de configuration **New Chat** propose un champ **Your Persona** (ton persona). Il reprend le même sélecteur avec recherche et la même option **None**. Dans l'assistant **New Game Setup**, ce champ s'appelle **Player's Persona**.
 
+Dans un chat Roleplay, une fiche de personnage peut proposer **Create your persona** (créer ton persona) en haut de ce sélecteur. Choisis cette option pour répondre aux questions de la fiche et obtenir un nouveau persona. Voir [Accueil interactif](interactive-onboarding.md).
+
 ## Le Quick Persona Switcher
 
 Dès qu'un chat est ouvert, un petit bouton rond en forme d'avatar apparaît près de la zone de saisie : c'est le **Quick Persona Switcher** (sélecteur rapide de persona). Son infobulle affiche ce nom tant qu'aucun persona n'est défini.
@@ -53,4 +55,5 @@ Changer de persona en cours de chat ne réécrit pas les messages précédents. 
 ## Guides associés
 
 - [Les personas utilisateur : création et modification](personas.md)
+- [Accueil interactif](interactive-onboarding.md)
 - [Vue d'ensemble de Chat Settings](../chats/chat-settings.md)

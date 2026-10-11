@@ -67,6 +67,8 @@
 
 전부 그대로 유지하고 싶다면 **Marinara Native**를 고르세요. 파일을 다른 도구로 넘길 때는 **Compatible** 형식 중 하나를 고르세요. 호환 형식 2가지는 스프라이트나 갤러리 이미지처럼 Marinara에만 있는 부가 정보를 버립니다. 비어 있지 않은 **Backstory**(배경 이야기)와 **Appearance**(외모) 필드는 표준 Description에 덧붙여 다른 V2 지원 도구에서도 캐릭터 정보를 유지합니다. 다시 가져올 때 중복되지 않도록 이 필드들은 내보내는 확장 정보에서 제거합니다. 저장된 카드는 바뀌지 않으며 **Marinara Native**는 별도 필드를 유지합니다.
 
+**Marinara Native**와 **Compatible PNG Card**는 카드의 [대화형 온보딩](interactive-onboarding.md)을 유지하므로, 누군가 그 카드를 Marinara로 가져와도 카드가 질문을 그대로 제공합니다. **Compatible JSON**은 온보딩을 빼고 내보냅니다.
+
 ## 캐릭터 여러 개 한꺼번에 내보내기
 
 여러 캐릭터를 zip 파일 하나로 묶어 내보낼 수 있습니다.

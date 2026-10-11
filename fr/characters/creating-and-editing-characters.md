@@ -35,10 +35,11 @@ En haut à droite, tu disposes de ces boutons :
 
 Si tu essaies de partir avec des modifications non enregistrées, un bandeau affiche `You have unsaved changes. Close without saving?` Il propose **Keep editing**, **Discard & close** et **Save & close**.
 
-L'éditeur est découpé en onglets. Sur un écran large, ils s'alignent verticalement à gauche. Sur un écran étroit, ils deviennent une bande défilante en haut. Les onglets, dans l'ordre, sont **Metadata**, **Card**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** et **Advanced**.
+L'éditeur est découpé en onglets. Sur un écran large, ils s'alignent verticalement à gauche. Sur un écran étroit, ils deviennent une bande défilante en haut. Les onglets, dans l'ordre, sont **Metadata**, **Card**, **Onboarding**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** et **Advanced**.
 
 Ce guide traite des onglets **Metadata**, **Card**, **Voice** et **Advanced**, ainsi que des avatars et de l'historique des versions. Les autres onglets ont leur propre guide :
 
+- **Onboarding** : [Accueil interactif](interactive-onboarding.md).
 - **Convo** : [Profils du mode Conversation](../conversation/profiles.md).
 - **Lorebook** : [Lier des lorebooks à des personnages](../lorebooks/linking-to-characters.md).
 - **Sprites** : [Sprites de personnage](sprites.md).
@@ -175,6 +176,7 @@ Si le texte concerné a changé depuis la proposition, l'application te prévien
 ## Guides associés
 
 - [Les personas : créer et modifier](personas.md)
+- [Accueil interactif](interactive-onboarding.md)
 - [Sprites de personnage](sprites.md)
 - [Galeries de personnages et de personas](galleries.md)
 - [Importer et exporter des fiches de personnage](import-export.md)

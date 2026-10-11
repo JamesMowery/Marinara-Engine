@@ -67,6 +67,8 @@ Dasselbe Fenster **Import Character** übernimmt auch Stapel-Importe. Wähle meh
 
 Nimm **Marinara Native**, wenn wirklich alles erhalten bleiben soll. Nimm eines der **Compatible**-Formate, wenn die Datei zu einem anderen Werkzeug wandert. Die beiden kompatiblen Formate lassen Marinara-eigene Extras wie Sprites und Galerie-Bilder weg. Nicht leere Felder **Backstory** (Hintergrundgeschichte) und **Appearance** (Aussehen) werden an die standardmäßige Description angehängt, damit andere V2-Programme diese Charakterinformationen behalten. Aus den exportierten Erweiterungen werden diese Felder entfernt, damit sie beim erneuten Import nicht doppelt vorkommen. Deine gespeicherte Karte bleibt unverändert; **Marinara Native** behält die getrennten Felder.
 
+Das [interaktive Onboarding](interactive-onboarding.md) einer Karte bleibt bei **Marinara Native** und **Compatible PNG Card** erhalten. So bietet die Karte ihre Fragen weiterhin an, wenn jemand sie in Marinara importiert. **Compatible JSON** lässt es weg.
+
 ## Viele Charaktere auf einmal exportieren
 
 Mehrere Charaktere lassen sich zusammen als eine einzige ZIP-Datei exportieren.

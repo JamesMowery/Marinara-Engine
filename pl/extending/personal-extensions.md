@@ -74,7 +74,18 @@ const panel = marinara.ui.registerContribution({
 marinara.onCleanup(() => panel.remove());
 ```
 
-Wartość `kind: "button"` daje zwięzłą akcję, a `kind: "menu-item"` — akcję w menu Extensions. Przyciski domyślnie używają `surface: "top-bar"`. Mogą też wskazywać `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` lub `settings`, z polem `position` ustawionym na `header`, `before-content` albo `after-content`. Pole `icon` przyjmuje każdą obsługiwaną przez Marinara Engine nazwę ikony Lucide w formacie kebab-case. Oba typy akcji wywołują `onActivate`. Rodzaj `panel` wywołuje `onActivate` przy otwarciu, a jego przyciski wywołują `onEvent` z bieżącymi wartościami kontrolek. Uchwyt obsługuje aktualizacje zależne od typu: `button` przyjmuje `label`, `description`, `icon`, `surface` i `position`; `menu-item` — `label`, `description` i `icon`; `panel` — `label`, `description`, `icon` i `elements`. Wszystkie uchwyty obsługują `remove()`. Identyfikatory mogą zawierać litery, cyfry oraz `.`, `_` i `-`.
+Wartość `kind: "button"` daje zwięzłą akcję, a `kind: "menu-item"` – akcję w menu Extensions. Wartość `kind: "command"` tworzy wpis w oknie Command Center, który uruchamia istniejący wkład z tej samej wersji rozszerzenia. Wkład `command` wymaga `targetContributionId` i nie może używać `onActivate` ani `onEvent`.
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-settings",
+});
+```
+
+Host rozwiązuje wkład `command` tylko wtedy, gdy cel ma ten sam identyfikator rozszerzenia i ten sam skrót treści. Brakujący cel, cel z innego rozszerzenia i cel z nieaktualnej wersji kończą się odmową. Przyciski domyślnie używają `surface: "top-bar"`. Mogą też wskazywać `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` lub `settings`, z polem `position` ustawionym na `header`, `before-content` albo `after-content`. Pole `icon` przyjmuje każdą obsługiwaną przez aplikację Marinara Engine nazwę ikony Lucide w formacie kebab-case. Oba typy akcji wywołują `onActivate`. Rodzaj `panel` wywołuje `onActivate` przy otwarciu, a jego przyciski wywołują `onEvent` z bieżącymi wartościami kontrolek. Uchwyt obsługuje aktualizacje zależne od typu: `button` przyjmuje `label`, `description`, `icon`, `surface` i `position`; `menu-item` – `label`, `description` i `icon`; `panel` – `label`, `description`, `icon` i `elements`. Wszystkie uchwyty obsługują `remove()`. Identyfikatory mogą zawierać litery, cyfry oraz `.`, `_` i `-`.
 
 Ten przykład umieszcza natywną akcję nad zawartością panelu Presets:
 

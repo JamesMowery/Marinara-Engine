@@ -25,6 +25,8 @@
 | Conversations | On | 按 Enter 发送消息 |
 | Game | On | 按 Enter 发送消息 |
 
+Professor Mari 有自己单独的开关 **Enter sends to Professor Mari**(按 Enter 发送给 Professor Mari)，位于 Search 与 Professor Mari 设置里（**Settings** > **General** > **Search and Professor Mari settings**(Search 与 Professor Mari 设置) > **Open**(打开)）。
+
 某个模式的开关关闭时，按 Enter 只会换行，需要点击 **Send** 才能发出消息。Roleplay(角色扮演) 默认关闭，因为角色扮演的消息往往很长，经常要换行。
 
 ## 添加图片和文件附件

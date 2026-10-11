@@ -23,7 +23,7 @@
 
 出于兼容性或产品层面的考虑，以下内容有意保留，留给单独的改动处理：
 
-- `@rollup/wasm-node` 和 `Mari_point_down_left.png`；
+- `@rollup/wasm-node`；
 - 可能属于仓库外部 API 或测试接缝的服务器导出；
 - PNG 解析器和教程几何计算的合并；
 - 范围较大的编辑器和输入区重构，以及大模块的重构；
@@ -203,9 +203,7 @@
 
 ## 5. 静态资源候选项
 
-`packages/client/public/sprites/mari/Mari_point_down_left.png` 是随包发布的 Mari 立绘中唯一一张文件名和路径都没被仓库引用过的。同目录下其他 Mari 素材都有引用。
-
-**建议（中等置信度）：**先确认没有哪种运行时命名规则或外部编写的主题会直接引用它，再删除，然后在浏览器里逐个检查 Mari 在教程和新手引导中的所有姿势。public 目录下的资源可以通过拼接出来的 URL 加载，所以仅凭搜不到文本还不足以给出高置信度。
+`packages/client/public/sprites/mari/Mari_point_down_left.png` 曾是随包发布的 Mari 立绘中唯一一张文件名和路径都没被仓库引用过的，已在 omnibar slice 38a 中删除。
 
 不要靠搜文件名去清理随包发布的游戏素材。服务器的初始化脚本和清单文件会动态扫描其中一部分素材目录。
 

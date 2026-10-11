@@ -493,3 +493,32 @@ The moved **Phonetic name** bullet keeps its (読み仮名) gloss, while `media/
 ## Noodle post translation (2026-10-03)
 
 `noodle/settings.md` glosses the Noodle **Translation** switch as **Translate posts automatically**(投稿を自動翻訳), on the pattern of **Auto-Translate Responses**(AIの返信を自動翻訳) in `integrations/message-translation.md`. The chat **Translation** setting **Save translator defaults** is glossed (翻訳のデフォルト設定を保存), keeping デフォルト for *default*. `ja.json` has neither string. **Translate** and **Translation** keep (翻訳), and Google Translate stays Latin. These are translation choices, not a new native-reader review.
+
+## Professor Mari, Search, Re-scan scenes and onboarding (2026-10-11)
+
+Choices from the #7382, #7396, #7372 and #7309 sync. `ja.json` has none of these labels, so the glosses are coined here.
+
+| English | Translation |
+| --- | --- |
+| permissions mode (prose) | 権限モード. The capitalized `Permissions Mode` that EN keeps in `development/optional-agent-packages.md` stays as it is |
+| change card (Professor Mari) | 変更カード |
+| quick answer (Search) | クイック回答 |
+| Search (the `Cmd/Ctrl+K` search) | Latin `Search` in prose, glossed once as **Search**(検索). Unbolded "the Search and Professor Mari settings" is SearchとProfessor Mariの設定; the bold label is **Search and Professor Mari settings** |
+| **Aware of** | **Aware of**(把握している内容) |
+| handoff (context sent to Professor Mari) | 引き継ぎ |
+| held change | 保留中の変更 |
+| sensitive file (change) | 影響の大きいファイル |
+| fail closed | フェイルクローズ, as already used in `development/personal-extensions.md` |
+| extension ID | 拡張ID |
+| Command Center | Latin, not translated |
+| **Show "older messages not sent" note** | **Show "older messages not sent" note**(「送信されなかった古いメッセージ」の注記を表示). The label keeps its ASCII quotes |
+| scene check (Advanced Memory) | シーン確認. Replaces シーン終了チェック; "scene starts" is シーンの開始位置 |
+| **Re-scan scenes** / **Re-scan** | **Re-scan scenes**(シーンを再スキャン) / **Re-scan**(再スキャン); heading シーンの再スキャン |
+| interactive onboarding | 対話式オンボーディング (the H1 of `characters/interactive-onboarding.md`, its link text, and the gloss for **Interactive onboarding**) |
+| **Create your persona** / **Create persona** | (自分のペルソナを作る) / (ペルソナを作成). These are kept apart on purpose |
+| **Undo** / **Put back** | (元に戻す) / (戻す) |
+| **Try again** / **Retry** | (もう一度試す) / (再試行). 再試行 matches `ui/ja.json` `chat.help.targets.retry.title` |
+| blanks in a persona template | 空所. 空欄 stays reserved for "leave the field blank" |
+| out-of-character POV note | POV(視点)を示すキャラクター外の注記, following 「キャラクター外の注記」 for *out of character notes* in `extending/regex-scripts.md` |
+
+Bold labels such as **Ask Prof. Mari**, **Prof. Mari**, **Continue with Prof. Mari** and **Same as Prof. Mari** stay byte-exact. Prose that EN renamed from "Mari" to "Professor Mari" follows, and Mariチャット becomes Professor Mariのチャット. The heading **Quick answers in Search** stays English because it is also the toggle's name, following the UI-surface heading rule. These are translation choices, not a new native-reader review.

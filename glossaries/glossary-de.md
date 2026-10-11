@@ -628,3 +628,72 @@ independent native-reader panel review. Existing pack-wide rules still apply.
   `noodle/settings.md`, like that file's other setting bullets.
 - **Reset Noodle Timeline** now first appears in the new `## Translation`
   section, so its one-time gloss *(Noodle-Timeline zurücksetzen)* sits there.
+
+## Professor Mari, Search, Re-scan scenes and onboarding (2026-10-11)
+
+Cycle precedent for the #7382, #7396, #7372 and #7309 sync:
+
+- Prose that says *Mari* now says **Professor Mari**, as in English. Compounds
+  hyphenate the whole name (§6): **Professor-Mari-Chat**, **Professor-Mari-Schrift**
+  (cf. `contrib/engine-foundations-overview.md` „Professor-Mari-Datenbankbefehlen“).
+  Bold UI labels keep the app's short form byte-exact: **Ask Prof. Mari**
+  *(Prof. Mari fragen)*, **Prof. Mari** (widget preset, unglossed),
+  **Continue with Prof. Mari** *(mit Prof. Mari weitermachen)*,
+  **Same as Prof. Mari** *(dieselbe Verbindung wie Prof. Mari)*,
+  **Ask Prof. Mari more…** *(Prof. Mari mehr fragen)*.
+- The Cmd/Ctrl+K omnibar is **die Suche** in prose; the bold label **Search** is
+  glossed once as *(Suche)*. A *quick answer* is **eine schnelle Antwort**;
+  **Quick answers in Search** is glossed *(schnelle Antworten in der Suche)* and
+  its section heading is translated („## Schnelle Antworten in der Suche“), so a
+  literal count of that English string is one lower than English.
+  **Search and Professor Mari settings** *(Einstellungen für Suche und Professor
+  Mari)*; prose: „die Einstellungen für Suche und Professor Mari“.
+- Professor Mari's *change card* is **die Änderungskarte** (replaces the old
+  Keep/Restore *Prüfkarte* in `home/professor-mari.md`; `FAQ.md` keeps
+  *Prüfkarte* while its English still says *review card*; the dependency/registry
+  *Prüfkarte* is a different card and stays). *Permissions mode* is
+  **der Berechtigungsmodus**; *Manual mode* is „im Modus Manual“. A *handoff*
+  is **die Übergabe**, a *context item* **das Kontextelement**, a *resource*
+  (character, persona, lorebook, preset) **das Objekt**, as elsewhere in
+  `home/professor-mari.md`.
+- Glosses: **Aware of** *(im Blick)*, **Undo** *(rückgängig)*, **Retry**
+  *(wiederholen)* kept distinct from **Try again** *(erneut versuchen)*,
+  **Turn on** *(einschalten)*, **Put back** *(zurücklegen)*, **Don't apply**
+  *(nicht anwenden)*. **Not saved**, **Undo until**, **Undo closed** and **In use**
+  are app-rendered statuses and stay unglossed (§3.3).
+- **Show "older messages not sent" note** keeps its straight ASCII quotes inside
+  the bold; its one-time gloss is *(Hinweis „ältere Nachrichten nicht gesendet“
+  anzeigen)*, German quotes outside the bold only.
+- **Command Center** (the extension contribution target) stays English and
+  unbolded, like the English. *Fails closed* is rendered by outcome, „wird
+  abgelehnt“, matching `development/multiplayer.md` and `development/frontend.md`.
+  The work-item name `omnibar slice 38a` stays literal („im Arbeitsschritt
+  omnibar slice 38a“).
+- Advanced Memory: *scene check* is **die Szenenprüfung** everywhere; the old
+  *Szenenendprüfung* is retired. `chats/peek-prompt.md` keeps „Prüfung auf ein
+  Szenenende“ while its English still says *scene-end check*. *Scene starts* are
+  **Szenenanfänge**, a *scene-break line* is **die Szenentrennzeile**, an
+  *out-of-character POV note* is „ein POV-Hinweis außerhalb der Rolle“.
+  **Re-scan scenes** *(Szenen neu durchsuchen)* and **Re-scan** *(neu
+  durchsuchen)*; the section heading is „### Szenen neu durchsuchen“.
+- Interactive onboarding: the concept is **interaktives Onboarding** (H1 and link
+  text „Interaktives Onboarding“, declined „das interaktive Onboarding“ where the
+  sentence needs it); the switch **Interactive onboarding** is glossed
+  *(interaktives Onboarding)*. *Card author* is **der Kartenautor**, *players*
+  **Spieler** (generic, §1), the new chat wizard **der Einrichtungsassistent**.
+  Label glosses: **How onboarding works** *(so funktioniert Onboarding)*,
+  **Onboarding Questions** *(Onboarding-Fragen)*, **Add Question** *(Frage
+  hinzufügen)*, **Variable Name** *(Variablenname)*, **Options** *(Optionen)*,
+  **Value** *(Wert)*, **Help text for players** *(Hilfetext für Spieler)*,
+  **Allow own answer** *(eigene Antwort erlauben)*, **Write your own** *(eigene
+  Antwort schreiben)*, **Multi-Select** *(Mehrfachauswahl)*, **Available
+  variables** *(verfügbare Variablen)*, **Rendered preview** *(gerenderte
+  Vorschau)*, **Create your persona** *(deine Persona erstellen)*, kept distinct
+  from **Create persona** *(Persona erstellen)*. **Question (shown to user)** has
+  parentheses and stays unglossed (§3.3). The **None** row's subtitle is quoted:
+  „bleibst du mit **None** („Stay anonymous“) anonym“.
+- Gloss placement when English inserts a new first use above an already-glossed
+  mention (**Settings** and **Delete** in `home/professor-mari.md`, **Use Decision
+  model** in `agents/memory.md`): the one-time gloss moves to the new first use and
+  the later mention drops it (§3.2), as with **Reset Noodle Timeline** (2026-10-03).
+  The label stays glossed exactly once per document.

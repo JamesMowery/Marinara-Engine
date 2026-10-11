@@ -30,6 +30,8 @@ Game Modeではこのセクションがゲーム内のパーティーとして�
 
 New Chatの設定ウィザードには**Your Persona**(自分のペルソナ)欄があります。同じ検索付きのピッカーと**None**の選択肢を使います。New Game Setupの設定ウィザードでは、この欄の名前が**Player's Persona**になります。
 
+Roleplayのチャットでは、キャラクターカードがこのピッカーの先頭に**Create your persona**(自分のペルソナを作る)を表示することがあります。これを選んでカードの質問に答えると、新しいペルソナができあがります。[対話式オンボーディング](interactive-onboarding.md)を参照してください。
+
 ## Quick Persona Switcher
 
 チャットを開くと、メッセージ入力欄の近くに小さな丸いアバターのボタンが表示されます。これが**Quick Persona Switcher**(ペルソナの簡易切り替え)です。ペルソナが未設定のときは、ツールチップにこの名前が表示されます。
@@ -53,4 +55,5 @@ Game Modeでは、New Game Setupウィザードでペルソナを選びます。
 ## 関連ガイド
 
 - [ペルソナの作成と編集](personas.md)
+- [対話式オンボーディング](interactive-onboarding.md)
 - [Chat Settingsの概要](../chats/chat-settings.md)

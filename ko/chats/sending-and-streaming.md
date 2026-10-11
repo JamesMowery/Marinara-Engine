@@ -25,6 +25,8 @@
 | Conversations | On | Enter가 메시지를 보냅니다 |
 | Game | On | Enter가 메시지를 보냅니다 |
 
+Professor Mari에게는 별도의 토글인 **Enter sends to Professor Mari**(Enter로 Professor Mari에게 전송)가 있습니다. 이 토글은 **Settings** > **General** > **Search and Professor Mari settings**(검색 및 Professor Mari 설정) > **Open**(열기)에서 여는 검색 및 Professor Mari 설정에 있습니다.
+
 토글이 꺼진 모드에서는 Enter를 눌러도 줄바꿈만 들어갑니다. 이때는 **Send**를 클릭해서 메시지를 올리세요. Roleplay는 메시지가 길고 줄바꿈이 자주 필요해서 기본값이 꺼짐입니다.
 
 ## 이미지와 파일 첨부

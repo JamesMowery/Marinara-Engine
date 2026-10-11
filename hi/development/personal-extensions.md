@@ -93,6 +93,18 @@
 - `button`: डिफ़ॉल्ट रूप से ऊपरी पट्टी में छोटा एक्शन, या होस्ट द्वारा `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` या `settings` सतह पर दिखाया एक्शन;
 - `menu-item`: **Extensions** मेन्यू में एक एक्शन;
 - `panel`: एक एंट्री, जो Marinara का भरोसेमंद **Extensions** साइड पैनल खोलती है।
+- `command`: Command Center (कमांड सेंटर) में एक एंट्री, जो उसी एक्सटेंशन रिविज़न के किसी मौजूदा `button`, `menu-item` या `panel` को चलाती है।
+
+कमांड में `targetContributionId` होता है, और कोई `onActivate` या `onEvent` कॉलबैक नहीं होता। होस्ट टारगेट को एक्सटेंशन ID, कंटेंट हैश और कंट्रिब्यूशन ID से पहचानता है। टारगेट न मिले या किसी दूसरे रिविज़न का हो, तो कमांड फ़ेल हो जाता है और कुछ नहीं चलता। उदाहरण के लिए:
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-panel",
+});
+```
 
 साइड पैनल बटन `position: "header"`, `"before-content"` या `"after-content"` लेते हैं। ऊपरी पट्टी बटन `position` नहीं देते। आइकन Marinara के Lucide कैटलॉग के सीमित kebab-case नाम हैं; असमर्थित नाम पर पहेली वाला आइकन आता है।
 

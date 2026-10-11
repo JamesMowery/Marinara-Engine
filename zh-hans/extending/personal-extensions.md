@@ -74,7 +74,18 @@ const panel = marinara.ui.registerContribution({
 marinara.onCleanup(() => panel.remove());
 ```
 
-紧凑操作使用 `kind: "button"`，Extensions 菜单操作使用 `kind: "menu-item"`。按钮默认使用 `surface: "top-bar"`，也可以指向 `chats`、`bots`、`characters`、`personas`、`lorebooks`、`presets`、`connections`、`agents` 或 `settings`，并将 `position` 设为 `header`、`before-content` 或 `after-content`。`icon` 可接受 Marinara 支持的任意 kebab-case Lucide 图标名称。两种操作都会触发 `onActivate`。`panel` 在打开时触发 `onActivate`；其按钮会带着所有面板控件的当前值触发 `onEvent`。句柄支持按种类更新：`button` 接受 `label`、`description`、`icon`、`surface` 和 `position`；`menu-item` 接受 `label`、`description` 和 `icon`；`panel` 接受 `label`、`description`、`icon` 和 `elements`。所有句柄都支持 `remove()`。ID 可以包含字母、数字以及 `.`、`_` 和 `-`。
+紧凑操作使用 `kind: "button"`，Extensions 菜单操作使用 `kind: "menu-item"`。`kind: "command"` 用于 Command Center(命令中心) 里的条目，它会激活同一扩展修订版本中已有的某个贡献项。命令必须带 `targetContributionId`，不能使用 `onActivate` 或 `onEvent`。
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-settings",
+});
+```
+
+只有目标与命令的扩展 ID 和内容哈希都相同时，宿主才会解析这条命令。目标缺失、跨扩展或属于过期修订版本时，一律按拒绝方式失败。按钮默认使用 `surface: "top-bar"`，也可以指向 `chats`、`bots`、`characters`、`personas`、`lorebooks`、`presets`、`connections`、`agents` 或 `settings`，并将 `position` 设为 `header`、`before-content` 或 `after-content`。`icon` 可接受 Marinara 支持的任意 kebab-case Lucide 图标名称。两种操作都会触发 `onActivate`。`panel` 在打开时触发 `onActivate`；其按钮会带着所有面板控件的当前值触发 `onEvent`。句柄支持按种类更新：`button` 接受 `label`、`description`、`icon`、`surface` 和 `position`；`menu-item` 接受 `label`、`description` 和 `icon`；`panel` 接受 `label`、`description`、`icon` 和 `elements`。所有句柄都支持 `remove()`。ID 可以包含字母、数字以及 `.`、`_` 和 `-`。
 
 例如，下面会在 Presets 面板内容上方放置一个原生操作：
 

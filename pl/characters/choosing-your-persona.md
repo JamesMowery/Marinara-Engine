@@ -30,6 +30,8 @@ W trybie Game Mode ta sekcja jest opisana jako drużyna w grze, ale etykieta poz
 
 Kreator **New Chat** ma pole **Your Persona** (twoja persona). Działa w nim to samo okno wyboru z wyszukiwarką oraz opcja **None**. W kreatorze **New Game Setup** to samo pole nosi nazwę **Player's Persona**.
 
+W czacie Roleplay karta postaci może oferować na górze tego okna wyboru opcję **Create your persona** (utworzenie własnej persony). Wybierz ją, żeby odpowiedzieć na pytania karty i dostać nową personę. Zobacz [Interaktywny onboarding](interactive-onboarding.md).
+
 ## Przełącznik **Quick Persona Switcher**
 
 W otwartym czacie, obok pola wiadomości, znajduje się mały okrągły przycisk z awatarem. To właśnie przełącznik **Quick Persona Switcher** (szybki przełącznik person). Kiedy żadna persona nie jest ustawiona, podpowiedź pokazuje tę właśnie nazwę.
@@ -53,4 +55,5 @@ Przełączenie persony w trakcie czatu nie zmienia wcześniejszych wiadomości. 
 ## Powiązane przewodniki
 
 - [Persony użytkownika: tworzenie i edycja](personas.md)
+- [Interaktywny onboarding](interactive-onboarding.md)
 - [Panel **Chat Settings** – przegląd](../chats/chat-settings.md)

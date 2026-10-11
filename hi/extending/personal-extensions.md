@@ -74,7 +74,18 @@ const panel = marinara.ui.registerContribution({
 marinara.onCleanup(() => panel.remove());
 ```
 
-छोटी कार्रवाई के लिए `kind: "button"` और Extensions-menu action के लिए `kind: "menu-item"` इस्तेमाल करें। Button की default जगह `surface: "top-bar"` है। वे `position` को `header`, `before-content` या `after-content` रखकर `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` या `settings` को भी target कर सकते हैं। `icon` में Marinara से supported कोई kebab-case Lucide icon name दिया जा सकता है। दोनों action kind `onActivate` चलाते हैं। `panel` खुलते ही `onActivate` चलाता है और उसके button सभी panel control की मौजूदा value के साथ `onEvent` चलाते हैं। Handle में kind के हिसाब से update मिलता है: `button` में `label`, `description`, `icon`, `surface` और `position`; `menu-item` में `label`, `description` और `icon`; `panel` में `label`, `description`, `icon` और `elements`। सभी handle `remove()` support करते हैं। ID में अक्षर, अंक, `.`, `_` और `-` आ सकते हैं।
+छोटी कार्रवाई के लिए `kind: "button"` और Extensions-menu action के लिए `kind: "menu-item"` इस्तेमाल करें। Command Center (कमांड सेंटर) की ऐसी एंट्री के लिए `kind: "command"` इस्तेमाल करें, जो उसी एक्सटेंशन रिविज़न के किसी मौजूदा कंट्रिब्यूशन को चलाती है। कमांड के लिए `targetContributionId` ज़रूरी है, और उसमें `onActivate` या `onEvent` इस्तेमाल नहीं हो सकते।
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-settings",
+});
+```
+
+होस्ट कमांड को उसके टारगेट से तभी जोड़ता है, जब टारगेट का एक्सटेंशन ID और कंटेंट हैश वही हो। टारगेट न मिले, किसी दूसरे एक्सटेंशन का हो या पुराने रिविज़न का हो, तो कमांड फ़ेल हो जाता है और कुछ नहीं चलता। Button की default जगह `surface: "top-bar"` है। वे `position` को `header`, `before-content` या `after-content` रखकर `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` या `settings` को भी target कर सकते हैं। `icon` में Marinara से supported कोई kebab-case Lucide icon name दिया जा सकता है। दोनों action kind `onActivate` चलाते हैं। `panel` खुलते ही `onActivate` चलाता है और उसके button सभी panel control की मौजूदा value के साथ `onEvent` चलाते हैं। Handle में kind के हिसाब से update मिलता है: `button` में `label`, `description`, `icon`, `surface` और `position`; `menu-item` में `label`, `description` और `icon`; `panel` में `label`, `description`, `icon` और `elements`। सभी handle `remove()` support करते हैं। ID में अक्षर, अंक, `.`, `_` और `-` आ सकते हैं।
 
 यह उदाहरण Presets panel content के ऊपर native action रखता है:
 
