@@ -12,7 +12,7 @@ Mit ihr sprichst du in ganz normaler Sprache. Tipp eine Nachricht in das Feld un
 
 Die allererste Nachricht an sie schaltet die Errungenschaft **Hello World** frei.
 
-Ihren Zustand zeigt außerdem auf jedem Bildschirm eine dünne Linie am unteren Rand der oberen Leiste der App: Die Linie bewegt sich in Wellen, während Professor Mari arbeitet, wird grün, wenn sie fertig ist, golden, solange eine Freigabe wartet, und rot, wenn der letzte Durchlauf fehlgeschlagen ist. Sobald du ihren Chat öffnest, verschwindet sie wieder. Solange **Ask Professor Mari from Search** (Professor Mari aus der Suche fragen) ausgeschaltet ist, bleibt die Linie aus. Alle ihre Einstellungen findest du in den Einstellungen für Suche und Professor Mari: über das Zahnrad in der Suche oder unter **Settings** > **General** (Allgemein) > **Search and Professor Mari settings** (Einstellungen für Suche und Professor Mari) > **Open** (öffnen).
+Ihren Zustand zeigt außerdem auf jedem Bildschirm eine dünne Linie am unteren Rand der oberen Leiste der App: Die Linie bewegt sich in Wellen, während Professor Mari arbeitet, wird grün, wenn sie fertig ist, golden, solange eine Freigabe wartet, und rot, wenn der letzte Durchlauf fehlgeschlagen ist. Sobald du ihren Chat öffnest, verschwindet die Linie wieder. Solange **Ask Professor Mari from Search** (Professor Mari aus der Suche fragen) ausgeschaltet ist, bleibt sie aus. Alle ihre Einstellungen findest du in den Einstellungen für Suche und Professor Mari: über das Zahnrad in der Suche oder unter **Settings** (Einstellungen) > **General** (Allgemein) > **Search and Professor Mari settings** (Einstellungen für Suche und Professor Mari) > **Open** (öffnen).
 
 ## Professor Mari aus deiner aktuellen Arbeit heraus fragen
 
@@ -22,7 +22,7 @@ Du kannst Professor Mari genau dort öffnen, wo du Hilfe brauchst. Diese Einstie
 
 - Editoren für **Character**, **Persona**, **Lorebook** und **Preset**: Frag nach dem geöffneten Objekt oder nach einem ausgewählten Feld.
 - Antworten in der **FAQ**: Mit **Ask Prof. Mari** übernimmst du die gefundene Frage samt ihrer geschriebenen Antwort als Ausgangspunkt.
-- **Search** (Suche): Drück `Cmd/Ctrl+K`, wähl ein Ergebnis aus und nimm es dann mit **Ask Prof. Mari** in den Entwurf auf. Die Suche selbst schickt keine Anfrage an ein Modell, außer eine schnelle Antwort ist eingeschaltet – siehe **Quick answers in Search** (schnelle Antworten in der Suche) weiter unten.
+- **Search** (Suche): Drück `Cmd/Ctrl+K`, wähl ein Ergebnis aus und nimm es dann mit **Ask Prof. Mari** in den Entwurf auf. Die Suche selbst schickt keine Anfrage an ein Modell, es sei denn, eine schnelle Antwort ist eingeschaltet – siehe **Quick answers in Search** (schnelle Antworten in der Suche) weiter unten.
 - **Recent Chats** (Letzte Chats) und andere Fehlerzustände: Mit **Ask Prof. Mari** neben **Retry** (wiederholen) übergibst du ihr die Fehlerbeschreibung und die gewünschte Reparatur.
 - Der normale Charakter-Chat mit Professor Mari und der Arbeitsbereich-Chat auf dem Home-Bildschirm nutzen dasselbe Übergabeformat.
 
@@ -34,7 +34,7 @@ Bei all dem kannst du sie um Hilfe bitten:
 - Einen Charakter anlegen oder bearbeiten. Ein Charakter ist eine Karte, die der KI einen Namen, eine Persönlichkeit und eine Stimme gibt.
 - Eine Persona anlegen oder bearbeiten. Die Persona ist die Identität, die du im Chat spielst – das „Ich“ in der Geschichte.
 - Ein Lorebook anlegen oder bearbeiten. Ein Lorebook ist eine Sammlung von Weltwissen, die die KI heranzieht, sobald sie zum Thema passt.
-- Ein Theme, einen Agenten, ein Prompt-Preset oder einen Entwurf für eine **Personal Extension** (persönliche Erweiterung) anlegen oder bearbeiten. Professor Mari ist die einzige Erweiterungs-Autorin im Standard-Umfang. Ihre Entwürfe bleiben deaktiviert, bis du den Code in der Sandbox geprüft, alle angeforderten aktiven Berechtigungen für Charakterkarten oder Personas durchgesehen und den exakten Hash unter **Settings** (Einstellungen) > **Addons** freigegeben hast.
+- Ein Theme, einen Agenten, ein Prompt-Preset oder einen Entwurf für eine **Personal Extension** (persönliche Erweiterung) anlegen oder bearbeiten. Professor Mari ist die einzige Erweiterungs-Autorin im Standard-Umfang. Ihre Entwürfe bleiben deaktiviert, bis du den Code in der Sandbox geprüft, alle angeforderten aktiven Berechtigungen für Charakterkarten oder Personas durchgesehen und den exakten Hash unter **Settings** > **Addons** freigegeben hast.
 - Einen einzelnen Teil eines Prompt-Presets an Ort und Stelle bearbeiten. Sie listet die einzelnen Abschnitte, Prompt-Gruppen und Auswahlvariablen eines Presets auf und zeigt dir jedes dieser Elemente auf Wunsch vollständig an. Ergänzen, ändern oder entfernen kann sie dann genau dieses eine Stück – etwa eine zusätzliche Zeile in einem bestimmten Abschnitt. Sie muss also nicht das ganze Preset neu anlegen oder ersetzen.
 - Alle 33 offiziellen herunterladbaren Agenten und Feature-Pakete vergleichen, erklären, welche Modi sie unterstützen, und empfehlen, welche zum jeweiligen Ziel passen. Sie unterscheidet dabei, was im Katalog steht und was tatsächlich installiert ist, verweist bei Bedarf auf **Agents → Download Agents** und weiß, dass Paketquellen und der vollständige Katalog unter [Pasta-Devs/Marinara-Agents](https://github.com/Pasta-Devs/Marinara-Agents) liegen.
 - Bilder generieren oder zuweisen, etwa Avatare, Sprites und Hintergründe. Ein Sprite ist ein Charakterbild – ein Porträt oder eine Ganzkörper-Pose –, das während eines Chats angezeigt wird.
@@ -107,13 +107,13 @@ Damit sie ein Bild lesen kann, muss das Modell der gewählten Verbindung Bilder 
 
 Ändert Professor Mari etwas, speichert sie die Änderung sofort und zeigt unter ihrer Antwort eine Änderungskarte. Die Karte listet jedes geänderte Feld auf. Bei einer Textänderung siehst du die alten und die neuen Wörter, bei einem Lorebook seine Einträge. Öffne **Show all** (alle anzeigen), um jedes Feld zu sehen. **Technical details** (technische Details) zeigt den rohen Befehl.
 
-Die Karte hat eine Aktion:
+Die Karte hat nur eine Aktion:
 
 - **Undo** (rückgängig) holt die zuvor gespeicherte Fassung zurück. Jede Änderung lässt sich rückgängig machen, in jedem Berechtigungsmodus. Der Berechtigungsmodus entscheidet nur, ob sie vorher fragt.
 - Eine Änderung, die nicht gespeichert wurde, zeigt **Not saved** und den Grund. **Try again** bittet sie erneut darum.
 - Die Anzeige **Undo until** erscheint auf der Karte nur in den letzten 24 Stunden. Eine Kopie zum Rückgängigmachen hält bis zu 14 Tage, und nur die neuesten 50 werden aufbewahrt. Danach bleibt die Änderung bestehen, und auf der Karte steht **Undo closed**.
 
-Anders ist es bei einer Änderung, die auf dich wartet. Eine zurückgehaltene Änderung (im Modus Manual oder bei einer Änderung an einer heiklen Datei oder einer Abhängigkeit) zeigt **Apply** (anwenden) und **Don't apply** (nicht anwenden). Eine Löschung zeigt **Delete** und **Put back** (zurücklegen). Die Suche listet ihre Änderungen nicht auf: Öffne Professor Mari, um sie anzusehen, anzuwenden oder rückgängig zu machen.
+Anders ist es bei einer Änderung, die auf dich wartet. Eine zurückgehaltene Änderung (im Modus Manual oder bei einer Änderung an einer heiklen Datei oder einer Abhängigkeit) zeigt **Apply** (anwenden) und **Don't apply** (nicht anwenden). Eine Löschung zeigt **Delete** (löschen) und **Put back** (zurücklegen). Die Suche listet ihre Änderungen nicht auf: Öffne Professor Mari, um sie anzusehen, anzuwenden oder rückgängig zu machen.
 
 - Eine Karte gehört zu dem Professor-Mari-Chat, in dem sie die Änderung vorgenommen hat. Ein neuer Chat beginnt ohne Karten anderer Chats. Wenn du einen Chat löschst, bleiben seine Änderungen erhalten, seine Karten werden entfernt. Eine Änderung über den Terminalbefehl `mari` gehört zu keinem Chat; ihre Karte erscheint deshalb in jedem Professor-Mari-Chat.
 - Eine Bearbeitung, die nichts ändern würde, wird nicht gespeichert und erhält keine Karte.
@@ -154,7 +154,7 @@ Klick auf die Schaltfläche **Skills** in ihrer Chat-Kopfzeile, um das Panel **P
 - Auf **New** (neu) klicken, um einen Skill aus einer Vorlage zu starten.
 - Auf **Upload** (hochladen) klicken, um einen Skill aus einer `.md`- oder `.txt`-Datei hinzuzufügen.
 - Jeden Skill ein- oder ausschalten. Ein ausgeschalteter Skill bleibt erhalten, wird aber nicht verwendet.
-- Einen Skill auswählen und **Name**, **Description** und **Instructions** bearbeiten, dann auf **Save** (speichern) klicken. Über **Delete** (löschen) verschwindet er wieder.
+- Einen Skill auswählen und **Name**, **Description** und **Instructions** bearbeiten, dann auf **Save** (speichern) klicken. Über **Delete** verschwindet er wieder.
 
 Solange es noch keine Skills gibt, steht im Panel **No custom skills yet** („noch keine eigenen Skills“).
 

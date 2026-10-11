@@ -649,11 +649,13 @@ Cycle precedent for the #7382, #7396, #7372 and #7309 sync:
   **Search and Professor Mari settings** *(Einstellungen für Suche und Professor
   Mari)*; prose: „die Einstellungen für Suche und Professor Mari“.
 - Professor Mari's *change card* is **die Änderungskarte** (replaces the old
-  Keep/Restore *Prüfkarte*; the dependency/registry *Prüfkarte* is a different
-  card and stays). *Permissions mode* is **der Berechtigungsmodus**; *Manual
-  mode* is „im Modus Manual“. A *handoff* is **die Übergabe**, a *context item*
-  **das Kontextelement**, a *resource* (character, persona, lorebook, preset)
-  **das Objekt**, as elsewhere in `home/professor-mari.md`.
+  Keep/Restore *Prüfkarte* in `home/professor-mari.md`; `FAQ.md` keeps
+  *Prüfkarte* while its English still says *review card*; the dependency/registry
+  *Prüfkarte* is a different card and stays). *Permissions mode* is
+  **der Berechtigungsmodus**; *Manual mode* is „im Modus Manual“. A *handoff*
+  is **die Übergabe**, a *context item* **das Kontextelement**, a *resource*
+  (character, persona, lorebook, preset) **das Objekt**, as elsewhere in
+  `home/professor-mari.md`.
 - Glosses: **Aware of** *(im Blick)*, **Undo** *(rückgängig)*, **Retry**
   *(wiederholen)* kept distinct from **Try again** *(erneut versuchen)*,
   **Turn on** *(einschalten)*, **Put back** *(zurücklegen)*, **Don't apply**
@@ -668,11 +670,12 @@ Cycle precedent for the #7382, #7396, #7372 and #7309 sync:
   The work-item name `omnibar slice 38a` stays literal („im Arbeitsschritt
   omnibar slice 38a“).
 - Advanced Memory: *scene check* is **die Szenenprüfung** everywhere; the old
-  *Szenenendprüfung* is retired. *Scene starts* are **Szenenanfänge**, a
-  *scene-break line* is **die Szenentrennzeile**, an *out-of-character POV note*
-  is „ein POV-Hinweis außerhalb der Rolle“. **Re-scan scenes** *(Szenen neu
-  durchsuchen)* and **Re-scan** *(neu durchsuchen)*; the section heading is
-  „### Szenen neu durchsuchen“.
+  *Szenenendprüfung* is retired. `chats/peek-prompt.md` keeps „Prüfung auf ein
+  Szenenende“ while its English still says *scene-end check*. *Scene starts* are
+  **Szenenanfänge**, a *scene-break line* is **die Szenentrennzeile**, an
+  *out-of-character POV note* is „ein POV-Hinweis außerhalb der Rolle“.
+  **Re-scan scenes** *(Szenen neu durchsuchen)* and **Re-scan** *(neu
+  durchsuchen)*; the section heading is „### Szenen neu durchsuchen“.
 - Interactive onboarding: the concept is **interaktives Onboarding** (H1 and link
   text „Interaktives Onboarding“, declined „das interaktive Onboarding“ where the
   sentence needs it); the switch **Interactive onboarding** is glossed
@@ -689,8 +692,8 @@ Cycle precedent for the #7382, #7396, #7372 and #7309 sync:
   from **Create persona** *(Persona erstellen)*. **Question (shown to user)** has
   parentheses and stays unglossed (§3.3). The **None** row's subtitle is quoted:
   „bleibst du mit **None** („Stay anonymous“) anonym“.
-- Gloss placement when English inserts a new first use above an unchanged,
-  already-glossed mention (**Settings** and **Delete** in `home/professor-mari.md`,
-  **Use Decision model** in `agents/memory.md`): the new text stays unglossed and
-  the existing gloss is left where it is, so the label is glossed exactly once
-  without widening the diff.
+- Gloss placement when English inserts a new first use above an already-glossed
+  mention (**Settings** and **Delete** in `home/professor-mari.md`, **Use Decision
+  model** in `agents/memory.md`): the one-time gloss moves to the new first use and
+  the later mention drops it (§3.2), as with **Reset Noodle Timeline** (2026-10-03).
+  The label stays glossed exactly once per document.
