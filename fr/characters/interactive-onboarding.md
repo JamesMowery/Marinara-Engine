@@ -1,6 +1,6 @@
 # Accueil interactif
 
-Ce guide présente l'**accueil interactif** (interactive onboarding), une fonction des fiches de personnage qui permet aux joueurs de construire leur persona en répondant aux questions de l'auteur de la fiche quand ils commencent un chat Roleplay. Il explique comment les auteurs le configurent dans le Character Editor (l'éditeur de personnage) et ce que les joueurs voient dans l'assistant de nouveau chat.
+Ce guide présente l'**accueil interactif** (interactive onboarding), une fonction des fiches de personnage qui permet aux joueurs de construire leur persona en répondant aux questions de l'auteur de la fiche quand ils commencent un chat Roleplay. Il explique comment les auteurs le configurent dans le Character Editor (éditeur de personnage) et ce que les joueurs voient dans l'assistant de nouveau chat.
 
 ## À quoi sert l'accueil interactif
 

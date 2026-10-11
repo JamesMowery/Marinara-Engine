@@ -64,7 +64,7 @@
     },
     {
       "path": "agents/memory.md",
-      "sha256": "e769455909908c5eab6349bb86f3a4bf69864c5198c5677f03382f44927c6ffc",
+      "sha256": "df183bb09c283853f2712369e2f9f03738c1f0e62b62193899722f7887588ab7",
       "bytes": 53334
     },
     {
@@ -124,8 +124,8 @@
     },
     {
       "path": "characters/interactive-onboarding.md",
-      "sha256": "d14f485285a67d0675dcfe0d2867331bf11a62b663c82385c2a0ffd8fbcef7f7",
-      "bytes": 7456
+      "sha256": "c7f63e0f067663d21cdeae0811d210a13f75b9ba75ca3633fea7c3a3a12ea424",
+      "bytes": 7454
     },
     {
       "path": "characters/library-organization.md",
@@ -479,8 +479,8 @@
     },
     {
       "path": "home/professor-mari.md",
-      "sha256": "139074af86d047cee43f2974436ee31c293bb545ec13a62456306bd615422fa2",
-      "bytes": 31751
+      "sha256": "16861604d4e88f3ebd3fcfd696cd7d8e04909755f3d7f27e1301d896cd1cb7f8",
+      "bytes": 31725
     },
     {
       "path": "home/tutorial.md",

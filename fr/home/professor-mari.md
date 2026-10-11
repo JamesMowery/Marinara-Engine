@@ -34,7 +34,7 @@ Demande-lui de l'aide pour tout ceci :
 - Créer ou modifier un personnage. Un personnage est une fiche qui donne à l'IA un nom, une personnalité et une voix.
 - Créer ou modifier un persona. Le persona est l'identité que tu incarnes dans un chat, le "toi" de l'histoire.
 - Créer ou modifier un lorebook. Un lorebook est un recueil de notes sur ton univers, que l'IA reprend quand elles sont pertinentes.
-- Créer ou modifier un thème, un agent, un preset de prompt ou un brouillon de Personal Extension. Professor Mari est la seule autrice d'extension par défaut. Ses brouillons restent désactivés tant que tu n'as pas donné ton accord. Inspecte le code en bac à sable, puis examine les permissions actives demandées sur les fiches de personnage ou les personas. Approuve enfin le hash exact dans **Settings** (Paramètres) > **Addons**.
+- Créer ou modifier un thème, un agent, un preset de prompt ou un brouillon de Personal Extension. Professor Mari est la seule autrice d'extension par défaut. Ses brouillons restent désactivés tant que tu n'as pas donné ton accord. Inspecte le code en bac à sable, puis examine les permissions actives demandées sur les fiches de personnage ou les personas. Approuve enfin le hash exact dans **Settings** > **Addons**.
 - Modifier une seule partie d'un preset de prompt, sur place. Elle sait lister les sections, les groupes de prompt et les variables de choix d'un preset, puis lire n'importe lequel d'entre eux en entier. Elle ajoute, change ou retire ce seul morceau, par exemple une ligne dans une section précise, au lieu de créer ou de remplacer le preset entier.
 - Comparer les 33 agents et packs de fonctionnalités officiels à télécharger, expliquer quels modes ils prennent en charge et conseiller ceux qui correspondent à ton objectif. Elle distingue ce que propose le catalogue de ce qui est réellement installé, oriente vers **Agents → Download Agents** (télécharger des agents) quand il le faut, et sait que les sources des packs et le catalogue complet se trouvent sur [Pasta-Devs/Marinara-Agents](https://github.com/Pasta-Devs/Marinara-Agents).
 - Générer ou attribuer des images : avatars, sprites, arrière-plans. Un sprite est une image du personnage, portrait ou pose en pied, affichée pendant un chat.
@@ -117,7 +117,7 @@ Une modification qui t'attend fonctionne autrement. Une modification retenue (en
 
 - Un encart appartient au chat Professor Mari dans lequel elle a effectué la modification. Un nouveau chat démarre sans les encarts des autres chats. Supprimer un chat conserve ses modifications et retire ses encarts. Une modification effectuée avec la commande `mari` dans un terminal n'appartient à aucun chat : son encart apparaît donc dans tous les chats Professor Mari.
 - Une modification qui laisserait tout à l'identique n'est pas enregistrée et ne reçoit aucun encart.
-- Professor Mari ne peut ni modifier ni supprimer sa propre carte de personnage. Marinara la rétablit à sa version intégrée à chaque démarrage.
+- Professor Mari ne peut ni modifier ni supprimer sa propre fiche de personnage. Marinara la rétablit à sa version intégrée à chaque démarrage.
 - Les personnages et les personas gardent aussi leur propre historique de versions dans leurs éditeurs. Tu peux y restaurer une version plus ancienne : c'est un deuxième filet de sécurité.
 
 Quand Professor Mari crée ou met à jour un personnage, un persona, un lorebook ou un preset, le résultat peut afficher **Open**. Utilise-le pour ouvrir la ressource exacte une fois que l'application a actualisé ses données. Un résultat mis à jour peut aussi afficher **Review** (examiner) quand une révision est en attente. **Review** ouvre les contrôles de la modification en attente. Les nouveaux éléments n'ont en général pas de révision, puisqu'aucun élément existant n'a été écrasé.
@@ -154,7 +154,7 @@ Clique sur le bouton **Skills** dans l'en-tête de son chat pour ouvrir le panne
 - Cliquer sur **New** (nouveau) pour partir d'un modèle de Skill.
 - Cliquer sur **Upload** (téléverser) pour ajouter une Skill depuis un fichier `.md` ou `.txt`.
 - Activer ou désactiver chaque Skill. Une Skill désactivée existe toujours, mais elle n'est pas utilisée.
-- Sélectionner une Skill pour modifier les champs **Name** (nom), **Description** et **Instructions**, puis cliquer sur **Save** (enregistrer). Clique sur **Delete** (supprimer) pour l'effacer.
+- Sélectionner une Skill pour modifier les champs **Name** (nom), **Description** et **Instructions**, puis cliquer sur **Save** (enregistrer). Clique sur **Delete** pour l'effacer.
 
 Tant que tu n'as aucune Skill, le panneau affiche **No custom skills yet**.
 
