@@ -93,6 +93,18 @@ La fonction `marinara.ui.showWindow({ title, elements, onEvent, onClose })` renv
 - `button` : une action compacte dans la barre supérieure par défaut, ou une action rendue par l'hôte sur la surface `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` ou `settings` ;
 - `menu-item` : une action dans le menu **Extensions** ;
 - `panel` : une entrée qui ouvre le panneau latéral **Extensions** de confiance de Marinara.
+- `command` : une entrée du Command Center (centre de commandes) qui active un `button`, un `menu-item` ou un `panel` existant de la même révision de l'extension.
+
+Les commandes contiennent `targetContributionId` et n'ont pas de callback `onActivate` ni `onEvent`. L'hôte résout la cible par identifiant d'extension, empreinte de contenu et identifiant de contribution. Une cible absente ou issue d'une autre révision échoue par sécurité. Par exemple :
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-panel",
+});
+```
 
 Les boutons de panneau latéral acceptent `position: "header"`, `"before-content"` ou `"after-content"`. Les boutons de la barre supérieure omettent `position`. Les icônes sont des noms kebab-case bornés du catalogue Lucide de Marinara ; les noms non reconnus utilisent l'icône de puzzle.
 

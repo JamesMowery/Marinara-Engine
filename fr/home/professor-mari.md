@@ -6,15 +6,27 @@ Professor Mari est l'assistante intégrée de Marinara Engine, sur l'écran d'ac
 
 Professor Mari vit sur l'écran d'accueil. L'écran d'accueil, c'est ce que tu vois quand aucun chat n'est ouvert.
 
-Repère l'encart avec son pixel art et le titre **Professor Mari**. Une ligne d'état affiche **Ready to help** quand elle est disponible, ou **Working on it...** quand elle travaille. Clique sur le bouton **Ask Professor Mari** (demander à Professor Mari) pour ouvrir sa fenêtre de chat complète.
+Repère l'encart avec son pixel art et le titre **Professor Mari**. Une ligne d'état affiche **Ready to help** quand elle est disponible, ou **Working on it...** quand elle travaille. Clique sur le bouton **Ask Prof. Mari** (demander à Prof. Mari) pour ouvrir sa fenêtre de chat complète.
 
 Tu lui parles en langage courant. Saisis un message dans le champ, puis appuie sur Enter pour l'envoyer. Appuie sur Shift et Enter ensemble pour aller à la ligne.
 
 Le tout premier message que tu lui envoies débloque le succès **Hello World**.
 
-## Ce qu'elle sait faire
+Une fine ligne en bas de la barre supérieure de l'application indique aussi son état depuis n'importe quel écran : elle ondule pendant que Professor Mari travaille, devient verte quand elle a terminé, dorée tant qu'une approbation attend, ou rouge si la dernière exécution a échoué. Elle disparaît dès que tu ouvres son chat. Cette ligne reste éteinte tant que le réglage **Ask Professor Mari from Search** (demander à Professor Mari depuis Search) est désactivé. Tous les réglages de Professor Mari se trouvent sur la page des réglages de Search et de Professor Mari : ouvre-la avec l'icône d'engrenage dans Search (la recherche de l'application), ou via **Settings** (Paramètres) > **General** (Général) > **Search and Professor Mari settings** (réglages de Search et de Professor Mari) > **Open** (ouvrir).
+
+## Demander à Professor Mari depuis ton travail en cours
 
 Professor Mari est bien plus qu'une boîte à questions. Elle explique l'application, t'aide à la configurer et fabrique des choses pour toi quand tu le demandes.
+
+Tu peux ouvrir Professor Mari depuis l'endroit où tu as besoin d'aide. Ces points d'entrée créent un brouillon modifiable et y joignent un petit résumé de contexte typé. Tu peux retirer le contexte joint avant d'envoyer le message.
+
+- Les éditeurs **Character** (personnage), **Persona**, **Lorebook** et **Preset** : pose-lui une question sur la ressource ouverte ou sur un champ sélectionné.
+- Les réponses de la **FAQ** : utilise **Ask Prof. Mari** pour inclure comme point de départ la question correspondante et sa réponse écrite.
+- **Search** : appuie sur `Cmd/Ctrl+K`, sélectionne un résultat, puis utilise **Ask Prof. Mari** pour inclure ce résultat dans le brouillon. Utiliser Search n'envoie aucune requête au modèle, sauf si les réponses rapides sont activées : voir **Quick answers in Search** (réponses rapides dans Search) plus bas.
+- **Recent Chats** (chats récents) et les autres états d'erreur : utilise **Ask Prof. Mari** à côté de **Retry** (réessayer) pour envoyer la description de l'erreur et l'action de réparation demandée.
+- Le chat habituel avec le personnage Professor Mari et le chat de l'espace de travail de l'écran d'accueil utilisent le même format de transfert.
+
+Les éléments joints apparaissent sous forme de pastilles **Aware of** (au courant de) au-dessus de son champ de message. Retire un élément de contexte quand il n'est pas pertinent. Une fois le message envoyé, Professor Mari récupère côté serveur le contenu plus volumineux des ressources, dans la limite du budget de contexte. Elle ne reçoit pas une ressource entière simplement parce que tu as ouvert un éditeur.
 
 Demande-lui de l'aide pour tout ceci :
 
@@ -31,11 +43,27 @@ Demande-lui de l'aide pour tout ceci :
 
 Elle lit un élément avant de le modifier, et elle réclame les détails manquants quand la demande est floue. Pour les tâches d'image, il faut d'abord une connexion de génération d'images qui fonctionne. Elle n'en crée pas à ta place.
 
+## Réponses rapides dans Search
+
+Quand tu saisis une question dans Search et qu'aucun résultat ne correspond, Professor Mari peut rédiger une réponse courte. Elle apparaît dans un encart **Quick answer · Read-only** (réponse rapide · lecture seule) sous la ligne **Ask Prof. Mari**.
+
+- Une réponse rapide compte au plus trois phrases, issues de la documentation de Marinara. Professor Mari ne voit que ce que tu as saisi, et la réponse ne modifie rien.
+- L'encart indique les pages de documentation utilisées. Pendant cinq minutes, la même question posée à nouveau réutilise une copie enregistrée.
+- Sous la réponse se trouvent **Copy** (copier), **Answer again** (répondre à nouveau) et **Continue with Prof. Mari** (continuer avec Prof. Mari). **Continue with Prof. Mari** ouvre sa fenêtre dans un nouveau chat qui porte le nom de ta question, avec la réponse rapide jointe. Utilise **Ask Prof. Mari more…** (en demander plus à Prof. Mari) pour poser une question de suivi dans sa fenêtre. Les réponses rapides n'ont pas de suivi propre.
+- Une réponse rapide attend que tu arrêtes de taper. **Wait after typing** (attendre après la saisie) règle le délai d'attente de Search.
+- Choisis qui répond dans **Settings** > **General** > **Search and Professor Mari settings** > **Quick answers** (réponses rapides) > **Answer with** (répondre avec) : un modèle local que tu as téléchargé, **Same as Prof. Mari** (la même connexion que Prof. Mari), ou une autre connexion. Chaque réponse correspond à une seule requête courte. Une connexion payante peut coûter de l'argent.
+- Si une réponse échoue, l'encart en donne la raison, par exemple que le modèle n'a pas répondu. **Try again** (réessayer) et **Continue with Prof. Mari** sont toujours là. **Choose a model** (choisir un modèle) n'apparaît que si une clé ou un modèle manque. Le message propre au fournisseur se trouve sous **Details** (détails).
+- Les réponses rapides restent désactivées tant que tu ne les as pas activées avec **Quick answers in Search** dans le même groupe.
+
 ## Les pastilles de suggestion guidées
 
 Dans un chat Professor Mari vide, des pastilles de démarrage comme **Create a Character**, **Create a Lorebook** et **Create a Persona** lancent les tâches les plus courantes. Pendant une création ou une modification guidée, les pastilles changent pour coller à l'étape suivante. Quand tu cliques sur une pastille, elle remplit le brouillon du champ de saisie ; tu peux le retoucher avant de l'envoyer.
 
 Les parcours guidés posent une seule question à la fois, au lieu d'afficher un long formulaire d'un coup.
+
+Pour une demande complète de création ou de modification, Professor Mari peut renvoyer un plan guidé limité. Chaque étape propose un petit nombre de suggestions. En choisir une remplit le brouillon en cours et fait avancer le plan localement. Ton texte reste dans le brouillon quand tu changes de suggestion. Le plan appartient au chat Professor Mari en cours : changer de chat, redémarrer, arrêter une exécution ou terminer le plan efface les étapes périmées. Les suggestions mal formées ou trop nombreuses sont écartées, et les pastilles sont désactivées pendant que Professor Mari travaille.
+
+Les suggestions ne sont disponibles que dans les chats Professor Mari. Les autres personnages ne reçoivent pas les pastilles de Professor Mari.
 
 ## Elle peut aussi lire et modifier les fichiers de l'application
 
@@ -77,22 +105,22 @@ Pour qu'elle puisse lire une image, le modèle de la connexion choisie doit pren
 
 ## Réviser ses modifications
 
-Quand Professor Mari modifie quelque chose qui existe déjà, elle enregistre le changement tout de suite, puis affiche un encart de révision. Tu peux ainsi annuler si le résultat ne te plaît pas.
+Quand Professor Mari modifie quelque chose, elle enregistre le changement aussitôt et affiche un encart de modification sous sa réponse. L'encart liste chaque champ modifié. Une modification de texte montre les anciens et les nouveaux mots, et un lorebook montre ses entrées. Ouvre **Show all** (tout afficher) pour voir tous les champs. **Technical details** (détails techniques) affiche la commande brute.
 
-Cet encart s'intitule **Review Mari's changes** (réviser les modifications de Mari). Il indique ce qu'elle a fait et quelles données sont touchées. Il comporte deux boutons :
+L'encart propose une seule action :
 
-- **Keep** (conserver) valide la modification. Le message "Kept Mari's workspace change." s'affiche.
-- **Restore** (restaurer) remet en place la version enregistrée précédente. Le message "Restored the previous app data snapshot." s'affiche.
+- **Undo** (annuler) remet en place la version enregistrée précédente. Toute modification peut être annulée, quel que soit le mode de permissions. Le mode de permissions décide seulement si elle demande d'abord.
+- Une modification qui n'a pas été enregistrée affiche **Not saved** et la raison. **Try again** lui renvoie la demande.
+- L'encart n'affiche la date limite d'annulation, **Undo until**, que pendant les dernières 24 heures. Une copie d'annulation dure jusqu'à 14 jours, et seules les 50 plus récentes sont conservées. Passé ce délai, la modification reste en place et l'encart indique **Undo closed**.
 
-Quelques points à connaître :
+Une modification qui t'attend fonctionne autrement. Une modification retenue (en mode Manual, ou pour un fichier sensible ou une dépendance) affiche **Apply** (appliquer) et **Don't apply** (ne pas appliquer). Une suppression affiche **Delete** (supprimer) et **Put back** (remettre en place). Search ne liste pas ses modifications : ouvre Professor Mari pour les voir, les appliquer ou les annuler.
 
-- Les nouveaux éléments, comme un personnage ou un lorebook fraîchement créé, reçoivent aussi un encart. **Restore** les supprime à nouveau.
-- Un encart appartient au chat Mari dans lequel elle a effectué la modification. Un nouveau chat démarre sans les encarts des autres chats. Supprimer un chat conserve ses modifications et retire ses encarts. Une modification effectuée avec la commande `mari` dans un terminal n'appartient à aucun chat : son encart apparaît donc dans tous les chats Mari.
-- Un encart reste jusqu'à ce que tu choisisses **Keep** ou **Restore**, pendant 14 jours au maximum. Ensuite, il se ferme tout seul et la modification est conservée.
-- Si **Restore** indique que les données ont changé depuis la modification de Mari, elles ont été retouchées entre-temps et la restauration écraserait cette version plus récente. Choisis **Keep** pour fermer l'encart ; les données actuelles restent intactes.
+- Un encart appartient au chat Professor Mari dans lequel elle a effectué la modification. Un nouveau chat démarre sans les encarts des autres chats. Supprimer un chat conserve ses modifications et retire ses encarts. Une modification effectuée avec la commande `mari` dans un terminal n'appartient à aucun chat : son encart apparaît donc dans tous les chats Professor Mari.
 - Une modification qui laisserait tout à l'identique n'est pas enregistrée et ne reçoit aucun encart.
-- Mari ne peut ni modifier ni supprimer sa propre carte de personnage. Marinara la rétablit à sa version intégrée à chaque démarrage.
+- Professor Mari ne peut ni modifier ni supprimer sa propre carte de personnage. Marinara la rétablit à sa version intégrée à chaque démarrage.
 - Les personnages et les personas gardent aussi leur propre historique de versions dans leurs éditeurs. Tu peux y restaurer une version plus ancienne : c'est un deuxième filet de sécurité.
+
+Quand Professor Mari crée ou met à jour un personnage, un persona, un lorebook ou un preset, le résultat peut afficher **Open**. Utilise-le pour ouvrir la ressource exacte une fois que l'application a actualisé ses données. Un résultat mis à jour peut aussi afficher **Review** (examiner) quand une révision est en attente. **Review** ouvre les contrôles de la modification en attente. Les nouveaux éléments n'ont en général pas de révision, puisqu'aucun élément existant n'a été écrasé.
 
 Deux types de modifications, plus risquées, attendent au lieu d'être appliquées d'emblée :
 
@@ -103,25 +131,25 @@ Approuver une bibliothèque, c'est faire confiance à son code quand Marinara l'
 
 ## Créer du contenu avec Decisions
 
-Mari peut écrire des **Activation questions** (questions d'activation) pour les agents, des énoncés **Decision** dans les entrées de lorebook et des prompts conditionnels dans les presets, fiches, lorebooks et prompts d'agents. Elle vérifie le Decision model sélectionné avant d'introduire ces fonctions. Un modèle sélectionné est une information de configuration, pas la preuve que le fournisseur est joignable ou qu'un modèle local chargera correctement.
+Professor Mari peut écrire des **Activation questions** (questions d'activation) pour les agents, des énoncés **Decision** dans les entrées de lorebook et des prompts conditionnels dans les presets, fiches, lorebooks et prompts d'agents. Elle vérifie le Decision model sélectionné avant d'introduire ces fonctions. Un modèle sélectionné est une information de configuration, pas la preuve que le fournisseur est joignable ou qu'un modèle local chargera correctement.
 
-Si aucun Decision model n'est sélectionné, elle n'ajoute pas de dépendances Decision aux créations et modifications ordinaires. Le contenu Decision existant reste intact lors de modifications sans rapport. Si tu demandes explicitement ce contenu, elle explique le repli pertinent et demande une fois dans ce chat Mari s'il faut continuer. Son registre persiste à la réouverture du chat et dans les conversations dépassant sa fenêtre récente. Une question sans réponse ou un refus ne vaut pas autorisation.
+Si aucun Decision model n'est sélectionné, elle n'ajoute pas de dépendances Decision aux créations et modifications ordinaires. Le contenu Decision existant reste intact lors de modifications sans rapport. Si tu demandes explicitement ce contenu, elle explique le repli pertinent et demande une fois dans ce chat Professor Mari s'il faut continuer. Son registre persiste à la réouverture du chat et dans les conversations dépassant sa fenêtre récente. Une question sans réponse ou un refus ne vaut pas autorisation.
 
-Tu peux lui dire : **"Stop reminding me to set up a Decision model."** Elle arrête dans le chat actuel et peut enregistrer cette préférence comme Memory. Utilise **Keep & Enable** (conserver et activer) pour l'appliquer aussi aux futurs chats. Désactiver ou supprimer cette Memory retire la préférence permanente. Supprimer les rappels de configuration ne l'invite pas à ajouter Decisions aux demandes ordinaires.
+Tu peux lui dire : **"Stop reminding me to set up a Decision model."** Elle arrête dans le chat actuel et peut enregistrer cette préférence comme Memory. Utilise **Turn on** (activer) pour l'appliquer aussi aux futurs chats. Désactiver ou supprimer cette Memory retire la préférence permanente. Supprimer les rappels de configuration ne l'invite pas à ajouter Decisions aux demandes ordinaires.
 
 Avec un modèle sélectionné, elle suit tes Memories et Skills pertinentes activées. Sans préférence de création dans celles-ci, elle demande si tu veux utiliser Decisions et mémoriser ta réponse. Tu peux accepter, refuser ou autoriser uniquement la tâche actuelle. Une Skill expliquant simplement la syntaxe ne vaut pas autorisation. Une demande directe comme "add Decision activation to this entry" autorise déjà cette tâche.
 
 Par défaut, elle en fait un usage limité avec un contrôle temporel adapté : **Sticky** ou **Cooldown** pour les entrées de lorebook, **Trigger Cadence** pour l'activation d'agents et `sticky`, `cooldown` ou `every` dans les conditions de prompt. Sticky et Cooldown réduisent les vérifications répétées après une activation positive ; ils ne les empêchent pas tant qu'un énoncé répond non. `every` saute les vérifications entre les tours prévus et y vaut non ; il ne convient donc pas toujours aux événements fugaces.
 
-Mari cherche aussi à stabiliser le début du prompt assemblé. Elle demande avant d'ajouter du contenu changeant tôt dans un prompt ou du contexte dans l'historique, sauf autorisation déjà donnée par tes instructions ou préférences activées. Il n'existe pas de règle universelle "sans risque après 1 000 tokens" : la réutilisation dépend du fournisseur, du modèle et du préfixe rendu identique. Autoriser Decisions n'autorise pas automatiquement ces placements.
+Professor Mari cherche aussi à stabiliser le début du prompt assemblé. Elle demande avant d'ajouter du contenu changeant tôt dans un prompt ou du contexte dans l'historique, sauf autorisation déjà donnée par tes instructions ou préférences activées. Il n'existe pas de règle universelle "sans risque après 1 000 tokens" : la réutilisation dépend du fournisseur, du modèle et du préfixe rendu identique. Autoriser Decisions n'autorise pas automatiquement ces placements.
 
-Les contrôles habituels Permissions Mode et de révision s'appliquent toujours. Les Memories enregistrées restent désactivées jusqu'à ton activation. Pour le contexte visible par chaque fonction Decision, ses replis et des exemples, consulte [Modèles de décision](../connections/decision-models.md), [Prompts conditionnels](../prompts/conditional-prompts.md), [Agents personnalisés](../agents/custom-agents.md#activation-questions) et [Entrées de lorebook](../lorebooks/entries.md#decision-activation).
+Le mode de permissions et les contrôles de révision habituels s'appliquent toujours. Les Memories enregistrées restent désactivées jusqu'à ton activation. Pour le contexte visible par chaque fonction Decision, ses replis et des exemples, consulte [Modèles de décision](../connections/decision-models.md), [Prompts conditionnels](../prompts/conditional-prompts.md), [Agents personnalisés](../agents/custom-agents.md#activation-questions) et [Entrées de lorebook](../lorebooks/entries.md#decision-activation).
 
 ## Les Skills personnalisées
 
 Une Skill est un court document d'instructions que tu rédiges pour changer la façon dont Professor Mari traite un certain type de demande.
 
-Clique sur le bouton **Skills** dans l'en-tête de son chat pour ouvrir le panneau **Professor Mari Skills**. De là, tu peux :
+Clique sur le bouton **Skills** dans l'en-tête de son chat pour ouvrir le panneau **Professor Mari skills**. De là, tu peux :
 
 - Cliquer sur **New** (nouveau) pour partir d'un modèle de Skill.
 - Cliquer sur **Upload** (téléverser) pour ajouter une Skill depuis un fichier `.md` ou `.txt`.
@@ -136,7 +164,7 @@ Professor Mari peut retenir tes préférences durables, pour t'éviter de les r�
 
 Il y a deux façons de lui donner un souvenir :
 
-- **Dis-le-lui.** Écris par exemple "retiens que mes entrées de lorebook ont toujours pour clés le nom du personnage et son surnom". Elle l'enregistre et affiche un encart de révision **Keep/Restore** avec la formulation exacte. Un souvenir qu'elle enregistre démarre **désactivé** : il ne change rien tant que tu ne l'as pas activé. L'encart propose un troisième bouton, **Keep & Enable** (conserver et activer), pour l'enregistrer et l'activer tout de suite.
+- **Dis-le-lui.** Écris par exemple "retiens que mes entrées de lorebook ont toujours pour clés le nom du personnage et son surnom". Elle l'enregistre et affiche un encart de modification avec la formulation exacte. Un souvenir qu'elle enregistre démarre **désactivé** : il ne change rien tant que tu ne l'as pas activé. L'encart propose **Turn on** pour l'activer tout de suite.
 - **Ajoute-le toi-même.** Clique sur le bouton **Memories** (souvenirs) dans l'en-tête de son chat pour ouvrir le panneau **Memories**. Tu peux y créer, modifier, activer, désactiver et supprimer tes souvenirs. Autre option : téléverser un fichier `.md` ou texte avec **Upload**, pour transformer son contenu en souvenir.
 
 Elle n'enregistre et ne modifie un souvenir que si **toi** tu le lui demandes, jamais parce qu'un contenu qu'elle a lu (un personnage, un lorebook, un fichier) le lui a dit.
@@ -163,7 +191,15 @@ Pendant qu'elle travaille, un bouton **Stop** (arrêter) apparaît dans l'en-tê
 
 Si tu laisses sa fenêtre de chat ouverte et que tu passes à une autre page, Professor Mari peut te suivre sous la forme d'une petite bulle flottante.
 
-Sur un téléphone ou un écran étroit, elle devient un petit avatar rond que tu peux déplacer. Touche-le pour rouvrir le chat complet. Sur un écran large, c'est une petite fenêtre **Ask Professor Mari** déplaçable qui apparaît. Chaque version dispose d'un contrôle pour masquer la bulle jusqu'à la fin de la session.
+Sur un téléphone ou un écran étroit, elle devient un petit avatar rond que tu peux déplacer. Touche-le pour rouvrir le chat complet. Sur un écran large, c'est une petite fenêtre **Ask Prof. Mari** déplaçable qui apparaît. Chaque version dispose d'un contrôle pour masquer la bulle jusqu'à la fin de la session.
+
+## Confiance et reprise après échec
+
+Ouvre **Aware of** dans l'en-tête de Professor Mari pour voir ce qui accompagne ton prochain message, ce qui reste dans ce chat Professor Mari et comment elle travaille : le modèle avec lequel elle répond, le budget de contexte, et si ses commandes shell s'exécutent en bac à sable. L'en-tête affiche aussi les approbations en attente, les Skills et les Memories. Vérifie-les avant une demande quand tu as besoin de savoir ce que Professor Mari peut lire.
+
+Professor Mari soumet les modifications importantes de l'espace de travail aux règles d'approbation et de révision existantes du serveur. **Aware of** n'accorde aucun accès supplémentaire. Les modifications de fichiers sensibles, les modifications de dépendances, les limites du shell et la validation des données de l'application restent appliquées par le serveur.
+
+Quand une demande échoue, l'historique du chat conserve la raison de l'échec et affiche **Retry** quand la demande peut être renvoyée. Corrige d'abord le problème indiqué (connexion, bac à sable, capacité ou accès distant), puis réessaie. Une nouvelle tentative ne part pas en silence d'une recherche, de la FAQ ou d'un état d'erreur. Elle reste une action de ta part.
 
 ## Sa FAQ est distincte du chat
 
@@ -187,7 +223,10 @@ Professor Mari est une assistante, pas la documentation complète. Garde ces lim
 
 ## Dépannage
 
-- Aucune réponse : vérifie qu'une connexion est sélectionnée via l'icône de lien. Si aucune n'est configurée, ouvre le panneau **Connections** et ajoutes-en une.
+- Aucune réponse : vérifie la connexion affichée dans **Aware of**, ou sélectionnes-en une via l'icône de lien. Si aucune n'est configurée, ouvre le panneau **Connections** et ajoutes-en une.
+- Un transfert contient le mauvais élément : retire l'élément de contexte, redémarre ou passe au bon chat Professor Mari, puis relance le transfert depuis l'écran d'origine. Le contexte est limité au transfert et au chat Professor Mari en cours.
+- Un résultat n'apparaît pas dans un éditeur : utilise **Open** sur l'encart du résultat. Professor Mari a peut-être terminé la commande alors que la liste des ressources n'était pas à jour.
+- Une demande échoue : lis l'état de l'échec, corrige le problème de configuration indiqué, puis utilise **Retry**. Ne redemande à Professor Mari depuis la source d'origine que si le contexte lui-même n'est plus correct.
 - Message contextuel "You haven't set up a connection yet" : choisis une connexion dans le menu déroulant de l'icône de lien, ou commence par en ajouter une.
 - Elle n'arrive pas à lire l'image jointe : le modèle doit prendre en charge les images en entrée. Passe à une connexion dont le modèle sait voir les images.
 - Les recherches Fandom échouent : elles ont besoin d'une connexion internet, Fandom étant un site externe.

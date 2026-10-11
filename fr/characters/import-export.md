@@ -67,6 +67,8 @@ Ouvre un personnage dans l'éditeur, puis clique sur **Export character** (expor
 
 Choisis **Marinara Native** pour tout conserver. Choisis l'un des formats **Compatible** quand le fichier part vers un autre outil. Ces deux formats compatibles abandonnent les éléments propres à Marinara, comme les sprites et les images de la galerie. Ils ajoutent les champs **Backstory** (histoire du personnage) et **Appearance** (apparence) non vides à la Description standard, afin que les autres lecteurs V2 conservent ces informations sur le personnage. Ces champs sont retirés des extensions exportées pour éviter les doublons lors d'une réimportation. Ta fiche enregistrée ne change pas ; **Marinara Native** conserve les champs séparés.
 
+L'[accueil interactif](interactive-onboarding.md) d'une fiche est conservé par **Marinara Native** et **Compatible PNG Card** : la fiche propose donc toujours ses questions quand quelqu'un l'importe dans Marinara. **Compatible JSON** le laisse de côté.
+
 ## Exporter plusieurs personnages d'un coup
 
 Un lot de personnages s'exporte dans un seul fichier zip.

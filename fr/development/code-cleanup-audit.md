@@ -23,7 +23,7 @@ Travaux terminés :
 
 Volontairement conservés pour un travail distinct de compatibilité ou de produit :
 
-- `@rollup/wasm-node` et `Mari_point_down_left.png` ;
+- `@rollup/wasm-node` ;
 - les exports du serveur susceptibles d'être des API externes au dépôt ou des points d'accroche pour les tests ;
 - le regroupement du parseur PNG et de la géométrie des tutoriels ;
 - les refactorisations larges de l'éditeur, du composeur et des gros modules ;
@@ -203,9 +203,7 @@ N'applique pas en bloc ce test de "l'occurrence textuelle unique" au dossier `pa
 
 ## 5. Candidat parmi les ressources statiques
 
-`packages/client/public/sprites/mari/Mari_point_down_left.png` est le seul sprite Mari livré dont le nom de fichier ou le chemin n'apparaît nulle part dans le dépôt. Les ressources Mari voisines, elles, sont référencées.
-
-**Recommandation (confiance moyenne) :** vérifie qu'aucune convention de nommage à l'exécution ni thème écrit par un tiers ne l'adresse directement, puis supprime-le et contrôle dans le navigateur toutes les poses de Mari des tutoriels et de la prise en main. Les ressources publiques peuvent être chargées par des URL construites : l'absence de texte ne suffit donc pas pour une confiance élevée.
+`packages/client/public/sprites/mari/Mari_point_down_left.png`, le seul sprite Mari livré dont le nom de fichier ou le chemin n'apparaissait nulle part dans le dépôt, a été supprimé par la tranche 38a de l'omnibar.
 
 Ne te sers pas de recherches par nom de fichier pour élaguer les ressources de jeu livrées. Certains dossiers de ressources sont parcourus dynamiquement par les seeders et les manifestes du serveur.
 

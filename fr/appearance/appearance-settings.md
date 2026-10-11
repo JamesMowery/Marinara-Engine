@@ -47,7 +47,7 @@ Ces deux options ne s'utilisent pas ensemble. Activer **RGB Mode** désactive **
 
 ## Chat widget style
 
-En bas de **App Style**, choisis **Default**, **Dottore** ou **Mari** pour les boutons, les fenêtres et les sections déplaçables du chat. Tu peux changer séparément la police, la forme du cadre et les trois couleurs principales. Les sélecteurs de couleur acceptent aussi les dégradés.
+En bas de **App Style**, choisis **Default**, **Dottore** ou **Prof. Mari** pour les boutons, les fenêtres et les sections déplaçables du chat. Tu peux changer séparément la police, la forme du cadre et les trois couleurs principales. Les sélecteurs de couleur acceptent aussi les dégradés.
 
 **Button size (px)** (taille du bouton en pixels) change la taille des boutons déplaçables du chat et de leurs icônes sans modifier Display Size. Saisis une taille de 32 à 96 pixels. Laisse le champ vide, ou utilise son bouton de réinitialisation, pour garder la valeur par défaut actuelle. La taille est enregistrée avec tes préférences d'apparence et reste identique quand tu choisis un autre preset.
 

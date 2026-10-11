@@ -74,7 +74,18 @@ const panel = marinara.ui.registerContribution({
 marinara.onCleanup(() => panel.remove());
 ```
 
-Utilise `kind: "button"` pour une action compacte et `kind: "menu-item"` pour une action du menu Extensions. Par défaut, les boutons ciblent `surface: "top-bar"`. Ils peuvent aussi viser `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` ou `settings`, avec `position` réglé sur `header`, `before-content` ou `after-content`. `icon` accepte tout nom Lucide en kebab-case pris en charge par Marinara. Les deux types d'action appellent `onActivate`. Un `panel` appelle `onActivate` à son ouverture ; ses boutons appellent `onEvent` avec les valeurs courantes de tous ses contrôles. La référence permet des mises à jour propres au type : `button` accepte `label`, `description`, `icon`, `surface` et `position` ; `menu-item` accepte `label`, `description` et `icon` ; `panel` accepte `label`, `description`, `icon` et `elements`. Toutes les références prennent en charge `remove()`. Les identifiants acceptent lettres, chiffres, `.`, `_` et `-`.
+Utilise `kind: "button"` pour une action compacte et `kind: "menu-item"` pour une action du menu Extensions. Utilise `kind: "command"` pour une entrée du Command Center (centre de commandes) qui active une contribution existante de la même révision de l'extension. Une commande exige `targetContributionId` et ne peut utiliser ni `onActivate` ni `onEvent`.
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-settings",
+});
+```
+
+L'hôte ne résout une commande que si la cible a le même identifiant d'extension et la même empreinte de contenu. Les cibles absentes, issues d'une autre extension ou d'une révision périmée échouent par sécurité. Par défaut, les boutons ciblent `surface: "top-bar"`. Ils peuvent aussi viser `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` ou `settings`, avec `position` réglé sur `header`, `before-content` ou `after-content`. `icon` accepte tout nom Lucide en kebab-case pris en charge par Marinara. Les deux types d'action appellent `onActivate`. Un `panel` appelle `onActivate` à son ouverture ; ses boutons appellent `onEvent` avec les valeurs courantes de tous ses contrôles. La référence permet des mises à jour propres au type : `button` accepte `label`, `description`, `icon`, `surface` et `position` ; `menu-item` accepte `label`, `description` et `icon` ; `panel` accepte `label`, `description`, `icon` et `elements`. Toutes les références prennent en charge `remove()`. Les identifiants acceptent lettres, chiffres, `.`, `_` et `-`.
 
 Par exemple, ceci place une action native au-dessus du contenu du panneau Presets :
 
