@@ -50,7 +50,7 @@
 - **Confirm before deleting**(删除前确认)：默认开启。开启时，Marinara 在永久删除聊天、角色或其他条目之前会先确认一次。建议保持开启，免得误删。
 - **Achievements**(成就)：默认开启。开启时，主页会显示成就按钮和解锁提示。关闭后，成就仍在后台记录，只是不再提示。见[成就](../home/achievements.md)。
 - **Music Player**(音乐播放器)：默认开启。开启时会显示紧凑的音乐播放器。见[音乐](../media/music.md)。
-- **Search and Professor Mari settings**(Search 与 Professor Mari 设置)：选择 **Open**(打开) 进入它们的设置页面。所有 Search 和 Professor Mari 的设置都在那里，分成五组：**Search**(搜索)，包括提议改进字段和搜索历史；**Quick answers**(快速回答)，包括 **Quick answers in Search**(Search 中的快速回答)、**Answer with**(回答使用) 和 **Wait after typing**(输入后等待)；**Professor Mari**，包括 Ask Professor Mari from Search(从 Search 问问 Professor Mari)、权限模式、回复建议按钮、改动卡片的打开方式和 Enter sends to Professor Mari(按 Enter 发送给 Professor Mari)；**Around the app**(应用各处)，包括 Mini Professor Mari visits(迷你 Professor Mari 来访)；**Appearance**(外观)，也就是她的形象：每个形象包都会显示她的肖像，正在使用的那个标着 **In use**(使用中)，锁定的形象包会显示你为解锁它累计的游玩时间。Search 里的齿轮图标也能打开同一个页面；搜索其中任何一项设置，无论用新名字还是旧名字，都会直接跳到它。
+- **Search and Professor Mari settings**(Search 与 Professor Mari 设置)：选择 **Open**(打开) 进入它们的设置页面。所有 Search(搜索栏) 和 Professor Mari 的设置都在那里，分成五组：**Search**(搜索)，包括提议改进字段和搜索历史；**Quick answers**(快速回答)，包括 **Quick answers in Search**(Search 中的快速回答)、**Answer with**(回答使用) 和 **Wait after typing**(输入后等待)；**Professor Mari**，包括 Ask Professor Mari from Search(从 Search 问问 Professor Mari)、权限模式、回复建议按钮、改动卡片的打开方式和 Enter sends to Professor Mari(按 Enter 发送给 Professor Mari)；**Around the app**(应用各处)，包括 Mini Professor Mari visits(迷你 Professor Mari 来访)；**Appearance**(外观)，也就是她的形象：每个形象包都会显示她的肖像，正在使用的那个标着 **In use**(使用中)，锁定的形象包会显示你为解锁它累计的游玩时间。Search 里的齿轮图标也能打开同一个页面；搜索其中任何一项设置，无论用新名字还是旧名字，都会直接跳到它。
 
 ## Text Rules
 

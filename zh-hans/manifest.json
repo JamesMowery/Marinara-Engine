@@ -124,8 +124,8 @@
     },
     {
       "path": "characters/interactive-onboarding.md",
-      "sha256": "975eb0c94601e14a23f26aa390cfe3dc4ead3a56a7332c2fa1106430270abf5a",
-      "bytes": 6498
+      "sha256": "02036ad051b96cd018fdff82106dda9f39a398ff9573c1649647c7ee17824510",
+      "bytes": 6513
     },
     {
       "path": "characters/library-organization.md",
@@ -479,8 +479,8 @@
     },
     {
       "path": "home/professor-mari.md",
-      "sha256": "73d8c3f29a9c0d2ce838587effdc3f43cf9f5010a519662f54b2ee01959d9f8c",
-      "bytes": 26060
+      "sha256": "0f601492fc1282827506ecdde8db6a03925782554c6981b23d8578c79ecbe842",
+      "bytes": 26075
     },
     {
       "path": "home/tutorial.md",
@@ -684,8 +684,8 @@
     },
     {
       "path": "settings/settings-overview.md",
-      "sha256": "8e28f6ed4bb59a81397de44b749d95788e76bdbd36988b189fd12079af82ec04",
-      "bytes": 13509
+      "sha256": "3c4b59fd74fcf18fabeadbfeafa71b528f45b6f827666cdd199f18b765998cc4",
+      "bytes": 13520
     }
   ]
 }

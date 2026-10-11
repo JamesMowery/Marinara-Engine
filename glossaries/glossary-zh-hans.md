@@ -633,10 +633,10 @@ Cycle precedent for the #7382, #7396, #7372 and #7309 sync. None of these labels
 | Command Center | 命令中心 | An extension revision is a 修订版本; "fails closed" is 按拒绝方式失败, as in `development/game-rulesets-and-sheets-implementation.md`. |
 | Show "older messages not sent" note | 显示“较早消息未发送”提示 | The label keeps its straight ASCII quotes; the gloss uses the pack's curly quotes. |
 | Re-scan scenes / Re-scan | 重新扫描场景 / 重新扫描 | 重新扫描 matches **Rescan** in `game/game-assets.md`. |
-| scene check / scene change / scene starts | 场景检查 / 场景变化 / 场景起点 | `agents/memory.md` no longer uses 场景结束检查. Out-of-character is 戏外. |
-| interactive onboarding | 交互式引导 | Never 新手引导, which is the app tutorial (`home/tutorial.md`). The **Onboarding** tab and the **Interactive onboarding** switch both take (交互式引导). |
+| scene check / scene change / scene starts | 场景检查 / 场景变化 / 场景起点 | `agents/memory.md` no longer uses 场景结束检查. `chats/peek-prompt.md` keeps 场景结束检查 because its English still says "scene-end check". Out-of-character is 戏外. |
+| interactive onboarding | 交互式引导 | Never 新手引导, which is the app tutorial (`home/tutorial.md`). The **Onboarding** tab and the **Interactive onboarding** switch both take (交互式引导). The new chat wizard is 新建聊天的设置向导, as in `conversation/schedules.md`. |
 | How onboarding works / Onboarding Questions / Add Question | 交互式引导的用法 / 引导问题 / 添加问题 | |
 | Help text for players / Allow own answer / Write your own | 给玩家的说明文字 / 允许自己作答 / 自己填写 | |
 | Create your persona / Create persona / Your Persona | 创建你的用户角色 / 创建用户角色 / 你的用户角色 | A persona template is a 用户角色模板; the player is the 玩家. |
 
-Reused glosses: **Variable Name**(变量名), **Question (shown to user)**(向用户展示的提问), **Options**(选项), **Value**(值) and **Multi-Select**(多选) from `prompts/preset-variables.md`; **Available variables**(可用变量) and **Rendered preview**(渲染预览) from `prompts/prompt-overrides.md`; **Persona & Characters**(用户角色与角色) from `roleplay/getting-started.md`. These are translation choices, not a new native-reader review.
+Reused glosses: **Variable Name**(变量名), **Question (shown to user)**(向用户展示的提问), **Options**(选项), **Value**(值) and **Multi-Select**(多选) from `prompts/preset-variables.md`; **Available variables**(可用变量) and **Rendered preview**(渲染预览) from `prompts/prompt-overrides.md`; **Persona & Characters**(用户角色与角色) from `roleplay/getting-started.md`; the five persona fields take the Card-tab glosses of `characters/creating-and-editing-characters.md`, so **Appearance** is (外观), not the (外貌) of `characters/import-export.md`. These are translation choices, not a new native-reader review.
