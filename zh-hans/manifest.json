@@ -1,6 +1,6 @@
 {
   "language": "zh-hans",
-  "sourceCommit": "10b82e5bd47e",
+  "sourceCommit": "d5862bf3313c",
   "files": [
     {
       "path": "CONFIGURATION.md",
@@ -234,8 +234,8 @@
     },
     {
       "path": "connections/providers-reference.md",
-      "sha256": "bfeb11a7be9b55735ec974f8da5c3cc78d31fd130b013faf41e7fe08cb42ea67",
-      "bytes": 14931
+      "sha256": "8a35acb56b578a949be8e255beb262dc956ac70d3da91f8739900b377ffe874b",
+      "bytes": 16398
     },
     {
       "path": "connections/subscription-clis.md",

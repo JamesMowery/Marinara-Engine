@@ -1,6 +1,6 @@
 {
   "language": "ru",
-  "sourceCommit": "10b82e5bd47e",
+  "sourceCommit": "d5862bf3313c",
   "files": [
     {
       "path": "CONFIGURATION.md",
@@ -234,8 +234,8 @@
     },
     {
       "path": "connections/providers-reference.md",
-      "sha256": "acb0a1b7850463caed7bd6d9dff2da41309400651a14ded6a31dca50e3c732fa",
-      "bytes": 27469
+      "sha256": "8e73aa6aa2b051554d8aa10359761cc3fe9841cac61549ec1d02aa41448d2312",
+      "bytes": 30181
     },
     {
       "path": "connections/subscription-clis.md",

@@ -123,6 +123,19 @@ Le même indicateur apparaît sous celui du contexte dans le sélecteur de conne
 
 **Z.AI** propose les modèles GLM (GLM 5.3, GLM 5.3 Flash et les précédents) sur sa propre API. La liste **Model** affiche les modèles GLM actuels, et **Fetch Models from API** la met à jour depuis ton compte. Les modèles GLM 5.3 raisonnent toujours : le réglage **Reasoning Effort** (effort de raisonnement) de ton preset est ramené aux trois niveaux acceptés par Z.AI : **Low** pour un effort faible, **High** pour un effort élevé et **Maximum** pour un effort maximal. Si tu ne le définis pas, Z.AI utilise sa valeur par défaut, **Maximum**. L'URL de base par défaut correspond au point d'accès facturé à l'usage. Le Coding Plan de Z.AI utilise un autre point d'accès que sa politique d'utilisation réserve aux outils de sa liste ; il ne faut donc pas s'attendre à ce qu'une clé de ce plan fonctionne ici.
 
+## DeepSeek
+
+- Où obtenir une clé : `https://platform.deepseek.com/api_keys`
+- URL de base par défaut : `https://api.deepseek.com/v1`
+
+**DeepSeek** propose ses propres modèles de chat, `deepseek-flash` et `deepseek-v4-pro`. Une fois la clé collée, le menu déroulant **Model** les affiche, et **Fetch Models from API** actualise la liste depuis ton compte.
+
+DeepSeek réfléchit par défaut. Son réglage **Reasoning Effort** utilise les niveaux propres à DeepSeek – **Low**, **High** et **Maximum** – et **Off** (désactivé) coupe la réflexion pour cette requête. Il n'y a pas de **Medium** : DeepSeek traite une requête de niveau moyen comme High, Marinara propose donc High plutôt qu'un second bouton qui ferait la même chose. Sa réflexion apparaît dans la réponse, avec l'affichage habituel des pensées.
+
+Certains réglages du panneau des paramètres ne s'appliquent pas à DeepSeek : le panneau les omet donc, au lieu de faire comme s'ils fonctionnaient. **Verbosity**, **Top K** et les pénalités en font partie : DeepSeek les a abandonnés et les ignore. **Temperature** (température) et **Top P** forment une paire – DeepSeek n'en utilise qu'un à la fois, selon qu'il réfléchit ou non –, si bien que tu vois **Temperature** quand la réflexion est désactivée et **Top P** quand elle est active.
+
+Passe par ce fournisseur pour connecter DeepSeek, plutôt que de diriger le fournisseur **OpenAI** vers l'URL de DeepSeek. Le fournisseur OpenAI attend les modèles propres à OpenAI : avec un modèle DeepSeek, il masque donc les commandes de génération et n'envoie presque aucun de tes réglages.
+
 ## Claude (Subscription)
 
 - Clé API : aucune. Tu t'identifies dans un outil local à la place.
