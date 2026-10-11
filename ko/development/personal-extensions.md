@@ -93,6 +93,18 @@ Browser Extension API 버전 5에는 `marinara.context.get()`과 `marinara.conte
 - `button`: 기본적으로 상단 막대의 작은 동작 버튼이며, 또는 `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents`, `settings` 화면에 호스트가 렌더링하는 동작입니다.
 - `menu-item`: **Extensions** 메뉴의 동작 항목;
 - `panel`: Marinara의 신뢰된 **Extensions** 사이드 패널을 여는 항목.
+- `command`: 같은 확장 리비전에 있는 기존 `button`, `menu-item`, `panel`을 실행하는 Command Center 항목.
+
+명령에는 `targetContributionId`가 들어 있고 `onActivate`나 `onEvent` 콜백은 없습니다. 호스트는 확장 ID, 콘텐츠 해시, 기여물 ID로 대상을 찾습니다. 대상이 없거나 다른 리비전의 대상이면 안전하게 실패합니다. 예를 들면 다음과 같습니다.
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-panel",
+});
+```
 
 사이드 패널 버튼은 `position: "header"`, `"before-content"`, `"after-content"`를 받습니다. 상단 막대 버튼은 `position`을 생략합니다. 아이콘은 Marinara의 Lucide 아이콘 카탈로그에 있는 제한된 kebab-case 이름을 사용하며, 지원하지 않는 이름은 퍼즐 아이콘으로 대체됩니다.
 

@@ -50,7 +50,7 @@
 - **Confirm before deleting**(삭제 전 확인하기): 기본값은 켜짐입니다. 켜 두면 Marinara가 채팅, 캐릭터를 비롯한 항목을 영구히 삭제하기 전에 확인합니다. 실수로 지우는 일을 막으려면 켜 두세요.
 - **Achievements**(업적): 기본값은 켜짐입니다. 켜면 홈 화면에 업적 버튼과 달성 알림이 표시됩니다. 끄면 기록은 조용히 계속됩니다. [업적](../home/achievements.md)을 참고하세요.
 - **Music Player**(음악 플레이어): 기본값은 켜짐입니다. 켜면 작은 Music Player가 표시됩니다. [Music DJ](../media/music.md)를 참고하세요.
-- **Mini Mari surprise visits**(Mini Mari의 깜짝 방문): 기본값은 켜짐입니다. 켜면 화면을 스크롤하는 동안 Chibi Professor Mari의 메시지가 드물게 나타납니다. 방해가 된다면 끄세요.
+- **Search and Professor Mari settings**(검색 및 Professor Mari 설정): **Open**(열기)을 선택하면 해당 설정 페이지로 이동합니다. Search와 Professor Mari의 설정은 모두 이 페이지에 있으며 다섯 그룹으로 나뉩니다. **Search**(검색)에는 필드 개선 제안과 검색 기록, **Quick answers**(빠른 답변)에는 **Quick answers in Search**(검색의 빠른 답변), **Answer with**(답변 모델), **Wait after typing**(입력 후 대기 시간), **Professor Mari**에는 검색에서 Professor Mari에게 묻기, 권한 모드, 답장 칩, 변경 카드가 열리는 방식, Enter로 Professor Mari에게 전송, **Around the app**(앱 곳곳에서)에는 Mini Professor Mari의 방문, **Appearance**에는 Professor Mari의 외형이 있습니다. 외형 팩마다 Professor Mari의 초상화가 표시되고, 사용 중인 팩에는 **In use**(사용 중)가, 잠긴 팩에는 잠금 해제까지 쌓은 플레이 시간이 표시됩니다. Search의 톱니바퀴를 눌러도 같은 페이지가 열리며, 이 설정 중 무엇이든 새 이름이나 예전 이름으로 검색하면 바로 그 설정으로 이동합니다.
 
 ## Text Rules
 
@@ -104,7 +104,7 @@
 
 ## Message Tools
 
-**Message Tools** 항목은 **Settings** > **Advanced** > **Message Tools**에 있습니다. 표시와 복구 관련 토글을 모아 둔 곳입니다. 아래 토글은 모두 기본값이 꺼짐입니다. 각 토글의 기능과 자세한 설명 위치는 표와 같습니다.
+**Message Tools** 항목은 **Settings** > **Advanced** > **Message Tools**에 있습니다. 표시와 복구 관련 토글을 모아 둔 곳입니다. 아래 토글은 **Show "older messages not sent" note**("전송되지 않은 이전 메시지" 안내 표시)만 기본값이 켜짐이고, 나머지는 모두 기본값이 꺼짐입니다. 각 토글의 기능과 자세한 설명 위치는 표와 같습니다.
 
 | 토글 | 기능 | 자세한 가이드 |
 | --- | --- | --- |
@@ -112,6 +112,7 @@
 | **Show model name on messages**(메시지에 모델 이름 표시) | 각 응답을 쓴 AI 모델을 표시합니다. | [메시지 조작](../chats/messages.md) |
 | **Show token usage on messages**(메시지에 토큰 사용량 표시) | 메시지별 프롬프트 토큰 수와 응답 토큰 수를 표시합니다. | [메시지 조작](../chats/messages.md) |
 | **Show message numbers**(메시지 번호 표시) | 채팅의 메시지마다 번호를 표시합니다. | [메시지 조작](../chats/messages.md) |
+| **Show "older messages not sent" note** | 이전 메시지가 프롬프트에 다 들어가지 못했을 때 최신 응답 아래에 안내를 표시합니다. 긴 채팅에서 이 안내를 숨기려면 끄세요. 잘리거나 비어 있는 응답에는 여전히 그 응답의 안내가 표시됩니다. | [Peek Prompt](../chats/peek-prompt.md) |
 | **Guide swipes/regens with chat input**(채팅 입력으로 스와이프/재생성 안내) | 재생성할 때 현재 입력해 둔 초안을 지침으로 씁니다. | [지침 기반 생성과 Impersonate](../chats/guided-and-impersonate.md) |
 | **Quick replies**(퀵 리플라이) | 전송 버튼 옆에 다른 초안 작업 버튼을 추가합니다. | [지침 기반 생성과 Impersonate](../chats/guided-and-impersonate.md) |
 | **Include reasoning in exports**(내보내기에 추론 포함) | 채팅 내보내기에 숨겨진 사고 과정을 넣습니다. | [채팅 내보내기와 가져오기](../chats/export-import.md) |

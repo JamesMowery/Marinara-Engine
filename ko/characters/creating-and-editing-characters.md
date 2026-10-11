@@ -35,10 +35,11 @@ Character Editor는 채팅 영역을 전체 화면 작업 공간으로 바꿉니
 
 저장하지 않은 작업이 있는 상태로 나가려고 하면 `You have unsaved changes. Close without saving?` 배너가 뜹니다. 여기서 **Keep editing**(계속 편집), **Discard & close**(취소 & 닫기), **Save & close**(저장 & 닫기)를 고를 수 있습니다.
 
-편집기는 탭으로 나뉩니다. 화면이 넓으면 탭이 왼쪽에 세로로 놓이고, 좁으면 위쪽에 가로로 스크롤되는 띠 형태가 됩니다. 탭은 순서대로 **Metadata**, **Card**, **Convo**(콘보), **Lorebook**(로어북), **Sprites**(스프라이트), **Gallery**(갤러리), **Colors**(색상), **Voice**, **Stats**(스탯), **Advanced**입니다.
+편집기는 탭으로 나뉩니다. 화면이 넓으면 탭이 왼쪽에 세로로 놓이고, 좁으면 위쪽에 가로로 스크롤되는 띠 형태가 됩니다. 탭은 순서대로 **Metadata**, **Card**, **Onboarding**(온보딩), **Convo**(콘보), **Lorebook**(로어북), **Sprites**(스프라이트), **Gallery**(갤러리), **Colors**(색상), **Voice**, **Stats**(스탯), **Advanced**입니다.
 
 이 가이드에서는 **Metadata**, **Card**, **Voice**, **Advanced** 탭과 아바타, 버전 히스토리를 설명합니다. 나머지 탭은 각각 별도 가이드가 있습니다.
 
+- **Onboarding**: [대화형 온보딩](interactive-onboarding.md).
 - **Convo**: [Conversation Mode 프로필(Display Name, About Me, Behavior)](../conversation/profiles.md).
 - **Lorebook**: [로어북을 캐릭터와 페르소나에 연결하기](../lorebooks/linking-to-characters.md).
 - **Sprites**: [캐릭터 스프라이트](sprites.md).
@@ -175,6 +176,7 @@ Roleplay 채팅 중에는 선택 사항인 에이전트가 장면에서 벌어�
 ## 관련 가이드
 
 - [사용자 페르소나: 만들기 및 편집](personas.md)
+- [대화형 온보딩](interactive-onboarding.md)
 - [캐릭터 스프라이트](sprites.md)
 - [캐릭터와 페르소나 갤러리](galleries.md)
 - [캐릭터 카드 가져오기와 내보내기](import-export.md)
