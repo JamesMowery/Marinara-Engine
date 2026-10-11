@@ -123,6 +123,19 @@ NanoGPT 暂时无法提供的额度会显示为**未知**，而非未使用。�
 
 **Z.AI** 通过自有 API 提供 GLM 模型（GLM 5.3、GLM 5.3 Flash 及更早的模型）。**Model** 下拉列表显示当前的 GLM 模型，**Fetch Models from API** 会从你的账户刷新列表。GLM 5.3 模型始终会进行推理：预设中的 **Reasoning Effort**(推理强度) 会映射到 Z.AI 支持的三个级别：**Low**(低)、**High**(高) 和 **Maximum**(最大)。不设置时会使用 Z.AI 的默认值 **Maximum**。默认基础 URL 是按用量付费的端点。Z.AI 的 Coding Plan 使用另一个端点，其使用政策仅允许列表中的指定工具使用，因此不应期待 Coding Plan 的密钥能在这里使用。
 
+## DeepSeek
+
+- 密钥获取地址：`https://platform.deepseek.com/api_keys`
+- 默认基础 URL：`https://api.deepseek.com/v1`
+
+**DeepSeek** 提供自家的聊天模型 `deepseek-flash` 和 `deepseek-v4-pro`。粘贴密钥之后，**Model** 下拉列表会列出它们，**Fetch Models from API** 会从你的账户刷新列表。
+
+DeepSeek 默认会思考。它的 **Reasoning Effort** 使用 DeepSeek 自己的级别，即 **Low**、**High** 和 **Maximum**；**Off**(关闭) 则为该次请求关闭思考。这里没有 **Medium**：DeepSeek 会把中等强度的请求按 High 处理，所以 Marinara 提供的是 High，而不是再放一个效果完全相同的按钮。它的思考内容会出现在回复里，显示方式与平时相同。
+
+参数面板里有些设置对 DeepSeek 不适用，所以面板直接不显示它们，而不是假装它们有效。**Verbosity**(详细度)、**Top K** 和重复惩罚都在此列：DeepSeek 已经弃用这些参数，发送了也会被忽略。**Temperature**(温度) 和 **Top P** 是一对：DeepSeek 一次只用其中一个，取决于它是否在思考。因此关闭思考时你看到的是 **Temperature**，开启思考时看到的是 **Top P**。
+
+请直接用这家服务商连接 DeepSeek，不要把 **OpenAI** 服务商指向 DeepSeek 的网址。OpenAI 服务商只认 OpenAI 自家的模型，配上 DeepSeek 模型时会隐藏生成参数控件，你的设置也几乎都不会发送出去。
+
 ## Claude (Subscription)
 
 - API 密钥：不需要，改为登录一个本地工具。
