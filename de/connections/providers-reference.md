@@ -130,7 +130,7 @@ Dieselbe Anzeige erscheint unter der Kontextanzeige in der Verbindungsauswahl ei
 
 **DeepSeek** stellt seine eigenen Chat-Modelle bereit, `deepseek-flash` und `deepseek-v4-pro`. Nach dem Einfügen deines Keys listet das Dropdown-Menü **Model** sie auf, und **Fetch Models from API** aktualisiert die Liste anhand deines Kontos.
 
-DeepSeek denkt standardmäßig nach. **Reasoning Effort** nutzt hier die eigenen Stufen von DeepSeek – **Low**, **High** und **Maximum** –, und **Off** (aus) schaltet das Nachdenken für diese Anfrage ab. **Medium** gibt es nicht: DeepSeek bearbeitet eine Anfrage mit mittlerer Stufe als High, deshalb bietet Marinara gleich High an statt einer zweiten Schaltfläche, die dasselbe täte. Seine Gedanken erscheinen in der Antwort und werden wie gewohnt angezeigt.
+DeepSeek denkt standardmäßig nach. **Reasoning Effort** nutzt hier die eigenen Stufen von DeepSeek – **Low**, **High** und **Maximum** –, und **Off** (aus) schaltet das Nachdenken für diese Anfrage ab. **Medium** gibt es nicht: DeepSeek behandelt eine Anfrage mit mittlerer Stufe wie High, deshalb bietet Marinara gleich High an statt einer zweiten Schaltfläche, die dasselbe täte. Seine Gedanken erscheinen in der Antwort und werden wie gewohnt angezeigt.
 
 Manche Einstellungen im Parameter-Panel gelten für DeepSeek nicht. Das Panel lässt sie deshalb weg, statt so zu tun, als würden sie wirken. Dazu gehören **Verbosity**, **Top K** und die Wiederholungsstrafen: DeepSeek hat sie abgeschafft und ignoriert sie. **Temperature** und **Top P** bilden ein Paar – DeepSeek nutzt immer nur einen der beiden, je nachdem, ob es gerade nachdenkt. Deshalb siehst du **Temperature**, wenn das Nachdenken aus ist, und **Top P**, wenn es an ist.
 
