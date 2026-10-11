@@ -6,7 +6,7 @@ Este guia explica como mudar toda a aparência do Marinara Engine com um tema de
 
 ## Estilos prontos para janelas de chat
 
-Para mudar o visual sem escrever CSS, abra **Settings > Appearance > App** (Configurações > Aparência > Aplicativo) e encontre **Chat widget style** (estilo dos widgets do chat) no fim de **App Style**. **Dottore** dá aos controles molduras de instrumentos em azul-gelo, bordas de metal claro e cantos recortados. **Mari** acrescenta molduras de conto de fadas com detalhes dourados, azuis de pedras preciosas e Gemas Essenciais nos títulos das janelas. Os botões usam o mesmo fundo das janelas. Cada preset tem sua própria fonte, funciona nos modos claro e escuro e muda juntos os botões, as janelas e as seções expansíveis.
+Para mudar o visual sem escrever CSS, abra **Settings > Appearance > App** (Configurações > Aparência > Aplicativo) e encontre **Chat widget style** (estilo dos widgets do chat) no fim de **App Style**. **Dottore** dá aos controles molduras de instrumentos em azul-gelo, bordas de metal claro e cantos recortados. **Prof. Mari** acrescenta molduras de conto de fadas com detalhes dourados, azuis de pedras preciosas e Gemas Essenciais nos títulos das janelas. Os botões usam o mesmo fundo das janelas. Cada preset tem sua própria fonte, funciona nos modos claro e escuro e muda juntos os botões, as janelas e as seções expansíveis.
 
 Os controles **Font** e **Shape** permitem mudar esses detalhes separadamente. **Preset font** e **Preset shape** seguem o estilo escolhido.
 
@@ -26,7 +26,7 @@ Para levar esse visual ao restante do chat, use os três botões liga/desliga ab
 - **Apply preset shape** (aplicar forma do preset) usa a forma de moldura escolhida nas mensagens de Roleplay com layout clássico ou de visual novel, na caixa de diálogo de Game, nos comentários laterais, nos widgets do HUD, no painel do mapa, nas fichas de personagem, nos campos de entrada e nos controles. As mensagens de Conversation mantêm sua própria forma.
 - **Apply preset colors** (aplicar cores do preset) usa as cores de borda, fundo e texto do widget nessas áreas, incluindo as mensagens de Conversation. Suas cores e gradientes personalizados também se aplicam. As falas entre aspas mantêm a Dialogue Highlight Color própria de cada personagem ou persona.
 
-Cada botão começa desativado e funciona de forma independente. Por exemplo, você pode usar as letras de Mari e manter as cores habituais do chat. Desativar um botão restaura essa parte do estilo habitual do chat. Escolher outro preset mantém as opções desses botões. Professor Mari também pode criar temas personalizados para essas áreas.
+Cada botão começa desativado e funciona de forma independente. Por exemplo, você pode usar as letras da Professor Mari e manter as cores habituais do chat. Desativar um botão restaura essa parte do estilo habitual do chat. Escolher outro preset mantém as opções desses botões. Professor Mari também pode criar temas personalizados para essas áreas.
 
 Os temas CSS personalizados ainda podem substituir esses presets. As variáveis públicas de janelas e gavetas abaixo têm prioridade sobre as cores do preset. Use `--mari-window-font-family` para as letras das janelas, `--mari-drawer-radius` para os cantos das seções e `--mari-window-ornament: none` para ocultar o ornamento do título. Para remover toda a decoração do preset, escolha **Default** primeiro.
 

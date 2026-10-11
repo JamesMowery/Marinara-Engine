@@ -47,7 +47,7 @@ Só um dos dois funciona por vez. Ativar o **RGB Mode** desativa o **Accent Puls
 
 ## Chat widget style
 
-No fim de **App Style**, escolha **Default**, **Dottore** ou **Mari** para os botões, as janelas e as seções móveis do chat. Você pode mudar separadamente a fonte, a forma da moldura e as três cores principais. Os seletores de cor também aceitam gradientes.
+No fim de **App Style**, escolha **Default**, **Dottore** ou **Prof. Mari** para os botões, as janelas e as seções móveis do chat. Você pode mudar separadamente a fonte, a forma da moldura e as três cores principais. Os seletores de cor também aceitam gradientes.
 
 **Button size (px)** (tamanho do botão em pixels) muda os botões móveis do chat e seus ícones sem alterar Display Size. Digite um tamanho de 32 a 96 pixels. Deixe o campo vazio ou use o botão de redefinir para manter o padrão atual. O tamanho fica salvo nas preferências de aparência e se mantém quando você escolhe outro preset.
 

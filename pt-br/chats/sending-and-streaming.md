@@ -25,6 +25,8 @@ A configuração **Send on Enter** fica em **Settings** (Configurações), na ab
 | Conversations | On | Enter envia a mensagem |
 | Game | On | Enter envia a mensagem |
 
+Professor Mari tem um botão liga/desliga próprio, **Enter sends to Professor Mari** (Enter envia para a Professor Mari), nas configurações da busca e da Professor Mari (**Settings** > **General** > **Search and Professor Mari settings** > **Open**).
+
 Quando o botão de um modo está desativado, o Enter só quebra a linha. Aí você clica em **Send** para publicar a mensagem. No Roleplay Mode ele vem desativado por padrão, porque as mensagens de roleplay costumam ser longas e precisam de quebras de linha.
 
 ## Anexar imagens e arquivos

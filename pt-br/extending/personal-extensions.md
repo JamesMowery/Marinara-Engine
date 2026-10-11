@@ -74,7 +74,18 @@ const panel = marinara.ui.registerContribution({
 marinara.onCleanup(() => panel.remove());
 ```
 
-Use `kind: "button"` para uma ação compacta e `kind: "menu-item"` para uma ação no menu Extensions. Os botões usam `surface: "top-bar"` por padrão. Eles também podem apontar para `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` ou `settings`, com `position` definido como `header`, `before-content` ou `after-content`. `icon` aceita qualquer nome Lucide em kebab-case compatível com o Marinara. Os dois tipos de ação chamam `onActivate`. Um `panel` chama `onActivate` ao abrir; seus botões chamam `onEvent` com os valores atuais dos controles. O identificador permite atualizações específicas por tipo: `button` aceita `label`, `description`, `icon`, `surface` e `position`; `menu-item` aceita `label`, `description` e `icon`; `panel` aceita `label`, `description`, `icon` e `elements`. Todos aceitam `remove()`. Os IDs podem conter letras, números, `.`, `_` e `-`.
+Use `kind: "button"` para uma ação compacta e `kind: "menu-item"` para uma ação no menu Extensions. Use `kind: "command"` para um item do Command Center (central de comandos) que aciona uma contribuição já existente da mesma revisão da extensão. Um comando exige `targetContributionId` e não pode usar `onActivate` nem `onEvent`.
+
+```js
+marinara.ui.registerContribution({
+  id: "open-weather",
+  kind: "command",
+  label: "Open weather controls",
+  targetContributionId: "weather-settings",
+});
+```
+
+O host só resolve um comando quando o destino tem o mesmo ID de extensão e o mesmo hash de conteúdo. Destinos ausentes, de outra extensão ou de uma revisão desatualizada falham de forma fechada. Os botões usam `surface: "top-bar"` por padrão. Eles também podem apontar para `chats`, `bots`, `characters`, `personas`, `lorebooks`, `presets`, `connections`, `agents` ou `settings`, com `position` definido como `header`, `before-content` ou `after-content`. `icon` aceita qualquer nome Lucide em kebab-case compatível com o Marinara. Os dois tipos de ação chamam `onActivate`. Um `panel` chama `onActivate` ao abrir; seus botões chamam `onEvent` com os valores atuais dos controles. O identificador permite atualizações específicas por tipo: `button` aceita `label`, `description`, `icon`, `surface` e `position`; `menu-item` aceita `label`, `description` e `icon`; `panel` aceita `label`, `description`, `icon` e `elements`. Todos aceitam `remove()`. Os IDs podem conter letras, números, `.`, `_` e `-`.
 
 Por exemplo, isto coloca uma ação nativa acima do conteúdo do painel Presets:
 
