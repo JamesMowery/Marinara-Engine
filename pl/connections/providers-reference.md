@@ -130,7 +130,7 @@ Ten sam wskaźnik znajduje się pod wskaźnikiem kontekstu w selektorze połącz
 
 **DeepSeek** udostępnia własne modele czatu, `deepseek-flash` i `deepseek-v4-pro`. Po wklejeniu klucza lista rozwijana **Model** zawiera oba te modele, a przycisk **Fetch Models from API** odświeża ją na podstawie twojego konta.
 
-Usługa DeepSeek domyślnie korzysta z myślenia. Ustawienie **Reasoning Effort** używa tu własnych poziomów usługi DeepSeek – **Low**, **High** i **Maximum** – a **Off** (wyłączone) wyłącza myślenie w danym zapytaniu. Poziomu **Medium** (średni) nie ma: zapytanie o średni poziom usługa DeepSeek obsługuje jak **High**, więc Marinara oferuje **High** zamiast drugiego przycisku, który robiłby to samo. Myślenie modelu widać w odpowiedzi w zwykłym podglądzie myślenia.
+Usługa DeepSeek domyślnie korzysta z myślenia. Ustawienie **Reasoning Effort** używa tu własnych poziomów usługi DeepSeek – **Low**, **High** i **Maximum** – a **Off** (wyłączone) wyłącza myślenie w danym zapytaniu. Poziomu **Medium** (średni) nie ma: zapytanie o średni poziom usługa DeepSeek obsługuje jak **High**, więc Marinara oferuje **High** zamiast drugiego przycisku, który robiłby to samo. Myślenie modelu widać w odpowiedzi, w zwykłym podglądzie myśli.
 
 Część ustawień w panelu parametrów nie dotyczy usługi DeepSeek, więc panel je pomija, zamiast udawać, że działają. Należą do nich ustawienia **Verbosity** i **Top K** oraz kary za powtórzenia: usługa DeepSeek wycofała je i ignoruje. Parametry **Temperature** (losowość) i **Top P** tworzą parę – usługa DeepSeek używa naraz tylko jednego z nich, zależnie od tego, czy myśli – więc przy wyłączonym myśleniu widzisz **Temperature**, a przy włączonym **Top P**.
 

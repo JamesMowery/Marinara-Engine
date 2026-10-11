@@ -1019,3 +1019,6 @@ These are documented choices for this sync, not a claim of independent native-re
   (R-13). *The penalties* are **kary za powtórzenia**
   (`prompts/generation-parameters.md:41`); **Verbosity**, **Top K** and **Top P**
   stay unglossed behind the carriers **ustawienia** / **parametry**.
+- *The usual thought display* is **zwykły podgląd myśli**, after the **View
+  thoughts** *(podgląd myśli)* gloss (`chats/sending-and-streaming.md:98`), not
+  *podgląd myślenia*.

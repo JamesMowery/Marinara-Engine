@@ -234,8 +234,8 @@
     },
     {
       "path": "connections/providers-reference.md",
-      "sha256": "7260d150c0c4ab2792b52ea0cf7dcc890d75329b173db63e0cc940e042f6fece",
-      "bytes": 18840
+      "sha256": "6d3a49714eeb92a30c7498c817188c4023e1634e93ebdc709a14c7468500117d",
+      "bytes": 18838
     },
     {
       "path": "connections/subscription-clis.md",
