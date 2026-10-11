@@ -12,7 +12,7 @@ Professor Mariはホーム画面にいます。ホーム画面は、チャット
 
 最初のメッセージを送ると、**Hello World**の実績が解除されます。
 
-アプリ上部のバーの下端に沿った細い線でも、どの画面からでもProfessor Mariの状態がわかります。作業中は線が揺らぎ、作業が終わると緑、承認を待っているあいだは金色、直前の実行が失敗したときは赤になります。チャットを開くと線は消えます(**Ask Professor Mari from Search**(SearchからProfessor Mariに質問)がオフのあいだは表示されません)。Professor Mariの設定はすべてSearchとProfessor Mariの設定にあり、Searchの歯車アイコンか、**Settings** > **General** > **Search and Professor Mari settings** > **Open**(設定 > 全般 > SearchとProfessor Mariの設定 > 開く)から開けます。
+アプリ上部のバーの下端には細い線もあり、どの画面からでもProfessor Mariの状態がわかります。作業中は線が揺らぎ、作業が終わると緑、承認を待っているあいだは金色、直前の実行が失敗したときは赤になります。チャットを開くと線は消えます。**Ask Professor Mari from Search**(SearchからProfessor Mariに質問)がオフのあいだは、この線は表示されません。Professor Mariの設定はすべてSearchとProfessor Mariの設定にあり、Searchの歯車アイコンか、**Settings** > **General** > **Search and Professor Mari settings** > **Open**(設定 > 全般 > SearchとProfessor Mariの設定 > 開く)から開けます。
 
 ## 作業中の場所からProfessor Mariに質問する
 

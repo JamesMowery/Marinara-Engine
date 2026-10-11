@@ -50,7 +50,7 @@
 - **Confirm before deleting**: デフォルトでオンです。オンのあいだは、チャットやキャラクターなどを完全に削除する前にMarinaraが確認します。うっかり削除を防ぐため、オンのままにしておくことをおすすめします。
 - **Achievements**: デフォルトでオンです。オンにすると、ホーム画面に実績のボタンと解除の通知が表示されます。オフにすると、記録は裏で静かに続きます。[実績](../home/achievements.md)を参照してください。
 - **Music Player**: デフォルトでオンです。オンにすると、小さなMusic Playerが表示されます。[Music DJ](../media/music.md)を参照してください。
-- **Search and Professor Mari settings**: **Open**を選ぶと、その設定ページに移動します。SearchとProfessor Mariの設定はすべてここにあり、5つのグループに分かれています。**Search**(欄の改善の提案、検索履歴)、**Quick answers**(**Quick answers in Search**、**Answer with**、**Wait after typing**)、**Professor Mari**(Ask Professor Mari from Search、権限モード、返信の候補チップ、変更カードの開き方、Enter sends to Professor Mari)、**Around the app**(Mini Professor Mari visits)、**Appearance**(Professor Mariの見た目。各パックに肖像が表示され、使用中のパックには**In use**と表示され、ロックされたパックにはロック解除までのプレイ時間が表示されます)です。Searchの歯車アイコンからも同じページが開きます。これらの設定を新しい名前か古い名前で検索すると、その設定へ直接移動します。
+- **Search and Professor Mari settings**: **Open**を選ぶと、その設定ページに移動します。SearchとProfessor Mariの設定はすべてここにあり、5つのグループに分かれています。**Search**には欄の改善の提案と検索履歴があります。**Quick answers**には**Quick answers in Search**、**Answer with**、**Wait after typing**があります。**Professor Mari**にはAsk Professor Mari from Search、権限モード、返信の候補チップ、変更カードの開き方、Enter sends to Professor Mariがあります。**Around the app**にはMini Professor Mari visitsがあります。**Appearance**はProfessor Mariの見た目の設定で、各パックに肖像が表示され、使用中のパックには**In use**と表示され、ロックされたパックにはロック解除までのプレイ時間が表示されます。Searchの歯車アイコンからも同じページが開きます。これらの設定を新しい名前か古い名前で検索すると、その設定へ直接移動します。
 
 ## Text Rules
 

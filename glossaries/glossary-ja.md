@@ -519,6 +519,6 @@ Choices from the #7382, #7396, #7372 and #7309 sync. `ja.json` has none of these
 | **Undo** / **Put back** | (元に戻す) / (戻す) |
 | **Try again** / **Retry** | (もう一度試す) / (再試行). 再試行 matches `ui/ja.json` `chat.help.targets.retry.title` |
 | blanks in a persona template | 空所. 空欄 stays reserved for "leave the field blank" |
-| out-of-character POV note | ロールプレイの外で書かれたPOV(視点)の注記 |
+| out-of-character POV note | POV(視点)を示すキャラクター外の注記, following 「キャラクター外の注記」 for *out of character notes* in `extending/regex-scripts.md` |
 
 Bold labels such as **Ask Prof. Mari**, **Prof. Mari**, **Continue with Prof. Mari** and **Same as Prof. Mari** stay byte-exact. Prose that EN renamed from "Mari" to "Professor Mari" follows, and Mariチャット becomes Professor Mariのチャット. The heading **Quick answers in Search** stays English because it is also the toggle's name, following the UI-surface heading rule. These are translation choices, not a new native-reader review.
