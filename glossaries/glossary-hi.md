@@ -768,3 +768,10 @@ Precedents from the #7382, #7396, #7372 and #7309 sync:
 - In the personal-extension guides, **Command Center** stays Latin with a one-time gloss (कमांड सेंटर). A contribution is **कंट्रिब्यूशन**, the majority spelling (`development/personal-extensions.md`); the older **कॉन्ट्रिब्यूशन** ×4 in `extending/personal-extensions.md`, `extending/writing-personal-extensions.md` and `development/optional-agent-packages.md` is a split left for a sweep. A revision is **रिविज़न**. "Fails closed" is phrased `फ़ेल हो जाता है और कुछ नहीं चलता`.
 
 These are translation choices, not a new native-reader review.
+
+## DeepSeek provider (2026-10-11)
+
+- The **Medium** reasoning level is glossed **(मध्यम)**, alongside the Z.AI glosses **Low** (कम), **High** (ज़्यादा), **Maximum** (अधिकतम). In `connections/providers-reference.md` the DeepSeek section runs **Reasoning Effort**, **Low**, **High** and **Maximum** bare, because the Z.AI section above already glosses them (gloss once per document, §5). Reused glosses: **Off** (बंद), **Verbosity** (वर्बोसिटी), **Temperature** (टेम्परेचर); **Top K** and **Top P** stay unglossed, as in `prompts/generation-parameters.md`.
+- The penalty parameters are **पेनल्टी वाली सेटिंग्स**. A provider that has "retired" a parameter has **उसका सपोर्ट खत्म कर दिया है**.
+
+These are translation choices, not a new native-reader review.
