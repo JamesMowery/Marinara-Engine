@@ -23,7 +23,7 @@ Completado:
 
 Se retiene intencionalmente para trabajo separado de compatibilidad o de producto:
 
-- `@rollup/wasm-node` y `Mari_point_down_left.png`;
+- `@rollup/wasm-node`;
 - exportaciones del servidor que podrían ser API fuera del árbol o puntos de prueba (test seams);
 - el parser de PNG y la consolidación de la geometría de los tutoriales;
 - la refactorización amplia del editor/compositor y de los módulos grandes;
@@ -203,9 +203,7 @@ No apliques esta prueba de “una sola aparición textual” de forma general a 
 
 ## 5. Candidato de recurso estático
 
-`packages/client/public/sprites/mari/Mari_point_down_left.png` es el único sprite de Mari incluido cuyo nombre base/ruta no tiene referencia en el repositorio. Los recursos de Mari vecinos sí están referenciados.
-
-**Recomendación (confianza media):** verifica que ninguna convención de nombres en tiempo de ejecución ni tema creado externamente lo direccione directamente, luego elimínalo y comprueba en el navegador cada pose de tutorial/onboarding de Mari. Los recursos públicos pueden cargarse mediante URLs construidas, así que la ausencia de texto por sí sola no basta para tener alta confianza.
+`packages/client/public/sprites/mari/Mari_point_down_left.png`, el único sprite de Mari incluido cuyo nombre base/ruta no tenía referencia en el repositorio, se eliminó con omnibar slice 38a.
 
 No uses búsquedas por nombre base para podar los recursos de juego incluidos. Algunos seeders y manifiestos del servidor escanean ciertos directorios de recursos de forma dinámica.
 

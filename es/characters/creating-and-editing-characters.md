@@ -35,10 +35,11 @@ Arriba a la derecha tienes estos botones:
 
 Si intentas salir con trabajo sin guardar, un aviso dice `You have unsaved changes. Close without saving?` Te ofrece **Keep editing** (Seguir editando), **Discard & close** (Descartar y cerrar) y **Save & close** (Guardar y cerrar).
 
-El editor está dividido en pestañas. En una pantalla ancha las pestañas van por el lado izquierdo. En una pantalla estrecha se convierten en una tira desplazable en la parte superior. Las pestañas, en orden, son **Metadata**, **Card**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** y **Advanced**.
+El editor está dividido en pestañas. En una pantalla ancha las pestañas van por el lado izquierdo. En una pantalla estrecha se convierten en una tira desplazable en la parte superior. Las pestañas, en orden, son **Metadata**, **Card**, **Onboarding**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** y **Advanced**.
 
 Esta guía cubre **Metadata**, **Card**, **Voice** y **Advanced**, además de los avatares y el historial de versiones. Las otras pestañas tienen sus propias guías:
 
+- **Onboarding**: [Onboarding interactivo](interactive-onboarding.md).
 - **Convo**: [Perfiles de Conversation Mode](../conversation/profiles.md).
 - **Lorebook**: [Vincular lorebooks a personajes](../lorebooks/linking-to-characters.md).
 - **Sprites**: [Sprites de personaje](sprites.md).
@@ -175,6 +176,7 @@ Si el texto subyacente cambió desde que se hizo la propuesta, la app te avisa a
 ## Guías relacionadas
 
 - [Personas de usuario: crear y editar](personas.md)
+- [Onboarding interactivo](interactive-onboarding.md)
 - [Sprites de personaje](sprites.md)
 - [Galerías de personaje y persona](galleries.md)
 - [Importar y exportar tarjetas de personaje](import-export.md)

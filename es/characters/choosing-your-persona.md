@@ -30,6 +30,8 @@ En Game Mode esta sección se presenta como tu grupo dentro del juego, pero aún
 
 El asistente de configuración New Chat tiene un campo **Your Persona** (Tu persona). Usa el mismo selector con búsqueda y una opción **None**. En el asistente de configuración New Game Setup, este campo se llama **Player's Persona** (Persona del jugador).
 
+En un chat de Roleplay, una tarjeta de personaje puede ofrecer **Create your persona** (Crear tu persona) en la parte superior de este selector. Elige esa opción para responder a las preguntas de la tarjeta y obtener una persona nueva. Consulta [Onboarding interactivo](interactive-onboarding.md).
+
 ## El Quick Persona Switcher
 
 Una vez que un chat está abierto, un pequeño botón de avatar redondo aparece cerca del cuadro de mensaje. Este es el **Quick Persona Switcher** (Selector rápido de persona). Su tooltip (texto de ayuda) muestra este nombre cuando no hay ninguna persona establecida.
@@ -53,4 +55,5 @@ Cambiar tu persona en mitad de un chat no reescribe los mensajes anteriores. Cad
 ## Guías relacionadas
 
 - [User Personas: Creating and Editing](personas.md)
+- [Onboarding interactivo](interactive-onboarding.md)
 - [Chat Settings Overview](../chats/chat-settings.md)
