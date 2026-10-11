@@ -61,7 +61,7 @@ A **Rendered preview** (prévia renderizada), no fim, mostra a persona montada a
 ## Criar uma persona como jogador
 
 1. Comece um novo chat de Roleplay. Na etapa **Persona & Characters** (persona e personagens), os cards com onboarding mostram um pequeno ícone de pessoa com um sinal de mais na lista de personagens.
-2. Adicione o personagem. Uma linha **Create your persona** (criar a sua persona) aparece no topo de **Your Persona** (a sua persona), com o nome do card a que ela pertence.
+2. Adicione o personagem. Uma linha **Create your persona** aparece no topo de **Your Persona** (a sua persona), com o nome do card a que ela pertence.
 3. Selecione essa linha e clique em **Next** (avançar).
 4. Uma janela **Create your persona** mostra as perguntas do card. As perguntas de acompanhamento aparecem assim que as suas respostas as tornam relevantes.
 5. Clique em **Create persona** (criar persona). A nova persona é salva e selecionada para o chat, e o assistente de configuração continua.

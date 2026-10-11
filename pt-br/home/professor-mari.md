@@ -12,7 +12,7 @@ A conversa é em linguagem comum. Digite uma mensagem na caixa e pressione Enter
 
 A primeira mensagem enviada para ela desbloqueia a conquista **Hello World**.
 
-Uma linha fina na borda inferior da barra superior do aplicativo também mostra o estado dela, em qualquer tela: a linha oscila enquanto ela trabalha, fica verde quando ela termina, dourada enquanto uma aprovação espera e vermelha se a última execução falhou. A linha some quando você abre o chat dela. (Ela fica desligada enquanto a opção **Ask Professor Mari from Search** (falar com a Professor Mari pela busca) estiver desativada.) Todas as opções dela ficam nas configurações da busca e da Professor Mari: a engrenagem da busca, ou **Settings** (Configurações) > **General** > **Search and Professor Mari settings** > **Open** (abrir).
+Uma linha fina na borda inferior da barra superior do aplicativo também mostra o estado dela, em qualquer tela: a linha oscila enquanto ela trabalha, fica verde quando ela termina, dourada enquanto uma aprovação espera e vermelha se a última execução falhou. A linha some quando você abre o chat dela. (A linha fica desligada enquanto a opção **Ask Professor Mari from Search** (falar com a Professor Mari pela busca) estiver desativada.) Todas as opções dela ficam nas configurações da busca e da Professor Mari: a engrenagem da busca, ou **Settings** (Configurações) > **General** > **Search and Professor Mari settings** > **Open** (abrir).
 
 ## Falar com a Professor Mari a partir do que você está fazendo
 
@@ -24,7 +24,7 @@ Você pode abrir a Professor Mari no lugar onde precisa de ajuda. Esses pontos d
 - Respostas do **FAQ**: use **Ask Prof. Mari** para incluir a pergunta encontrada e a resposta escrita como ponto de partida.
 - **Search** (busca): pressione `Cmd/Ctrl+K`, selecione um resultado e use **Ask Prof. Mari** para incluir o resultado selecionado no rascunho. A busca não envia sozinha nenhuma requisição ao modelo, a menos que uma resposta rápida esteja ativada (veja **Quick answers in Search** abaixo).
 - **Recent Chats** (chats recentes) e outros estados de erro: use **Ask Prof. Mari** ao lado de **Retry** (tentar novamente) para enviar a descrição do erro e a ação de reparo pedida.
-- O chat normal com o personagem Professor Mari e o chat do espaço de trabalho da tela inicial usam o mesmo formato de encaminhamento.
+- O chat normal com a personagem Professor Mari e o chat do espaço de trabalho da tela inicial usam o mesmo formato de encaminhamento.
 
 Os itens anexados aparecem como chips **Aware of** (ciente de) acima da caixa de mensagem dela. Remova um item de contexto quando ele não for relevante. Depois que você envia a mensagem, a Professor Mari obtém no servidor o conteúdo mais extenso do recurso, dentro do orçamento de contexto. Ela não recebe um recurso inteiro só porque você abriu um editor.
 
@@ -34,7 +34,7 @@ Peça ajuda a ela em qualquer um destes casos:
 - Criar ou editar um personagem. O personagem é um card que dá nome, personalidade e voz à IA.
 - Criar ou editar uma persona. A persona é a identidade que você interpreta no chat, o "você" da história.
 - Criar ou editar um lorebook. O lorebook é um conjunto de anotações do seu mundo que a IA usa quando fazem sentido.
-- Criar ou editar um tema, um agente, um preset de prompt ou um rascunho de Personal Extension. Professor Mari é a única autora de extensões que já vem no aplicativo. Os rascunhos dela ficam desativados até você inspecionar o código em ambiente isolado (sandbox), revisar as permissões ativas de card de personagem ou de persona que forem pedidas e aprovar o hash exato em **Settings** (Configurações) > **Addons**.
+- Criar ou editar um tema, um agente, um preset de prompt ou um rascunho de Personal Extension. Professor Mari é a única autora de extensões que já vem no aplicativo. Os rascunhos dela ficam desativados até você inspecionar o código em ambiente isolado (sandbox), revisar as permissões ativas de card de personagem ou de persona que forem pedidas e aprovar o hash exato em **Settings** > **Addons**.
 - Editar uma parte específica de um preset de prompt, sem mexer no resto. Ela lista as seções, os grupos de prompt e as variáveis de escolha do preset, lê qualquer um desses itens por inteiro e acrescenta, altera ou remove só aquele pedaço. É possível, por exemplo, acrescentar uma linha em uma seção específica, em vez de só criar ou substituir o preset inteiro.
 - Comparar os 33 agentes e pacotes de recursos oficiais disponíveis para download, explicar quais modos cada um atende e indicar o que combina com o objetivo do usuário. Ela diferencia o que existe no catálogo do que está realmente instalado, encaminha o usuário para **Agents → Download Agents** quando é o caso, e sabe que os pacotes e o catálogo completo estão em [Pasta-Devs/Marinara-Agents](https://github.com/Pasta-Devs/Marinara-Agents).
 - Gerar ou atribuir imagens, como avatares, sprites e planos de fundo. O sprite é a imagem do personagem, um retrato ou uma pose de corpo inteiro, que aparece durante o chat.
@@ -45,7 +45,7 @@ Ela lê um item antes de editar e pergunta o que falta quando o pedido está vag
 
 ## Quick answers in Search
 
-Quando você digita uma pergunta na busca e nenhum resultado corresponde, a Professor Mari pode escrever uma resposta curta. Ela aparece como um card **Quick answer · Read-only** (resposta rápida · somente leitura) abaixo da linha **Ask Prof. Mari**.
+Quando você digita uma pergunta na busca e nenhum resultado corresponde, a Professor Mari pode escrever uma resposta curta. A resposta aparece como um card **Quick answer · Read-only** (resposta rápida · somente leitura) abaixo da linha **Ask Prof. Mari**.
 
 - Uma resposta rápida tem até três frases tiradas da documentação do Marinara. A Professor Mari vê apenas o que você digitou, e a resposta não altera nada.
 - O card cita as páginas da documentação que usou. Durante cinco minutos, repetir a mesma pergunta usa uma cópia salva.
@@ -117,7 +117,7 @@ Uma mudança que espera por você é diferente. Uma mudança retida (no modo Man
 
 - O card pertence ao chat da Professor Mari em que ela fez a alteração. Um chat novo começa sem os cards dos outros chats. Excluir um chat mantém suas alterações e remove seus cards. Uma alteração feita com o comando `mari` no terminal não pertence a nenhum chat, por isso seu card aparece em todos os chats da Professor Mari.
 - Uma edição que deixaria tudo igual não é salva e não recebe card.
-- Professor Mari não pode editar nem excluir o próprio card de personagem. Marinara a redefine para a versão integrada a cada inicialização.
+- Professor Mari não pode editar nem excluir o próprio card de personagem. Marinara o redefine para a versão integrada a cada inicialização.
 - Personagens e personas também guardam o próprio histórico de versões dentro dos editores. Ali você restaura uma versão antiga, como uma segunda rede de proteção.
 
 Quando a Professor Mari cria ou atualiza um personagem, uma persona, um lorebook ou um preset, o resultado pode mostrar **Open**. Use esse botão para abrir exatamente esse recurso depois que o aplicativo atualizar os dados. Um resultado atualizado também pode mostrar **Review** (revisar) quando há uma revisão pendente. **Review** abre os controles da mudança pendente. Itens novos normalmente não têm revisão, porque nenhum item existente foi sobrescrito.
