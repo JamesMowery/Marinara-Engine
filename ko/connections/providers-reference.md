@@ -123,6 +123,19 @@ NanoGPT가 현재 보고할 수 없는 할당량은 미사용이 아닌 **알 �
 
 **Z.AI**는 자체 API로 GLM 모델(GLM 5.3, GLM 5.3 Flash와 이전 모델)을 제공합니다. **Model** 드롭다운에는 현재 GLM 모델이 표시되며, **Fetch Models from API**로 계정에서 목록을 새로 불러올 수 있습니다. GLM 5.3 모델은 항상 추론을 수행합니다. 프리셋의 **Reasoning Effort**(추론 강도)는 Z.AI가 지원하는 세 단계인 **Low**(낮음), **High**(높음), **Maximum**(최대)에 맞게 변환됩니다. 설정하지 않으면 Z.AI의 기본값인 **Maximum**을 사용합니다. 기본 Base URL은 사용량에 따라 과금되는 엔드포인트입니다. Z.AI의 Coding Plan은 별도의 엔드포인트를 사용하며, 이용 정책에 따라 지정된 목록의 도구에만 허용됩니다. 따라서 Coding Plan 키가 여기서 작동할 것으로 기대해서는 안 됩니다.
 
+## DeepSeek
+
+- 키를 받는 곳: `https://platform.deepseek.com/api_keys`
+- 기본 Base URL: `https://api.deepseek.com/v1`
+
+**DeepSeek**는 자체 채팅 모델인 `deepseek-flash`와 `deepseek-v4-pro`를 제공합니다. 키를 붙여넣으면 **Model** 드롭다운에 이 모델이 표시되며, **Fetch Models from API**로 계정에서 목록을 새로 불러올 수 있습니다.
+
+DeepSeek는 기본적으로 사고 기능을 사용합니다. **Reasoning Effort**는 DeepSeek 자체 단계인 **Low**, **High**, **Maximum**을 사용하며, **Off**(꺼짐)를 고르면 해당 요청에서 사고 기능을 끕니다. **Medium**은 없습니다. DeepSeek는 중간 단계 요청을 High로 처리하므로, Marinara는 같은 동작을 하는 버튼을 하나 더 두는 대신 High를 제공합니다. 사고 내용은 평소와 같은 생각 과정 표시로 답변에 나타납니다.
+
+파라미터 패널의 일부 설정은 DeepSeek에 적용되지 않으므로, 패널은 작동하는 것처럼 보이게 두지 않고 해당 설정을 아예 표시하지 않습니다. 여기에는 **Verbosity**(상세도), **Top K**, 페널티 설정이 포함됩니다. DeepSeek는 이 설정들의 지원을 종료했으며 무시합니다. **Temperature**(온도)와 **Top P**는 한 쌍입니다. DeepSeek는 사고 여부에 따라 둘 중 하나만 사용하므로, 사고 기능이 꺼져 있으면 **Temperature**가, 켜져 있으면 **Top P**가 표시됩니다.
+
+DeepSeek에 연결할 때는 **OpenAI** 제공자에 DeepSeek의 URL을 지정하지 말고 이 제공자를 사용하세요. **OpenAI** 제공자는 OpenAI 자체 모델을 전제로 하므로, DeepSeek 모델에서는 생성 설정 항목을 숨기고 지정한 설정을 거의 보내지 않습니다.
+
 ## Claude (Subscription)
 
 - API 키: 없음. 키 대신 로컬 도구에 로그인합니다.
