@@ -63,7 +63,7 @@ Pytanie, które występuje tylko wewnątrz `{{#if}}`, pada tylko wtedy, gdy ten 
 1. Zacznij nowy czat Roleplay. W kroku **Persona & Characters** (persona i postacie) karty z onboardingiem mają na liście postaci małą ikonę osoby z plusem.
 2. Dodaj postać. Na górze pola **Your Persona** (twoja persona) pojawia się wiersz **Create your persona** z nazwą karty, do której należy.
 3. Wybierz ten wiersz i kliknij **Next** (dalej).
-4. Okno **Create your persona** pokazuje pytania karty. Pytania uzupełniające pojawiają się, gdy tylko twoje odpowiedzi sprawią, że mają znaczenie.
+4. Okno **Create your persona** pokazuje pytania karty. Pytania uzupełniające pojawiają się, gdy tylko twoje odpowiedzi sprawią, że nabiorą znaczenia.
 5. Kliknij **Create persona** (utworzenie persony). Nowa persona zostaje zapisana i wybrana dla czatu, a kreator przechodzi dalej.
 
 Jeśli wybierzesz inną personę albo opcję **None** (brak) z podpisem Stay anonymous, pytania nie padają. **Back** (powrót) w oknie pytań wraca do wyboru persony. Każda karta z onboardingiem w czacie ma własny wiersz **Create your persona**.

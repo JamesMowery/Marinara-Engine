@@ -12,7 +12,7 @@ Rozmawiasz z nią zwykłym językiem. Wpisz wiadomość w polu, a potem naciśni
 
 Wysłanie pierwszej wiadomości odblokowuje osiągnięcie **Hello World**.
 
-Jej stan pokazuje też na każdym ekranie cienka linia wzdłuż dolnej krawędzi górnego paska aplikacji: faluje, kiedy asystentka pracuje, robi się zielona, kiedy skończy, złota, kiedy czeka zatwierdzenie, albo czerwona, jeśli ostatnie zadanie się nie powiodło. Znika po otwarciu jej czatu. Linia jest wyłączona, gdy wyłączony jest przełącznik **Ask Professor Mari from Search** (pytania do Professor Mari z wyszukiwarki). Wszystkie jej ustawienia znajdują się w ustawieniach wyszukiwarki Search i asystentki Professor Mari: otwiera je ikona koła zębatego w wyszukiwarce Search albo ścieżka **Settings** (Ustawienia) > **General** > **Search and Professor Mari settings** (ustawienia wyszukiwarki i asystentki Professor Mari) > **Open** (otwarcie).
+Jej stan pokazuje też na każdym ekranie cienka linia wzdłuż dolnej krawędzi górnego paska aplikacji: faluje, kiedy asystentka pracuje, robi się zielona, kiedy skończy, złota, kiedy coś czeka na zatwierdzenie, albo czerwona, jeśli ostatnie zadanie się nie powiodło. Znika po otwarciu jej czatu. Linia jest wyłączona, gdy wyłączony jest przełącznik **Ask Professor Mari from Search** (pytania do Professor Mari z wyszukiwarki). Wszystkie jej ustawienia znajdują się w ustawieniach wyszukiwarki Search i asystentki Professor Mari: otwiera je ikona koła zębatego w wyszukiwarce Search albo ścieżka **Settings** (Ustawienia) > **General** > **Search and Professor Mari settings** (ustawienia wyszukiwarki i asystentki Professor Mari) > **Open** (otwarcie).
 
 ## Pytanie do Professor Mari prosto z bieżącej pracy
 
@@ -61,7 +61,7 @@ W pustym czacie z Professor Mari pojawiają się kafelki startowe, takie jak **C
 
 Prowadzone kroki to jedno konkretne pytanie naraz, zamiast długiego formularza podanego od razu w całości.
 
-Przy pełnej prośbie o utworzenie lub edycję Professor Mari może zwrócić ograniczony plan prowadzony. Każdy krok ma niewielki zestaw podpowiedzi. Wybranie jednej z nich wypełnia bieżący szkic i lokalnie przesuwa plan do następnego kroku. Po zmianie podpowiedzi twój tekst zostaje w szkicu. Plan należy do bieżącego czatu z Professor Mari, więc przełączenie czatu, restart, zatrzymanie zadania albo ukończenie planu usuwa nieaktualne kroki. Wadliwe albo nadmiarowe podpowiedzi są odrzucane, a kafelki są nieaktywne, kiedy Professor Mari pracuje.
+Przy pełnej prośbie o utworzenie lub edycję Professor Mari może zwrócić prowadzony plan o ograniczonej liczbie kroków. Każdy krok ma niewielki zestaw podpowiedzi. Wybranie jednej z nich wypełnia bieżący szkic i lokalnie przesuwa plan do następnego kroku. Po zmianie podpowiedzi twój tekst zostaje w szkicu. Plan należy do bieżącego czatu z Professor Mari, więc przełączenie czatu, restart, zatrzymanie zadania albo ukończenie planu usuwa nieaktualne kroki. Wadliwe albo nadmiarowe podpowiedzi są odrzucane, a kafelki są nieaktywne, kiedy Professor Mari pracuje.
 
 Podpowiedzi są dostępne tylko w czatach z Professor Mari. Inne postacie nie dostają kafelków Professor Mari.
 
@@ -199,7 +199,7 @@ Otwórz **Aware of** w nagłówku czatu z Professor Mari, żeby zobaczyć, co zo
 
 Professor Mari wprowadza istotne zmiany w przestrzeni roboczej wyłącznie w ramach istniejących reguł zatwierdzania i przeglądu po stronie serwera. **Aware of** nie daje dodatkowego dostępu. Zmiany plików wrażliwych, zmiany zależności, limity powłoki i walidację danych aplikacji nadal egzekwuje serwer.
 
-Kiedy prośba się nie uda, zapis rozmowy zachowuje przyczynę błędu i pokazuje **Retry**, jeśli prośbę da się wysłać ponownie. Najpierw usuń wskazany problem z połączeniem, piaskownicą, możliwościami albo dostępem zdalnym, a potem ponów prośbę. Ponowienie nie rusza po cichu z wyszukiwania, FAQ ani stanu błędu. Zawsze uruchamia je użytkownik.
+Kiedy prośba się nie uda, zapis rozmowy zachowuje przyczynę błędu i pokazuje **Retry**, jeśli prośbę da się wysłać ponownie. Najpierw usuń wskazany problem z połączeniem, piaskownicą, możliwościami albo dostępem zdalnym, a potem ponów prośbę. Ponowienie nie uruchamia się po cichu z wyszukiwania, FAQ ani stanu błędu. Zawsze wymaga twojego działania.
 
 ## Sekcja FAQ działa osobno od czatu
 

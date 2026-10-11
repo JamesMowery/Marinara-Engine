@@ -972,8 +972,11 @@ Cycle precedents from the #7382 / #7396 / #7372 / #7309 sync:
   names (Ask Professor Mari from Search, Enter sends to Professor Mari, Mini
   Professor Mari visits) stay English, as in the source.
 - **Show "older messages not sent" note** keeps its straight ASCII quotes inside the
-  bold and is glossed *(informacja o niewysłanych starszych wiadomościach)*; the
+  bold and is glossed *(pokazanie informacji o niewysłanych starszych wiadomościach)*,
+  a verbal noun like **Show rewritten version** *(pokazanie wersji przepisanej)*; the
   note itself is an **informacja**.
+- The Professor Mari setting *reply chips* is **kafelki z podpowiedziami**, the same
+  chips as the `## Kafelki z podpowiedziami` section of `home/professor-mari.md`.
 - `agents/memory.md`: *scene check* is **sprawdzenie sceny** (sprawdzenia scen),
   matching the existing *Standalone scene check interval* gloss; the *scene-end
   check* form *sprawdzenie końca sceny* is retired. *Scene starts* are **początki
@@ -1000,6 +1003,8 @@ Cycle precedents from the #7382 / #7396 / #7372 / #7309 sync:
   not the Card Browser page button's *(następna)*.
 - Residual 5 update: the three em dashes in the `extending/personal-extensions.md`
   contribution-kinds paragraph became en dashes (R-99) when that paragraph was
-  rewritten for `kind: "command"`; that file no longer carries an em dash.
+  rewritten for `kind: "command"`; that file no longer carries an em dash. The same
+  rewrite gave its "obsługiwaną przez Marinara Engine" the carrier noun
+  ("przez aplikację Marinara Engine", R-10); the file's other residual 11 uses stay.
 
 These are documented choices for this sync, not a claim of independent native-reader review.
