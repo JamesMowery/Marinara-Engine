@@ -123,6 +123,19 @@ O mesmo indicador aparece abaixo do indicador de contexto no seletor de conexão
 
 **Z.AI** oferece os modelos GLM (GLM 5.3, GLM 5.3 Flash e anteriores) pela própria API. A lista **Model** mostra os modelos GLM atuais, e **Fetch Models from API** a atualiza a partir da sua conta. Os modelos GLM 5.3 sempre usam raciocínio: o ajuste **Reasoning Effort** (esforço de raciocínio) do seu preset é convertido nos três níveis aceitos pela Z.AI: **Low** (baixo), **High** (alto) e **Maximum** (máximo). Se você não definir esse ajuste, será usado o padrão da Z.AI: **Maximum**. A URL base padrão é o endpoint com cobrança por uso. O Coding Plan da Z.AI usa outro endpoint que a política de uso reserva às ferramentas da lista do provedor, então não se espera que uma chave desse plano funcione aqui.
 
+## DeepSeek
+
+- Onde conseguir a chave: `https://platform.deepseek.com/api_keys`
+- URL base padrão: `https://api.deepseek.com/v1`
+
+**DeepSeek** oferece os próprios modelos de chat, `deepseek-flash` e `deepseek-v4-pro`. Depois de colar a chave, o menu suspenso **Model** lista esses modelos, e **Fetch Models from API** atualiza a lista a partir da sua conta.
+
+A DeepSeek usa raciocínio por padrão. Nesse provedor, o ajuste **Reasoning Effort** usa os níveis próprios da DeepSeek – **Low**, **High** e **Maximum** – e **Off** (desativado) desliga o raciocínio naquela requisição. Não existe **Medium**: a DeepSeek trata uma requisição de nível médio como High, então Marinara oferece High em vez de um segundo botão que faria a mesma coisa. O raciocínio aparece na resposta com a exibição de raciocínio de sempre.
+
+Alguns ajustes do painel de parâmetros não se aplicam à DeepSeek, por isso o painel os deixa de fora em vez de fingir que funcionam. **Verbosity**, **Top K** e as penalidades estão entre eles: a DeepSeek descontinuou esses ajustes e os ignora. **Temperature** (temperatura) e **Top P** formam um par – a DeepSeek só usa um de cada vez, dependendo de estar raciocinando ou não – e por isso você vê **Temperature** quando o raciocínio está desativado e **Top P** quando está ativado.
+
+Conecte a DeepSeek por este provedor, em vez de apontar o provedor **OpenAI** para a URL da DeepSeek. O provedor OpenAI espera os modelos da própria OpenAI, então, com um modelo da DeepSeek, ele esconde os controles de geração e não envia quase nenhum dos seus ajustes.
+
 ## Claude (Subscription)
 
 - Chave de API: nenhuma. Em vez disso, você faz login em uma ferramenta local.
