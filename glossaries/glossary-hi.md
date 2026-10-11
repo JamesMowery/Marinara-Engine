@@ -773,5 +773,6 @@ These are translation choices, not a new native-reader review.
 
 - The **Medium** reasoning level is glossed **(मध्यम)**, alongside the Z.AI glosses **Low** (कम), **High** (ज़्यादा), **Maximum** (अधिकतम). In `connections/providers-reference.md` the DeepSeek section runs **Reasoning Effort**, **Low**, **High** and **Maximum** bare, because the Z.AI section above already glosses them (gloss once per document, §5). Reused glosses: **Off** (बंद), **Verbosity** (वर्बोसिटी), **Temperature** (टेम्परेचर); **Top K** and **Top P** stay unglossed, as in `prompts/generation-parameters.md`.
 - The penalty parameters are **पेनल्टी वाली सेटिंग्स**. A provider that has "retired" a parameter has **उसका सपोर्ट खत्म कर दिया है**.
+- A model's thoughts are **सोच**, as in the **View thoughts** (सोच देखें) gloss; "the usual thought display" is **सोच दिखाने का आम तरीका**. A request at a given effort level is **<स्तर> स्तर की रिक्वेस्ट** (`मध्यम स्तर की रिक्वेस्ट`), not a bare `मध्यम रिक्वेस्ट`.
 
 These are translation choices, not a new native-reader review.
