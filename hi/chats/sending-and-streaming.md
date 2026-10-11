@@ -25,6 +25,8 @@
 | Conversations | On | Enter संदेश भेज देता है |
 | Game | On | Enter संदेश भेज देता है |
 
+Professor Mari का अपना अलग टॉगल है, **Enter sends to Professor Mari** (Enter से Professor Mari को भेजें)। यह Search और Professor Mari की सेटिंग्स में मिलता है: **Settings** → **General** → **Search and Professor Mari settings** → **Open** (सेटिंग्स → जनरल → Search और Professor Mari सेटिंग्स → खोलें)।
+
 जिस मोड का टॉगल बंद हो, वहाँ Enter दबाने पर नई पंक्ति जुड़ती है। संदेश भेजने के लिए फिर **Send** पर क्लिक करें। Roleplay में यह डिफ़ॉल्ट रूप से बंद है, क्योंकि Roleplay के संदेश अक्सर लंबे होते हैं और उनमें लाइन ब्रेक की ज़रूरत पड़ती है।
 
 ## इमेज और फ़ाइलें अटैच करना

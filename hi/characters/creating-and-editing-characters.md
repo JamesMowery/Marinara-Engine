@@ -35,10 +35,11 @@ Character Editor चैट वाली जगह हटाकर पूरे �
 
 बिना सेव किए बाहर निकलने की कोशिश पर एक बैनर दिखता है: `You have unsaved changes. Close without saving?` इसमें **Keep editing**, **Discard & close** और **Save & close** विकल्प मिलते हैं।
 
-एडिटर टैब में बँटा है। चौड़ी स्क्रीन पर टैब बाईं तरफ़ नीचे की ओर दिखते हैं। छोटी स्क्रीन पर वही ऊपर एक स्क्रॉल होने वाली पट्टी बन जाते हैं। टैब इसी क्रम में हैं: **Metadata**, **Card**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** और **Advanced**।
+एडिटर टैब में बँटा है। चौड़ी स्क्रीन पर टैब बाईं तरफ़ नीचे की ओर दिखते हैं। छोटी स्क्रीन पर वही ऊपर एक स्क्रॉल होने वाली पट्टी बन जाते हैं। टैब इसी क्रम में हैं: **Metadata**, **Card**, **Onboarding**, **Convo**, **Lorebook**, **Sprites**, **Gallery**, **Colors**, **Voice**, **Stats** और **Advanced**।
 
 इस गाइड में **Metadata**, **Card**, **Voice** और **Advanced** टैब के साथ अवतार और वर्ज़न हिस्ट्री की बात है। बाकी टैब की अपनी अलग गाइड हैं:
 
+- **Onboarding**: [इंटरैक्टिव ऑनबोर्डिंग](interactive-onboarding.md)।
 - **Convo**: [Conversation मोड की प्रोफ़ाइल (Display Name, About Me, Behavior)](../conversation/profiles.md)।
 - **Lorebook**: [लोरबुक को कैरेक्टर और पर्सोना से जोड़ना](../lorebooks/linking-to-characters.md)।
 - **Sprites**: [कैरेक्टर स्प्राइट](sprites.md)।
@@ -175,6 +176,7 @@ Roleplay चैट के दौरान एक वैकल्पिक एज
 ## मिलती-जुलती गाइड
 
 - [यूज़र पर्सोना: बनाना और बदलना](personas.md)
+- [इंटरैक्टिव ऑनबोर्डिंग](interactive-onboarding.md)
 - [कैरेक्टर स्प्राइट](sprites.md)
 - [कैरेक्टर और पर्सोना गैलरी](galleries.md)
 - [कैरेक्टर कार्ड इंपोर्ट और एक्सपोर्ट करना](import-export.md)
