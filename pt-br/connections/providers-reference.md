@@ -130,7 +130,7 @@ O mesmo indicador aparece abaixo do indicador de contexto no seletor de conexão
 
 **DeepSeek** oferece os próprios modelos de chat, `deepseek-flash` e `deepseek-v4-pro`. Depois de colar a chave, o menu suspenso **Model** lista esses modelos, e **Fetch Models from API** atualiza a lista a partir da sua conta.
 
-A DeepSeek usa raciocínio por padrão. Nesse provedor, o ajuste **Reasoning Effort** usa os níveis próprios da DeepSeek – **Low**, **High** e **Maximum** – e **Off** (desativado) desliga o raciocínio naquela requisição. Não existe **Medium**: a DeepSeek trata uma requisição de nível médio como High, então Marinara oferece High em vez de um segundo botão que faria a mesma coisa. O raciocínio aparece na resposta com a exibição de raciocínio de sempre.
+A DeepSeek usa raciocínio por padrão. Nesse provedor, o ajuste **Reasoning Effort** usa os níveis próprios da DeepSeek – **Low**, **High** e **Maximum** – e **Off** (desativado) desliga o raciocínio naquela requisição. Não existe **Medium**: a DeepSeek trata uma requisição de nível médio como High, então Marinara oferece High em vez de um segundo botão que faria a mesma coisa. O raciocínio aparece na resposta, exibido da forma habitual.
 
 Alguns ajustes do painel de parâmetros não se aplicam à DeepSeek, por isso o painel os deixa de fora em vez de fingir que funcionam. **Verbosity**, **Top K** e as penalidades estão entre eles: a DeepSeek descontinuou esses ajustes e os ignora. **Temperature** (temperatura) e **Top P** formam um par – a DeepSeek só usa um de cada vez, dependendo de estar raciocinando ou não – e por isso você vê **Temperature** quando o raciocínio está desativado e **Top P** quando está ativado.
 
