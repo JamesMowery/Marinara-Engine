@@ -64,8 +64,8 @@
     },
     {
       "path": "agents/memory.md",
-      "sha256": "7471eadc31263eaa610359104283a82772763138424a9654c1923f7f2dd075fc",
-      "bytes": 54826
+      "sha256": "cb0f5d284cd3e91a02f69bc87a35aa9f14e2b9d6e358262d787e0669a40cb905",
+      "bytes": 54829
     },
     {
       "path": "appearance/appearance-settings.md",
@@ -99,8 +99,8 @@
     },
     {
       "path": "characters/choosing-your-persona.md",
-      "sha256": "55415e8919d000ba20ce6a34425dac998dca883880f525afcb3e3af2c6d71282",
-      "bytes": 4634
+      "sha256": "14bae75fd322f43c883fa5c58386d17d6ee365368572f94b878befd015f5f833",
+      "bytes": 4648
     },
     {
       "path": "characters/colors-and-stats.md",
@@ -124,8 +124,8 @@
     },
     {
       "path": "characters/interactive-onboarding.md",
-      "sha256": "1adb24f4434eaa5ecdb9a5e137894faa0172602dd2321e9735775fc1889edae8",
-      "bytes": 7756
+      "sha256": "31447e7ab6d46bb0da78732d6b91316b6c68006308888ae60b9416da27e11ded",
+      "bytes": 7778
     },
     {
       "path": "characters/library-organization.md",
@@ -404,8 +404,8 @@
     },
     {
       "path": "extending/personal-extensions.md",
-      "sha256": "7beb3006592b99194556936e5f84781fe55f69904b1ed328f6fbc6e870605f81",
-      "bytes": 21533
+      "sha256": "db3aab5620a428a66c4cf1a5b063119cb8f215c92e6126b6e051ad4f88a05792",
+      "bytes": 21540
     },
     {
       "path": "extending/regex-scripts.md",
@@ -479,8 +479,8 @@
     },
     {
       "path": "home/professor-mari.md",
-      "sha256": "3019de3f2a5f1fe3a26e59edb17641dde4c4c94542604dd5b57124d69ddb73ab",
-      "bytes": 32958
+      "sha256": "932874d37d951b4ebe0492f89a2aebc34a9584fb1fa5a374445b94a741c7a002",
+      "bytes": 32966
     },
     {
       "path": "home/tutorial.md",
@@ -684,8 +684,8 @@
     },
     {
       "path": "settings/settings-overview.md",
-      "sha256": "41ed9bb3280e603848bc889f49a13dc1c21c09a1757b6411bf8260ff87d1bef2",
-      "bytes": 16879
+      "sha256": "5d02f82f420a50f333614741b2a6f90f956e479e7215942c75e53d5ea3a85945",
+      "bytes": 16967
     }
   ]
 }

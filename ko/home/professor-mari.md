@@ -12,7 +12,7 @@ Professor Mari는 홈 화면에 있습니다. 홈 화면은 채팅을 하나도 
 
 Professor Mari에게 첫 메시지를 보내면 **Hello World** 업적이 열립니다.
 
-앱 상단 바 아래쪽 가장자리의 얇은 선으로도 어느 화면에서든 Professor Mari의 상태를 볼 수 있습니다. 작업하는 동안에는 일렁이고, 작업을 마치면 초록색, 승인을 기다리는 동안에는 금색, 마지막 실행이 실패하면 빨간색으로 바뀝니다. Professor Mari의 채팅을 열면 사라집니다. (**Ask Professor Mari from Search**(검색에서 Professor Mari에게 묻기)를 꺼 두면 이 선도 꺼집니다.) Professor Mari의 설정은 모두 검색 및 Professor Mari 설정에 있습니다. Search(검색)의 톱니바퀴를 누르거나 **Settings** > **General** > **Search and Professor Mari settings**(검색 및 Professor Mari 설정) > **Open**(열기)을 선택하세요.
+앱 상단 바 아래쪽 가장자리의 얇은 선으로도 어느 화면에서든 Professor Mari의 상태를 볼 수 있습니다. 작업하는 동안에는 일렁이고, 작업을 마치면 초록색, 승인을 기다리는 동안에는 금색, 마지막 실행이 실패하면 빨간색으로 바뀝니다. Professor Mari의 채팅을 열면 사라집니다. (**Ask Professor Mari from Search**(검색에서 Professor Mari에게 묻기)를 꺼 두면 이 선도 꺼집니다.) Professor Mari의 설정은 모두 검색 및 Professor Mari 설정에 있습니다. Search(검색)의 톱니바퀴를 누르거나 **Settings** > **General**(일반) > **Search and Professor Mari settings**(검색 및 Professor Mari 설정) > **Open**(열기)을 선택하세요.
 
 ## 지금 하던 작업에서 Professor Mari에게 묻기
 

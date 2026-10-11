@@ -605,8 +605,10 @@ Cycle precedent for #7382, #7396, #7372 and #7309 (`home/professor-mari.md`, `se
 | **Search and Professor Mari settings** | **Search and Professor Mari settings**(검색 및 Professor Mari 설정); prose name 검색 및 Professor Mari 설정 |
 | quick answer | 빠른 답변. **Quick answers in Search**(검색의 빠른 답변), also the section heading; **Quick answers**(빠른 답변); **Quick answer · Read-only**(빠른 답변 · 읽기 전용) |
 | **Answer with** / **Wait after typing** / **Answer again** | (답변 모델) / (입력 후 대기 시간) / (다시 답변) |
+| **Ask Prof. Mari more…** / **Copy** / **Details** | (Professor Mari에게 더 묻기…), keeping the label's U+2026 / (복사) / (세부 정보) |
 | **Continue with Prof. Mari** / **Same as Prof. Mari** | (Professor Mari와 계속하기) / (Professor Mari와 동일), on the `ko.json` "서술자와 동일" pattern |
 | **Ask Professor Mari from Search** / **Enter sends to Professor Mari** | (검색에서 Professor Mari에게 묻기) / (Enter로 Professor Mari에게 전송) |
+| Setting names the English lists unbolded (`settings/settings-overview.md`, the **Professor Mari** and **Around the app** groups) | English kept, unbolded, with the gloss (§5 rule 6): `Ask Professor Mari from Search(검색에서 Professor Mari에게 묻기)`, `Enter sends to Professor Mari(Enter로 Professor Mari에게 전송)`, `Mini Professor Mari visits(Mini Mari의 깜짝 방문)`, the last byte-exact `ko.json` `settings.controls.miniMari.label`. Descriptions in the same lists (permissions mode, reply chips) are plain Korean |
 | **Around the app** / **In use** / **Choose a model** | (앱 곳곳에서) / (사용 중) / (모델 선택) |
 | **Aware of** | **Aware of**(알고 있는 내용). `en.json` now names that panel "Context"; the docs keep **Aware of** |
 | change card | 변경 카드 |
@@ -628,4 +630,4 @@ Cycle precedent for #7382, #7396, #7372 and #7309 (`home/professor-mari.md`, `se
 | scene starts (selected in diagnostics) | 장면 시작 지점 |
 | **Re-scan scenes** / **Re-scan** | (장면 다시 검사) / (다시 검사); particles 를 (신스) / 을 (리스캔) |
 
-**Gloss placement when a label is already glossed later in the file.** A new, earlier mention of a label that the file already glosses further down stays bare, so each label still has exactly one gloss per file (§5 rule 5). This applies to **Settings**, **General** and **Delete** in `home/professor-mari.md`, to **Use Decision model** in the new Re-scanning section of `agents/memory.md`, and to the new Message Tools table row in `settings/settings-overview.md`, whose label is glossed in the intro sentence just above. These are translation choices, not a new native-reader review.
+**Gloss placement when a label is already glossed later in the file.** A new, earlier mention of a label that the file already glosses further down stays bare, so each label still has exactly one gloss per file (§5 rule 5). This applies to **Settings** and **Delete** in `home/professor-mari.md` (**General** has no later gloss there, so its first mention takes (일반)), to **Use Decision model** in the new Re-scanning section of `agents/memory.md`, and to the new Message Tools table row in `settings/settings-overview.md`, whose label is glossed in the intro sentence just above. These are translation choices, not a new native-reader review.
