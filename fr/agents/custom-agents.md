@@ -196,6 +196,8 @@ Les outils ne fonctionnent que si le chat lui-même les autorise. Dans **Chat Se
 
 Les fichiers d'agent importés n'accordent aucun accès aux outils. Après avoir importé un agent, inspecte son prompt et ses réglages, puis sélectionne toi-même les outils que tu veux lui confier.
 
+Un agent dispose d'au plus 16 tours d'appels d'outils par exécution (moins si le `MAX_TOOL_ROUNDS` du serveur est plus bas), puis donne sa réponse avec ce qu'il a. Un modèle qui appelle un outil à la fois consomme un tour par appel : un agent qui enregistre de nombreuses entrées devrait donc faire plusieurs appels dans une même réponse quand le modèle prend en charge les appels d'outils parallèles. Une exécution de rattrapage de lorebook, qui ne fait qu'enregistrer des entrées, a droit à 64 tours au plus.
+
 ## Options de prompt nommées
 
 Un même agent peut contenir plusieurs variantes de prompt. C'est la fonctionnalité **Named prompt options** (options de prompt nommées). Un chat peut ainsi choisir une variante sans que tu modifies l'agent partout.
