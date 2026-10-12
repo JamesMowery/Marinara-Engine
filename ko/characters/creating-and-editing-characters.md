@@ -73,8 +73,8 @@ Character Editor는 채팅 영역을 전체 화면 작업 공간으로 바꿉니
 
 **Dialogue & Greetings**(대화 & 그리팅) 구역에서는 채팅이 어떻게 시작되고 캐릭터가 어떤 말투를 쓰는지 정합니다.
 
-- **First Message**(첫 메시지). 새 채팅이 시작될 때 표시되는 첫 메시지입니다.
-- **Alternate Greetings**(대체 인사말). 추가로 준비하는 인사말입니다. 채팅을 시작할 때 어느 것을 쓸지 고를 수 있습니다. 위아래 버튼으로 순서를 바꾸고, X로 하나를 지웁니다.
+- **First Message**(첫 메시지). 새 Roleplay 채팅이 시작될 때 표시되는 첫 메시지입니다. Conversation과 Game 채팅은 첫 인사로 시작하지 않습니다.
+- **Alternate Greetings**(대체 인사말). 추가로 준비하는 인사말입니다. Roleplay 채팅을 시작할 때 어느 것을 쓸지 고를 수 있습니다. 위아래 버튼으로 순서를 바꾸고, X로 하나를 지웁니다.
 - **Example Dialogue**(예시 대화). 캐릭터의 말투를 알려 주는 대화 예시입니다. 예시를 나눌 때는 `<START>`를 쓰고, 자리 표시자로 `{{user}}`와 `{{char}}`를 씁니다.
 
 첫 인사와 예시 메시지는 캐릭터의 Gallery 이미지도 표시할 수 있습니다. [캐릭터 갤러리 → 메시지와 첫 인사에서 갤러리 이미지 재사용](galleries.md#reuse-a-gallery-image-in-messages-and-greetings)을 참고하세요.
