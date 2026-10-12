@@ -27,7 +27,7 @@ Ein Profil hält fest, wie der Chat mit der KI spricht:
 - Fenster- und Schaltflächenanordnung: Positionen und Größen, Anheftungen und Sperren, eingebettete oder herausgelöste Tools, offene Steuerungsfenster und Schaltflächenpositionen am Computer und Telefon. Profile ohne gespeicherte Anordnung, etwa **Default**, lassen die Anordnung des Chats unverändert.
 - Ob die Hinweise zur Anordnung in Chat Settings verborgen sind. **Default** und ältere Profile ohne diese Auswahl zeigen die Hinweise wieder an.
 
-Chat-eigene Inhalte ersetzt ein Profil nicht: Charaktere, Persona, Lorebooks, Sprites, Zusammenfassung, Tags oder Szenen-Prompt bleiben unberührt. Auch der Chatverlauf steckt nicht darin.
+Chat-eigene Inhalte ersetzt ein Profil nicht: Charaktere, Persona, Lorebooks, Sprites, Zusammenfassung, Tags oder Szenen-Prompt bleiben unberührt. Auch der Chatverlauf steckt nicht darin, ebenso wenig der laufende Zustand eines Chats, etwa seine Makrovariablen, die Charaktere, die du darin deaktiviert hast, oder sein Raum im Mehrspielermodus.
 
 ## Ein Profil anwenden
 
@@ -54,6 +54,36 @@ Die Symbolleiste unter dem Dropdown bietet diese Aktionen:
 | Delete | **Delete profile** | Entfernt das ausgewählte Profil dauerhaft |
 
 Für das erste eigene Profil richtest du einen Chat ein und wählst **Save current chat settings as a new profile**. Zum Aktualisieren später: Profil anwenden, den Chat anpassen, dann **Save current chat settings into this profile** wählen.
+
+### Andere Chats aktualisieren, die das Profil nutzen
+
+Jeder Chat behält seine eigene Kopie der Profileinstellungen. Speicherst du ein Profil, ändern sich andere Chats deshalb nicht von selbst. Nutzen andere Chats desselben Modus das Profil, fragt Marinara beim Speichern, was passieren soll:
+
+- **Save to this profile only** (nur in diesem Profil speichern) speichert das Profil und lässt die anderen Chats, wie sie sind.
+- **Save and update** (speichern und aktualisieren), gefolgt von der Zahl der Chats, etwa **Save and update 3 other chats**, kopiert zusätzlich die Chat Settings des Profils in diese Chats. Ihre eigenen Änderungen an diesen Einstellungen werden ersetzt, und eine Einstellung, die du im Chat, aus dem du speicherst, auf ihrem Standardwert gelassen hast, kehrt auch dort zu ihrem Standardwert zurück.
+
+**Save and update** kopiert:
+
+- Generierungs- und Kontextoptionen
+- Optionen für Gruppenchats
+- Funktions- und Befehlsschalter
+- Agenten und ihre Optionen
+- Gedächtnis- und Zusammenfassungseinstellungen
+- Übersetzung
+- Die Fensteranordnung
+
+Alles andere behält jeder Chat so, wie er es hat, darunter:
+
+- Verbindung, Prompt-Preset und eigener Prompt
+- Geschichte und Charaktere
+- Lorebooks und Hintergrund
+- Notizen und Fortschritt
+- Welche Roleplay-Befehle nur der Erzähler des Chats verwenden darf
+- Ob Noodle die Nachrichten des Chats verwenden darf
+
+Advanced Parameters und die Bildbeschreibung (an oder aus und welche Verbindung Bilder beschreibt) ändern sich nur in Chats, die die Verbindung des Profils nutzen, weil sie für diese Verbindung festgelegt werden. Charakter-Zeitpläne ändern sich nur, wenn sie im Chat, aus dem du speicherst, ein- oder ausgeschaltet wurden; sonst behält jeder Chat seine eigene Wahl. Knowledge Retrieval, Knowledge Router, Lorebook Keeper und Expression Engine bleiben samt ihren Prompt-Vorlagen so an oder aus, wie jeder Chat sie eingestellt hat. Ihre Quellen, ihr Lorebook oder ihre Sprites wählt jeder Chat selbst.
+
+Räume im Mehrspielermodus werden auf diesem Weg nie aktualisiert. Nutzt kein anderer Chat das Profil, funktioniert **Save** (Speichern) ohne Rückfrage.
 
 ## Das Standardprofil festlegen
 

@@ -136,7 +136,7 @@ const vectors = await embeddings.embed(texts, signal);
 // Store/compare embeddings.spaceId with persisted vectors; do not mix embedding spaces.
 ```
 
-Der zurückgegebene Host besitzt `spaceId`, `label` und `embed(texts, signal?)`. Die Auflösung verwendet die konfigurierte Embedding-Quelle und fällt auf den eingebauten lokalen MiniLM-Embedder zurück, wenn keine verfügbar ist oder die Konfiguration nicht aufgelöst werden kann. `embed` kann `null` liefern. Leere Bündel, mehr als 128 Texte oder insgesamt mehr als 200.000 Zeichen werden abgelehnt. Ein neuer Host berechnet bestehende Vektoren nicht neu; das Paket muss einen geänderten `spaceId` behandeln, bevor es neue und gespeicherte Vektoren vergleicht.
+Der zurückgegebene Host besitzt `spaceId`, `label` und `embed(texts, signal?, inputType?)` (zum Eingabetyp siehe Capability API 1.68). Die Auflösung verwendet die konfigurierte Embedding-Quelle und fällt auf den eingebauten lokalen MiniLM-Embedder zurück, wenn keine verfügbar ist oder die Konfiguration nicht aufgelöst werden kann. `embed` kann `null` liefern. Leere Bündel, mehr als 128 Texte oder insgesamt mehr als 200.000 Zeichen werden abgelehnt. Ein neuer Host berechnet bestehende Vektoren nicht neu; das Paket muss einen geänderten `spaceId` behandeln, bevor es neue und gespeicherte Vektoren vergleicht.
 
 Aktuelle Engines bieten die Methode unabhängig von der deklarierten API-Version an. Deklariere 1.15, wenn das Folgen von Verbindungsänderungen erforderlich ist. Ein Paket mit bewusster Unterstützung älterer Engines kann `typeof api.runtime.resolveEmbeddings === "function"` prüfen und auf `api.runtime.embeddings` zurückfallen; dessen Beschränkung auf den Aktivierungsstand muss es dann akzeptieren.
 
@@ -566,6 +566,18 @@ Der `combat`-Block kann über `distance: { label, perCell }` den Wert eines Feld
 `ranged`, `cover`, `opportunity` oder Waffenreichweiten OHNE `distance` werden beim Import abgelehnt; ohne Maßeinheit je Feld wären sie bedeutungslos. Das Brett verwendet Generator, Gelände und Aufstellung des vorhandenen Tactical-Stils. Diese Version ergänzt weder ein zweites Spielfeldmodell noch eine Berechtigung.
 
 Wie 1.20 bis 1.27 ist dies keine weiche Schnittstelle: Unbekannte Schlüssel lassen die ganze Regelsatzdatei oder den Katalog mit einer Kreatur und zweiteiliger Reichweite scheitern. Die Installation prüft die verifizierten Bytes von `ruleset.json` und jeder deklarierten Datei `catalogs/<id>.json` und lehnt sie unter älterer Deklaration ab. Ohne Entfernungsangaben ändert sich nichts.
+
+### Capability API 1.68: Suchanfragen als Anfragen einbetten
+
+`embeddings.embed(texts, signal?, inputType?)` nimmt ein drittes Argument an: Für Suchtext, etwa eine Recall-Anfrage, übergibst du `"query"`. Standardmäßig gelten Texte als `"document"`. Manche Embedding-Modelle erwarten bei Anfragen ein Präfix, manche auch bei Dokumenten: e5 und nomic-embed-text verwenden für beides je eines, Snowflake Arctic Embed v2 nur für Anfragen. Die Engine setzt jeweils das richtige. Wird eine Anfrage als Dokument eingebettet, fällt der Recall schwächer aus. Andere Modelle, darunter der eingebaute MiniLM-Embedder, erhalten in keinem Fall ein Präfix. Der Eingabetyp ändert `spaceId` nicht. Gespeicherte Vektoren bleiben also vergleichbar, und nichts muss neu eingebettet werden.
+
+```ts
+const embeddings = await api.runtime.resolveEmbeddings();
+const [queryVector] = (await embeddings.embed([query], signal, "query")) ?? [];
+const memoryVectors = await embeddings.embed(memoryTexts, signal); // documents
+```
+
+Dies ist eine weiche Schnittstelle: Eine ältere Engine ignoriert das dritte Argument. Ein Paket kann es daher immer übergeben und muss 1.68 nicht deklarieren. Übergib den Eingabetyp als drittes Argument, nie in einem Optionsobjekt: Eine ältere Engine reicht das zweite Argument unverändert als Abbruchsignal an den Anbieter weiter.
 
 <a id="capability-api-150-professor-mari-actions"></a>
 

@@ -148,7 +148,7 @@ Ein Profil bündelt Verbindung, Prompt-Preset, Agenten, Tools, Übersetzung, Mem
 
 Die Leiste enthält eine Reihe kleiner Symbol-Schaltflächen ohne Beschriftung. Zeigst du auf eine davon, nennt ein Tooltip ihren Namen:
 
-- Die Diskette (**Save current chat settings into this profile**) schreibt die Einstellungen des aktuellen Chats in das ausgewählte Profil.
+- Die Diskette (**Save current chat settings into this profile**) schreibt die Einstellungen des aktuellen Chats in das ausgewählte Profil. Nutzen andere Chats das Profil, fragt sie nach, ob diese ebenfalls aktualisiert werden sollen.
 - Der Stift (**Rename profile**) benennt das ausgewählte Profil um.
 - Das Symbol aus Datei und Plus (**Save current chat settings as a new profile**) legt aus den Einstellungen des aktuellen Chats ein neues Profil an.
 - Der Abwärtspfeil (**Import settings profile (.json)**) lädt ein Profil aus einer `.json`-Datei.
