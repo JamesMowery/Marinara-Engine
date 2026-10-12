@@ -6,7 +6,7 @@
 
 ## Card Browser란
 
-**Card Browser**는 Marinara 안에서 여러 공개 캐릭터 카드 사이트를 검색합니다. 지원하는 소스는 **ChubAI**, **JannyAI**, **Pygmalion**, **Wyvern**, **DataCat** 5곳입니다. **CharacterTavern**도 목록에는 그대로 있지만 지금은 둘러볼 수 없습니다([CharacterTavern](#charactertavern) 참고). 소스를 골라 검색하고, 결과를 필터링하고, 캐릭터의 상세 정보를 미리 볼 수 있습니다. 그런 다음 그 캐릭터를 라이브러리로 가져오거나 PNG 파일로 저장하면 됩니다. 기본값 그대로 두면 캐릭터 카드를 둘러보고 가져오는 데 계정도 API 키도 필요하지 않습니다.
+**Card Browser**는 Marinara 안에서 여러 공개 캐릭터 카드 사이트를 검색합니다. 지원하는 사이트는 **ChubAI**, **JannyAI**, **Pygmalion**, **Wyvern**, **DataCat**, **PlotLight** 6곳입니다. PlotLight에는 캐릭터용과 페르소나용, 두 가지 소스가 있습니다([PlotLight](#plotlight) 참고). **CharacterTavern**도 목록에는 그대로 있지만 지금은 둘러볼 수 없습니다([CharacterTavern](#charactertavern) 참고). 소스를 골라 검색하고, 결과를 필터링하고, 캐릭터의 상세 정보를 미리 볼 수 있습니다. 그런 다음 그 캐릭터를 라이브러리로 가져오거나 PNG 파일로 저장하면 됩니다. 기본값 그대로 두면 캐릭터 카드를 둘러보고 가져오는 데 계정도 API 키도 필요하지 않습니다.
 
 ## Card Browser 열기
 
@@ -23,7 +23,7 @@
 
 ## 소스 고르기
 
-헤더의 소스 버튼을 클릭하세요. 현재 소스 이름과 작은 화살표가 표시되어 있습니다. 클릭하면 소스가 **ChubAI**, **JannyAI**, **CharacterTavern**, **Pygmalion**, **Wyvern**, **DataCat** 순서로 들어 있는 메뉴가 열립니다. **CharacterTavern**에는 **Unavailable**(사용할 수 없음) 표시가 붙어 있습니다.
+헤더의 소스 버튼을 클릭하세요. 현재 소스 이름과 작은 화살표가 표시되어 있습니다. 클릭하면 소스가 **ChubAI**, **JannyAI**, **CharacterTavern**, **Pygmalion**, **Wyvern**, **DataCat**, **PlotLight**, **PlotLight Personas** 순서로 들어 있는 메뉴가 열립니다. **CharacterTavern**에는 **Unavailable**(사용할 수 없음) 표시가 붙어 있습니다.
 
 **Card Browser**를 처음 열면 **ChubAI**가 선택되어 있습니다. 소스를 바꾸면 검색어, 태그, 필터가 모두 지워집니다. 성인 콘텐츠 설정과 로그인 상태는 소스마다 따로 기억하므로, 한 소스에서 바꾼 설정이 다른 소스에 영향을 주지 않습니다.
 
@@ -41,23 +41,39 @@ CharacterTavern이 웹사이트를 개편하면서 Marinara가 카드를 검색�
 
 CharacterTavern에서 이미 가져온 캐릭터는 라이브러리에 그대로 남아 있습니다.
 
+## PlotLight
+
+PlotLight는 공개 캐릭터와 페르소나를 Marinara 같은 앱과 공유합니다. 메뉴에는 PlotLight 소스가 두 개 있습니다.
+
+- **PlotLight**는 캐릭터 카드를 보여 줍니다.
+- **PlotLight Personas**는 페르소나를 보여 줍니다. 페르소나는 채팅에서 나를 대신하는 캐릭터입니다.
+
+PlotLight 계정은 필요 없습니다. 각 결과에는 제작자 이름이 그대로 남고, 상세 화면에는 원본 페이지로 가는 **View on PlotLight** 링크가 있습니다.
+
+PlotLight에서 가져오면 Marinara는 PlotLight가 그 항목용으로 제공하는 파일을 다운로드합니다. 캐릭터 카드는 보통 PNG로 오며, 그 안에 초상화와 제작자가 허용한 로어북이 들어 있습니다. 페르소나는 텍스트 파일로 오고, 그림은 Marinara가 따로 복사합니다. 어느 쪽이든 캐릭터로도, 페르소나로도 가져올 수 있습니다.
+
+PlotLight는 앱이 요청을 보낼 수 있는 빈도를 제한합니다. 너무 빠르게 검색하거나 가져오면 Marinara가 **PlotLight is busy**라는 메시지와 함께 몇 초 기다려야 하는지 알려 줍니다. Marinara는 그만큼 기다렸다가 다시 요청합니다. 검색과 가져오기는 제한이 따로 적용되므로 한쪽이 다른 쪽을 막지 않습니다.
+
+제작자가 허용하지 않은 경우처럼 다운로드할 수 없는 카드와 페르소나도 있습니다. 그러면 Marinara가 **PlotLight doesn't offer this for download.**라고 표시합니다. 그 항목은 가져오거나 전체 상세 정보를 볼 수 없지만, 그림과 제작자, **View on PlotLight** 링크는 화면에 남습니다.
+
 ## 검색, 정렬, 페이지 이동
 
 **Search characters...** 입력란에 입력하면 검색됩니다. Enter 키를 누를 필요는 없습니다. 입력을 멈추고 잠깐(약 0.5초) 지나면 Marinara가 알아서 검색합니다. 입력란을 비우거나 필터를 바꿔도 다시 검색합니다.
 
 검색 입력란 옆에는 정렬 드롭다운이 있습니다. 선택지는 소스마다 다르고, 기본 정렬 방식도 소스마다 다릅니다.
 
-| 소스      | 기본 정렬       |
-| --------- | --------------- |
-| ChubAI    | Most Downloaded |
-| JannyAI   | Newest          |
-| Pygmalion | Downloads       |
-| Wyvern    | Popular         |
-| DataCat   | Relevance       |
+| 소스                           | 기본 정렬       |
+| ------------------------------ | --------------- |
+| ChubAI                         | Most Downloaded |
+| JannyAI                        | Newest          |
+| Pygmalion                      | Downloads       |
+| Wyvern                         | Popular         |
+| DataCat                        | Relevance       |
+| PlotLight / PlotLight Personas | Popular         |
 
 현재 검색을 다시 실행하려면 **Refresh**(새로고침) 버튼(원형 화살표 아이콘)을 클릭하세요.
 
-결과 아래에는 **Previous**(이전) 버튼과 **Next**(다음) 버튼이 있고, **Page 2** 같은 페이지 표시가 함께 나옵니다. 소스가 정확한 전체 개수를 알려 주지 못할 때는 현재 페이지 번호만 표시됩니다.
+결과 아래에는 **Previous**(이전) 버튼과 **Next**(다음) 버튼이 있고, **Page 2** 같은 페이지 표시가 함께 나옵니다. 소스가 정확한 전체 개수를 알려 주지 못할 때는 현재 페이지 번호만 표시됩니다. **PlotLight**는 전체 개수를 알려 주지 않으므로 헤더에 **Browsing PlotLight**가 표시되고, 마지막 페이지에서는 **Next**가 꺼집니다. PlotLight 페이지에는 평소보다 카드가 적거나 하나도 없어도 그 뒤에 페이지가 더 있을 수 있습니다. 이때는 **Next**가 켜진 채로 남으므로 계속 넘겨 볼 수 있습니다.
 
 **DataCat**에는 주의할 점이 하나 있습니다. **Fresh** 정렬은 태그 필터와 검색어가 모두 없을 때만 최신 결과를 보여 줍니다. 검색어를 입력하거나 태그를 고르는 순간 **DataCat**은 일반 관련도 결과로 되돌아갑니다.
 
@@ -74,9 +90,11 @@ CharacterTavern에서 이미 가져온 캐릭터는 라이브러리에 그대로
 
 **DataCat**은 방식이 다릅니다. 태그 목록이 워낙 방대해서 인기 태그를 처음부터 바로 불러옵니다. 그 밖의 태그 이름은 직접 입력하면 됩니다.
 
+**PlotLight**에서는 목록에서 태그를 고르거나 **Elf**처럼 직접 입력하세요. Marinara는 각 태그를 PlotLight 자체 태그 목록에서 찾습니다. PlotLight에 없는 태그를 직접 입력하면 아무 결과와도 일치하지 않습니다.
+
 ## 추가 필터
 
-일부 소스는 툴바에 **Filters**(필터) 버튼을 함께 표시합니다. 제공할 필터가 있는 소스에서만 나타나므로 **DataCat**에서는 보이지 않습니다. 작은 배지에 적용 중인 필터 개수가 표시됩니다.
+일부 소스는 툴바에 **Filters**(필터) 버튼을 함께 표시합니다. 제공할 필터가 있는 소스에서만 나타나므로 **DataCat**과 **PlotLight**에서는 보이지 않습니다. 작은 배지에 적용 중인 필터 개수가 표시됩니다.
 
 필터 패널에는 다음 항목이 들어갈 수 있습니다.
 
@@ -95,6 +113,7 @@ CharacterTavern에서 이미 가져온 캐릭터는 라이브러리에 그대로
 - **Pygmalion**: 로그인하기 전까지 **NSFW** 체크박스가 비활성화되어 있습니다. 툴팁이 먼저 로그인하라고 안내합니다. 로그인한 뒤에는 앱이 Pygmalion 계정 설정을 그대로 따릅니다. 그때부터 체크박스에는 **NSFW depends on your account settings**라고 표시됩니다. 로그인 후에는 켜고 끄는 스위치가 따로 없습니다.
 - **Wyvern**: **NSFW** 체크박스가 항상 비활성화되어 있습니다. **Use "🔞 Popular NSFW" sort for NSFW content**라는 안내가 표시됩니다. **Wyvern**에서 성인 콘텐츠를 보려면 정렬 드롭다운에서 **🔞 Popular NSFW**를 고르세요.
 - **DataCat**: 모든 캐릭터에 성인 태그가 붙어 있어 체크박스가 켜진 상태로 고정됩니다. **DataCat**을 처음 고르면 **DataCat is NSFW only** 제목의 창이 뜹니다. 둘러보려면 **Continue to DataCat**을, 돌아가려면 **Don't continue to DataCat**을 클릭하세요.
+- **PlotLight**와 **PlotLight Personas**: **NSFW** 체크박스가 항상 비활성화되어 있습니다. 툴팁에는 **PlotLight decides what you can see without an account, and adult-tagged results are marked NSFW.**라고 적혀 있습니다. PlotLight는 계정 없이 방문한 사용자에게 자체 규칙을 적용합니다. PlotLight가 공유하는 결과 중 일부에는 여전히 성인 콘텐츠 태그가 붙어 있으며, 그런 결과에는 **NSFW** 배지가 붙습니다.
 
 성인 캐릭터는 썸네일 모서리에 작고 빨간 **NSFW** 배지가 붙습니다.
 
@@ -181,6 +200,10 @@ JSON과 PNG는 같은 캐릭터 데이터를 담는 대표적인 두 가지 형�
 **Pygmalion 로그인이 갑자기 풀렸습니다.** Marinara 서버를 다시 시작하면 이 로그인 정보가 지워집니다. **Log In** 창을 다시 열고 토큰을 한 번 더 붙여넣으세요.
 
 **CharacterTavern에는 안내만 표시됩니다.** 정상입니다. CharacterTavern 카드를 파일로 가져오는 방법은 [CharacterTavern](#charactertavern)을 참고하세요.
+
+**PlotLight가 바쁘다고 표시합니다.** PlotLight는 앱이 요청을 보낼 수 있는 빈도를 제한합니다. 메시지에 나온 초만큼 기다린 뒤 다시 시도하세요.
+
+**PlotLight가 카드나 페르소나를 다운로드용으로 제공하지 않습니다.** 제작자가 다운로드를 허용하지 않았거나 더 이상 공개 상태가 아닐 수 있습니다. **View on PlotLight**로 사이트에서 확인하세요.
 
 **검색이 실패하거나 소스가 아예 작동하지 않습니다.** 공개 사이트는 언제든 페이지 구조를 바꾸거나 접근을 막을 수 있습니다. 시간을 두고 다시 시도해 보세요. 특정 소스에서 계속 실패한다면 그 사이트에서 캐릭터를 직접 열어 카드를 다운로드한 뒤, 일반적인 가져오기 방법으로 넣으세요. [캐릭터 카드 가져오기와 내보내기](import-export.md)를 참고하세요.
 

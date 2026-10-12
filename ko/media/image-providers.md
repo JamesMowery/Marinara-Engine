@@ -41,6 +41,7 @@
 | Z.AI | 필요 | 클라우드 |
 | Atlas Cloud | 필요 | 클라우드 |
 | fal.ai | 필요 | 클라우드 |
+| SpicyAPI | 필요 | 클라우드 |
 | NanoGPT | 필요 | 클라우드 |
 | Block Entropy | 필요 | 클라우드 |
 | RunPod Serverless (ComfyUI) | 필요 | 클라우드 |
@@ -106,6 +107,16 @@ API 키 대신 ChatGPT 요금제를 사용하는 클라우드 서비스입니다
 기본 **Base URL**이 `https://fal.run`인 클라우드 서비스입니다. [fal.ai](https://fal.ai/dashboard/keys)에서 API 키를 만들고 이미지 서비스 목록에서 **fal.ai**를 선택하세요. 초기 **Model** 목록에는 `fal-ai/flux/schnell`과 `fal-ai/flux/dev`가 있습니다. 입력 및 출력 스키마가 호환되는 다른 텍스트 이미지 생성 엔드포인트 ID도 입력할 수 있습니다. **Test Connection**(연결 테스트)은 설정만 확인합니다. **Test Image**는 실제 생성 요청을 보내므로 fal.ai 크레딧을 사용합니다.
 
 Marinara는 프롬프트와 요청한 크기를 전송하고, 처음 반환된 이미지를 기존 이미지 처리 흐름으로 다운로드합니다. 네거티브 프롬프트는 텍스트 지시로 덧붙입니다. `seed`, `num_inference_steps`, `image_size` 같은 모델별 옵션에는 **Custom Parameters**(사용자 지정 매개변수)를 사용하세요. 이 연동은 동기식 텍스트 이미지 생성 요청을 사용하며, 참조 이미지를 보내거나 중단된 작업을 재개하지 않습니다. 지원하는 입력은 선택한 모델이나 사용자 지정 엔드포인트의 API 페이지에서 확인하세요. 예를 들어 [flux/schnell API 참조](https://fal.ai/models/fal-ai/flux/schnell/api)를 볼 수 있습니다.
+
+## SpicyAPI
+
+기본 **Base URL**이 `https://api.spicyapi.ai/api/v1`인 클라우드 서비스입니다. [SpicyAPI 콘솔](https://spicyapi.ai/console/keys)에서 API 키를 만들고 이미지 서비스 목록에서 **SpicyAPI**를 선택하세요. Marinara가 모델 `alibaba/z-image-spicy-pro/text-to-image`를 채웁니다. **Fetch Models from API**를 클릭하면 SpicyAPI의 텍스트-이미지 모델과 편집 모델을 모두 불러오며, `bytedance/seedream-5.0-pro/text-to-image` 같은 모델 ID를 직접 입력할 수도 있습니다. **Test Connection**은 모델 목록을 읽어 키를 확인하므로 비용이 들지 않습니다. **Test Image**는 실제 이미지를 만들며 SpicyAPI 잔액을 사용합니다.
+
+**SpicyAPI** 서비스를 고르세요. SpicyAPI 주소로 **OpenAI (DALL-E)**나 **Custom (OAI-Compatible)** 연결을 쓰지 마세요. SpicyAPI의 OpenAI 방식 주소는 텍스트만 처리하므로 이런 연결로는 이미지를 만들 수 없습니다.
+
+SpicyAPI 모델은 저마다 받는 설정이 다릅니다. Marinara는 선택한 모델이 어떤 설정을 받는지 SpicyAPI에 물어보고 그 설정만 보냅니다. 화면비, 너비와 높이, 고정 크기처럼 모델이 제공하는 형식 가운데 가장 가까운 것을 고릅니다. 모델에 네거티브 프롬프트 항목이 없으면 네거티브 프롬프트를 프롬프트 끝에 텍스트로 덧붙입니다. `seed`, `resolution`, `loras` 같은 다른 모델 옵션에는 **Custom Parameters**를 사용하세요.
+
+SpicyAPI는 이미지마다 작업 하나로 실행합니다. Marinara는 작업이 끝나기를 기다리고, 1분 정도 넘게 걸리면 다시 확인한 뒤 결과를 다운로드합니다. 연결이 끊기면 Marinara는 새 작업에 비용을 들이는 대신 같은 작업을 이어받습니다. 편집 모델(ID 끝이 `/edit`인 모델)은 참조 이미지를 받습니다. SpicyAPI는 참조 이미지를 장당 1 MB, 요청당 2 MB까지 받으므로, Marinara는 더 큰 이미지를 줄이고 들어가지 않는 나머지 이미지는 뺍니다.
 
 ## NanoGPT
 
@@ -208,6 +219,7 @@ Marinara는 플레이스홀더를 이용해 워크플로를 채웁니다. 값이
 | Venice.ai | 텍스트-이미지 생성에서는 지원하지 않음 |
 | Z.AI | 지금의 텍스트-이미지 연동에서는 지원하지 않음 |
 | Atlas Cloud | image-to-image, edit, Kontext를 지원하는 모델 ID에서 첫 번째 이미지만 |
+| SpicyAPI | 편집 모델에서만, 모델 한도까지. 더 큰 이미지는 한도에 맞게 줄임 |
 | NanoGPT | 최대 3장 |
 | Stability AI | 첫 번째 이미지만, image to image 방식으로 사용 |
 | Arli AI | 첫 번째 이미지만, image to image 방식으로 사용 |

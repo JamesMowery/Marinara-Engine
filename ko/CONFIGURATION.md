@@ -247,7 +247,7 @@ LOG_DISABLE_REQUEST_LOGGING=true
 | `COMFYUI_GEN_TIMEOUT` | `2400`(40분, 단위는 초) | 대기열에 들어간 ComfyUI 이미지 워크플로 한 번에 허용하는 시간입니다. |
 | `SPRITE_GENERATION_TIMEOUT_MS` | `IMAGE_GEN_TIMEOUT_MS` 값을 따름 | AI 스프라이트 생성 작업 한 번에 허용하는 시간입니다. |
 | `CUSTOM_TOOL_TIMEOUT_MS` | `60000`(1분) | 사용자 지정 도구 호출 한 번에 허용하는 시간입니다. |
-| `MAX_TOOL_ROUNDS` | `100` | 모델이 최종 답변을 내놓기 전까지 허용하는 도구 호출 횟수의 상한입니다. |
+| `MAX_TOOL_ROUNDS` | `100` | 모델이 최종 답변을 내놓기 전까지 허용하는 도구 호출 횟수의 상한입니다. Game Mode 턴은 최대 4회, 에이전트는 16회, 로어북 백필은 64회까지이며, 이 값이 더 낮으면 이 값을 따릅니다. |
 
 이미지, 동영상, 스프라이트, ComfyUI 타임아웃은 서버 시작 시점에 고정되므로 바꾸려면 재시작해야 합니다. 채팅 생성, 에이전트, Game 동적 이미지 프롬프트, 임베딩, 사용자 지정 도구 타임아웃은 다음 요청이나 다음 에이전트 실행부터 재시작 없이 적용됩니다. 검증 대상인 채팅, 에이전트, Game 동적 이미지 프롬프트 타임아웃에 잘못된 값, 0, 음수, 범위를 벗어난 값을 넣으면 경고를 남기고 문서에 적힌 기본값을 안전하게 사용합니다. 크거나 고품질인 작업이 도중에 실패한다면 미디어 타임아웃을 올려 보세요. 동영상 작업을 더 알아보려면 [장면 동영상](media/scene-video.md)을 참고하세요.
 
@@ -385,7 +385,7 @@ Conversation 스케줄 컨트롤은 브라우저나 앱 기기가 알려 준 시
 
 | 변수 | 기본값 | 설명 |
 | --- | --- | --- |
-| `CLAUDE_SUBSCRIPTION_USE_INSTALLED_CLI` | `true` | **Claude (Subscription)** 연결이 이 컴퓨터에 설치된 Claude Code를 쓸지 정합니다. 설치된 버전이 Marinara에 포함된 사본과 같거나 더 새로울 때 사용합니다. 항상 포함된 사본을 쓰려면 `false`로 설정하세요. 재시작하지 않아도 5분 안에 반영됩니다. |
+| `CLAUDE_SUBSCRIPTION_USE_INSTALLED_CLI` | `true` | **Claude (Subscription)** 연결이 이 컴퓨터에 설치된 Claude Code를 쓸지 정합니다. 설치된 버전이 Marinara에 포함된 사본과 같거나 더 새로울 때 사용합니다. Android에는 포함된 사본이 없으므로 설치된 Claude Code를 버전과 관계없이 사용하며, 이 값을 켜 둔 채로 두어야 합니다. 항상 포함된 사본을 쓰려면 `false`로 설정하세요. 재시작하지 않아도 5분 안에 반영됩니다. |
 | `DOCS_I18N_BASE_URL` | 공식 `docs-i18n` 브랜치 | 문서와 UI 언어 팩의 다운로드 위치입니다. UI 팩은 `ui/` 하위 트리에 있습니다. 공개 `https://` 호스트여야 하며, 포크와 미러는 자체 `docs-i18n` 브랜치 사본을 지정할 수 있습니다. |
 | `GIPHY_API_KEY` | 비어 있음 | Conversation 모드에서 GIF를 검색할 때 쓰는 Giphy 키입니다. 설정하지 않으면 검색이 꺼집니다. |
 | `INTIFACE_URL` | `ws://127.0.0.1:12345` | Intiface 햅틱 앱의 기본 주소입니다. |

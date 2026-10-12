@@ -177,6 +177,7 @@ CSRF_TRUSTED_ORIGINS=http://203.0.113.10:7831,https://chat.example.com
 - **No API connection configured for this chat**: 채팅에 연결이 선택되어 있지 않습니다. **Connections**(연결) 패널을 열어 연결을 만든 다음 채팅에 지정하세요. [AI 제공자에 연결하기](connections/connecting-to-a-provider.md)를 참고하세요. API 키는 제공자가 발급하는 비밀 문자열이며, 이 값이 있어야 Marinara가 그 제공자의 모델을 쓸 수 있습니다.
 - 모델이 특정 파라미터를 받지 않는 경우: 어떤 파라미터인지는 토스트에 나옵니다. **Chat Settings**(채팅 설정) > **Advanced Parameters**(고급 매개변수)를 열고 그 파라미터를 찾으세요. 이름 옆의 스위치를 끄면 됩니다(툴팁에 "This parameter is sent to the model"이라고 표시됩니다).
 - 모델이 특정 파라미터를 요구하는 경우: 같은 방법으로 찾은 다음, 그 파라미터 옆의 스위치를 켜세요.
+- **This model's chat template needs user and assistant messages to take turns**: llama.cpp로 실행하는 Mistral 기반 모델 같은 일부 로컬 모델은 나와 AI가 번갈아 보낸 메시지만 받습니다. Marinara는 이런 모델에 대해 연달아 이어진 메시지를 이미 하나로 합친 뒤 한 번 더 시도합니다. 그래도 이 오류가 보이면 **Chat Settings** > **Advanced Parameters**를 열고 **Post-Processing Messages**(메시지 후처리)를 **Single User Message**(단일 사용자 메시지)로 설정하거나, 덜 엄격한 채팅 템플릿으로 모델을 실행하세요.
 - **The AI returned an empty response. Try sending your message again.**: 메시지를 다시 보내세요. 같은 문제가 계속되면 다른 모델이나 다른 연결로 바꿔 보세요.
 - **A generation is already in progress for this chat**: 답변 하나가 아직 스트리밍 중입니다. 끝날 때까지 기다리거나 Stop 버튼을 클릭한 뒤 다시 시도하세요.
 - **No connections are marked for the random pool**: 무작위 연결 라우팅을 켰지만 후보로 지정한 연결이 하나도 없습니다. 후보에 연결을 하나 이상 추가하거나 무작위 라우팅을 끄세요.
