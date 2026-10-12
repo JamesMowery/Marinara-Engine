@@ -148,7 +148,7 @@ Profil zbiera połączenie, preset promptu, agentów, narzędzia, tłumaczenie, 
 
 Na pasku jest rząd małych przycisków z ikonami, bez podpisów. Po najechaniu kursorem każdy przycisk pokazuje swoją nazwę w podpowiedzi:
 
-- Ikona dyskietki (**Save current chat settings into this profile**) zapisuje ustawienia bieżącego czatu w wybranym profilu.
+- Ikona dyskietki (**Save current chat settings into this profile**) zapisuje ustawienia bieżącego czatu w wybranym profilu. Jeśli z profilu korzystają inne czaty, pyta, czy je również zaktualizować.
 - Ikona ołówka (**Rename profile**) zmienia nazwę wybranego profilu.
 - Ikona pliku z plusem (**Save current chat settings as a new profile**) zapisuje ustawienia bieżącego czatu jako nowy profil.
 - Ikona strzałki w dół (**Import settings profile (.json)**) wczytuje profil z pliku `.json`.

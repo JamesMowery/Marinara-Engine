@@ -27,7 +27,7 @@ Profil zapisuje sposób, w jaki czat rozmawia z AI:
 - Układ okien i przycisków: pozycje i rozmiary okien, przypięcia i blokady, narzędzia wewnątrz Chat Settings lub w osobnych oknach, otwarte okna kontrolek oraz pozycje przycisków na komputerze i telefonie. Profile bez zapisanego układu, takie jak **Default**, zachowują obecny układ czatu.
 - Widoczność wskazówek dotyczących układu w Chat Settings. Zastosowanie **Default** lub starszego profilu bez tej opcji pokazuje wskazówki ponownie.
 
-Profil nie zastępuje treści należących do czatu, czyli postaci, persony (postaci, w którą się wcielasz), lorebooków (zbiorów faktów o twoim świecie), sprite'ów (obrazków postaci na obszarze sceny), podsumowania, tagów ani promptu sceny. Nie zawiera też historii czatu.
+Profil nie zastępuje treści należących do czatu, czyli postaci, persony (postaci, w którą się wcielasz), lorebooków (zbiorów faktów o twoim świecie), sprite'ów (obrazków postaci na obszarze sceny), podsumowania, tagów ani promptu sceny. Nie zawiera też historii czatu ani bieżącego stanu czatu, takiego jak jego zmienne makr, postacie wyłączone w nim przez ciebie czy jego pokój gry wieloosobowej.
 
 ## Zastosowanie profilu
 
@@ -54,6 +54,36 @@ Rząd ikon pod listą rozwijaną zawiera te działania:
 | Delete | **Delete profile** | Trwale usuwa wybrany profil |
 
 Aby utworzyć pierwszy profil, skonfiguruj czat i wybierz **Save current chat settings as a new profile**. Aby zaktualizować go później, zastosuj profil, zmień ustawienia czatu, a potem wybierz **Save current chat settings into this profile**.
+
+### Aktualizowanie innych czatów korzystających z profilu
+
+Każdy czat ma własną kopię ustawień profilu, więc samo zapisanie profilu nie zmienia innych czatów. Gdy z profilu korzystają inne czaty w tym samym trybie, zapis pyta, co zrobić:
+
+- **Save to this profile only** (zapisanie tylko w tym profilu) zapisuje profil i zostawia pozostałe czaty bez zmian.
+- **Save and update** (zapisanie i aktualizacja) z dopisaną liczbą czatów, na przykład **Save and update 3 other chats** (zapisanie i aktualizacja 3 innych czatów), kopiuje też do tych czatów ustawienia Chat Settings zapisane w profilu. Ich własne zmiany tych ustawień zostają zastąpione, a ustawienie, które w czacie, z którego zapisujesz, ma wartość domyślną, wraca w nich do wartości domyślnej.
+
+**Save and update** kopiuje:
+
+- Opcje generowania i kontekstu
+- Opcje czatu grupowego
+- Przełączniki funkcji i komend
+- Agentów i ich opcje
+- Ustawienia pamięci i podsumowań
+- Tłumaczenie
+- Układ okien
+
+Wszystko inne zostaje tak, jak jest w danym czacie, w tym:
+
+- Połączenie, preset promptu i własny prompt
+- Fabuła i postacie
+- Lorebooki i tło
+- Notatki i postęp
+- To, których komend Roleplay może używać tylko narrator czatu
+- To, czy Noodle może korzystać z wiadomości czatu
+
+Ustawienia Advanced Parameters i opisywanie obrazów (włączenie lub wyłączenie oraz wybór połączenia, które opisuje obrazy) zmieniają się tylko w czatach korzystających z połączenia profilu, bo ustawia się je dla tego połączenia. Harmonogramy postaci zmieniają się tylko wtedy, gdy w czacie, z którego zapisujesz, zostały włączone lub wyłączone; w przeciwnym razie każdy czat zachowuje własny wybór. Agenci Knowledge Retrieval, Knowledge Router, Lorebook Keeper i Expression Engine pozostają włączeni lub wyłączeni, razem ze swoimi szablonami promptu, tak jak w danym czacie. Każdy czat sam wybiera dla nich źródła, lorebook czy sprite'y.
+
+Pokoje gry wieloosobowej nigdy nie są aktualizowane w ten sposób. Gdy z profilu nie korzysta żaden inny czat, przycisk **Save** (zapis) działa bez pytania.
 
 ## Wybór profilu domyślnego
 
