@@ -41,6 +41,7 @@
 | Z.AI | 需要 | 云端 |
 | Atlas Cloud | 需要 | 云端 |
 | fal.ai | 需要 | 云端 |
+| SpicyAPI | 需要 | 云端 |
 | NanoGPT | 需要 | 云端 |
 | Block Entropy | 需要 | 云端 |
 | RunPod Serverless (ComfyUI) | 需要 | 云端 |
@@ -106,6 +107,16 @@
 云端服务，默认 **Base URL** 为 `https://fal.run`。在 [fal.ai](https://fal.ai/dashboard/keys) 创建 API 密钥，然后在图像服务网格中选择 **fal.ai**。初始 **Model** 列表提供 `fal-ai/flux/schnell` 和 `fal-ai/flux/dev`；也可以输入其他文生图端点 ID，但其输入、输出结构必须兼容。**Test Connection**(测试连接) 只检查配置。**Test Image** 会发送真实的生成请求，消耗你的 fal.ai 额度。
 
 Marinara 发送提示词和所需尺寸，再将返回的第一张图像下载到现有的图像处理流程中。负面提示词会作为文字指令追加。模型专用选项（例如 `seed`、`num_inference_steps` 或 `image_size`）可通过 **Custom Parameters**(自定义参数) 设置。该集成使用同步文生图请求，不发送参考图像，也不会恢复中断的任务。请在所选模型或自定义端点的 API 页面确认支持的输入，例如 [flux/schnell API 参考](https://fal.ai/models/fal-ai/flux/schnell/api)。
+
+## SpicyAPI
+
+云端服务，默认 **Base URL** 为 `https://api.spicyapi.ai/api/v1`。在 [SpicyAPI 控制台](https://spicyapi.ai/console/keys)创建 API 密钥，然后在图像服务网格中选择 **SpicyAPI**。Marinara 会自动填入模型 `alibaba/z-image-spicy-pro/text-to-image`。点击 **Fetch Models from API** 可以加载 SpicyAPI 全部的文生图和编辑模型，也可以直接输入模型 ID，例如 `bytedance/seedream-5.0-pro/text-to-image`。**Test Connection** 通过读取模型列表来检查你的密钥，所以不花钱。**Test Image** 会实际生成一张图像，消耗你的 SpicyAPI 余额。
+
+请选择 **SpicyAPI** 服务。不要用 **OpenAI (DALL-E)** 或 **Custom (OAI-Compatible)**(自定义 OAI 兼容) 连接搭配 SpicyAPI 的地址。SpicyAPI 的 OpenAI 风格地址只处理文本，所以这两种方式都生成不了图像。
+
+每个 SpicyAPI 模型接受的设置各不相同。Marinara 会向 SpicyAPI 查询所选模型接受哪些设置，并且只发送这些设置。它会选用模型提供的最接近的尺寸形式，例如宽高比、宽和高，或者固定尺寸。如果模型没有负面提示词字段，负面提示词会以文字形式追加到提示词末尾。其他模型选项（例如 `seed`、`resolution` 或 `loras`）可通过 **Custom Parameters** 设置。
+
+SpicyAPI 把每张图像作为一个任务来运行。Marinara 会等待任务完成，耗时超过大约一分钟就回头查询，然后下载结果。如果连接中断，Marinara 会接着处理同一个任务，而不是花钱重新开一个。编辑模型（ID 以 `/edit` 结尾的模型）会收到你的参考图。SpicyAPI 接受的参考图每张最大 1 MB、每次请求合计最大 2 MB，所以 Marinara 会缩小较大的图像，并舍弃放不下的多余图像。
 
 ## NanoGPT
 
@@ -208,6 +219,7 @@ Marinara 通过占位符往工作流里填内容。把下面这些文本标记�
 | Venice.ai | 文生图不支持 |
 | Z.AI | 当前的文生图集成不支持 |
 | Atlas Cloud | 支持图生图、编辑或 Kontext 的模型 ID 只取第一张 |
+| SpicyAPI | 仅限编辑模型，不超过模型的上限；较大的图像会缩小到符合要求 |
 | NanoGPT | 最多 3 张 |
 | Stability AI | 只取第一张，按图生图使用 |
 | Arli AI | 只取第一张，按图生图使用 |

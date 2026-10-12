@@ -177,6 +177,7 @@ CSRF_TRUSTED_ORIGINS=http://203.0.113.10:7831,https://chat.example.com
 - **No API connection configured for this chat**：这个聊天没有选连接。打开 **Connections**(连接) 面板，新建一个，然后给聊天选上。见[连接 AI 服务商](connections/connecting-to-a-provider.md)。API 密钥是服务商给的一串秘密字符，Marinara 靠它才能调用对方的模型。
 - 模型不接受某个参数：提示里会写明是哪一个。打开 **Chat Settings**(聊天设置) > **Advanced Parameters**(高级参数)，找到那个参数，关掉它名字旁边的开关（悬停提示写的是“This parameter is sent to the model”）。
 - 模型要求必须提供某个参数：同样的做法，但要把那个参数旁边的开关打开。
+- **This model's chat template needs user and assistant messages to take turns**：有些本地模型，比如用 llama.cpp 运行的 Mistral 系模型，只接受你和 AI 轮流交替的消息。对这类模型，Marinara 已经会把连续的消息合并起来，再试一次。如果还是看到这条提示，打开 **Chat Settings** > **Advanced Parameters**，把 **Post-Processing Messages**(消息后处理) 设为 **Single User Message**(单条用户消息)，或者改用没那么严格的聊天模板来运行模型。
 - **The AI returned an empty response. Try sending your message again.**：把消息重新发一次。如果一直这样，换个模型或换个连接试试。
 - **A generation is already in progress for this chat**：还有一条回复正在流式输出。等它结束，或者点 Stop 按钮，然后再试。
 - **No connections are marked for the random pool**：开启了随机连接路由，却没有把任何连接标进随机池。至少往池里加一个连接，或者把随机路由关掉。

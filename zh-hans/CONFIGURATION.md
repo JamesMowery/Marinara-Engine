@@ -247,7 +247,7 @@ LOG_DISABLE_REQUEST_LOGGING=true
 | `COMFYUI_GEN_TIMEOUT` | `2400`(40 分钟，单位为秒) | 单个 ComfyUI 图像工作流排队之后允许的时间。 |
 | `SPRITE_GENERATION_TIMEOUT_MS` | 回退到 `IMAGE_GEN_TIMEOUT_MS` | 单次 AI 立绘生成任务允许的时间。 |
 | `CUSTOM_TOOL_TIMEOUT_MS` | `60000`(1 分钟) | 单次自定义工具调用允许的时间。 |
-| `MAX_TOOL_ROUNDS` | `100` | 模型必须给出最终答案之前最多允许的工具调用轮数。 |
+| `MAX_TOOL_ROUNDS` | `100` | 模型必须给出最终答案之前最多允许的工具调用轮数。Game Mode 的一个回合最多 4 轮，智能体最多 16 轮，世界书回填最多 64 轮；此值更低时以此值为准。 |
 
 图像、视频、立绘和 ComfyUI 的超时在启动时就固定下来，改动需要重启。聊天生成、智能体、Game 动态图像提示词、嵌入和自定义工具的超时会在下一次请求或下一次智能体运行时生效，无需重启。经过校验的聊天、智能体和 Game 动态图像提示词超时如果填了无效值、零、负数或超出范围的值，会记录一条警告，并安全地退回文档写明的默认值。大体量或高画质任务中途失败时，就调高对应的媒体超时。想进一步了解视频任务，见[场景视频](media/scene-video.md)。
 
@@ -385,7 +385,7 @@ Conversation 的日程控件默认使用浏览器或应用所在设备报告的�
 
 | 变量 | 默认值 | 作用 |
 | --- | --- | --- |
-| `CLAUDE_SUBSCRIPTION_USE_INSTALLED_CLI` | `true` | **Claude (Subscription)** 连接是否改用这台电脑上安装的 Claude Code，前提是它的版本不低于 Marinara 自带的那份。设为 `false` 则始终使用自带的版本。5 分钟内生效，无需重启。 |
+| `CLAUDE_SUBSCRIPTION_USE_INSTALLED_CLI` | `true` | **Claude (Subscription)** 连接是否改用这台电脑上安装的 Claude Code，前提是它的版本不低于 Marinara 自带的那份。Android 上没有自带的版本，因此会使用已安装的任意 Claude Code，这一项需要保持开启。设为 `false` 则始终使用自带的版本。5 分钟内生效，无需重启。 |
 | `DOCS_I18N_BASE_URL` | 官方 `docs-i18n` 分支 | 文档和界面语言包的下载来源。界面语言包位于 `ui/` 子树中。必须使用公开的 `https://` 主机；fork 和镜像可以指向自己的 `docs-i18n` 分支副本。 |
 | `GIPHY_API_KEY` | 空 | 用于 Conversation 模式里 GIF 搜索的 Giphy 密钥。未设置时搜索功能关闭。 |
 | `INTIFACE_URL` | `ws://127.0.0.1:12345` | Intiface 触感应用的默认地址。 |

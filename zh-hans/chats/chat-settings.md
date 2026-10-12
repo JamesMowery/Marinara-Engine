@@ -148,7 +148,7 @@ Tracker Panel 隐藏时，电脑上的追踪器改用 [Trackers 窗口](../rolep
 
 这一栏还有一排只有图标、没有文字的小按钮，鼠标悬停时会显示各自的名称：
 
-- 磁盘图标（**Save current chat settings into this profile**）把当前聊天的设置写入选中的方案。
+- 磁盘图标（**Save current chat settings into this profile**）把当前聊天的设置写入选中的方案。如果还有其他聊天使用这个方案，它会询问是否一并更新那些聊天。
 - 铅笔图标（**Rename profile**）给选中的方案改名。
 - 文件加号图标（**Save current chat settings as a new profile**）把当前聊天的设置存成一个新方案。
 - 向下箭头图标（**Import settings profile (.json)**）从 `.json` 文件载入方案。

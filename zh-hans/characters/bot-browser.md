@@ -6,7 +6,7 @@
 
 ## Card Browser 是什么
 
-**Card Browser** 可以在 Marinara 内部搜索多个公开的角色卡网站，支持五个来源：**ChubAI**、**JannyAI**、**Pygmalion**、**Wyvern** 和 **DataCat**。**CharacterTavern** 仍在列表里，但暂时无法浏览（见 [CharacterTavern](#charactertavern)）。选定来源后可以搜索、筛选结果，并预览角色的完整信息，然后把角色导入角色库，或者存成 PNG 文件。默认设置下，浏览和导入角色卡都不需要账号，也不需要 API 密钥（类似密码的一串秘密字符）。
+**Card Browser** 可以在 Marinara 内部搜索多个公开的角色卡网站，支持六个网站：**ChubAI**、**JannyAI**、**Pygmalion**、**Wyvern**、**DataCat** 和 **PlotLight**。PlotLight 有两个来源，一个用于角色，一个用于用户角色（见 [PlotLight](#plotlight)）。**CharacterTavern** 仍在列表里，但暂时无法浏览（见 [CharacterTavern](#charactertavern)）。选定来源后可以搜索、筛选结果，并预览角色的完整信息，然后把角色导入角色库，或者存成 PNG 文件。默认设置下，浏览和导入角色卡都不需要账号，也不需要 API 密钥（类似密码的一串秘密字符）。
 
 ## 打开 Card Browser
 
@@ -23,7 +23,7 @@
 
 ## 选择来源
 
-点击顶部的来源按钮，它上面显示当前来源名和一个小箭头。菜单会按这个顺序列出各个来源：**ChubAI**、**JannyAI**、**CharacterTavern**、**Pygmalion**、**Wyvern** 和 **DataCat**。**CharacterTavern** 会标为 **Unavailable**(不可用)。
+点击顶部的来源按钮，它上面显示当前来源名和一个小箭头。菜单会按这个顺序列出各个来源：**ChubAI**、**JannyAI**、**CharacterTavern**、**Pygmalion**、**Wyvern**、**DataCat**、**PlotLight** 和 **PlotLight Personas**(PlotLight 用户角色)。**CharacterTavern** 会标为 **Unavailable**(不可用)。
 
 第一次打开 **Card Browser** 时默认选中 **ChubAI**。切换来源会清空搜索词、标签和筛选条件。每个来源的成人内容设置和登录状态各自独立保存，改动其中一个不会影响其他来源。
 
@@ -41,23 +41,39 @@ CharacterTavern 重建了网站，不再提供 Marinara 原先用来搜索和下
 
 之前从 CharacterTavern 导入的角色仍然留在角色库里。
 
+## PlotLight
+
+PlotLight 会把公开的角色和用户角色分享给 Marinara 这类应用。它在菜单里有两个来源：
+
+- **PlotLight** 列出角色卡。
+- **PlotLight Personas** 列出用户角色。用户角色就是在聊天里代表你的那个角色。
+
+不需要 PlotLight 账号。每条结果都保留作者的名字，详情视图里有一个 **View on PlotLight** 链接，指向原始页面。
+
+从 PlotLight 导入时，Marinara 会下载 PlotLight 为它提供的文件。角色卡通常是一个 PNG，里面带着角色的肖像，以及作者允许附带的世界书。用户角色是一个文本文件，Marinara 会另外复制它的图片。两种都可以导入为角色，也可以导入为用户角色。
+
+PlotLight 会限制应用向它发请求的频率。搜索或导入太快时，Marinara 会提示 **PlotLight is busy**，并说明要等几秒。它会等够这段时间再发请求。搜索和导入的限制分开计算，所以一个不会拖慢另一个。
+
+有些角色卡和用户角色无法下载，比如作者不允许下载时。这时 Marinara 会提示 **PlotLight doesn't offer this for download.** 这一项无法导入，也看不到完整信息，但它的图片、作者和 **View on PlotLight** 链接仍会留在屏幕上。
+
 ## 搜索、排序与翻页
 
 在 **Search characters...** 输入框里输入内容就能搜索，不用按 Enter。停止输入大约半秒后，Marinara 会自动开始搜索。清空输入框或者改动筛选条件，同样会重新搜索一次。
 
 搜索框旁边是排序下拉菜单。各来源的选项不一样，默认排序也各不相同：
 
-| 来源      | 默认排序        |
-| --------- | --------------- |
-| ChubAI    | Most Downloaded |
-| JannyAI   | Newest          |
-| Pygmalion | Downloads       |
-| Wyvern    | Popular         |
-| DataCat   | Relevance       |
+| 来源                           | 默认排序        |
+| ------------------------------ | --------------- |
+| ChubAI                         | Most Downloaded |
+| JannyAI                        | Newest          |
+| Pygmalion                      | Downloads       |
+| Wyvern                         | Popular         |
+| DataCat                        | Relevance       |
+| PlotLight / PlotLight Personas | Popular         |
 
 点击 **Refresh**(刷新) 按钮（圆形箭头图标）可以重新执行当前的搜索。
 
-结果下方是 **Previous**(上一页) 和 **Next**(下一页) 按钮，中间是形如 **Page 2** 的页码。当来源报不出确切的结果总数时，这里只显示当前页码。
+结果下方是 **Previous**(上一页) 和 **Next**(下一页) 按钮，中间是形如 **Page 2** 的页码。当来源报不出确切的结果总数时，这里只显示当前页码。**PlotLight** 从不报告总数，所以顶部显示的是 **Browsing PlotLight**，到最后一页时 **Next** 会变为不可用。PlotLight 的某一页可能比平常少几张卡，甚至一张都没有，但后面仍可能还有更多页。这时 **Next** 会保持可用，可以继续往下翻。
 
 **DataCat** 有一点要注意：它的 **Fresh** 排序只有在既没有标签筛选、也没有搜索词的时候才真正给出最新结果。一旦输入搜索词或选中标签，**DataCat** 就退回到普通的相关度结果。
 
@@ -74,9 +90,11 @@ CharacterTavern 重建了网站，不再提供 Marinara 原先用来搜索和下
 
 **DataCat** 的做法不同。它的标签库非常庞大，所以一打开就直接加载最热门的标签。其他标签仍然可以手动输入。
 
+在 **PlotLight** 上，可以从列表里挑标签，也可以手动输入，例如 **Elf**。Marinara 会在 PlotLight 自己的标签列表里查找每个标签。手动输入的标签如果 PlotLight 没有，就什么也匹配不到。
+
 ## 更多筛选项
 
-部分来源会在工具栏多出一个 **Filters**(筛选) 按钮。只有当该来源确实提供筛选项时它才出现，所以 **DataCat** 上看不到。按钮上的小角标显示当前生效了几项筛选。
+部分来源会在工具栏多出一个 **Filters**(筛选) 按钮。只有当该来源确实提供筛选项时它才出现，所以 **DataCat** 和 **PlotLight** 上看不到。按钮上的小角标显示当前生效了几项筛选。
 
 筛选面板里可能有：
 
@@ -95,6 +113,7 @@ CharacterTavern 重建了网站，不再提供 Marinara 原先用来搜索和下
 - **Pygmalion**：登录之前 **NSFW** 复选框是灰的，鼠标悬停的提示会让你先登录。登录之后，应用会跟随你在 Pygmalion 上的账号设置，复选框的文字随之变成 **NSFW depends on your account settings**。登录后就没有单独的开关了。
 - **Wyvern**：**NSFW** 复选框始终是灰的，旁边有一条说明 **Use "🔞 Popular NSFW" sort for NSFW content**。想在 **Wyvern** 上看成人内容，要在排序下拉菜单里选 **🔞 Popular NSFW**。
 - **DataCat**：站上每个角色都带成人标记，所以复选框被锁定为开启。第一次选择 **DataCat** 时会弹出一个标题为 **DataCat is NSFW only** 的窗口，点击 **Continue to DataCat** 继续浏览，点击 **Don't continue to DataCat** 返回。
+- **PlotLight** 和 **PlotLight Personas**：**NSFW** 复选框始终是灰的。它的悬停提示写着 **PlotLight decides what you can see without an account, and adult-tagged results are marked NSFW.** PlotLight 对没有账号的访客有自己的一套规则。它分享的部分结果仍带有成人内容标记，这些结果会显示 **NSFW** 角标。
 
 成人角色的缩略图角上会有一个红色的 **NSFW** 小角标。
 
@@ -181,6 +200,10 @@ JSON 和 PNG 是同一份角色数据的两种常见格式。JSON 是纯文本�
 **Pygmalion 的登录突然失效了。** 重启 Marinara 服务器会清掉这个登录信息。重新打开 **Log In** 窗口，再粘贴一次 Token。
 
 **CharacterTavern 只显示一条说明。** 这是正常现象。想把它的角色卡作为文件导入，见 [CharacterTavern](#charactertavern)。
+
+**PlotLight 提示正忙。** PlotLight 会限制应用向它发请求的频率。等提示里写的秒数过去，再试一次。
+
+**PlotLight 不提供某张角色卡或某个用户角色的下载。** 可能是作者不允许下载，也可能它已经不再公开。用 **View on PlotLight** 到网站上查看一下。
 
 **搜索失败，或者某个来源用不了了。** 公开网站随时可能改版或者封锁访问，过一阵再试。某个来源一直失败的话，直接到该网站上打开角色，自己下载角色卡，再走常规的导入流程带进来，见[导入和导出角色卡](import-export.md)。
 
