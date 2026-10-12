@@ -1,11 +1,11 @@
 {
   "language": "ja",
-  "sourceCommit": "9fd6e090021551615a2052de9423c761721a996e",
+  "sourceCommit": "b3ee44672fffbb04e652ddcb791637262ac69f9e",
   "files": [
     {
       "path": "CONFIGURATION.md",
-      "sha256": "6cda17023a8322a4f47518e179d379cdb093438fd12c2c59473f94e5f2b0111b",
-      "bytes": 58045
+      "sha256": "272b9fbd2e3182f955f726ae0cbd348710dfff6f5e9456c08c6fbc0e17cd15c8",
+      "bytes": 58456
     },
     {
       "path": "FAQ.md",
@@ -24,8 +24,8 @@
     },
     {
       "path": "TROUBLESHOOTING.md",
-      "sha256": "a08eb92a6bba40e8590c090ec1804df881c6ec4730dc0529890c45848e472f26",
-      "bytes": 65141
+      "sha256": "78367fb9004b1568055a5bac50b46603aa6a9faf733b3bbc00fc21fcfd56c0e7",
+      "bytes": 65889
     },
     {
       "path": "UPGRADING.md",
@@ -49,8 +49,8 @@
     },
     {
       "path": "agents/custom-agents.md",
-      "sha256": "123da72175e85e9b6a1f14dc4e8d4f7d4671de640a2fc585b503b0d9e1351346",
-      "bytes": 30190
+      "sha256": "46b84e2b294a746b3fca26bdc7cf936f9cc86ea469e51bbc073b24551eee2417",
+      "bytes": 30867
     },
     {
       "path": "agents/hierarchical-maps.md",
@@ -64,8 +64,8 @@
     },
     {
       "path": "agents/memory.md",
-      "sha256": "0be08f159641f59b63f910d8680665f87fa0b0bf466c8d773ce7ef957d7c2b72",
-      "bytes": 61960
+      "sha256": "29e3677c2d50f2592b38fdf4c20970fa02e9ef38c4fe97307cb00591b61dd04a",
+      "bytes": 64078
     },
     {
       "path": "appearance/appearance-settings.md",
@@ -94,8 +94,8 @@
     },
     {
       "path": "characters/bot-browser.md",
-      "sha256": "1722f17290096a753c3ccf2e5b6588dbe6ef9ee3990a9b966b69da2990830b1c",
-      "bytes": 21251
+      "sha256": "5014eb958e9e7e03d15a8cb3bb27ce7b53eb647b970e7699320afea03e5a16a4",
+      "bytes": 25132
     },
     {
       "path": "characters/choosing-your-persona.md",
@@ -389,8 +389,8 @@
     },
     {
       "path": "development/optional-agent-packages.md",
-      "sha256": "11730a967d5b658f5892a6051255400070e260f7baa64e3a81d1351728d7dfe3",
-      "bytes": 115355
+      "sha256": "9009eb2f2caf066b1bfbd7ba7edbb1d86eba2bff0ab1f65b64edea3090b5c513",
+      "bytes": 117485
     },
     {
       "path": "development/personal-extensions.md",
@@ -439,8 +439,8 @@
     },
     {
       "path": "game/getting-started.md",
-      "sha256": "2a6313566974fd39683375964705d08f3050450e64358d56eabce7a9175cf599",
-      "bytes": 29798
+      "sha256": "c9da430c130bb7aa8483bf38dedb55bc13379b2fbcf53bf56dfd0829323de9e0",
+      "bytes": 29877
     },
     {
       "path": "game/hud-widgets.md",
@@ -584,8 +584,8 @@
     },
     {
       "path": "media/image-providers.md",
-      "sha256": "54f89875b3edc7dab60292691144c08c0b058988bb13e94117f44b93ac9476b6",
-      "bytes": 23997
+      "sha256": "22124dfc64cad4eba92a3540536027ab5c9cf7d82c529460c7bbd82d1fb24664",
+      "bytes": 26647
     },
     {
       "path": "media/music.md",
