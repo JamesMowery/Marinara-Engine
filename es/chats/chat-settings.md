@@ -148,7 +148,7 @@ Un perfil agrupa la conexión de este chat, el preset de prompt, los agentes, la
 
 La barra tiene una fila de botones pequeños con iconos y sin texto. Cada botón muestra su nombre en un tooltip cuando pasas el cursor por encima:
 
-- El icono de disco (**Save current chat settings into this profile**) escribe los ajustes del chat actual en el perfil seleccionado.
+- El icono de disco (**Save current chat settings into this profile**) escribe los ajustes del chat actual en el perfil seleccionado. Si otros chats usan el perfil, pregunta si quieres actualizarlos también.
 - El icono de lápiz (**Rename profile**) cambia el nombre del perfil seleccionado.
 - El icono de archivo con signo más (**Save current chat settings as a new profile**) guarda los ajustes del chat actual como un perfil nuevo.
 - El icono de flecha hacia abajo (**Import settings profile (.json)**) carga un perfil desde un archivo `.json`.

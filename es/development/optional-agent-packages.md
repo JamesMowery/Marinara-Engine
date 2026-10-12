@@ -563,6 +563,19 @@ Importar un archivo de configuración restaura una Experience instalada y compat
 
 Usa de forma independiente la declaración existente de disponibilidad de inicio cuando el mundo deba prepararse antes del primer turno. Declara API 1.18 como mínimo del paquete; los hosts anteriores no pueden interpretar esta declaración de configuración.
 
+### Capability API 1.71: leer los mensajes como los leen los agentes
+
+En el modo Roleplay, un mensaje puede llevar susurros que no forman parte de su `content`. Todos los agentes que ejecuta Engine los leen, y un paquete que lee el chat por su cuenta ahora puede leer el mismo texto. Cada registro de `persistence.listMessages(chatId)` recibe `agentContent`: el mensaje tal como lo leen los agentes de Engine. Cada susurro aparece en su lugar, marcado como `[Private whisper to <name>: …]`, y un mensaje que solo es un susurro se lee como sus susurros. Un documento que entrega un personaje, como una carta, va después del mensaje. Las notas privadas del jugador se omiten.
+
+`agentContent` solo está presente en los chats de Roleplay. Falta en los demás modos y en una sala multijugador alojada, donde todos ven lo que escriben los agentes. `content` nunca cambia: sigue siendo el texto público. `extra` tampoco cambia: son los datos guardados del mensaje, con todos los susurros, en todos los modos. Nunca muestres texto construido a partir de él a jugadores o personajes a los que no iba dirigido un susurro.
+
+```ts
+const messages = await api.runtime.persistence.listMessages(chatId);
+const history = messages.map((message) => message.agentContent ?? message.content);
+```
+
+Es una interfaz flexible: los Engine anteriores omiten el campo, así que un paquete que lee `agentContent ?? content` no necesita declarar 1.71. Necesita el permiso `chat-read`, como `listMessages`. Los susurros son privados: cualquier cosa que un paquete escriba a partir de ellos, como una nota o un recuerdo, puede llegar a personajes a los que no iba dirigido el susurro.
+
 ### Capability API 1.68: generar el embedding de las consultas de búsqueda como consultas
 
 `embeddings.embed(texts, signal?, inputType?)` acepta un tercer argumento: pasa `"query"` para el texto de búsqueda, como una consulta de recuperación. Los textos usan `"document"` de forma predeterminada. Algunos modelos de embeddings esperan un prefijo en las consultas, y algunos también en los documentos: e5 y nomic-embed-text usan uno para cada tipo, y Snowflake Arctic Embed v2 solo añade prefijo a las consultas. Engine añade el adecuado. La recuperación es peor cuando el embedding de una consulta se genera como documento. Otros modelos, incluido el generador MiniLM integrado, no reciben prefijo en ningún caso. El tipo de entrada no cambia `spaceId`, así que los vectores guardados siguen siendo comparables y no hace falta volver a generar ningún embedding.
