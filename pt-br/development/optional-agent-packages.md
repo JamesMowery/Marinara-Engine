@@ -564,6 +564,19 @@ A importação de um arquivo de configuração restaura uma Experience instalada
 
 Use a declaração existente de prontidão para inicialização de forma independente quando o mundo precisar estar preparado antes do primeiro turno. Declare API 1.18 como mínimo do pacote; hosts anteriores não conseguem interpretar essa declaração de configuração.
 
+### Capability API 1.71: ler as mensagens como os agentes as leem
+
+No Roleplay, uma mensagem pode trazer sussurros que não fazem parte do seu `content`. Todos os agentes que o Engine executa leem esses sussurros, e agora um pacote que lê o chat por conta própria pode ler o mesmo texto. Cada registro de `persistence.listMessages(chatId)` recebe `agentContent`: a mensagem como os agentes do Engine a leem. Cada sussurro fica no seu lugar, marcado como `[Private whisper to <name>: …]`, e uma mensagem que é só um sussurro é lida como os seus sussurros. Um documento que um personagem entrega, como uma carta, vem depois da mensagem. As notas privadas do jogador ficam de fora.
+
+`agentContent` só existe em chats de Roleplay. Ele falta nos outros modos e em uma sala multijogador hospedada, onde todos veem o que os agentes escrevem. `content` nunca muda: continua sendo o texto público. `extra` também não muda: são os dados salvos da mensagem, com todos os sussurros, em todos os modos. Nunca mostre um texto montado a partir dele a jogadores ou personagens a quem um sussurro não se destinava.
+
+```ts
+const messages = await api.runtime.persistence.listMessages(chatId);
+const history = messages.map((message) => message.agentContent ?? message.content);
+```
+
+É uma integração opcional: motores antigos deixam o campo de fora, então um pacote que lê `agentContent ?? content` não precisa declarar 1.71. Ele precisa da permissão `chat-read`, como `listMessages`. Sussurros são privados: tudo o que um pacote escreve a partir deles, como uma nota ou uma memória, pode chegar a personagens a quem o sussurro não se destinava.
+
 ### Capability API 1.68: gerar embeddings de consultas de busca como consultas
 
 `embeddings.embed(texts, signal?, inputType?)` aceita um terceiro argumento: passe `"query"` para textos de busca, como uma consulta de recuperação. Os textos usam `"document"` por padrão. Alguns modelos de embedding esperam um prefixo nas consultas, e alguns também nos documentos: e5 e nomic-embed-text usam um de cada, e o Snowflake Arctic Embed v2 prefixa apenas as consultas. O Engine acrescenta o prefixo certo. A recuperação fica mais fraca quando o embedding de uma consulta é gerado como documento. Outros modelos, incluindo o gerador MiniLM integrado, não recebem prefixo em nenhum dos casos. O tipo de entrada não muda o `spaceId`, então os vetores salvos continuam comparáveis e nenhum vetor precisa ser recalculado.
