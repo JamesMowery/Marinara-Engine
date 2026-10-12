@@ -41,6 +41,7 @@ Le tableau ci-dessous présente chaque service d'un coup d'œil. Les détails et
 | Z.AI | Oui | Cloud |
 | Atlas Cloud | Oui | Cloud |
 | fal.ai | Oui | Cloud |
+| SpicyAPI | Oui | Cloud |
 | NanoGPT | Oui | Cloud |
 | Block Entropy | Oui | Cloud |
 | RunPod Serverless (ComfyUI) | Oui | Cloud |
@@ -106,6 +107,16 @@ Service cloud dont la Base URL par défaut est `https://api.atlascloud.ai/api/v1
 Service cloud avec **Base URL** par défaut `https://fal.run`. Crée une clé API sur [fal.ai](https://fal.ai/dashboard/keys), puis sélectionne **fal.ai** dans la grille des services d'images. La liste initiale **Model** propose `fal-ai/flux/schnell` et `fal-ai/flux/dev` ; tu peux saisir l'identifiant d'un autre endpoint texte-vers-image dont le schéma d'entrée et de sortie est compatible. **Test Connection** (tester la connexion) vérifie uniquement la configuration. **Test Image** envoie une vraie demande de génération et consomme tes crédits fal.ai.
 
 Marinara envoie le prompt et les dimensions demandées, puis télécharge la première image renvoyée dans son circuit habituel de gestion des images. Les prompts négatifs sont ajoutés sous forme d'instructions textuelles. Utilise **Custom Parameters** (paramètres personnalisés) pour les options propres au modèle, comme `seed`, `num_inference_steps` ou `image_size`. Cette intégration utilise des demandes synchrones texte-vers-image ; elle n'envoie pas d'images de référence et ne reprend pas les tâches interrompues. Vérifie les entrées prises en charge sur la page API du modèle ou du point de terminaison choisi, par exemple dans la [référence API de flux/schnell](https://fal.ai/models/fal-ai/flux/schnell/api).
+
+## SpicyAPI
+
+Service cloud avec **Base URL** par défaut `https://api.spicyapi.ai/api/v1`. Crée une clé API dans la [console SpicyAPI](https://spicyapi.ai/console/keys), puis sélectionne **SpicyAPI** dans la grille des services d'images. Marinara préremplit le modèle avec `alibaba/z-image-spicy-pro/text-to-image`. Clique sur **Fetch Models from API** pour charger tous les modèles SpicyAPI de texte-vers-image et d'édition, ou saisis un identifiant de modèle comme `bytedance/seedream-5.0-pro/text-to-image`. **Test Connection** vérifie ta clé en lisant la liste des modèles : cela ne coûte donc rien. **Test Image** crée une vraie image et consomme ton solde SpicyAPI.
+
+Choisis le service **SpicyAPI**. N'utilise ni **OpenAI (DALL-E)** ni une connexion **Custom (OAI-Compatible)** avec une adresse SpicyAPI. L'adresse de style OpenAI de SpicyAPI ne gère que le texte : ces options ne peuvent donc pas créer d'images.
+
+Chaque modèle SpicyAPI prend ses propres paramètres. Marinara demande à SpicyAPI lesquels le modèle choisi accepte et n'envoie que ceux-là. Il choisit la forme la plus proche que propose le modèle, comme un rapport d'aspect, une largeur et une hauteur, ou une taille fixe. Si le modèle n'a pas de champ de prompt négatif, le prompt négatif est ajouté sous forme de texte à la fin du prompt. Utilise **Custom Parameters** pour les autres options du modèle, comme `seed`, `resolution` ou `loras`.
+
+SpicyAPI traite chaque image comme une tâche. Marinara attend la fin de la tâche, revient vérifier si elle dure plus d'une minute environ, puis télécharge le résultat. Si la connexion tombe, Marinara reprend la même tâche au lieu d'en payer une nouvelle. Les modèles d'édition (identifiants qui se terminent par `/edit`) reçoivent tes images de référence. SpicyAPI accepte des images de référence jusqu'à 1 Mo chacune et 2 Mo par requête : Marinara réduit donc les images plus grandes et laisse de côté celles en trop qui ne tiennent pas.
 
 ## NanoGPT
 
@@ -208,6 +219,7 @@ Une **image de référence** est une image existante que tu envoies avec le prom
 | Venice.ai | Non pris en charge pour la génération texte vers image |
 | Z.AI | Non pris en charge dans l'intégration texte vers image actuelle |
 | Atlas Cloud | Première image, pour les identifiants de modèle image vers image, edit ou Kontext compatibles |
+| SpicyAPI | Modèles d'édition uniquement, jusqu'à la limite du modèle ; les images plus grandes sont réduites pour tenir |
 | NanoGPT | Jusqu'à 3 |
 | Stability AI | Première image uniquement, utilisée en image vers image |
 | Arli AI | Première image uniquement, utilisée en image vers image |

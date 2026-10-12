@@ -27,7 +27,7 @@ Un profil enregistre la façon dont le chat dialogue avec l'IA :
 - Masquage des conseils de disposition de Chat Settings. Appliquer **Default** ou un ancien profil sans ce choix affiche à nouveau les conseils.
 - Les autres options de chat réutilisables
 
-Un profil ne remplace pas le contenu qui appartient au chat : personnages, persona (le personnage que tu incarnes), lorebooks (recueils de faits sur ton univers), sprites, résumé, tags ou prompt de scène. Il ne contient pas non plus l'historique du chat.
+Un profil ne remplace pas le contenu qui appartient au chat : personnages, persona (le personnage que tu incarnes), lorebooks (recueils de faits sur ton univers), sprites, résumé, tags ou prompt de scène. Il ne contient pas non plus l'historique du chat, ni l'état en cours d'un chat, comme ses variables de macro, les personnages que tu y as désactivés ou son salon multijoueur.
 
 ## Appliquer un profil
 
@@ -54,6 +54,36 @@ La rangée d'icônes sous le menu déroulant propose ces actions :
 | Delete | **Delete profile** | Supprime définitivement le profil sélectionné |
 
 Pour créer un premier profil, règle un chat comme tu le souhaites, puis choisis **Save current chat settings as a new profile**. Pour le mettre à jour plus tard, applique le profil, modifie le chat, puis choisis **Save current chat settings into this profile**.
+
+### Mettre à jour les autres chats qui utilisent le profil
+
+Chaque chat garde sa propre copie des réglages du profil : enregistrer un profil ne modifie donc pas les autres chats à lui seul. Quand d'autres chats du même mode utilisent le profil, l'enregistrement demande quoi faire :
+
+- **Save to this profile only** (enregistrer uniquement dans ce profil) enregistre le profil et laisse les autres chats tels quels.
+- **Save and update** (enregistrer et mettre à jour), suivi du nombre de chats, par exemple **Save and update 3 other chats**, copie aussi les Chat Settings du profil dans ces chats. Leurs propres modifications de ces réglages sont remplacées, et un réglage que tu as laissé à sa valeur par défaut dans le chat depuis lequel tu enregistres revient aussi à sa valeur par défaut dans ces chats.
+
+**Save and update** copie :
+
+- Les options de génération et de contexte
+- Les options de chat de groupe
+- Les interrupteurs des fonctionnalités et des commandes
+- Les agents et leurs options
+- Les réglages de mémoire et de résumé
+- La traduction
+- La disposition des fenêtres
+
+Tout le reste demeure tel quel dans chaque chat, notamment :
+
+- Sa connexion, son preset de prompt et son prompt personnalisé
+- Son histoire et ses personnages
+- Ses lorebooks et son arrière-plan
+- Ses notes et sa progression
+- Les commandes Roleplay que seul son narrateur peut utiliser
+- Le fait que Noodle puisse ou non utiliser ses messages
+
+Les réglages Advanced Parameters et la description automatique des images (activée ou non, et la connexion qui décrit les images) ne changent que dans les chats qui utilisent la connexion du profil, car ils sont définis pour cette connexion. Les emplois du temps des personnages ne changent que s'ils ont été activés ou désactivés dans le chat depuis lequel tu enregistres ; sinon, chaque chat garde son propre choix. Knowledge Retrieval, Knowledge Router, Lorebook Keeper et Expression Engine restent activés ou désactivés, avec leurs modèles de prompt, comme chaque chat les a réglés. Chaque chat choisit lui-même leurs sources, leur lorebook ou leurs sprites.
+
+Les salons multijoueurs ne sont jamais mis à jour de cette façon. Quand aucun autre chat n'utilise le profil, **Save** fonctionne sans rien demander.
 
 ## Choisir le profil par défaut
 

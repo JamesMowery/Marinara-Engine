@@ -564,6 +564,19 @@ L'importation d'un fichier de configuration restaure une Experience installée e
 
 Utilise indépendamment la déclaration existante de disponibilité au démarrage lorsque le monde doit être préparé avant le premier tour. Déclare API 1.18 comme minimum du package ; les hôtes plus anciens ne savent pas interpréter cette déclaration de configuration.
 
+### Capability API 1.71 : lire les messages comme les agents les lisent
+
+En Roleplay, un message peut contenir des murmures qui ne font pas partie de son `content`. Chaque agent exécuté par Engine les lit, et un package qui lit lui-même le chat peut désormais lire le même texte. Chaque enregistrement renvoyé par `persistence.listMessages(chatId)` reçoit `agentContent` : le message tel que les agents d'Engine le lisent. Chaque murmure se trouve à sa place, marqué `[Private whisper to <name>: …]`, et un message qui n'est qu'un murmure se lit comme ses murmures. Un document qu'un personnage remet, comme une lettre, suit le message. Les notes privées du joueur sont laissées de côté.
+
+`agentContent` n'est présent que dans les chats Roleplay. Il est absent dans les autres modes et dans un salon multijoueur hébergé, où tout le monde voit ce qu'écrivent les agents. `content` ne change jamais : c'est toujours le texte public. `extra` ne change pas non plus : ce sont les données enregistrées du message, avec tous ses murmures, dans tous les modes. N'affiche jamais un texte construit à partir de lui à des joueurs ou à des personnages auxquels un murmure n'était pas destiné.
+
+```ts
+const messages = await api.runtime.persistence.listMessages(chatId);
+const history = messages.map((message) => message.agentContent ?? message.content);
+```
+
+Il s'agit d'une interface souple : les anciens moteurs omettent ce champ, donc un package qui lit `agentContent ?? content` n'a pas besoin de déclarer 1.71. Il lui faut la permission `chat-read`, comme pour `listMessages`. Les murmures sont privés : tout ce qu'un package écrit à partir d'eux, comme une note ou un souvenir, peut atteindre des personnages auxquels le murmure n'était pas destiné.
+
 ### Capability API 1.68 : calculer l'embedding des requêtes de recherche en tant que requêtes
 
 `embeddings.embed(texts, signal?, inputType?)` accepte un troisième argument : passe `"query"` pour un texte de recherche, comme une requête de rappel. Par défaut, les textes sont traités comme `"document"`. Certains modèles d'embedding attendent un préfixe sur les requêtes, et certains aussi sur les documents : e5 et nomic-embed-text en utilisent un pour chacun, et Snowflake Arctic Embed v2 ne préfixe que les requêtes. Engine ajoute celui qui convient. Le rappel est moins bon quand l'embedding d'une requête est calculé comme celui d'un document. Les autres modèles, dont le générateur local MiniLM intégré, ne reçoivent de préfixe dans aucun cas. Le type d'entrée ne change pas `spaceId` : les vecteurs enregistrés restent donc comparables et rien n'a besoin d'être recalculé.
