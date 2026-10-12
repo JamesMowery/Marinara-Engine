@@ -247,7 +247,7 @@ Essas configurações valem para todos os perfis e são salvas ao lado do `.env`
 | `COMFYUI_GEN_TIMEOUT` | `2400` (40 minutos, em segundos) | Tempo permitido para um fluxo de imagem do ComfyUI depois de entrar na fila. |
 | `SPRITE_GENERATION_TIMEOUT_MS` | usa `IMAGE_GEN_TIMEOUT_MS` como alternativa | Tempo permitido para uma tarefa de geração de sprite por IA. |
 | `CUSTOM_TOOL_TIMEOUT_MS` | `60000` (1 minuto) | Tempo permitido para uma chamada de ferramenta personalizada. |
-| `MAX_TOOL_ROUNDS` | `100` | Número máximo de rodadas de chamada de ferramenta antes de o modelo ter que dar uma resposta final. |
+| `MAX_TOOL_ROUNDS` | `100` | Número máximo de rodadas de chamada de ferramenta antes de o modelo ter que dar uma resposta final. Um turno do Game Mode recebe no máximo 4, um agente 16 e um preenchimento retroativo de lorebook 64, ou este valor, se for menor. |
 
 Os tempos limite de imagem, vídeo, sprite e ComfyUI ficam travados na inicialização, então mudá-los exige reinício. Os tempos limite de geração de chat, de agente, de prompt dinâmico de imagem do Game, de embedding e de ferramenta personalizada passam a valer na próxima requisição ou execução de agente, sem reinício. Valores inválidos, zerados, negativos ou fora da faixa nos tempos limite validados de chat, de agente e de prompt dinâmico de imagem do Game geram um aviso no log e usam com segurança os padrões documentados. Aumente um tempo limite de mídia quando tarefas grandes ou de alta qualidade falharem no meio do caminho. Para saber mais sobre as tarefas de vídeo, veja [Vídeo de cena](media/scene-video.md).
 
@@ -385,7 +385,7 @@ Todos estes ajustes vêm desligados para preservar o comportamento anterior, e c
 
 | Variável | Padrão | O que faz |
 | --- | --- | --- |
-| `CLAUDE_SUBSCRIPTION_USE_INSTALLED_CLI` | `true` | Define se as conexões **Claude (Subscription)** usam o Claude Code instalado neste computador quando ele é pelo menos tão novo quanto a cópia incluída no Marinara. Defina como `false` para usar sempre a cópia incluída. Passa a valer em até cinco minutos, sem precisar reiniciar. |
+| `CLAUDE_SUBSCRIPTION_USE_INSTALLED_CLI` | `true` | Define se as conexões **Claude (Subscription)** usam o Claude Code instalado neste computador quando ele é pelo menos tão novo quanto a cópia incluída no Marinara. O Android não tem cópia incluída, então usa qualquer Claude Code instalado e precisa que esta opção continue ativada. Defina como `false` para usar sempre a cópia incluída. Passa a valer em até cinco minutos, sem precisar reiniciar. |
 | `DOCS_I18N_BASE_URL` | a branch `docs-i18n` oficial | Origem dos downloads dos pacotes de idioma da documentação e da interface. Os pacotes da interface ficam na subárvore `ui/`. Precisa ser um host público `https://`; forks e espelhos podem apontar para sua própria cópia da branch `docs-i18n`. |
 | `GIPHY_API_KEY` | vazio | Chave do Giphy para a busca de GIFs no Conversation Mode. Sem ela, a busca fica desligada. |
 | `INTIFACE_URL` | `ws://127.0.0.1:12345` | Endereço padrão do aplicativo háptico Intiface. |

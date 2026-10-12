@@ -27,7 +27,7 @@ O perfil salva a forma como o chat conversa com a IA:
 - Se as dicas de layout de Chat Settings estão ocultas. Aplicar **Default** ou um perfil antigo sem essa escolha mostra as dicas novamente.
 - Outras opções reutilizáveis do chat
 
-O perfil não substitui o conteúdo que pertence ao chat, como personagens, persona, lorebooks, sprites, resumo, tags ou prompt da cena. Ele também não salva o histórico da conversa.
+O perfil não substitui o conteúdo que pertence ao chat, como personagens, persona, lorebooks, sprites, resumo, tags ou prompt da cena. Ele também não salva o histórico da conversa nem o estado em andamento de um chat, como as variáveis de macro, os personagens que você desativou nele ou a sala multijogador dele.
 
 ## Como aplicar um perfil
 
@@ -54,6 +54,36 @@ A linha de ícones embaixo do menu suspenso traz estas ações:
 | Delete | **Delete profile** | Exclui o perfil selecionado de vez |
 
 Para criar o primeiro perfil, ajuste um chat do jeito que você quer e escolha **Save current chat settings as a new profile**. Para atualizá-lo depois, aplique o perfil, mude o chat e escolha **Save current chat settings into this profile**.
+
+### Como atualizar outros chats que usam o perfil
+
+Cada chat guarda a própria cópia das configurações do perfil, então salvar um perfil não muda os outros chats por si só. Quando outros chats do mesmo modo usam o perfil, salvar pergunta o que fazer:
+
+- **Save to this profile only** (salvar só neste perfil) salva o perfil e deixa os outros chats como estão.
+- **Save and update** (salvar e atualizar), seguido do número de chats, como em **Save and update 3 other chats**, também copia para esses chats as configurações de Chat Settings do perfil. As mudanças que esses chats tinham nessas configurações são substituídas, e uma configuração que você deixou no padrão no chat de onde salva também volta ao padrão neles.
+
+**Save and update** copia:
+
+- Opções de geração e de contexto
+- Opções de chat em grupo
+- Botões liga/desliga de recursos e de comandos
+- Agentes e as opções deles
+- Configurações de memória e de resumo
+- Tradução
+- O layout das janelas
+
+Todo o resto continua como cada chat tem, inclusive:
+
+- A conexão, o preset de prompt e o prompt personalizado
+- A história e os personagens
+- Os lorebooks e o plano de fundo
+- As notas e o progresso
+- Quais comandos de Roleplay só o narrador do chat pode usar
+- Se o Noodle pode usar as mensagens do chat
+
+Advanced Parameters e a descrição de imagens (ligada ou desligada, e qual conexão descreve as imagens) só mudam nos chats que usam a conexão do perfil, porque são definidos para essa conexão. As agendas de personagem só mudam se foram ligadas ou desligadas no chat de onde você salva; caso contrário, cada chat mantém a própria escolha. Knowledge Retrieval, Knowledge Router, Lorebook Keeper e Expression Engine continuam ligados ou desligados, com os seus modelos de prompt, como cada chat os tem. Cada chat escolhe por conta própria as fontes, o lorebook ou os sprites deles.
+
+As salas multijogador nunca são atualizadas dessa forma. Quando nenhum outro chat usa o perfil, **Save** (salvar) funciona sem perguntar.
 
 ## Como escolher o perfil padrão
 

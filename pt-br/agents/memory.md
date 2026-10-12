@@ -147,6 +147,18 @@ Com a opção ativada, cada nova mensagem, sua ou de um personagem, fica oculta 
 - Se você mesmo mudar o **Hide from AI** de uma mensagem, ou usar `/hide` ou `/unhide` nela, antes ou depois da escolha automática, a sua escolha permanece e Advanced Memory nunca mais altera essa mensagem. Mensagens que você já tinha ocultado de alguém continuam como estão.
 - Cada mensagem é decidida uma única vez. Se o modelo falhar ou não responder a tempo, nada é ocultado naquela mensagem, e o erro aparece no log do servidor.
 
+Com Advanced Memory ativado, uma nova resposta de personagem pode mudar de cena ou de ponto de vista com uma linha de quebra, como `***`, `---` ou `* * *`. Ela é então salva como mensagens separadas do mesmo personagem, uma para cada parte.
+
+- Cada parte tem o próprio público. **Decide who sees new messages**, **Hide from AI** e os sussurros valem para cada parte separadamente.
+- O personagem que escreveu a resposta continua vendo todas as partes, como acontece com qualquer mensagem dele. Se ele não deve ver uma parte, oculte-a dele você mesmo.
+- A linha de quebra fica no topo da parte que vem depois dela. Uma quebra dentro de um bloco de código ou de um bloco HTML, como um painel `<details>`, não conta.
+- O raciocínio da resposta aparece na primeira parte. Ele não é enviado de volta ao modelo, mesmo com **Exclude Past Reasoning** (excluir o raciocínio anterior) desativado.
+- As informações da mensagem, os trackers e os resultados dos agentes ficam com a última parte.
+- O Prose Guardian e outros agentes de reescrita reescrevem cada parte separadamente, e a linha de quebra continua no topo. Com **Hold Message Until Rewrite** (segurar a mensagem até a reescrita) ativado, cada parte espera a própria reescrita. Se a reescrita de uma parte falhar, essa parte fica como foi escrita e as outras são reescritas mesmo assim.
+- A leitura automática em voz alta lê todas as partes, em ordem.
+- Dar swipe ou regenerar uma parte gera uma nova versão só daquela mensagem. Em uma parte anterior, a nova versão mantém só o texto antes da primeira quebra, porque as cenas depois dela já têm as próprias mensagens.
+- Continue e Impersonate nunca dividem a resposta.
+
 ### Durante o chat
 
 A detecção de cenas acontece depois que a resposta principal de Roleplay é salva. **Standalone scene check interval (messages)** tem padrão **5**. Quando chega esse número de mensagens novas, o verificador recebe todas as mensagens desde a última verificação (até o dobro do intervalo), a mensagem em que a última verificação terminou, para comparação, as instruções de cena e o formato de saída. Ele aponta a mensagem exata que encerra cada cena, que pode ser aquela mensagem anterior, ou não retorna finais se a cena continua. Contam mensagens de personas e personagens. A frequência independe dos horários dos agentes de acompanhamento; com o modo de decisão desativado, uma verificação programada compartilha uma chamada de um agente de acompanhamento após a geração quando visibilidade e orçamento permitem, ou usa o auxiliar separadamente. Cada intervalo começa depois do final anterior e inclui a nova mensagem final. Só um final detectado prepara em segundo plano o resumo e o índice da cena encerrada, inclusive quando ela termina na resposta mais recente. Transições incertas deixam a cena aberta. **Chat Settings → Agent activity** mostra **Advanced Recall**, com progresso, erros e recuperação, mesmo com agentes comuns desativados. O progresso só é consultado durante uma tarefa de memória; arquivos prontos não são consultados em repouso. Com o modo de decisão ativado, a conexão de decisão escolhida faz essa verificação.
