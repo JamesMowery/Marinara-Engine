@@ -73,8 +73,8 @@ Zakładka **Card** to główne miejsce pisania. Zbiera pola, które AI czyta, ż
 
 Sekcja **Dialogue & Greetings** ustala, jak zaczyna się czat i jak brzmi postać:
 
-- **First Message**. Wiadomość otwierająca, pokazywana na początku nowego czatu.
-- **Alternate Greetings**. Dodatkowe wiadomości otwierające. Przy rozpoczynaniu czatu wybierasz, której użyć. Kolejność zmieniają strzałki w górę i w dół, a X usuwa wybraną pozycję.
+- **First Message**. Wiadomość otwierająca, pokazywana na początku nowego czatu Roleplay. Czaty Conversation i Game nie zaczynają się od powitania.
+- **Alternate Greetings**. Dodatkowe wiadomości otwierające. Przy rozpoczynaniu czatu Roleplay wybierasz, której użyć. Kolejność zmieniają strzałki w górę i w dół, a X usuwa wybraną pozycję.
 - **Example Dialogue**. Przykładowe wymiany zdań, które uczą AI głosu postaci. Do rozdzielania wymian służy `<START>`. Jako symbole zastępcze wpisuj `{{user}}` i `{{char}}`.
 
 Powitania i przykładowe wiadomości mogą też pokazywać obrazy z galerii postaci; zobacz [Galerie postaci → Ponowne używanie obrazu z galerii w wiadomościach i powitaniach](galleries.md#reuse-a-gallery-image-in-messages-and-greetings).

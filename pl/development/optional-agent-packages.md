@@ -135,7 +135,7 @@ const vectors = await embeddings.embed(texts, signal);
 // Store/compare embeddings.spaceId with persisted vectors; do not mix embedding spaces.
 ```
 
-Zwrócony host ma `spaceId`, `label` i `embed(texts, signal?)`. Rozwiązywanie korzysta ze skonfigurowanego źródła embeddingów, a gdy żadne nie jest dostępne lub konfiguracja zawodzi, wraca do wbudowanego lokalnego MiniLM. `embed` może zwrócić `null`; puste partie, ponad 128 tekstów lub ponad 200 000 znaków łącznie są odrzucane. Nowy host nie przelicza istniejących wektorów, więc pakiet musi obsłużyć zmianę `spaceId`, zanim porówna nowe wektory z zapisanymi.
+Zwrócony host ma `spaceId`, `label` i `embed(texts, signal?, inputType?)` (typ danych wejściowych opisuje Capability API 1.68). Rozwiązywanie korzysta ze skonfigurowanego źródła embeddingów, a gdy żadne nie jest dostępne lub konfiguracja zawodzi, wraca do wbudowanego lokalnego MiniLM. `embed` może zwrócić `null`; puste partie, ponad 128 tekstów lub ponad 200 000 znaków łącznie są odrzucane. Nowy host nie przelicza istniejących wektorów, więc pakiet musi obsłużyć zmianę `spaceId`, zanim porówna nowe wektory z zapisanymi.
 
 W bieżącym Engine metoda jest dostępna niezależnie od wersji API deklarowanej przez pakiet. Zadeklaruj API 1.15, jeśli wymagane jest śledzenie zmian połączenia. Pakiet celowo wspierający starsze Engine może sprawdzić `typeof api.runtime.resolveEmbeddings === "function"` i wrócić do `api.runtime.embeddings`, akceptując ograniczenie migawki z aktywacji.
 
@@ -555,6 +555,18 @@ Blok `combat` może określać wartość pola planszy we własnej jednostce odle
 Deklarowanie `ranged`, `cover`, `opportunity` albo zasięgu broni BEZ `distance` jest odrzucane przy imporcie: nic nie znaczy bez pola do pomiaru. Plansza używa generatora, terenu i rozmieszczenia taktycznego stylu walki, więc nie dodaje drugiego modelu pola bitwy ani uprawnień.
 
 To nie jest miękki interfejs, jak w 1.20-1.27: Engine nieznający kluczy odrzuca cały plik zasad albo katalog ze stworzeniem o podwójnym zasięgu. Instalacja czyta zweryfikowane bajty `ruleset.json` i wszystkich zadeklarowanych `catalogs/<id>.json`, odrzucając starszą deklarację. Bez zmian dla zestawu bez odległości.
+
+### Capability API 1.68: embedding zapytań wyszukiwania jako zapytań
+
+`embeddings.embed(texts, signal?, inputType?)` przyjmuje trzeci argument: dla tekstu wyszukiwania, na przykład zapytania przywoływania, przekaż `"query"`. Domyślnie teksty mają typ `"document"`. Niektóre modele embeddingów oczekują prefiksu przed zapytaniami, a niektóre także przed dokumentami: e5 i nomic-embed-text mają po jednym prefiksie dla zapytań i dla dokumentów, a Snowflake Arctic Embed v2 dodaje prefiks tylko do zapytań. Engine dodaje właściwy prefiks. Gdy embedding zapytania powstaje tak jak dla dokumentu, przywoływanie działa gorzej. Inne modele, w tym wbudowany MiniLM, nie dostają prefiksu w żadnym z tych przypadków. Typ danych wejściowych nie zmienia `spaceId`, więc zapisane wektory pozostają porównywalne i niczego nie trzeba ponownie przeliczać.
+
+```ts
+const embeddings = await api.runtime.resolveEmbeddings();
+const [queryVector] = (await embeddings.embed([query], signal, "query")) ?? [];
+const memoryVectors = await embeddings.embed(memoryTexts, signal); // documents
+```
+
+To miękki interfejs: starszy Engine ignoruje trzeci argument, więc pakiet może zawsze go przekazywać i nie musi deklarować 1.68. Przekazuj typ danych wejściowych jako trzeci argument, nigdy w obiekcie opcji: starszy Engine przekazuje drugi argument bezpośrednio dostawcy jako sygnał przerwania.
 
 <a id="capability-api-150-professor-mari-actions"></a>
 
