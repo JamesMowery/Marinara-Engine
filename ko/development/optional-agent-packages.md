@@ -141,7 +141,7 @@ const vectors = await embeddings.embed(texts, signal);
 // Store/compare embeddings.spaceId with persisted vectors; do not mix embedding spaces.
 ```
 
-반환한 호스트에는 `spaceId`, `label`, `embed(texts, signal?)`가 있습니다. 설정된 임베딩 소스를 사용하며, 소스가 없거나 설정 해석이 실패하면 내장 로컬 MiniLM 임베더로 대체합니다. `embed`는 `null`을 반환할 수 있습니다. 빈 배치, 128개 초과 텍스트, 합계 200,000자 초과는 거부됩니다. 새 호스트가 기존 벡터를 다시 임베딩하지는 않으므로 패키지는 저장된 벡터와 비교하기 전에 `spaceId` 변경을 처리해야 합니다.
+반환한 호스트에는 `spaceId`, `label`, `embed(texts, signal?, inputType?)`가 있습니다. 입력 유형은 Capability API 1.68을 참고하세요. 설정된 임베딩 소스를 사용하며, 소스가 없거나 설정 해석이 실패하면 내장 로컬 MiniLM 임베더로 대체합니다. `embed`는 `null`을 반환할 수 있습니다. 빈 배치, 128개 초과 텍스트, 합계 200,000자 초과는 거부됩니다. 새 호스트가 기존 벡터를 다시 임베딩하지는 않으므로 패키지는 저장된 벡터와 비교하기 전에 `spaceId` 변경을 처리해야 합니다.
 
 현재 Engine은 패키지가 선언한 API 버전과 관계없이 이 메서드를 공개합니다. 연결 변경 추적이 필수면 API 1.15를 선언하세요. 오래된 Engine을 의도적으로 지원하는 패키지는 `typeof api.runtime.resolveEmbeddings === "function"`을 확인하고, 활성화 시점에 고정된다는 한계를 받아들여 `api.runtime.embeddings`로 대체할 수 있습니다.
 
@@ -571,6 +571,18 @@ Engine 전투와 데이터를 연결하는 기능이며 완전한 테이블톱 �
 설정 파일을 가져오면 설치된 호환 Experience와 유효한 숫자 시드를 복원하지만 임의의 패키지 설정은 버립니다. 현재 매니페스트가 상수를 다시 제공합니다. 기존 게임은 이유를 설명하고 Experience 가져오기를 건너뜁니다. 생성 스냅샷은 설정 요약을 위해 Experience 이름과 시드를 보관합니다.
 
 첫 턴 전에 월드를 준비해야 한다면 기존 시작 준비 선언을 별도로 사용하세요. 패키지의 최소 버전으로 API 1.18을 선언하세요. 이전 호스트는 이 설정 선언을 해석하지 못합니다.
+
+### Capability API 1.68: 검색 쿼리를 쿼리로 임베딩
+
+`embeddings.embed(texts, signal?, inputType?)`는 세 번째 인수를 받습니다. 회상 쿼리처럼 검색에 쓰는 텍스트에는 `"query"`를 전달하세요. 텍스트의 기본값은 `"document"`입니다. 일부 임베딩 모델은 쿼리에 접두사를 기대하고, 일부는 문서에도 접두사를 기대합니다. e5와 nomic-embed-text는 쿼리와 문서에 각각 하나씩 붙이고, Snowflake Arctic Embed v2는 쿼리에만 접두사를 붙입니다. 알맞은 접두사는 Engine이 붙입니다. 쿼리를 문서로 임베딩하면 회상 성능이 떨어집니다. 내장 MiniLM 임베더를 포함한 다른 모델은 어느 쪽이든 접두사를 받지 않습니다. 입력 유형은 `spaceId`를 바꾸지 않으므로 저장된 벡터를 계속 비교할 수 있고 다시 임베딩할 필요도 없습니다.
+
+```ts
+const embeddings = await api.runtime.resolveEmbeddings();
+const [queryVector] = (await embeddings.embed([query], signal, "query")) ?? [];
+const memoryVectors = await embeddings.embed(memoryTexts, signal); // documents
+```
+
+소프트 인터페이스입니다. 오래된 Engine은 세 번째 인수를 무시하므로 패키지는 언제나 이 인수를 전달해도 되며 1.68을 선언할 필요가 없습니다. 입력 유형은 옵션 객체에 넣지 말고 반드시 세 번째 인수로 전달하세요. 오래된 Engine은 두 번째 인수를 중단 신호로 여겨 제공자에게 그대로 넘깁니다.
 
 <a id="capability-api-150-professor-mari-actions"></a>
 
