@@ -148,7 +148,7 @@ Game의 **Game controls**, **Session**, **Volume**, **Game Assets**와 **Connect
 
 이 줄에는 글자 없이 작은 아이콘 버튼만 늘어서 있습니다. 버튼에 마우스를 올리면 툴팁에 이름이 나타납니다.
 
-- 디스크 아이콘(**Save current chat settings into this profile**)은 현재 채팅의 설정을 선택한 프로필에 써 넣습니다.
+- 디스크 아이콘(**Save current chat settings into this profile**)은 현재 채팅의 설정을 선택한 프로필에 써 넣습니다. 다른 채팅이 이 프로필을 쓰고 있으면 그 채팅들도 갱신할지 묻습니다.
 - 연필 아이콘(**Rename profile**)은 선택한 프로필의 이름을 바꿉니다.
 - 파일 더하기 아이콘(**Save current chat settings as a new profile**)은 현재 채팅의 설정을 새 프로필로 저장합니다.
 - 아래쪽 화살표 아이콘(**Import settings profile (.json)**)은 `.json` 파일에서 프로필을 불러옵니다.
