@@ -13,7 +13,7 @@ Marinara Engineの基本配布物には、任意のエージェントと機能�
 エージェントパッケージは、宣言的なエージェントを1つ以上提供でき、加えて信頼された実行可能な機能を任意で提供できます:
 
 - ルート、ライフサイクルフック、プロンプトプロバイダー、結果ハンドラー、ストレージのマイグレーションを担うサーバー側のエントリーポイント
-- パネル、チャット画面、設定セクション、セットアップの選択肢、実行時の表示を担うクライアント側のエントリーポイント
+- パネル、チャット画面、設定セクション、セットアップの選択肢、実行時の表示、Game Mode全体の画面を担うクライアント側のエントリーポイント
 - 共有のJSONスキーマと、安定したワイヤーコントラクト
 - パッケージが所有するアセット、ドキュメント、Professor Mariの知識フラグメント
 
@@ -141,7 +141,7 @@ const vectors = await embeddings.embed(texts, signal);
 // Store/compare embeddings.spaceId with persisted vectors; do not mix embedding spaces.
 ```
 
-返されたホストは`spaceId`、`label`、`embed(texts, signal?)`を持ちます。設定された埋め込みソースを使い、利用できないか設定の解決が失敗した場合は組み込みのローカルMiniLMへフォールバックします。`embed`は`null`を返すことがあります。空のバッチ、128テキスト超、合計200,000文字超は拒否されます。新しいホストが既存ベクトルを再埋め込みすることはないので、保存済みベクトルと比較する前に`spaceId`の変更へ対応する必要があります。
+返されたホストは`spaceId`、`label`、`embed(texts, signal?, inputType?)`を持ちます(入力の種類はCapability API 1.68を参照してください)。設定された埋め込みソースを使い、利用できないか設定の解決が失敗した場合は組み込みのローカルMiniLMへフォールバックします。`embed`は`null`を返すことがあります。空のバッチ、128テキスト超、合計200,000文字超は拒否されます。新しいホストが既存ベクトルを再埋め込みすることはないので、保存済みベクトルと比較する前に`spaceId`の変更へ対応する必要があります。
 
 現在のEngineでは宣言APIバージョンに関係なく公開されます。接続変更への追従が必須ならAPI 1.15を宣言してください。古いEngineも意図的にサポートするパッケージは、`typeof api.runtime.resolveEmbeddings === "function"`を調べ、有効化時の設定に固定される制約を受け入れて`api.runtime.embeddings`へフォールバックできます。
 
@@ -271,7 +271,27 @@ export async function activate({ api }) {
 
 パッケージに同梱するエージェントのプロンプトテンプレートでも、ユーザーのカスタムエージェントと同じく`{{#if decision:"..."}}`と`{{#if decision_choice:"..." == "..."}}`を使えます。Engineはテンプレートから文を探し、エージェント実行前(後処理エージェントでは返信後)に質問し、答えを使って展開します。Capability APIのバージョンには関係しません。構文と言い回しは[条件付きプロンプト](../prompts/conditional-prompts.md#asking-the-decision-model)、エージェントの各フェーズでの扱いは[カスタムエージェントの作成](../agents/custom-agents.md#decision-statements-in-the-agents-prompt)を参照してください。
 
-パッケージのランタイムコードからDecisionモデルを直接呼ぶ方法はまだありません。専用のCapability APIメソッドとバージョン更新が必要です。
+パッケージのサーバーコードは、`api.runtime.decisions.evaluate(...)`を通じて、パッケージが渡すコンテキストについて、ユーザーが設定したDecisionモデルに上限付きのyes/noの質問と選択式の質問をすることもできます。使われるのは、エージェントの起動質問や条件付きプロンプトと同じDecisionモデル(管理対象のローカルモデルまたはDecision接続)で、キーやEngine内部は一切公開されません。`decisions`は任意で、新しいCapability APIも権限も必要ありません。`typeof api.runtime.decisions?.evaluate === "function"`を確認し、古いEngineではフォールバックしてください。
+
+```ts
+const result = await api.runtime.decisions?.evaluate({
+  messages: [{ role: "user", content: "The tavern falls silent as the stranger draws a blade." }],
+  questions: [
+    { id: "danger", question: "Someone is about to be attacked." },
+    { id: "mood", question: "The mood of the scene is", options: ["calm", "tense", "festive"] },
+  ],
+  // Optional: pass `signal` to cancel and `debugMode: true` to log the Decision prompt.
+});
+// null: no Decision model is configured, or it gave no answer (unreachable, timed out or cancelled).
+if (result && (result.answers.danger ?? 0) >= result.threshold) {
+  // ...
+}
+```
+
+- `messages`はパッケージ自身のコンテキストで、古い順に並べます(最大200メッセージ、200,000文字。メッセージの`name`は最大100文字)。モデルに収まるよう、古いメッセージから除外します。
+- 各`question`は最大500文字で、IDは一意でなければなりません。選択式の質問には2つ以上の`options`があり、答えはそのいずれか、または`"none of these"`です。
+- 1回のリクエストで求められる答えの数は、ユーザーの**Decision statements per turn**(1ターンあたりの判定文数)の上限までです。選択式の質問は、選択肢ごとに1つと、さらに1つを加えて数えます。無効なリクエストは`TypeError`を投げます。
+- `answers`にはyes/noの質問ごとにyesの確率が入り、含まれていない質問は回答されなかったものです。モデル自身の動作点である`threshold`と比較してください。確率はDecisionモデルの間で比較できません。
 
 Decisionモデルを持たないユーザーでも動くよう、すべての利用箇所を設計してください。答えのない文はnoとみなすため、`{{else}}`側、または何も出さない動作を妥当な既定にします。Jevを必須にせず、一般のDecisionモデル向けに書いてください。ローカルチャットモデルやほかの対応バックエンドも同じ構文を使いますが、答えは異なる場合があります。特定のスコア、リクエスト数、キャッシュ済みの答えに依存する前に、[しきい値](../connections/decision-models.md#thresholds)と[制限とコスト](../prompts/conditional-prompts.md#limits-and-cost)を読んでください。
 
@@ -562,15 +582,80 @@ API 1.26は、ロール、対象、行動枠、攻撃・能力一覧、状態、
 }
 ```
 
-3つのフィールドはすべて任意です。宣言されたシードは、選択したExperienceの下に**Randomize**(ランダム化)ボタンとともに表示されます。入力が空、または有限の数値でない場合、**Start**(開始)がブロックされます。ホストは数値シードと宣言された定数を`experienceConfig`に書き込みます。`config`にはシードのキーを含められません。定数はシリアライズ後に8,000文字以内に収まる必要があります。シードのラベルはパッケージ作者が用意する表示テキストです。省略するとEngineのローカライズ済みラベルを使用します。
+3つのフィールドはすべて任意です。宣言されたシードは、選択したExperienceの下に**Randomize**(ランダム化)ボタンとともに表示されます。シードは0から4294967295までの符号なし整数です。空、小数、負の数、指数表記、16進数の入力では**Start**(開始)がブロックされます。ホストは数値シードと宣言された定数を`experienceConfig`に書き込みます。`config`にはシードのキーを含められません。定数はシリアライズ後に8,000文字以内に収まる必要があります。シードのラベルはパッケージ作者が用意する表示テキストです。省略するとEngineのローカライズ済みラベルを使用します。
 
-宣言されたウィジェット要件がデフォルトを設定するのは、プレイヤーがそのコントロールを変更するまでです。Experienceをオフにすると通常のデフォルトに戻りますが、プレイヤーが明示的に選んだ値は変わりません。コントロールにはExperienceの想定が説明され、編集可能なままです。これらのExperiencesでは空間マップの設定コントロールが非表示になり、別のマップ下書き、テンプレート、ビルダーは起動しません。
+宣言されたウィジェット要件は、Experienceが有効な間は強制されます。ホストはコントロールを宣言された値に設定してロックし、どのExperienceが設定したかを説明します。設定ファイルのインポートで宣言された値を上書きすることはできません。プレイヤーが以前に選んでいた値はそのまま保持され、Experienceをオフにするとすぐに元に戻ります。これらのExperiencesでは空間マップの設定コントロールが非表示になり、別のマップ下書き、テンプレート、ビルダーは起動しません。
 
-**Lorebooks**(ロアブック)ステップでは、未接続のブック内のものも含め、有効なエントリーを個別に最大100件選べます。無効なブック、エントリー、チャットの除外指定は尊重されます。これらのIDは`GameSetupConfig.activeLorebookEntryIds`で渡されます。`/game/setup`では、追加の強制エントリーとして確率判定を省略しますが、通常のトークン上限は維持します。グローバル、キャラクターに紐づくもの、接続済みのロアは、引き続き通常のスキャンに参加します。パッケージも設定から同じ選択済みIDを読み取り、独自のワールド生成リクエストに使用できます。
+**Lorebooks**(ロアブック)ステップでは、未接続のブック内のものも含め、有効なエントリーを個別に最大100件選べます。無効なブック、エントリー、チャットの除外指定は尊重されます。これらのIDは`GameSetupConfig.activeLorebookEntryIds`で渡されます。`/game/setup`では、追加の強制エントリーとして確率判定を省略しますが、通常のトークン上限は維持します。グローバル、キャラクターに紐づくもの、接続済みのロアは、引き続き通常のスキャンに参加します。パッケージも設定から同じ選択済みIDを読み取り、独自のワールド生成リクエストに使用できます。インポートしたエントリーIDのうち、この環境に存在しないものは報告したうえでスキップします。
 
-設定ファイルのインポートでは、インストール済みで互換性のあるExperienceとその有効な数値シードを復元しますが、任意のパッケージ設定は破棄します。定数は現在のマニフェストから改めて取得します。既存ゲームでは、理由を説明したうえでExperienceのインポートをスキップします。作成時のスナップショットには、設定の要約用にExperience名とシードを保持します。
+設定ファイルのインポートでは、インストール済みで互換性のあるExperienceとその有効な数値シードを復元しますが、任意のパッケージ設定は破棄します。定数は現在のマニフェストから改めて取得します。使用できるExperienceのシードを含まないファイルでは、あらかじめ入力されたランダムなシードはそのまま残ります。既存ゲームでは、理由を説明したうえでExperienceのインポートをスキップします。作成時のスナップショットには、設定の要約用にExperience名とシードを保持します。
 
 最初のターンより前にワールドを準備する必要がある場合は、既存の起動準備完了の宣言を独立して使用してください。パッケージの最低要件としてAPI 1.18を宣言します。古いホストはこの設定宣言を解釈できません。
+
+### Capability API 1.68: 検索クエリーをクエリーとして埋め込む
+
+`embeddings.embed(texts, signal?, inputType?)`は3つ目の引数を受け取ります。記憶の呼び出しに使うクエリーのような検索用のテキストには`"query"`を渡してください。テキストのデフォルトは`"document"`です。埋め込みモデルの中には、クエリーに接頭辞を付ける前提のものや、文書にも接頭辞を付けるものがあります。e5とnomic-embed-textはクエリーと文書のそれぞれに接頭辞を使い、Snowflake Arctic Embed v2はクエリーにだけ接頭辞を付けます。適切な接頭辞はEngineが付けます。クエリーを文書として埋め込むと、検索で関連する内容が見つかりにくくなります。組み込みのMiniLMを含むほかのモデルには、どちらの場合も接頭辞は付きません。入力の種類によって`spaceId`は変わらないため、保存済みのベクトルは引き続き比較でき、再埋め込みは必要ありません。
+
+```ts
+const embeddings = await api.runtime.resolveEmbeddings();
+const [queryVector] = (await embeddings.embed([query], signal, "query")) ?? [];
+const memoryVectors = await embeddings.embed(memoryTexts, signal); // documents
+```
+
+これはソフトなインターフェースです。古いEngineは3つ目の引数を無視するため、パッケージは常にこの引数を渡してよく、1.68を宣言する必要はありません。入力の種類は必ず3つ目の引数として渡し、オプションオブジェクトには入れないでください。古いEngineは2つ目の引数を中断シグナルとしてそのままプロバイダーに渡すためです。
+
+### Capability API 1.67: キャラクターをエディターで開く
+
+ブラウザービューは`openCharacter(characterId, { tab })`を受け取ります。キャラクターエディターを開き、指定されたタブがあればそのタブを表示するため、パッケージは自身が読み取るカードの項目へユーザーを案内できます。古いEngineにはこの関数がありません。リンクを表示する前に`openCharacter`があることを確認してください。
+
+```ts
+if (typeof props.openCharacter === "function") props.openCharacter(characterId, { tab: "convo" });
+```
+
+### Capability API 1.66: パッケージのスレッドから始めるシーン
+
+Roleplayのシーンは通常、Conversationから枝分かれします(`/scene`)。新しい`scenes`権限を持つパッケージは、ダイレクトメッセージのスレッドなど、自身のスレッドを代わりの起点にできます。シーンは通常のシーンチャットです。同じプランナー、プロンプト設定ダイアログ、シーン固有の指示、End Scene、Discard、Convertの操作を使い、終了時には同じようにキャラクターの記憶が保存されます。スレッド側はパッケージが担当します。プランナーが読む内容、シーンの進行中のロック、要約の扱いです。
+
+```ts
+export async function activate({ api }) {
+  api.registerSceneOrigin({
+    // Planning context, or null when the thread no longer exists.
+    getContext: async (threadId) => ({
+      characterIds: [creatorCharacterId],
+      personaId,
+      connectionId: null, // the Engine's default connection
+      transcript: [{ speaker: "Mina", content: "Come to my shoot tonight?" }],
+      notes: "Stage persona, limits and anything else the scene writer must respect.",
+    }),
+    // Lock the thread. Return false when it already has an active scene.
+    claim: async (threadId, { sceneChatId, characterIds }) => lockThread(threadId, sceneChatId),
+    // Unlock and receive the outcome.
+    release: async (threadId, end) => {
+      if (!(await holdsLock(threadId, end.sceneChatId))) return;
+      if (end.kind === "concluded") await saveRecap(threadId, end.summary);
+      await unlockThread(threadId);
+    },
+  });
+}
+```
+
+ブラウザービュー(`home-browser-tab`)は次のPropsを受け取ります。
+
+- `startScene({ originId, prompt?, planHint?, plan?, data?, initiatorCharacterId?, initiatorName? })`は、シーンのプロンプト設定ダイアログを開き、シーンを計画・作成して、そのチャットを開きます。シーンを自分で書く場合は`plan`(`SceneFullPlan`: 名前、説明、隠しシナリオ、最初のメッセージ、シーンのシステムプロンプト、レーティング、関係の経緯、参加ガイド、背景、登場キャラクター)を渡してください。ダイアログとEngineのプランナーは省略され、シーンは計画どおりに作成されます。結果は`{ chatId }`で、ユーザーがキャンセルした場合や作成に失敗した場合は`null`になります(ユーザーには理由が表示されます)。このヘルパーは常にパッケージ自身のIDを使います。これは利便性のためのもので、境界ではありません。シーンのルートは任意のパッケージIDを受け付けるため、`getContext`は、そのスレッドでプレイヤーがもともと見られる内容だけを返す必要があります。
+- `openChat(chatId)`はチャットに移動します。ロックされたスレッドの「Go to scene」ボタンに使います。
+- `focusSceneOriginId`は、ユーザーがシーンから戻ったとき(Back、End Scene、Discard)に表示するスレッドです。表示したら`onFocusSceneOriginHandled()`を一度呼んでください。
+
+知っておくべきルールは次のとおりです。
+
+- `data`はこのシーン独自の設定で、最大4,000文字の通常のJSONオブジェクトです。Engineはこれをシーンとともに保持し、`claim(originId, { sceneChatId, characterIds, data })`と、`release`の`end.data`に渡します。そのため、シーンごとに扱いを決められます。`claim`はロックせずにシーンを受け入れることができ(`true`を返して何も保存しない)、`release`は要約を受け取らずにロックを解除することも、シーンが求めた範囲で要約を受け取ることもできます。
+- 必須なのは`getContext`だけです。シーンを始めたいだけのパッケージは`claim`と`release`を省略します。その場合は何もロックされず、同じ起点から任意の数のシーンを実行でき、終了時にも何も届きません(**Back**(戻る)では引き続きパッケージに戻ります)。結果を受け取らずにロックだけしたい場合は`release`だけを、ロックせずに結果だけを受け取りたい場合は`claim`だけを省略してください。
+- プロバイダーはパッケージごとに1つです。もう一度登録すると置き換わり、無効化すると削除されます。
+- `characterIds`はEngineのキャラクターでなければなりません。不明なIDは除外され、既知のキャラクターが1人もいないコンテキストは拒否されます。不明な`personaId`は指定なしとして扱います。`notes`は8,000文字で切り詰められ、プランナーに渡されるほか、トランスクリプトとともに隠しコンテキストとしてシーンの書き手にも渡されます。
+- `claim`はシーンチャットが作成された後に実行されます。`false`を返すと409で、例外を投げると503でシーンチャットを破棄します。`getContext`、`claim`、`release`の制限時間はそれぞれ8秒です。`getContext`や`claim`が遅れると失敗とみなされ(503、シーンチャットは削除されます)、`release`が遅れるとログに記録して破棄されます。
+- `release`は`concluded`(`summary`、`description`、`scenario`、`rating`と登場キャラクター付き)、`abandoned`、`deleted`、`converted`のいずれかを受け取ります。冪等である必要があり、ロックを持たないシーンは無視しなければなりません。例外を投げた`release`や、パッケージが非アクティブな間に届いた`release`はログに記録して破棄されます。いずれにしてもシーンチャットは終了したままなので、残ったロックは`chat-read`でシーンチャットを読んで整合させてください。そのメタデータには`sceneStatus`があり、終了したシーンには`sceneSummary`もあります。
+- Engineは、パッケージを起点とするシーンについてConversationに何も書き込みません。キャラクターの記憶は、Conversationのシーンと同じように終了時に保存されます。
+
+1.66より古い`capabilityApi`を宣言したマニフェストでは`scenes`を拒否します。
 
 <a id="capability-api-150-professor-mari-actions"></a>
 
@@ -582,7 +667,11 @@ API 1.26は、ロール、対象、行動枠、攻撃・能力一覧、状態、
 export async function activate({ api }) {
   api.registerService("mari-actions:my-package", {
     list: () => [
-      { name: "add-idea", summary: "Give a Creator an idea for a post.", inputs: { accountId: "The Creator.", text: "The idea." } },
+      {
+        name: "add-idea",
+        summary: "Give a Creator an idea for a post.",
+        inputs: { accountId: "The Creator.", text: "The idea." },
+      },
     ],
     run: async (name, input, { signal }) => {
       const parsed = schemas[name]?.safeParse(input);
