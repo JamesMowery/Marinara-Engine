@@ -135,7 +135,7 @@ const vectors = await embeddings.embed(texts, signal);
 // Store/compare embeddings.spaceId with persisted vectors; do not mix embedding spaces.
 ```
 
-O host retornado tem `spaceId`, `label` e `embed(texts, signal?)`. Usa a fonte de embeddings configurada e recorre ao gerador local MiniLM integrado se nenhuma estiver disponível ou se a resolução da configuração falhar. `embed` pode retornar `null`; lotes vazios, mais de 128 textos ou mais de 200.000 caracteres somados são recusados. Um novo host não recalcula vetores existentes: o pacote deve tratar mudanças de `spaceId` antes de comparar vetores novos e salvos.
+O host retornado tem `spaceId`, `label` e `embed(texts, signal?, inputType?)` (veja a Capability API 1.68 para o tipo de entrada). Usa a fonte de embeddings configurada e recorre ao gerador local MiniLM integrado se nenhuma estiver disponível ou se a resolução da configuração falhar. `embed` pode retornar `null`; lotes vazios, mais de 128 textos ou mais de 200.000 caracteres somados são recusados. Um novo host não recalcula vetores existentes: o pacote deve tratar mudanças de `spaceId` antes de comparar vetores novos e salvos.
 
 O método está disponível nos motores atuais independentemente da versão API declarada. Declare API 1.15 se precisar acompanhar mudanças de conexão. Para aceitar motores antigos, você pode verificar `typeof api.runtime.resolveEmbeddings === "function"` e recorrer a `api.runtime.embeddings`, aceitando sua limitação ao estado da ativação.
 
@@ -563,6 +563,18 @@ A etapa **Lorebooks** (lorebooks) permite selecionar até 100 entradas individua
 A importação de um arquivo de configuração restaura uma Experience instalada e compatível e sua semente numérica válida, mas descarta configurações arbitrárias do pacote. O manifesto atual fornece as constantes novamente. Jogos existentes ignoram importações de Experience com uma explicação. Os snapshots de criação preservam o nome da Experience e a semente para o resumo da configuração.
 
 Use a declaração existente de prontidão para inicialização de forma independente quando o mundo precisar estar preparado antes do primeiro turno. Declare API 1.18 como mínimo do pacote; hosts anteriores não conseguem interpretar essa declaração de configuração.
+
+### Capability API 1.68: gerar embeddings de consultas de busca como consultas
+
+`embeddings.embed(texts, signal?, inputType?)` aceita um terceiro argumento: passe `"query"` para textos de busca, como uma consulta de recuperação. Os textos usam `"document"` por padrão. Alguns modelos de embedding esperam um prefixo nas consultas, e alguns também nos documentos: e5 e nomic-embed-text usam um de cada, e o Snowflake Arctic Embed v2 prefixa apenas as consultas. O Engine acrescenta o prefixo certo. A recuperação fica mais fraca quando o embedding de uma consulta é gerado como documento. Outros modelos, incluindo o gerador MiniLM integrado, não recebem prefixo em nenhum dos casos. O tipo de entrada não muda o `spaceId`, então os vetores salvos continuam comparáveis e nenhum vetor precisa ser recalculado.
+
+```ts
+const embeddings = await api.runtime.resolveEmbeddings();
+const [queryVector] = (await embeddings.embed([query], signal, "query")) ?? [];
+const memoryVectors = await embeddings.embed(memoryTexts, signal); // documents
+```
+
+É uma integração opcional: um motor antigo ignora o terceiro argumento, então o pacote sempre pode passá-lo e não precisa declarar 1.68. Passe o tipo de entrada como terceiro argumento, nunca em um objeto de opções: um motor antigo repassa o segundo argumento diretamente ao provedor como sinal de cancelamento.
 
 <a id="capability-api-150-professor-mari-actions"></a>
 

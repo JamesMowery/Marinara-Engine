@@ -73,8 +73,8 @@ A aba **Card** é o espaço principal de escrita. Ela reúne os campos que a IA 
 
 A seção **Dialogue & Greetings** define como o chat começa e como o personagem soa:
 
-- **First Message**. A mensagem de abertura mostrada quando um chat novo começa.
-- **Alternate Greetings**. Mensagens de abertura extras. Ao começar um chat, você escolhe qual delas usar. Use os controles de subir e descer para reordená-las e o X para remover uma.
+- **First Message**. A mensagem de abertura mostrada quando um chat novo de Roleplay começa. Os chats de Conversation e Game não começam com uma saudação.
+- **Alternate Greetings**. Mensagens de abertura extras. Ao começar um chat de Roleplay, você escolhe qual delas usar. Use os controles de subir e descer para reordená-las e o X para remover uma.
 - **Example Dialogue**. Trocas de exemplo que ensinam a voz do personagem. Use `<START>` para separar as trocas. Use `{{user}}` e `{{char}}` como marcadores.
 
 As saudações e mensagens de exemplo também podem mostrar imagens da Gallery do personagem; veja [Galerias de personagens → Reutilizar uma imagem da galeria em mensagens e saudações](galleries.md#reuse-a-gallery-image-in-messages-and-greetings).

@@ -508,7 +508,7 @@ Status: formato, rota, Capability API 1.21 e seletor do editor de fichas estão 
 
 ## Etapas e evidências de conclusão
 
-Cada etapa é um PR para `staging`, com rascunho aberto ao iniciar o trabalho, entrada em `CHANGELOG.md` sob `[Unreleased]`, textos localizados, documentação, acompanhamento `[docs-i18n]` e caixas de verificação manual desmarcadas. As provas são `*.regression.ts`; nenhum `.test.ts` permanece na árvore.
+Cada etapa é um PR para `staging`, com rascunho aberto ao iniciar o trabalho, textos localizados, documentação, acompanhamento `[docs-i18n]` e caixas de verificação manual desmarcadas. As provas são `*.regression.ts`; nenhum `.test.ts` permanece na árvore.
 
 | # | Repositório | Trabalho | Menor prova útil |
 | --- | --- | --- | --- |
