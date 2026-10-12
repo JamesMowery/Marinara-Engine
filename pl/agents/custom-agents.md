@@ -196,6 +196,8 @@ Narzędzia działają tylko wtedy, gdy sam czat na to pozwala. W panelu **Chat S
 
 Zaimportowane pliki agentów nie dają dostępu do narzędzi. Po zaimportowaniu agenta sprawdź jego prompt i ustawienia, a następnie samodzielnie zaznacz narzędzia, z których ma korzystać.
 
+Agent dostaje najwyżej 16 rund wywołań narzędzi w jednym przebiegu (mniej, jeśli `MAX_TOOL_ROUNDS` na serwerze ma niższą wartość), a potem udziela odpowiedzi na podstawie tego, co ma. Model, który wywołuje jedno narzędzie naraz, zużywa rundę na każde wywołanie, więc agent zapisujący wiele wpisów powinien wykonywać kilka wywołań w jednej odpowiedzi, jeśli model obsługuje równoległe wywołania narzędzi. Przebieg wstecznego uzupełniania lorebooka, który tylko zapisuje wpisy, dostaje do 64 rund.
+
 ## Nazwane warianty promptu
 
 Jeden agent może przechowywać kilka wariantów promptu. Odpowiada za to funkcja **Named prompt options** (nazwane warianty promptu). Dzięki temu czat wybiera jeden wariant, bez edytowania agenta w całej aplikacji.

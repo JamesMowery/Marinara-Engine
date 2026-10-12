@@ -572,6 +572,19 @@ Engine 전투와 데이터를 연결하는 기능이며 완전한 테이블톱 �
 
 첫 턴 전에 월드를 준비해야 한다면 기존 시작 준비 선언을 별도로 사용하세요. 패키지의 최소 버전으로 API 1.18을 선언하세요. 이전 호스트는 이 설정 선언을 해석하지 못합니다.
 
+### Capability API 1.71: 에이전트가 읽는 방식으로 메시지 읽기
+
+Roleplay에서는 메시지에 `content`에 포함되지 않는 귓속말이 담길 수 있습니다. Engine이 실행하는 모든 에이전트는 이 귓속말을 읽으며, 이제 채팅을 직접 읽는 패키지도 같은 텍스트를 읽을 수 있습니다. `persistence.listMessages(chatId)`가 돌려주는 각 레코드에 `agentContent`가 추가됩니다. Engine 에이전트가 읽는 형태의 메시지입니다. 각 귓속말은 원래 자리에 `[Private whisper to <name>: …]` 표시와 함께 들어가며, 귓속말만 있는 메시지는 그 귓속말로 읽힙니다. 편지처럼 캐릭터가 건네는 문서는 메시지 뒤에 이어집니다. 플레이어의 비공개 메모는 빠집니다.
+
+`agentContent`는 Roleplay 채팅에만 있습니다. 다른 모드와, 에이전트가 쓴 내용을 모두가 보는 호스팅한 멀티플레이어 방에서는 빠집니다. `content`는 바뀌지 않으며 여전히 공개 텍스트입니다. `extra`도 바뀌지 않습니다. 이 필드는 모든 모드에서 귓속말이 모두 들어 있는 메시지의 저장 데이터입니다. 이 필드로 만든 텍스트를 귓속말 대상이 아닌 플레이어나 캐릭터에게 절대 보여 주지 마세요.
+
+```ts
+const messages = await api.runtime.persistence.listMessages(chatId);
+const history = messages.map((message) => message.agentContent ?? message.content);
+```
+
+소프트 인터페이스입니다. 오래된 Engine은 이 필드를 넣지 않으므로 `agentContent ?? content`를 읽는 패키지는 1.71을 선언할 필요가 없습니다. `listMessages`와 마찬가지로 `chat-read` 권한이 필요합니다. 귓속말은 비공개입니다. 패키지가 귓속말을 바탕으로 쓰는 메모나 기억 같은 내용은 귓속말 대상이 아닌 캐릭터에게 전달될 수 있습니다.
+
 ### Capability API 1.68: 검색 쿼리를 쿼리로 임베딩
 
 `embeddings.embed(texts, signal?, inputType?)`는 세 번째 인수를 받습니다. 회상 쿼리처럼 검색에 쓰는 텍스트에는 `"query"`를 전달하세요. 텍스트의 기본값은 `"document"`입니다. 일부 임베딩 모델은 쿼리에 접두사를 기대하고, 일부는 문서에도 접두사를 기대합니다. e5와 nomic-embed-text는 쿼리와 문서에 각각 하나씩 붙이고, Snowflake Arctic Embed v2는 쿼리에만 접두사를 붙입니다. 알맞은 접두사는 Engine이 붙입니다. 쿼리를 문서로 임베딩하면 회상 성능이 떨어집니다. 내장 MiniLM 임베더를 포함한 다른 모델은 어느 쪽이든 접두사를 받지 않습니다. 입력 유형은 `spaceId`를 바꾸지 않으므로 저장된 벡터를 계속 비교할 수 있고 다시 임베딩할 필요도 없습니다.

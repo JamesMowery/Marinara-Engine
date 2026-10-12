@@ -41,6 +41,7 @@
 | Z.AI | 必要 | クラウド |
 | Atlas Cloud | 必要 | クラウド |
 | fal.ai | 必要 | クラウド |
+| SpicyAPI | 必要 | クラウド |
 | NanoGPT | 必要 | クラウド |
 | Block Entropy | 必要 | クラウド |
 | RunPod Serverless (ComfyUI) | 必要 | クラウド |
@@ -106,6 +107,16 @@ APIキーの代わりにChatGPTのプランを使うクラウドサービスで�
 デフォルトの**Base URL**が`https://fal.run`のクラウドサービスです。[fal.ai](https://fal.ai/dashboard/keys)でAPIキーを作成し、画像サービスの一覧で**fal.ai**を選んでください。初期の**Model**一覧には`fal-ai/flux/schnell`と`fal-ai/flux/dev`があります。入出力スキーマが対応する別のテキストから画像を生成するエンドポイントIDも入力できます。**Test Connection**(接続テスト)は設定だけを確認します。**Test Image**は実際に生成をリクエストし、fal.aiのクレジットを消費します。
 
 Marinaraはプロンプトと指定サイズを送り、最初に返された画像を既存の画像処理フローにダウンロードします。ネガティブプロンプトはテキストの指示として追加します。`seed`、`num_inference_steps`、`image_size`などモデル固有のオプションには**Custom Parameters**(カスタムパラメーター)を使ってください。この連携は同期式のテキストから画像への生成リクエストを使います。参照画像の送信や中断したジョブの再開には対応していません。対応する入力は、選択したモデルや独自エンドポイントのAPIページで確認してください。例として[flux/schnellのAPIリファレンス](https://fal.ai/models/fal-ai/flux/schnell/api)を参照できます。
+
+## SpicyAPI
+
+デフォルトの**Base URL**が`https://api.spicyapi.ai/api/v1`のクラウドサービスです。[SpicyAPIのコンソール](https://spicyapi.ai/console/keys)でAPIキーを作成し、画像サービスの一覧で**SpicyAPI**を選んでください。モデルには`alibaba/z-image-spicy-pro/text-to-image`をMarinaraが入力します。**Fetch Models from API**をクリックすると、SpicyAPIのテキストから画像を生成するモデルと編集モデルをすべて読み込めます。`bytedance/seedream-5.0-pro/text-to-image`のようにモデルIDを入力することもできます。**Test Connection**(接続テスト)はモデル一覧を読み取ってキーを確認するだけなので、費用はかかりません。**Test Image**は実際に画像を生成し、SpicyAPIの残高を消費します。
+
+**SpicyAPI**のサービスを選んでください。**OpenAI (DALL-E)**や、SpicyAPIのアドレスを入れた**Custom (OAI-Compatible)**の接続は使わないでください。SpicyAPIのOpenAI形式のアドレスはテキストしか扱わないため、それらでは画像を作れません。
+
+SpicyAPIのモデルは、それぞれ受け付ける設定が異なります。Marinaraは、選んだモデルが受け付ける設定をSpicyAPIに問い合わせ、それだけを送ります。サイズは、アスペクト比、幅と高さ、固定サイズなど、モデルが受け付ける形式のうち最も近いものを選びます。モデルにネガティブプロンプトの欄がない場合は、ネガティブプロンプトをテキストとしてプロンプトの末尾に追加します。`seed`、`resolution`、`loras`など、それ以外のモデルのオプションには**Custom Parameters**(カスタムパラメーター)を使ってください。
+
+SpicyAPIは、画像を1枚ずつタスクとして処理します。Marinaraはタスクの完了を待ち、1分ほどたっても終わらない場合はあらためて状態を確認してから、結果をダウンロードします。接続が切れた場合は、新しいタスクに料金を払うのではなく、同じタスクを引き継ぎます。編集モデル(IDが`/edit`で終わるもの)には参照画像が送られます。SpicyAPIが受け付ける参照画像は1枚あたり1 MBまで、1リクエストあたり2 MBまでなので、Marinaraは大きい画像を縮小し、収まらない分の画像は送りません。
 
 ## NanoGPT
 
@@ -208,6 +219,7 @@ Marinaraはプレースホルダーを使ってワークフローを埋めます
 | Venice.ai | text-to-imageの生成では非対応 |
 | Z.AI | 現在のtext-to-image連携では非対応 |
 | Atlas Cloud | image-to-image、編集、Kontextに対応したモデルIDでは1枚目のみ |
+| SpicyAPI | 編集モデルのみ、モデルの上限まで。大きい画像は収まるように縮小 |
 | NanoGPT | 最大3枚 |
 | Stability AI | 1枚目のみ、image to imageとして使用 |
 | Arli AI | 1枚目のみ、image to imageとして使用 |

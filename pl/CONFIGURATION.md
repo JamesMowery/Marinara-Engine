@@ -247,7 +247,7 @@ Te ustawienia obejmują wszystkie profile i są zapisywane obok aktywnego pliku 
 | `COMFYUI_GEN_TIMEOUT` | `2400` (40 minut, w sekundach) | Czas na jeden proces generowania obrazu w ComfyUI po jego zakolejkowaniu. |
 | `SPRITE_GENERATION_TIMEOUT_MS` | wartość z `IMAGE_GEN_TIMEOUT_MS` | Czas na jedno zadanie generowania sprite'a przez AI. |
 | `CUSTOM_TOOL_TIMEOUT_MS` | `60000` (1 minuta) | Czas na jedno wywołanie własnego narzędzia. |
-| `MAX_TOOL_ROUNDS` | `100` | Największa liczba rund wywołań narzędzi, po której model musi dać ostateczną odpowiedź. |
+| `MAX_TOOL_ROUNDS` | `100` | Największa liczba rund wywołań narzędzi, po której model musi dać ostateczną odpowiedź. Tura w trybie Game Mode dostaje najwyżej 4, agent 16, a wsteczne uzupełnianie lorebooka 64, albo tę wartość, jeśli jest niższa. |
 
 Limity czasu dla obrazów, wideo, sprite'ów i ComfyUI zostają ustalone przy starcie, więc ich zmiana wymaga restartu. Limity dla generowania czatu, agentów, dynamicznego promptu obrazu w trybie Game, embeddingów i własnych narzędzi działają od następnego żądania albo następnego przebiegu agenta, bez restartu. Wartości nieprawidłowe, zerowe, ujemne albo spoza zakresu w sprawdzanych limitach czatu, agenta i dynamicznego promptu obrazu w trybie Game powodują ostrzeżenie w logu i bezpieczny powrót do wartości domyślnych opisanych wyżej. Zwiększ limit multimedialny, gdy duże albo bardzo dokładne zadania przerywają się w połowie. Więcej o zadaniach wideo znajdziesz w przewodniku [Generowanie wideo sceny](media/scene-video.md).
 
@@ -385,7 +385,7 @@ Wszystkie ustawienia są domyślnie wyłączone, zachowując wcześniejsze dzia�
 
 | Zmienna | Domyślnie | Do czego służy |
 | --- | --- | --- |
-| `CLAUDE_SUBSCRIPTION_USE_INSTALLED_CLI` | `true` | Czy połączenia **Claude (Subscription)** korzystają z narzędzia Claude Code zainstalowanego na tym komputerze, jeśli jest ono co najmniej tak nowe jak kopia dołączona do aplikacji Marinara. Ustaw `false`, żeby zawsze używać dołączonej kopii. Zmiana zaczyna działać w ciągu pięciu minut, bez restartu. |
+| `CLAUDE_SUBSCRIPTION_USE_INSTALLED_CLI` | `true` | Czy połączenia **Claude (Subscription)** korzystają z narzędzia Claude Code zainstalowanego na tym komputerze, jeśli jest ono co najmniej tak nowe jak kopia dołączona do aplikacji Marinara. W systemie Android nie ma dołączonej kopii, więc używane jest dowolne zainstalowane narzędzie Claude Code, a to ustawienie musi pozostać włączone. Ustaw `false`, żeby zawsze używać dołączonej kopii. Zmiana zaczyna działać w ciągu pięciu minut, bez restartu. |
 | `DOCS_I18N_BASE_URL` | oficjalna gałąź `docs-i18n` | Miejsce pobierania pakietów językowych dokumentacji i interfejsu. Pakiety interfejsu znajdują się w poddrzewie `ui/`. Musi to być publiczny host `https://`; forki i kopie mogą wskazać własną wersję gałęzi `docs-i18n`. |
 | `GIPHY_API_KEY` | pusta | Klucz Giphy do wyszukiwania plików GIF w trybie Conversation. Bez niego wyszukiwanie jest wyłączone. |
 | `INTIFACE_URL` | `ws://127.0.0.1:12345` | Domyślny adres aplikacji haptycznej Intiface. |

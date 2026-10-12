@@ -196,6 +196,8 @@ As ferramentas só funcionam se o próprio chat permitir. Em **Chat Settings**, 
 
 Arquivos de agente importados não concedem acesso a ferramentas. Depois de importar um agente, examine o prompt e as configurações dele e então selecione você mesmo as ferramentas que quer liberar.
 
+Um agente recebe no máximo 16 rodadas de chamadas de ferramenta em uma execução (menos, se o `MAX_TOOL_ROUNDS` do servidor for menor) e depois dá a resposta com o que tiver. Um modelo que chama uma ferramenta por vez gasta uma rodada em cada chamada, então um agente que salva muitas entradas deve fazer várias chamadas em uma mesma resposta quando o modelo tem suporte a chamadas de ferramenta paralelas. Uma execução de preenchimento retroativo de lorebook, que só salva entradas, recebe até 64 rodadas.
+
 ## Named prompt options
 
 Um único agente pode guardar várias variações de prompt. É o recurso **Named prompt options**. Assim, cada chat escolhe uma variação sem que você precise editar o agente para todo mundo.

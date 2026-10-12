@@ -148,7 +148,7 @@ Un profil regroupe la connexion du chat, le preset de prompt, les agents, les ou
 
 La barre comporte une rangée de petits boutons-icônes sans texte. Le nom de chaque bouton s'affiche dans une infobulle au survol :
 
-- L'icône de disquette (**Save current chat settings into this profile**, enregistrer les réglages du chat en cours dans ce profil) écrit les réglages du chat en cours dans le profil sélectionné.
+- L'icône de disquette (**Save current chat settings into this profile**, enregistrer les réglages du chat en cours dans ce profil) écrit les réglages du chat en cours dans le profil sélectionné. Si d'autres chats utilisent ce profil, elle demande s'il faut aussi les mettre à jour.
 - L'icône de crayon (**Rename profile**) renomme le profil sélectionné.
 - L'icône de fichier avec un plus (**Save current chat settings as a new profile**) enregistre les réglages du chat en cours dans un nouveau profil.
 - L'icône de flèche vers le bas (**Import settings profile (.json)**) charge un profil depuis un fichier `.json`.

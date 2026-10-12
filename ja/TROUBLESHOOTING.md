@@ -177,6 +177,7 @@ CSRF_TRUSTED_ORIGINS=http://203.0.113.10:7831,https://chat.example.com
 - **No API connection configured for this chat**: そのチャットに接続が選ばれていません。**Connections**(接続)パネルを開いて接続を作成し、チャットに設定してください。[AIプロバイダーへの接続](connections/connecting-to-a-provider.md)を参照してください。APIキーとは、プロバイダーから受け取る秘密の文字列で、これがあるとMarinaraがそのモデルを使えるようになります。
 - モデルが受け付けないパラメーターがある場合: どのパラメーターかがトーストに表示されます。**Chat Settings**(チャット設定) > **Advanced Parameters**を開いてそのパラメーターを探し、名前の横のスイッチをオフにします(ツールチップには「This parameter is sent to the model」と表示されます)。
 - モデルが必須だと言うパラメーターがある場合: 同じ手順で、そのパラメーターの横のスイッチをオンにします。
+- **This model's chat template needs user and assistant messages to take turns**: llama.cppで動かすMistral系のモデルなど、一部のローカルモデルは、自分とAIのメッセージが交互に並んでいる場合しか受け付けません。Marinaraは、こうしたモデルに対しては連続したメッセージをすでに自動でまとめ、もう一度試すようになっています。それでもこの表示が出る場合は、**Chat Settings** > **Advanced Parameters**を開いて**Post-Processing Messages**(メッセージの後処理)を**Single User Message**(1つのユーザーメッセージ)に設定するか、制約の緩いチャットテンプレートでモデルを動かしてください。
 - **The AI returned an empty response. Try sending your message again.**: メッセージを送り直してください。何度も起きるときは、別のモデルか別の接続を試します。
 - **A generation is already in progress for this chat**: 前の返信がまだストリーミング中です。終わるまで待つか、Stopボタンをクリックしてから、もう一度試します。
 - **No connections are marked for the random pool**: 接続のランダム振り分けをオンにしたのに、対象の接続が1つも指定されていません。1つ以上の接続を対象に加えるか、ランダム振り分けをオフにしてください。

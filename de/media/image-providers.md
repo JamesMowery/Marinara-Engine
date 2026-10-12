@@ -41,6 +41,7 @@ Die Tabelle zeigt alle Dienste auf einen Blick. Details und Eigenheiten folgen w
 | Z.AI | Ja | Cloud |
 | Atlas Cloud | Ja | Cloud |
 | fal.ai | Ja | Cloud |
+| SpicyAPI | Ja | Cloud |
 | NanoGPT | Ja | Cloud |
 | Block Entropy | Ja | Cloud |
 | RunPod Serverless (ComfyUI) | Ja | Cloud |
@@ -106,6 +107,16 @@ Cloud-Dienst mit der Standard-Base-URL `https://api.atlascloud.ai/api/v1`. Du br
 Cloud-Dienst mit der standardmäßigen **Base URL** `https://fal.run`. Erstelle bei [fal.ai](https://fal.ai/dashboard/keys) einen API-Schlüssel und wähle **fal.ai** im Raster der Bilddienste. Die anfängliche **Model**-Liste bietet `fal-ai/flux/schnell` und `fal-ai/flux/dev`; du kannst eine andere Text-zu-Bild-Endpunkt-ID mit kompatiblem Ein- und Ausgabeschema eingeben. **Test Connection** prüft nur die Konfiguration. **Test Image** sendet eine echte Generierungsanfrage und verbraucht dein fal.ai-Guthaben.
 
 Marinara sendet den Prompt und die gewünschten Abmessungen und lädt dann das erste zurückgegebene Bild in den bestehenden Bildablauf herunter. Negative Prompts werden als Textanweisungen angehängt. Nutze **Custom Parameters** (benutzerdefinierte Parameter) für modellspezifische Optionen wie `seed`, `num_inference_steps` oder `image_size`. Die Integration nutzt synchrone Text-zu-Bild-Anfragen; sie sendet keine Referenzbilder und setzt unterbrochene Aufträge nicht fort. Prüfe die unterstützten Eingaben auf der API-Seite deines gewählten Modells oder eigenen Endpunkts, etwa in der [API-Referenz für flux/schnell](https://fal.ai/models/fal-ai/flux/schnell/api).
+
+## SpicyAPI
+
+Cloud-Dienst mit der standardmäßigen **Base URL** `https://api.spicyapi.ai/api/v1`. Erstelle in der [SpicyAPI-Konsole](https://spicyapi.ai/console/keys) einen API-Schlüssel und wähle dann **SpicyAPI** im Raster der Bilddienste. Marinara trägt das Modell `alibaba/z-image-spicy-pro/text-to-image` ein. Klick auf **Fetch Models from API**, um alle Text-zu-Bild- und Edit-Modelle von SpicyAPI zu laden, oder gib eine Modell-ID wie `bytedance/seedream-5.0-pro/text-to-image` ein. **Test Connection** prüft deinen Schlüssel, indem die Modellliste abgerufen wird; das kostet nichts. **Test Image** erzeugt ein echtes Bild und verbraucht dein SpicyAPI-Guthaben.
+
+Wähl den Dienst **SpicyAPI**. Nutze weder **OpenAI (DALL-E)** noch eine Verbindung vom Typ **Custom (OAI-Compatible)** mit einer SpicyAPI-Adresse. Die Adresse im OpenAI-Stil von SpicyAPI verarbeitet nur Text, deshalb können diese Verbindungen keine Bilder erzeugen.
+
+Jedes SpicyAPI-Modell hat eigene Einstellungen. Marinara fragt bei SpicyAPI nach, welche das gewählte Modell akzeptiert, und sendet nur diese. Dabei wählt Marinara die nächstliegende Form, die das Modell anbietet, etwa ein Seitenverhältnis, Breite und Höhe oder eine feste Größe. Hat das Modell kein Feld für einen negativen Prompt, wird der negative Prompt als Text ans Ende des Prompts angehängt. Nutze **Custom Parameters** für weitere Modelloptionen wie `seed`, `resolution` oder `loras`.
+
+SpicyAPI bearbeitet jedes Bild als Auftrag. Marinara wartet, bis der Auftrag fertig ist, fragt erneut nach, wenn er länger als etwa eine Minute dauert, und lädt dann das Ergebnis herunter. Bricht die Verbindung ab, nimmt Marinara denselben Auftrag wieder auf, statt für einen neuen zu bezahlen. Edit-Modelle (IDs, die auf `/edit` enden) erhalten deine Referenzbilder. SpicyAPI nimmt Referenzbilder bis 1 MB pro Bild und 2 MB pro Anfrage an. Deshalb verkleinert Marinara größere Bilder und lässt überzählige weg, die nicht mehr hineinpassen.
 
 ## NanoGPT
 
@@ -208,6 +219,7 @@ Ein **Referenzbild** ist ein vorhandenes Bild, das du zusammen mit dem Prompt sc
 | Venice.ai | Bei Text-to-Image-Generierung nicht unterstützt |
 | Z.AI | In der aktuellen Text-to-Image-Integration nicht unterstützt |
 | Atlas Cloud | Erstes Bild bei passenden Modell-IDs für Image-to-Image, Edit oder Kontext |
+| SpicyAPI | Nur Edit-Modelle, bis zum Limit des Modells; größere Bilder werden passend verkleinert |
 | NanoGPT | Bis zu 3 |
 | Stability AI | Nur das erste Bild, als Image-to-Image genutzt |
 | Arli AI | Nur das erste Bild, als Image-to-Image genutzt |

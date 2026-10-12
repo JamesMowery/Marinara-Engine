@@ -556,6 +556,19 @@ Deklarowanie `ranged`, `cover`, `opportunity` albo zasięgu broni BEZ `distance`
 
 To nie jest miękki interfejs, jak w 1.20-1.27: Engine nieznający kluczy odrzuca cały plik zasad albo katalog ze stworzeniem o podwójnym zasięgu. Instalacja czyta zweryfikowane bajty `ruleset.json` i wszystkich zadeklarowanych `catalogs/<id>.json`, odrzucając starszą deklarację. Bez zmian dla zestawu bez odległości.
 
+### Capability API 1.71: odczyt wiadomości tak, jak czytają je agenci
+
+W trybie Roleplay wiadomość może zawierać szepty, które nie należą do jej `content`. Czyta je każdy agent uruchamiany przez Engine, a pakiet, który sam czyta czat, może teraz odczytać ten sam tekst. Każdy rekord z `persistence.listMessages(chatId)` dostaje pole `agentContent`: wiadomość w takiej postaci, w jakiej czytają ją agenci Engine. Każdy szept stoi w swoim miejscu, oznaczony jako `[Private whisper to <name>: …]`, a wiadomość, która jest tylko szeptem, czyta się jako jej szepty. Dokument przekazany przez postać, na przykład list, następuje po wiadomości. Prywatne notatki gracza są pomijane.
+
+`agentContent` występuje tylko w czatach w trybie Roleplay. Brakuje go w innych trybach i w hostowanym pokoju gry wieloosobowej, gdzie wszyscy widzą, co piszą agenci. `content` nigdy się nie zmienia: nadal jest tekstem publicznym. `extra` też się nie zmienia: to zapisane dane wiadomości, ze wszystkimi szeptami, w każdym trybie. Nigdy nie pokazuj tekstu zbudowanego na jego podstawie graczom ani postaciom, dla których szept nie był przeznaczony.
+
+```ts
+const messages = await api.runtime.persistence.listMessages(chatId);
+const history = messages.map((message) => message.agentContent ?? message.content);
+```
+
+To miękki interfejs: starszy Engine pomija to pole, więc pakiet, który czyta `agentContent ?? content`, nie musi deklarować 1.71. Potrzebuje uprawnienia `chat-read`, tak jak `listMessages`. Szepty są prywatne: wszystko, co pakiet napisze na ich podstawie, na przykład notatka albo wspomnienie, może dotrzeć do postaci, dla których szept nie był przeznaczony.
+
 ### Capability API 1.68: embedding zapytań wyszukiwania jako zapytań
 
 `embeddings.embed(texts, signal?, inputType?)` przyjmuje trzeci argument: dla tekstu wyszukiwania, na przykład zapytania przywoływania, przekaż `"query"`. Domyślnie teksty mają typ `"document"`. Niektóre modele embeddingów oczekują prefiksu przed zapytaniami, a niektóre także przed dokumentami: e5 i nomic-embed-text mają po jednym prefiksie dla zapytań i dla dokumentów, a Snowflake Arctic Embed v2 dodaje prefiks tylko do zapytań. Engine dodaje właściwy prefiks. Gdy embedding zapytania powstaje tak jak dla dokumentu, przywoływanie działa gorzej. Inne modele, w tym wbudowany MiniLM, nie dostają prefiksu w żadnym z tych przypadków. Typ danych wejściowych nie zmienia `spaceId`, więc zapisane wektory pozostają porównywalne i niczego nie trzeba ponownie przeliczać.

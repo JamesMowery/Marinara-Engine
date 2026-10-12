@@ -567,6 +567,19 @@ Der `combat`-Block kann über `distance: { label, perCell }` den Wert eines Feld
 
 Wie 1.20 bis 1.27 ist dies keine weiche Schnittstelle: Unbekannte Schlüssel lassen die ganze Regelsatzdatei oder den Katalog mit einer Kreatur und zweiteiliger Reichweite scheitern. Die Installation prüft die verifizierten Bytes von `ruleset.json` und jeder deklarierten Datei `catalogs/<id>.json` und lehnt sie unter älterer Deklaration ab. Ohne Entfernungsangaben ändert sich nichts.
 
+### Capability API 1.71: Nachrichten so lesen, wie Agenten sie lesen
+
+Im Roleplay kann eine Nachricht Flüsternachrichten enthalten, die nicht zu ihrem `content` gehören. Jeder Agent, den die Engine ausführt, liest sie mit, und ein Paket, das den Chat selbst liest, kann jetzt denselben Text lesen. Jeder Datensatz aus `persistence.listMessages(chatId)` erhält `agentContent`: die Nachricht so, wie die Agenten der Engine sie lesen. Jede Flüsternachricht steht an ihrer Stelle, markiert als `[Private whisper to <name>: …]`, und eine Nachricht, die nur aus einer Flüsternachricht besteht, liest sich als ihre Flüsternachrichten. Ein Dokument, das ein Charakter übergibt, etwa ein Brief, folgt auf die Nachricht. Die privaten Notizen des Spielers bleiben außen vor.
+
+`agentContent` gibt es nur in Roleplay-Chats. In anderen Modi fehlt das Feld, ebenso in einem gehosteten Raum im Mehrspielermodus, in dem alle sehen, was Agenten schreiben. `content` ändert sich nie: Es ist weiterhin der öffentliche Text. Auch `extra` ändert sich nicht: Es enthält die gespeicherten Daten der Nachricht, darin jede Flüsternachricht, in jedem Modus. Zeig Text, der daraus gebaut wird, nie Spielern oder Charakteren, für die eine Flüsternachricht nicht bestimmt war.
+
+```ts
+const messages = await api.runtime.persistence.listMessages(chatId);
+const history = messages.map((message) => message.agentContent ?? message.content);
+```
+
+Dies ist eine weiche Schnittstelle: Ältere Engines lassen das Feld weg, daher muss ein Paket, das `agentContent ?? content` liest, 1.71 nicht deklarieren. Es braucht wie `listMessages` die Berechtigung `chat-read`. Flüsternachrichten sind privat: Alles, was ein Paket daraus schreibt, etwa eine Notiz oder eine Erinnerung, kann Charaktere erreichen, für die die Flüsternachricht nicht bestimmt war.
+
 ### Capability API 1.68: Suchanfragen als Anfragen einbetten
 
 `embeddings.embed(texts, signal?, inputType?)` nimmt ein drittes Argument an: Für Suchtext, etwa eine Recall-Anfrage, übergibst du `"query"`. Standardmäßig gelten Texte als `"document"`. Manche Embedding-Modelle erwarten bei Anfragen ein Präfix, manche auch bei Dokumenten: e5 und nomic-embed-text verwenden für beides je eines, Snowflake Arctic Embed v2 nur für Anfragen. Die Engine setzt jeweils das richtige. Wird eine Anfrage als Dokument eingebettet, fällt der Recall schwächer aus. Andere Modelle, darunter der eingebaute MiniLM-Embedder, erhalten in keinem Fall ein Präfix. Der Eingabetyp ändert `spaceId` nicht. Gespeicherte Vektoren bleiben also vergleichbar, und nichts muss neu eingebettet werden.

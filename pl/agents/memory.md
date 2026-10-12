@@ -147,6 +147,18 @@ Po włączeniu każda nowa wiadomość, twoja lub postaci, zostaje ukryta przed 
 - Jeśli samodzielnie zmienisz **Hide from AI** wiadomości albo użyjesz na niej `/hide` lub `/unhide`, przed automatycznym wyborem lub po nim, twój wybór zostaje, a Advanced Memory już nigdy nie zmienia tej wiadomości. Wiadomości, które wcześniej ukryto przed którąś postacią, pozostają bez zmian.
 - O każdej wiadomości decyzja zapada raz. Jeśli model zawiedzie albo nie odpowie na czas, w tej wiadomości nic nie zostaje ukryte, a błąd pojawia się w logu serwera.
 
+Przy włączonym Advanced Memory nowa odpowiedź postaci może zmienić scenę albo punkt widzenia za pomocą linii podziału, takiej jak `***`, `---` czy `* * *`. Zostaje wtedy zapisana jako osobne wiadomości tej samej postaci, po jednej na każdą część.
+
+- Każda część ma własny krąg odbiorców. **Decide who sees new messages**, **Hide from AI** i szepty działają na każdą część osobno.
+- Postać, która napisała odpowiedź, nadal widzi każdą część, tak jak każdą swoją wiadomość. Jeśli nie powinna, samodzielnie ukryj przed nią daną część.
+- Linia podziału zostaje na początku części, która po niej następuje. Podział wewnątrz bloku kodu albo bloku HTML, na przykład panelu `<details>`, się nie liczy.
+- Myślenie odpowiedzi jest widoczne przy pierwszej części. Nie trafia z powrotem do modelu, nawet przy wyłączonym **Exclude Past Reasoning** (pomijanie wcześniejszego rozumowania).
+- Informacje o wiadomości, trackery i wyniki agentów trafiają do ostatniej części.
+- Prose Guardian i inni agenci przepisujący przepisują każdą część osobno, a linia podziału zostaje na początku. Przy włączonym **Hold Message Until Rewrite** (wstrzymanie wiadomości do czasu przepisania) każda część czeka na własne przepisanie. Jeśli przepisanie jednej części się nie powiedzie, ta część zostaje w pierwotnym brzmieniu, a pozostałe i tak zostają przepisane.
+- Automatyczne odtwarzanie mowy czyta wszystkie części po kolei.
+- Nowy swipe albo ponowne wygenerowanie części tworzy nową wersję tylko tej wiadomości. W przypadku wcześniejszej części nowa wersja zachowuje tylko tekst sprzed pierwszego podziału, bo sceny po nim mają już własne wiadomości.
+- Funkcje Continue i Impersonate nigdy nie dzielą odpowiedzi.
+
 ### Podczas rozmowy
 
 Wykrywanie scen następuje po zapisaniu głównej odpowiedzi Roleplay. **Standalone scene check interval (messages)** (odstęp sprawdzania scen) wynosi domyślnie **5**. Gdy nadejdzie tyle nowych wiadomości, model dostaje wszystkie wiadomości od ostatniego sprawdzenia (najwyżej dwukrotność tego odstępu), do porównania wiadomość, na której zakończyło się ostatnie sprawdzenie, a także instrukcje i format wyniku. Wskazuje dokładną wiadomość kończącą każdą scenę (może to być także ta wcześniejsza wiadomość) albo nie zwraca zakończeń, jeśli scena trwa. Liczą się wiadomości person i postaci. Częstotliwość jest niezależna od harmonogramów agentów śledzących; przy wyłączonym trybie decyzyjnym, gdy widoczność źródeł i budżet pozwalają, sprawdzenie współdzieli ich wywołanie po generowaniu, a w przeciwnym razie korzysta osobno z modelu pomocniczego. Nowy zakres zaczyna się po końcu poprzedniej sceny i obejmuje wskazaną wiadomość końcową. Tylko wykryte zakończenie uruchamia przygotowanie podsumowania i indeksu w tle, także gdy scenę kończy najnowsza odpowiedź. Niepewne przejścia pozostawiają scenę otwartą. Sekcja **Agent activity** w **Chat Settings** pokazuje zadanie jako **Advanced Recall**, z postępem, błędami i odzyskiwaniem, również przy wyłączonych zwykłych agentach. Odpytywanie postępu trwa tylko podczas zadania pamięci; gotowe archiwum nie jest odpytywane w czasie bezczynności. Po włączeniu trybu decyzyjnego tę kontrolę wykonuje wybrane połączenie decyzyjne.
