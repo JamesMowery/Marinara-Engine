@@ -33,8 +33,8 @@ Uma cor semitransparente deixa parte do plano de fundo aparecer através do bal�
 Cada cor afeta uma parte diferente do chat:
 
 - A cor do nome pinta o nome exibido nas mensagens do chat. No caso de um personagem, ela também pinta o nome nas abas da barra lateral. No caso de uma persona, ela também pinta o nome nos seletores de persona.
-- A cor do diálogo pinta o texto que está entre aspas de diálogo. Funciona com aspas retas e com os outros estilos de aspas. Esse texto também pode ficar em negrito, pela seção **Settings** (Configurações).
-- A cor da caixa de mensagem define o plano de fundo dos balões de mensagem daquele personagem ou daquela persona. Vale tanto nos chats Conversation quanto nos chats Roleplay.
+- A cor do diálogo pinta o texto que está entre aspas de diálogo. Funciona com aspas retas e com os outros estilos de aspas. Esse texto também pode ficar em negrito, pela seção **Settings** (Configurações). Os chats Conversation não usam essa cor.
+- A cor da caixa de mensagem define o plano de fundo dos balões de mensagem daquele personagem ou daquela persona nos chats Roleplay. Os chats Conversation e Game não usam essa cor.
 
 ## A aba Stats
 

@@ -107,7 +107,9 @@ O Narrative Director tem um botão **Push Story** acima da caixa de mensagem. El
 
 Em **Chat Settings → Agents → Roleplay Commands**, ative **Whisper** (sussurro) para permitir comentários privados, segredos ou visões dentro de uma resposta. Começa desativado. Escolha se **All** (todos) os personagens ou somente o **Narrator** (narrador) designado podem usar. Como Personal Notes, exige chat solo ou geração de grupo **Individual**.
 
-O comando é `[whisper: character="name" text="the secret"]`. Nomeie exatamente um personagem do chat ou sua persona selecionada. Apenas esse destinatário e o narrador designado recebem o texto nos prompts. Um nome desconhecido ou ambíguo é ignorado sem expor o segredo. Agentes compartilhados não recebem sussurros.
+O comando é `[whisper: character="name" text="the secret"]`. Nomeie exatamente um personagem do chat ou sua persona selecionada. Entre os personagens, apenas esse destinatário e o narrador designado recebem o texto nos prompts. Um nome desconhecido ou ambíguo é ignorado sem expor o segredo.
+
+Os agentes também leem sussurros, entre eles o Echo Chamber, os trackers, o Lorebook Keeper, o Long-Term Memory e, nos chats em grupo, a ordem de resposta **Smart**, então um sussurro para um personagem pode fazer desse personagem quem responde. Cada sussurro é marcado como privado e indica o destinatário. Mesmo assim, o que um agente escreve, como uma entrada de lorebook, uma nota de tracker ou uma resposta reescrita, pode chegar a personagens a quem o sussurro não se destinava. Em uma sala multijogador hospedada, os agentes e a ordem de resposta **Smart** não recebem sussurros, porque todos na sala veem o que os agentes escrevem. O Relationship Tracker e o Memory Nag leem o chat por conta própria e ainda não veem sussurros.
 
 O sussurro permanece no seu lugar na mensagem. Os dirigidos à persona ficam visíveis imediatamente; nos demais, escolha **Reveal a secret** (revelar um segredo) para ler. Revelar muda apenas sua tela, não o conhecimento dos personagens. Segredos acompanham a mensagem e o swipe ativo e saem do prompt quando a mensagem é ocultada de todo mundo ou fica fora do histórico selecionado.
 
