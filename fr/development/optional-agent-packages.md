@@ -135,7 +135,7 @@ const vectors = await embeddings.embed(texts, signal);
 // Store/compare embeddings.spaceId with persisted vectors; do not mix embedding spaces.
 ```
 
-L'hôte renvoyé possède `spaceId`, `label` et `embed(texts, signal?)`. Il utilise la source configurée et se replie sur le générateur local MiniLM intégré si aucune source n'est disponible ou si la résolution de configuration échoue. `embed` peut renvoyer `null` ; les lots vides, plus de 128 textes ou plus de 200 000 caractères cumulés sont refusés. Un nouvel hôte ne recalcule pas les vecteurs existants : le paquet doit traiter un changement de `spaceId` avant de comparer les nouveaux vecteurs aux anciens.
+L'hôte renvoyé possède `spaceId`, `label` et `embed(texts, signal?, inputType?)` (voir Capability API 1.68 pour le type d'entrée). Il utilise la source configurée et se replie sur le générateur local MiniLM intégré si aucune source n'est disponible ou si la résolution de configuration échoue. `embed` peut renvoyer `null` ; les lots vides, plus de 128 textes ou plus de 200 000 caractères cumulés sont refusés. Un nouvel hôte ne recalcule pas les vecteurs existants : le paquet doit traiter un changement de `spaceId` avant de comparer les nouveaux vecteurs aux anciens.
 
 Les moteurs actuels exposent cette méthode quelle que soit la version d'API déclarée. Déclare API 1.15 si le suivi des changements de connexion est nécessaire. Pour accepter les anciens moteurs, tu peux vérifier `typeof api.runtime.resolveEmbeddings === "function"` et utiliser sinon `api.runtime.embeddings`, avec sa limite à l'état d'activation.
 
@@ -563,6 +563,18 @@ L'étape **Lorebooks** (lorebooks) permet de sélectionner jusqu'à 100 entrées
 L'importation d'un fichier de configuration restaure une Experience installée et compatible ainsi que sa graine numérique valide, mais écarte toute configuration arbitraire du package. Le manifeste actuel fournit à nouveau les constantes. Les parties existantes ignorent les importations d'Experience avec une explication. Les instantanés de création conservent le nom de l'Experience et la graine pour le résumé de configuration.
 
 Utilise indépendamment la déclaration existante de disponibilité au démarrage lorsque le monde doit être préparé avant le premier tour. Déclare API 1.18 comme minimum du package ; les hôtes plus anciens ne savent pas interpréter cette déclaration de configuration.
+
+### Capability API 1.68 : calculer l'embedding des requêtes de recherche en tant que requêtes
+
+`embeddings.embed(texts, signal?, inputType?)` accepte un troisième argument : passe `"query"` pour un texte de recherche, comme une requête de rappel. Par défaut, les textes sont traités comme `"document"`. Certains modèles d'embedding attendent un préfixe sur les requêtes, et certains aussi sur les documents : e5 et nomic-embed-text en utilisent un pour chacun, et Snowflake Arctic Embed v2 ne préfixe que les requêtes. Engine ajoute celui qui convient. Le rappel est moins bon quand l'embedding d'une requête est calculé comme celui d'un document. Les autres modèles, dont le générateur local MiniLM intégré, ne reçoivent de préfixe dans aucun cas. Le type d'entrée ne change pas `spaceId` : les vecteurs enregistrés restent donc comparables et rien n'a besoin d'être recalculé.
+
+```ts
+const embeddings = await api.runtime.resolveEmbeddings();
+const [queryVector] = (await embeddings.embed([query], signal, "query")) ?? [];
+const memoryVectors = await embeddings.embed(memoryTexts, signal); // documents
+```
+
+Il s'agit d'une interface souple : un ancien moteur ignore le troisième argument, donc un package peut toujours le passer et n'a pas besoin de déclarer 1.68. Passe le type d'entrée en troisième argument, jamais dans un objet d'options : un ancien moteur transmet le deuxième argument directement au fournisseur comme signal d'annulation.
 
 <a id="capability-api-150-professor-mari-actions"></a>
 

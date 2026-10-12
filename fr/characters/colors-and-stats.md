@@ -33,8 +33,8 @@ Une couleur semi-transparente laisse voir une partie de l'arrière-plan à trave
 Chaque couleur agit sur une partie différente du chat :
 
 - La couleur du nom s'applique au nom affiché dans les messages du chat. Pour un personnage, elle colore aussi le nom dans les onglets de la barre latérale. Pour un persona, elle colore aussi le nom dans les sélecteurs de persona.
-- La couleur des dialogues s'applique au texte placé entre guillemets de dialogue. Elle fonctionne avec les guillemets droits comme avec les autres styles de guillemets. Ce texte peut aussi être mis en gras depuis **Settings** (Paramètres).
-- La couleur de la bulle définit l'arrière-plan des bulles de message de ce personnage ou de ce persona. Elle s'applique aussi bien aux chats Conversation qu'aux chats Roleplay.
+- La couleur des dialogues s'applique au texte placé entre guillemets de dialogue. Elle fonctionne avec les guillemets droits comme avec les autres styles de guillemets. Ce texte peut aussi être mis en gras depuis **Settings** (Paramètres). Les chats Conversation ne l'utilisent pas.
+- La couleur de la bulle définit l'arrière-plan des bulles de message de ce personnage ou de ce persona dans les chats Roleplay. Les chats Conversation et Game ne l'utilisent pas.
 
 ## L'onglet Stats
 
