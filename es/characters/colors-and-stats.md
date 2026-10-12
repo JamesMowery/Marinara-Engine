@@ -33,8 +33,8 @@ Un color semitransparente deja ver parte del fondo a través de la burbuja. El f
 Cada color afecta a una parte diferente del chat:
 
 - El color del nombre da color al nombre que se muestra en los mensajes del chat. Para un personaje, también da color al nombre en las pestañas de la barra lateral. Para una persona, también da color al nombre en los selectores de persona.
-- El color del diálogo da color al texto dentro de las comillas de diálogo. Funciona con comillas rectas y con otros estilos de comillas. También puedes poner este texto en negrita desde **Settings** (Configuración).
-- El color del cuadro del mensaje define el fondo de las burbujas de mensaje de ese personaje o persona. Se aplica tanto en los chats de Conversation como en los de Roleplay.
+- El color del diálogo da color al texto dentro de las comillas de diálogo. Funciona con comillas rectas y con otros estilos de comillas. También puedes poner este texto en negrita desde **Settings** (Configuración). Los chats de Conversation no lo usan.
+- El color del cuadro del mensaje define el fondo de las burbujas de mensaje de ese personaje o persona en los chats de Roleplay. Los chats de Conversation y de Game no lo usan.
 
 ## La pestaña Stats
 
