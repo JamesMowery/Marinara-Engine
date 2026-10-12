@@ -508,7 +508,7 @@ Status: Das Format, die Route, Capability API 1.21 und die Auswahl im Bogenedito
 
 ## Abschnitte und Abschlussnachweise
 
-Jeder Abschnitt ist ein PR gegen `staging`, mit einem beim Arbeitsbeginn eröffneten Entwurfs-PR, einem Eintrag unter `[Unreleased]` in `CHANGELOG.md`, lokalisierten Texten, Dokumentation, einem `[docs-i18n]`-Folgeissue und nicht abgehakten Kästchen für die manuelle Prüfung. Nachweise sind `*.regression.ts`; keine `.test.ts` bleibt im Arbeitsbaum.
+Jeder Abschnitt ist ein PR gegen `staging`, mit einem beim Arbeitsbeginn eröffneten Entwurfs-PR, lokalisierten Texten, Dokumentation, einem `[docs-i18n]`-Folgeissue und nicht abgehakten Kästchen für die manuelle Prüfung. Nachweise sind `*.regression.ts`; keine `.test.ts` bleibt im Arbeitsbaum.
 
 | # | Repository | Arbeit | Kleinster sinnvoller Nachweis |
 | --- | --- | --- | --- |

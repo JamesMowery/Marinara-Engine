@@ -73,8 +73,8 @@ Der Tab **Card** ist der eigentliche Schreibarbeitsbereich. Hier stehen die Feld
 
 Der Abschnitt **Dialogue & Greetings** legt fest, wie ein Chat beginnt und wie der Charakter klingt:
 
-- **First Message**. Die Eröffnungsnachricht, die zum Start eines neuen Chats erscheint.
-- **Alternate Greetings**. Zusätzliche Eröffnungsnachrichten. Beim Start eines Chats wählst du aus, welche Begrüßung zum Einsatz kommt. Mit den Pfeilen nach oben und unten sortierst du sie um, mit dem X entfernst du eine.
+- **First Message**. Die Eröffnungsnachricht, die zum Start eines neuen Roleplay-Chats erscheint. Conversation- und Game-Chats beginnen ohne Begrüßung.
+- **Alternate Greetings**. Zusätzliche Eröffnungsnachrichten. Beim Start eines Roleplay-Chats wählst du aus, welche Begrüßung zum Einsatz kommt. Mit den Pfeilen nach oben und unten sortierst du sie um, mit dem X entfernst du eine.
 - **Example Dialogue**. Beispielwechsel, die die Stimme des Charakters vermitteln. Trenn die einzelnen Wechsel mit `<START>`. Als Platzhalter dienen `{{user}}` und `{{char}}`.
 
 Begrüßungen und Beispielnachrichten können auch Bilder aus der Galerie des Charakters anzeigen; siehe [Charaktergalerien → Ein Galeriebild in Nachrichten und Begrüßungen wiederverwenden](galleries.md#reuse-a-gallery-image-in-messages-and-greetings).
