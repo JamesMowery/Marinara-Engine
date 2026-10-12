@@ -508,7 +508,7 @@ Estado: el formato, la ruta, Capability API 1.21 y el selector del editor de fic
 
 ## Fases y pruebas de finalización
 
-Cada fase es un PR contra `staging`, con un borrador abierto al comenzar, una entrada en `CHANGELOG.md` bajo `[Unreleased]`, textos localizados, documentación, un seguimiento `[docs-i18n]` y casillas de verificación manual sin marcar. Las pruebas son `*.regression.ts`; no queda ningún `.test.ts` en el árbol.
+Cada fase es un PR contra `staging`, con un borrador abierto al comenzar, textos localizados, documentación, un seguimiento `[docs-i18n]` y casillas de verificación manual sin marcar. Las pruebas son `*.regression.ts`; no queda ningún `.test.ts` en el árbol.
 
 | # | Repositorio | Trabajo | Prueba útil mínima |
 | --- | --- | --- | --- |
