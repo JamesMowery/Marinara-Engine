@@ -550,6 +550,19 @@ API 1.26 添加可选 `combat`，定义掷骰、目标、行动预算、攻击�
 
 如果世界必须在首个回合前准备完毕，请独立使用现有的启动就绪声明。将 API 1.18 声明为包的最低要求；旧宿主无法理解此设置声明。
 
+### Capability API 1.71：按智能体读到的样子读取消息
+
+在 Roleplay 中，一条消息可以带有不属于其 `content` 的耳语。Engine 运行的每个智能体都会读到这些耳语，现在自行读取聊天的包也能读到同样的文本。`persistence.listMessages(chatId)` 返回的每条记录都多了 `agentContent`：即 Engine 智能体读到的消息。每条耳语都留在原位，标为 `[Private whisper to <name>: …]`；只有耳语的消息，读到的就是它的耳语。角色递交的文档（例如一封信）跟在消息后面。玩家的私人笔记不包含在内。
+
+`agentContent` 只在 Roleplay 聊天中存在。其他模式下没有它，房主主持的多人模式房间里也没有，那里所有人都能看到智能体写出的内容。`content` 始终不变：它仍是公开文本。`extra` 也不变：它是消息保存的数据，在任何模式下都包含每一条耳语。绝不要把由它生成的文本展示给耳语对象以外的玩家或角色。
+
+```ts
+const messages = await api.runtime.persistence.listMessages(chatId);
+const history = messages.map((message) => message.agentContent ?? message.content);
+```
+
+这是软接口：旧 Engine 不提供这个字段，因此读取 `agentContent ?? content` 的包无需声明 1.71。它和 `listMessages` 一样需要 `chat-read` 权限。耳语是私密的：包根据耳语写下的任何内容，例如一条笔记或一段记忆，都可能传到耳语对象以外的角色那里。
+
 ### Capability API 1.68：把搜索查询作为查询嵌入
 
 `embeddings.embed(texts, signal?, inputType?)` 接受第三个参数：搜索文本要传 `"query"`，例如召回查询。文本默认为 `"document"`。有些嵌入模型要求给查询加前缀，有些还要求给文档加前缀：e5 和 nomic-embed-text 对两者各加一个，Snowflake Arctic Embed v2 只给查询加。Engine 会加上正确的前缀。查询被当作文档嵌入时，召回效果会变差。其他模型，包括内置的 MiniLM 嵌入器，无论哪种类型都不加前缀。输入类型不会改变 `spaceId`，因此已存向量仍可比较，无需重新嵌入任何内容。
