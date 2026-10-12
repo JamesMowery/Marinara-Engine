@@ -73,8 +73,8 @@ L'onglet **Card** est l'espace de rédaction principal. Il contient les champs q
 
 La section **Dialogue & Greetings** définit l'ouverture du chat et le ton du personnage :
 
-- **First Message**. Le message d'accueil affiché au démarrage d'un nouveau chat.
-- **Alternate Greetings**. Des messages d'accueil supplémentaires. Au lancement d'un chat, tu choisis lequel utiliser. Les commandes haut et bas les réordonnent, et le X en supprime un.
+- **First Message**. Le message d'accueil affiché au démarrage d'un nouveau chat Roleplay. Les chats Conversation et Game ne commencent pas par un message d'accueil.
+- **Alternate Greetings**. Des messages d'accueil supplémentaires. Au lancement d'un chat Roleplay, tu peux choisir lequel utiliser. Les commandes haut et bas les réordonnent, et le X en supprime un.
 - **Example Dialogue**. Des échanges d'exemple qui donnent sa voix au personnage. Utilise `<START>` pour séparer les échanges. Utilise `{{user}}` et `{{char}}` comme espaces réservés.
 
 Les salutations et les messages d'exemple peuvent aussi afficher des images de la Gallery du personnage ; consulte [Galeries de personnages → Réutiliser une image de galerie dans les messages et les salutations](galleries.md#reuse-a-gallery-image-in-messages-and-greetings).

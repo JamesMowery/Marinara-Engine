@@ -109,7 +109,9 @@ Nad polem czatu Narrative Director ma przycisk **Push Story**. Uzbraja on tego a
 
 W **Chat Settings → Agents → Roleplay Commands** (ustawienia czatu → agenci → komendy Roleplay) włącz **Whisper** (szept), aby pozwolić na prywatne uwagi, sekrety lub wizje w odpowiedzi. Domyślnie jest wyłączone. Wybierz, czy mogą używać go **All** (wszystkie) postacie, czy tylko wyznaczony **Narrator** (narrator). Jak Personal Notes wymaga czatu solo lub generowania grupowego **Individual**.
 
-Komenda to `[whisper: character="name" text="the secret"]`. Wskaż dokładnie jedną postać czatu lub wybraną personę. Tylko odbiorca i wyznaczony narrator otrzymują tekst w promptach. Nieznane lub niejednoznaczne imię jest ignorowane bez ujawniania sekretu. Współdzieleni agenci nie dostają szeptów.
+Komenda to `[whisper: character="name" text="the secret"]`. Wskaż dokładnie jedną postać czatu lub wybraną personę. Spośród postaci tylko odbiorca i wyznaczony narrator otrzymują tekst w promptach. Nieznane lub niejednoznaczne imię jest ignorowane bez ujawniania sekretu.
+
+Szepty czytają też agenci, w tym Echo Chamber, trackery, Lorebook Keeper, Long-Term Memory oraz, w czatach grupowych, kolejność odpowiedzi **Smart**, więc szept do postaci może sprawić, że odpowie właśnie ona. Każdy szept jest oznaczony jako prywatny i wskazuje swojego odbiorcę. Mimo to treść napisana przez agenta, na przykład wpis lorebooka, notatka trackera czy przepisana odpowiedź, może dotrzeć do postaci, dla których szept nie był przeznaczony. W hostowanym pokoju gry wieloosobowej agenci i kolejność odpowiedzi **Smart** nie dostają szeptów, bo wszyscy w pokoju widzą, co piszą agenci. Agenci Relationship Tracker i Memory Nag czytają czat samodzielnie i na razie nie widzą szeptów.
 
 Szept pozostaje w swoim miejscu wiadomości. Szepty do twojej persony widać od razu; inne odczytasz przez **Reveal a secret** (ujawnij sekret). Ujawnienie zmienia tylko ekran, nie wiedzę postaci. Sekrety podążają za wiadomością i aktywnym swipe'em oraz znikają z promptu po ukryciu wiadomości przed wszystkimi lub wyjściu poza wybraną historię.
 

@@ -33,8 +33,8 @@ Kolor półprzezroczysty przepuszcza część tła przez dymek. Format `rgba` to
 Każdy kolor działa w innym miejscu czatu:
 
 - Kolor imienia koloruje wyświetlaną nazwę w wiadomościach na czacie. U postaci koloruje dodatkowo nazwę na zakładkach paska bocznego. U persony koloruje też nazwę na listach wyboru persony.
-- Kolor dialogu koloruje tekst w cudzysłowach dialogowych. Działa zarówno z prostymi cudzysłowami, jak i z innymi ich stylami. Ten tekst da się dodatkowo pogrubić w sekcji **Settings** (Ustawienia).
-- Kolor pola wiadomości ustawia tło dymków danej postaci albo persony. Obowiązuje w czatach Conversation i Roleplay.
+- Kolor dialogu koloruje tekst w cudzysłowach dialogowych. Działa zarówno z prostymi cudzysłowami, jak i z innymi ich stylami. Ten tekst da się dodatkowo pogrubić w sekcji **Settings** (Ustawienia). Czaty Conversation z niego nie korzystają.
+- Kolor pola wiadomości ustawia tło dymków danej postaci albo persony w czatach Roleplay. Czaty Conversation i Game z niego nie korzystają.
 
 ## Zakładka **Stats**
 

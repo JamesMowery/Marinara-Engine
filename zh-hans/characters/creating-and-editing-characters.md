@@ -73,8 +73,8 @@ Character Editor 会把聊天区域换成一整页的工作区，顶部横贯的
 
 **Dialogue & Greetings**(对白与开场白) 一节决定聊天怎么开场、角色说话是什么调子：
 
-- **First Message**(首条消息)。新聊天开始时显示的首条消息。
-- **Alternate Greetings**(备选开场白)。额外的开场白。开新聊天时可以挑一条用。用上下按钮调整顺序，用 X 删除。
+- **First Message**(首条消息)。新的 Roleplay(角色扮演) 聊天开始时显示的首条消息。Conversation(对话模式) 和 Game(游戏模式) 聊天开始时没有开场白。
+- **Alternate Greetings**(备选开场白)。额外的开场白。开新的 Roleplay 聊天时可以挑一条用。用上下按钮调整顺序，用 X 删除。
 - **Example Dialogue**(对话示例)。示范角色语气的对话样例。用 `<START>` 分隔每段对话，用 `{{user}}` 和 `{{char}}` 作为占位文字。
 
 问候语和示例消息也可以展示角色 Gallery 中的图片，参见[角色图库 → 在消息和问候语中复用图库图片](galleries.md#reuse-a-gallery-image-in-messages-and-greetings)。

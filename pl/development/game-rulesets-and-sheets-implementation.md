@@ -508,7 +508,7 @@ Status: format, trasa, Capability API 1.21 i selektor edytora są gotowe (§ Ust
 
 ## Etapy i dowody ukończenia
 
-Każdy etap to jeden PR do `staging`, z PR-em roboczym otwieranym na początku, wpisem `CHANGELOG.md` w `[Unreleased]`, zlokalizowanym tekstem, dokumentacją, zgłoszeniem `[docs-i18n]` i niezaznaczonymi polami ręcznej weryfikacji. Dowody to `*.regression.ts`; żadne `.test.ts` nie pozostaje w drzewie.
+Każdy etap to jeden PR do `staging`, z PR-em roboczym otwieranym na początku, zlokalizowanym tekstem, dokumentacją, zgłoszeniem `[docs-i18n]` i niezaznaczonymi polami ręcznej weryfikacji. Dowody to `*.regression.ts`; żadne `.test.ts` nie pozostaje w drzewie.
 
 | # | Repozytorium | Praca | Najmniejszy użyteczny dowód |
 | --- | --- | --- | --- |

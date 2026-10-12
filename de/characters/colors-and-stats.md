@@ -33,8 +33,8 @@ Eine halbtransparente Farbe lässt den Hintergrund teilweise durch die Sprechbla
 Jede Farbe wirkt an einer anderen Stelle im Chat:
 
 - Die Namensfarbe färbt den angezeigten Namen in den Chat-Nachrichten. Bei einem Charakter färbt sie zusätzlich den Namen in den Tabs der Seitenleiste. Bei einer Persona färbt sie zusätzlich den Namen in den Persona-Auswahllisten.
-- Die Dialogfarbe färbt Text innerhalb von Dialog-Anführungszeichen. Das klappt mit geraden Anführungszeichen ebenso wie mit anderen Anführungsstilen. Unter **Settings** (Einstellungen) lässt sich dieser Text zusätzlich fett darstellen.
-- Die Farbe der Nachrichtenbox bestimmt den Hintergrund der Sprechblasen dieses Charakters bzw. dieser Persona. Sie gilt in Conversation- und in Roleplay-Chats.
+- Die Dialogfarbe färbt Text innerhalb von Dialog-Anführungszeichen. Das klappt mit geraden Anführungszeichen ebenso wie mit anderen Anführungsstilen. Unter **Settings** (Einstellungen) lässt sich dieser Text zusätzlich fett darstellen. Conversation-Chats verwenden sie nicht.
+- Die Farbe der Nachrichtenbox bestimmt in Roleplay-Chats den Hintergrund der Sprechblasen dieses Charakters bzw. dieser Persona. Conversation- und Game-Chats verwenden sie nicht.
 
 ## Der Tab **Stats**
 

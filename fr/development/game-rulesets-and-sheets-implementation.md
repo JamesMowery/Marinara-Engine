@@ -508,7 +508,7 @@ Les personnages voyagent seuls. Une carte exportée avec une fiche communautaire
 
 ## Tranches et preuves de sortie
 
-Chaque tranche est une PR vers `staging`, avec brouillon ouvert au début du travail, entrée `CHANGELOG.md` sous `[Unreleased]`, textes localisés, documentation, suivi `[docs-i18n]` et cases de vérification manuelle non cochées. Les preuves sont des `*.regression.ts` ; aucun `.test.ts` ne reste dans l'arbre.
+Chaque tranche est une PR vers `staging`, avec brouillon ouvert au début du travail, textes localisés, documentation, suivi `[docs-i18n]` et cases de vérification manuelle non cochées. Les preuves sont des `*.regression.ts` ; aucun `.test.ts` ne reste dans l'arbre.
 
 | # | Dépôt | Travail | Plus petite preuve utile |
 | --- | --- | --- | --- |

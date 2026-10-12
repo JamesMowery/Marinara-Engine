@@ -119,7 +119,7 @@ const vectors = await embeddings.embed(texts, signal);
 // Store/compare embeddings.spaceId with persisted vectors; do not mix embedding spaces.
 ```
 
-返回的宿主具有 `spaceId`、`label` 和 `embed(texts, signal?)`。解析使用已配置的嵌入源；没有可用源或配置解析失败时，回退到内置本地 MiniLM 嵌入器。`embed` 可以返回 `null`；空批次、超过 128 段文本或合计超过 200,000 字符都会被拒绝。新宿主不会重新嵌入现有向量，因此包必须先处理 `spaceId` 变化，再将新向量与已存向量比较。
+返回的宿主具有 `spaceId`、`label` 和 `embed(texts, signal?, inputType?)`(输入类型见 Capability API 1.68)。解析使用已配置的嵌入源；没有可用源或配置解析失败时，回退到内置本地 MiniLM 嵌入器。`embed` 可以返回 `null`；空批次、超过 128 段文本或合计超过 200,000 字符都会被拒绝。新宿主不会重新嵌入现有向量，因此包必须先处理 `spaceId` 变化，再将新向量与已存向量比较。
 
 当前 Engine 无论包声明何种 API 版本都会公开此方法。若必须跟随连接变化，请声明 API 1.15。特意支持旧 Engine 的包可以检查 `typeof api.runtime.resolveEmbeddings === "function"`，并接受激活时快照的限制，回退到 `api.runtime.embeddings`。
 
@@ -549,6 +549,18 @@ API 1.26 添加可选 `combat`，定义掷骰、目标、行动预算、攻击�
 导入设置文件时，会恢复已安装且兼容的 Experience 及其有效数值种子，但会丢弃任意包配置。常量由当前清单重新提供。已有游戏会跳过 Experience 导入并说明原因。创建快照会保留 Experience 名称和种子，用于设置摘要。
 
 如果世界必须在首个回合前准备完毕，请独立使用现有的启动就绪声明。将 API 1.18 声明为包的最低要求；旧宿主无法理解此设置声明。
+
+### Capability API 1.68：把搜索查询作为查询嵌入
+
+`embeddings.embed(texts, signal?, inputType?)` 接受第三个参数：搜索文本要传 `"query"`，例如召回查询。文本默认为 `"document"`。有些嵌入模型要求给查询加前缀，有些还要求给文档加前缀：e5 和 nomic-embed-text 对两者各加一个，Snowflake Arctic Embed v2 只给查询加。Engine 会加上正确的前缀。查询被当作文档嵌入时，召回效果会变差。其他模型，包括内置的 MiniLM 嵌入器，无论哪种类型都不加前缀。输入类型不会改变 `spaceId`，因此已存向量仍可比较，无需重新嵌入任何内容。
+
+```ts
+const embeddings = await api.runtime.resolveEmbeddings();
+const [queryVector] = (await embeddings.embed([query], signal, "query")) ?? [];
+const memoryVectors = await embeddings.embed(memoryTexts, signal); // documents
+```
+
+这是软接口：旧 Engine 会忽略第三个参数，因此包始终可以传入它，无需声明 1.68。输入类型要作为第三个参数传入，绝不要放进选项对象：旧 Engine 会把第二个参数直接作为中止信号交给服务商。
 
 <a id="capability-api-150-professor-mari-actions"></a>
 
