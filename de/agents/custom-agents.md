@@ -196,6 +196,8 @@ Tools funktionieren nur, wenn der Chat selbst sie erlaubt. Öffne in den **Chat 
 
 Importierte Agent-Dateien bringen keinen Tool-Zugriff mit. Sieh dir nach dem Import Prompt und Einstellungen an und wähle die gewünschten Tools anschließend selbst aus.
 
+Ein Agent bekommt pro Lauf höchstens 16 Runden mit Tool-Aufrufen (weniger, wenn `MAX_TOOL_ROUNDS` auf dem Server niedriger ist) und antwortet danach mit dem, was er hat. Ein Modell, das jeweils nur ein Tool aufruft, verbraucht für jeden Aufruf eine Runde. Ein Agent, der viele Einträge speichert, sollte deshalb mehrere Aufrufe in einer Antwort absetzen, sofern das Modell parallele Tool-Aufrufe unterstützt. Ein Backfill-Lauf für Lorebooks, der nur Einträge speichert, bekommt bis zu 64 Runden.
+
 ## Named prompt options
 
 Ein einzelner Agent kann mehrere Prompt-Varianten enthalten. Diese Funktion heißt **Named prompt options** (benannte Prompt-Varianten). Ein Chat wählt dann eine Variante aus, ohne dass du den Agenten global änderst.
