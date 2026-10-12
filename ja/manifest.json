@@ -1,6 +1,6 @@
 {
   "language": "ja",
-  "sourceCommit": "d5862bf3313c",
+  "sourceCommit": "9fd6e090021551615a2052de9423c761721a996e",
   "files": [
     {
       "path": "CONFIGURATION.md",
@@ -64,8 +64,8 @@
     },
     {
       "path": "agents/memory.md",
-      "sha256": "d109ebc5080b1c9c9ef56039f748ee52110e95feeb6777a3e536030406a34e11",
-      "bytes": 60632
+      "sha256": "0be08f159641f59b63f910d8680665f87fa0b0bf466c8d773ce7ef957d7c2b72",
+      "bytes": 61960
     },
     {
       "path": "appearance/appearance-settings.md",
@@ -104,13 +104,13 @@
     },
     {
       "path": "characters/colors-and-stats.md",
-      "sha256": "3b55beb3eaaf7121ac48f6f4ce3de144cf2b4038f9fce5f7035231fbbb792e4b",
-      "bytes": 10572
+      "sha256": "9b617163d06a2d8ff52a38c974e4cf44e672e110360eee9a47ce129eddbaf7e0",
+      "bytes": 10645
     },
     {
       "path": "characters/creating-and-editing-characters.md",
-      "sha256": "9b8ca36c0a416564e56b003de048a95615cdc711ec1583f57ea0b4ee325d5651",
-      "bytes": 19946
+      "sha256": "7d30f1132c021dcae4e9701073b7296d8fcfb2b1e2c6ab0272e3cdac6a6a7e00",
+      "bytes": 20056
     },
     {
       "path": "characters/galleries.md",
@@ -149,8 +149,8 @@
     },
     {
       "path": "chats/chat-settings.md",
-      "sha256": "50c3e48eb788110fa198887dd3fde059fd1ee12b30525e87bf6250a008cf7006",
-      "bytes": 32351
+      "sha256": "1448d10054ca24f8f7442f9cc2cff391ef0acf5ccfc5b8a96fefbeb0642edf7a",
+      "bytes": 32501
     },
     {
       "path": "chats/connected-chats.md",
@@ -194,8 +194,8 @@
     },
     {
       "path": "chats/settings-profiles.md",
-      "sha256": "60a3d94c0f6d2159794e659bd8ca24480ab33c52e3d7c7db02cafb475e8e7003",
-      "bytes": 9063
+      "sha256": "2e70fac97a205b8aeb89f9594046e509897434c1c4ad6818a56a9a603d8486d6",
+      "bytes": 11912
     },
     {
       "path": "chats/slash-commands.md",
@@ -349,8 +349,8 @@
     },
     {
       "path": "development/game-rulesets-and-sheets-implementation.md",
-      "sha256": "09b0bb4b6805a92436a5280186d4bb8ac5fc73d2ebd5b52f1464bffc16e34829",
-      "bytes": 149851
+      "sha256": "4cdf97f379f3a60271ef879b8560a6e13478f5a10c0c3569b5bb209966dc8e50",
+      "bytes": 149811
     },
     {
       "path": "development/hierarchical-locations-prd-v3.md",
@@ -379,8 +379,8 @@
     },
     {
       "path": "development/multiplayer.md",
-      "sha256": "e2fc70b5c55134ab6f9f2e670f2e71e82d13dbab24aca32d1c9a140ee96eef47",
-      "bytes": 19652
+      "sha256": "038f5f1f3de119636ae5fddab0251b47016cd38cf99304938a474d52da46c0d9",
+      "bytes": 19775
     },
     {
       "path": "development/noodle-internals.md",
@@ -389,8 +389,8 @@
     },
     {
       "path": "development/optional-agent-packages.md",
-      "sha256": "f2dd53424783b05a434b3a2661e24f16b644300c37a36302c63bed6ff41550c7",
-      "bytes": 103656
+      "sha256": "11730a967d5b658f5892a6051255400070e260f7baa64e3a81d1351728d7dfe3",
+      "bytes": 115355
     },
     {
       "path": "development/personal-extensions.md",
@@ -664,8 +664,8 @@
     },
     {
       "path": "roleplay/getting-started.md",
-      "sha256": "83d9a5e41650afb78dbce8ab1155cd87c0909de6ce32c57f4b4c549232881fa5",
-      "bytes": 26096
+      "sha256": "16e69d3fc93272e014be3f69ae8c6e457173ae3688f7c7288a39c487aa6bac67",
+      "bytes": 27089
     },
     {
       "path": "roleplay/hud-and-trackers.md",
