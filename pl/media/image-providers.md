@@ -41,6 +41,7 @@ Tabela poniżej pokazuje wszystkie usługi w skrócie. Szczegóły i haczyki opi
 | Z.AI | Tak | Chmura |
 | Atlas Cloud | Tak | Chmura |
 | fal.ai | Tak | Chmura |
+| SpicyAPI | Tak | Chmura |
 | NanoGPT | Tak | Chmura |
 | Block Entropy | Tak | Chmura |
 | RunPod Serverless (ComfyUI) | Tak | Chmura |
@@ -106,6 +107,16 @@ Usługa w chmurze z domyślnym adresem Base URL `https://api.atlascloud.ai/api/v
 Usługa w chmurze z domyślnym **Base URL** `https://fal.run`. Utwórz klucz API w [fal.ai](https://fal.ai/dashboard/keys), a następnie wybierz **fal.ai** w siatce usług obrazów. Początkowa lista **Model** zawiera `fal-ai/flux/schnell` i `fal-ai/flux/dev`; możesz wpisać identyfikator innego punktu końcowego text-to-image ze zgodnym schematem wejścia i wyjścia. **Test Connection** (test połączenia) sprawdza tylko konfigurację. **Test Image** wysyła rzeczywiste żądanie generowania i zużywa kredyty fal.ai.
 
 Marinara wysyła prompt i żądane wymiary, a następnie pobiera pierwszy zwrócony obraz do istniejącego procesu obsługi obrazów. Negatywny prompt jest dopisywany jako instrukcje tekstowe. Użyj **Custom Parameters** (parametry niestandardowe) do ustawienia opcji konkretnego modelu, takich jak `seed`, `num_inference_steps` lub `image_size`. Integracja korzysta z synchronicznych żądań text-to-image; nie wysyła obrazów referencyjnych ani nie wznawia przerwanych zadań. Sprawdź obsługiwane dane wejściowe na stronie API wybranego modelu lub własnego punktu końcowego, np. w [dokumentacji API flux/schnell](https://fal.ai/models/fal-ai/flux/schnell/api).
+
+## SpicyAPI
+
+Usługa w chmurze z domyślnym **Base URL** `https://api.spicyapi.ai/api/v1`. Utwórz klucz API w [konsoli SpicyAPI](https://spicyapi.ai/console/keys), a następnie wybierz **SpicyAPI** w siatce usług obrazów. Marinara sama wpisuje model `alibaba/z-image-spicy-pro/text-to-image`. Kliknij przycisk **Fetch Models from API**, żeby wczytać wszystkie modele SpicyAPI typu text-to-image i modele do edycji, albo wpisz identyfikator modelu, na przykład `bytedance/seedream-5.0-pro/text-to-image`. **Test Connection** sprawdza klucz, odczytując listę modeli, więc nic nie kosztuje. **Test Image** tworzy prawdziwy obraz i zużywa środki z salda SpicyAPI.
+
+Wybierz usługę **SpicyAPI**. Nie używaj usługi **OpenAI (DALL-E)** ani połączenia **Custom (OAI-Compatible)** z adresem SpicyAPI. Adres SpicyAPI w stylu OpenAI obsługuje tylko tekst, więc żadna z tych opcji nie utworzy obrazów.
+
+Każdy model SpicyAPI przyjmuje własne ustawienia. Marinara pyta usługę SpicyAPI, które z nich przyjmuje wybrany model, i wysyła tylko te. Wybiera najbliższy format rozmiaru, jaki oferuje model, na przykład proporcje obrazu, szerokość i wysokość albo stały rozmiar. Jeśli model nie ma pola na negatywny prompt, negatywny prompt jest dopisywany jako tekst na końcu promptu. Do innych opcji modelu, takich jak `seed`, `resolution` czy `loras`, użyj pola **Custom Parameters**.
+
+Usługa SpicyAPI wykonuje każdy obraz jako zadanie. Marinara czeka na zakończenie zadania, sprawdza je ponownie, jeśli trwa dłużej niż około minuty, a potem pobiera wynik. Jeśli połączenie zostanie przerwane, Marinara wraca do tego samego zadania, zamiast płacić za nowe. Modele do edycji (identyfikatory kończące się na `/edit`) dostają twoje obrazy referencyjne. Usługa SpicyAPI przyjmuje obrazy referencyjne o rozmiarze do 1 MB każdy i do 2 MB na jedno żądanie, więc Marinara zmniejsza większe obrazy i pomija nadmiarowe, które się nie mieszczą.
 
 ## NanoGPT
 
@@ -208,6 +219,7 @@ Każda usługa ma też pola tekstowe **Prompt Prefix** oraz **Negative Prefix**.
 | Venice.ai | Nieobsługiwane przy zamianie tekstu na obraz |
 | Z.AI | Nieobsługiwane w obecnej integracji zamiany tekstu na obraz |
 | Atlas Cloud | Pierwszy obraz, przy zgodnych identyfikatorach modeli do zamiany obrazu na obraz, edycji lub trybu Kontext |
+| SpicyAPI | Tylko modele do edycji, do limitu modelu; większe obrazy są zmniejszane, żeby się zmieściły |
 | NanoGPT | Do 3 |
 | Stability AI | Tylko pierwszy obraz, użyty do zamiany obrazu na obraz |
 | Arli AI | Tylko pierwszy obraz, użyty do zamiany obrazu na obraz |

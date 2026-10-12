@@ -6,7 +6,7 @@ Karta postaci to plik z imieniem jednej postaci, jej osobowością, powitaniem i
 
 ## Do czego służy Card Browser
 
-Panel **Card Browser** przeszukuje kilka publicznych stron z kartami postaci bez wychodzenia z aplikacji Marinara. Obsługuje pięć źródeł: **ChubAI**, **JannyAI**, **Pygmalion**, **Wyvern** i **DataCat**. Źródło **CharacterTavern** nadal jest na liście, ale na razie nie da się go przeglądać (zobacz [CharacterTavern](#charactertavern)). Wybrane źródło da się przeszukać, wyniki przefiltrować, a szczegóły postaci obejrzeć przed decyzją. Potem wystarczy zaimportować postać do biblioteki albo zapisać ją jako plik PNG. Przy ustawieniach domyślnych przeglądanie i importowanie kart postaci nie wymaga konta ani klucza API (tajnego kodu, trochę jak hasło).
+Panel **Card Browser** przeszukuje kilka publicznych stron z kartami postaci bez wychodzenia z aplikacji Marinara. Obsługuje sześć serwisów: **ChubAI**, **JannyAI**, **Pygmalion**, **Wyvern**, **DataCat** i **PlotLight**. Serwis PlotLight ma dwa źródła: jedno dla postaci i jedno dla person (zobacz [PlotLight](#plotlight)). Źródło **CharacterTavern** nadal jest na liście, ale na razie nie da się go przeglądać (zobacz [CharacterTavern](#charactertavern)). Wybrane źródło da się przeszukać, wyniki przefiltrować, a szczegóły postaci obejrzeć przed decyzją. Potem wystarczy zaimportować postać do biblioteki albo zapisać ją jako plik PNG. Przy ustawieniach domyślnych przeglądanie i importowanie kart postaci nie wymaga konta ani klucza API (tajnego kodu, trochę jak hasło).
 
 ## Otwieranie panelu Card Browser
 
@@ -23,7 +23,7 @@ Panel **Card Browser** pozostaje wczytany przez cały czas działania aplikacji.
 
 ## Wybór źródła
 
-Kliknij przycisk źródła w nagłówku. Widnieje na nim nazwa bieżącego źródła i mała strzałka. Otwiera się menu ze źródłami w tej kolejności: **ChubAI**, **JannyAI**, **CharacterTavern**, **Pygmalion**, **Wyvern** i **DataCat**. Źródło **CharacterTavern** ma oznaczenie **Unavailable** (Niedostępne).
+Kliknij przycisk źródła w nagłówku. Widnieje na nim nazwa bieżącego źródła i mała strzałka. Otwiera się menu ze źródłami w tej kolejności: **ChubAI**, **JannyAI**, **CharacterTavern**, **Pygmalion**, **Wyvern**, **DataCat**, **PlotLight** i **PlotLight Personas**. Źródło **CharacterTavern** ma oznaczenie **Unavailable** (Niedostępne).
 
 Przy pierwszym otwarciu panelu **Card Browser** wybrane jest źródło **ChubAI**. Zmiana źródła czyści wpisany tekst wyszukiwania, tagi i filtry. Każde źródło pamięta własne ustawienie treści dla dorosłych i własne logowanie, więc zmiana w jednym źródle nie wpływa na pozostałe.
 
@@ -41,6 +41,21 @@ Do tego czasu postacie z serwisu CharacterTavern nadal da się ręcznie przenie�
 
 Postacie zaimportowane wcześniej z serwisu CharacterTavern zostają w bibliotece.
 
+## PlotLight
+
+Serwis PlotLight udostępnia swoje publiczne postacie i persony aplikacjom takim jak Marinara. W menu ma dwa źródła:
+
+- **PlotLight** pokazuje listę kart postaci.
+- **PlotLight Personas** (persony z serwisu PlotLight) pokazuje listę person. Persona to postać, która reprezentuje ciebie w czatach.
+
+Konto w serwisie PlotLight nie jest potrzebne. Każdy wynik zachowuje nazwę swojego autora, a widok szczegółów ma link **View on PlotLight** (wyświetlenie w serwisie PlotLight) do oryginalnej strony.
+
+Przy imporcie z serwisu PlotLight Marinara pobiera plik, który serwis PlotLight udostępnia dla danego wyniku. Karta postaci przychodzi zwykle jako plik PNG, a w nim jej portret i lorebook, jeśli autor pozwala go dołączyć. Persona przychodzi jako plik tekstowy, a Marinara kopiuje jej obraz osobno. Każdy z tych rodzajów da się zaimportować jako postać albo jako personę.
+
+Serwis PlotLight ogranicza, jak często aplikacje mogą wysyłać do niego zapytania. Jeśli wyszukujesz albo importujesz zbyt szybko, Marinara wyświetla komunikat **PlotLight is busy** i podaje, ile sekund trzeba zaczekać. Właśnie tyle czeka, zanim zapyta ponownie. Wyszukiwanie i importowanie mają osobne limity, więc jedno nie wstrzymuje drugiego.
+
+Niektórych kart i person nie da się pobrać, na przykład wtedy, gdy autor na to nie pozwala. Marinara wyświetla wtedy komunikat **PlotLight doesn't offer this for download.** Takiego wyniku nie da się zaimportować ani zobaczyć jego pełnych szczegółów, ale jego obraz, autor i link **View on PlotLight** zostają na ekranie.
+
 ## Wyszukiwanie, sortowanie i strony
 
 Wpisz tekst w polu **Search characters...**, żeby wyszukać. Nie trzeba naciskać klawisza Enter. Marinara odczekuje chwilę (około pół sekundy) po zakończeniu pisania i wyszukuje automatycznie. Wyczyszczenie pola albo zmiana filtra również uruchamia wyszukiwanie od nowa.
@@ -54,10 +69,11 @@ Obok pola wyszukiwania jest lista rozwijana sortowania. Opcje różnią się w k
 | Pygmalion | Downloads       |
 | Wyvern    | Popular         |
 | DataCat   | Relevance       |
+| PlotLight / PlotLight Personas | Popular |
 
 Kliknij przycisk **Refresh** (odświeżenie, ikona okrągłej strzałki), aby powtórzyć bieżące wyszukiwanie.
 
-Pod wynikami znajdziesz przyciski **Previous** (poprzednia) i **Next** (następna) oraz etykietę strony, na przykład **Page 2**. Kiedy źródło nie potrafi podać dokładnej sumy, widać tylko numer bieżącej strony.
+Pod wynikami znajdziesz przyciski **Previous** (poprzednia) i **Next** (następna) oraz etykietę strony, na przykład **Page 2**. Kiedy źródło nie potrafi podać dokładnej sumy, widać tylko numer bieżącej strony. Źródło **PlotLight** nigdy nie podaje sumy, więc nagłówek pokazuje napis **Browsing PlotLight** (przeglądanie serwisu PlotLight), a przycisk **Next** wyłącza się na ostatniej stronie. Strona z serwisu PlotLight może zawierać mniej kart niż zwykle albo nie zawierać żadnej, a mimo to mieć po sobie kolejne strony. Przycisk **Next** pozostaje wtedy włączony, więc da się przeglądać dalej.
 
 Jedna uwaga o źródle **DataCat**: sortowanie **Fresh** pokazuje świeże wyniki tylko wtedy, gdy nie ma ani filtra tagów, ani tekstu wyszukiwania. Po wpisaniu tekstu lub wybraniu tagu **DataCat** wraca do zwykłych wyników według trafności.
 
@@ -74,9 +90,11 @@ W większości źródeł lista tagów powstaje na podstawie postaci z ostatnich 
 
 Źródło **DataCat** działa inaczej. Od razu wczytuje najpopularniejsze tagi, bo jego lista tagów jest bardzo długa. Każdy inny tag nadal można wpisać ręcznie.
 
+W źródle **PlotLight** wybierz tagi z listy albo wpisz tag ręcznie, na przykład **Elf**. Marinara wyszukuje każdy tag na własnej liście tagów serwisu PlotLight. Wpisany tag, którego serwis PlotLight nie ma, nie pasuje do żadnego wyniku.
+
 ## Dodatkowe filtry
 
-Niektóre źródła dokładają na pasku narzędzi przycisk **Filters** (filtry). Widać go tylko wtedy, gdy źródło ma jakieś filtry do zaoferowania, więc dla źródła **DataCat** się nie pojawia. Mała plakietka pokazuje liczbę aktywnych filtrów.
+Niektóre źródła dokładają na pasku narzędzi przycisk **Filters** (filtry). Widać go tylko wtedy, gdy źródło ma jakieś filtry do zaoferowania, więc dla źródeł **DataCat** i **PlotLight** się nie pojawia. Mała plakietka pokazuje liczbę aktywnych filtrów.
 
 Panel filtrów może zawierać:
 
@@ -95,6 +113,7 @@ Treści dla dorosłych aplikacja oznacza jako **NSFW**. Na pasku narzędzi jest 
 - **Pygmalion**: pole wyboru **NSFW** jest wyszarzone do czasu zalogowania. Podpowiedź prosi o wcześniejsze zalogowanie. Po zalogowaniu aplikacja stosuje ustawienia konta w serwisie Pygmalion. Pole wyboru pokazuje wtedy napis **NSFW depends on your account settings**. Po zalogowaniu nie ma już osobnego przełącznika włącz/wyłącz.
 - **Wyvern**: pole wyboru **NSFW** jest zawsze wyszarzone. Komunikat brzmi **Use "🔞 Popular NSFW" sort for NSFW content**. Aby zobaczyć treści dla dorosłych w tym źródle, wybierz opcję **🔞 Popular NSFW** na liście rozwijanej sortowania.
 - **DataCat**: każda postać ma tam tag treści dla dorosłych, więc pole wyboru jest zablokowane we włączonej pozycji. Przy pierwszym wyborze źródła **DataCat** pojawia się okno o tytule **DataCat is NSFW only**. Kliknij **Continue to DataCat**, aby je przeglądać, albo **Don't continue to DataCat**, aby wrócić.
+- **PlotLight** i **PlotLight Personas**: pole wyboru **NSFW** jest zawsze wyszarzone. Jego podpowiedź brzmi **PlotLight decides what you can see without an account, and adult-tagged results are marked NSFW.** Serwis PlotLight stosuje własne zasady wobec odwiedzających bez konta. Niektóre udostępniane przez niego wyniki nadal mają tag treści dla dorosłych i dostają plakietkę **NSFW**.
 
 Postacie dla dorosłych mają małą czerwoną plakietkę **NSFW** w rogu miniatury.
 
@@ -181,6 +200,10 @@ Panel **Card Browser** na prawym pasku bocznym prowadzi osobną listę postaci z
 **Logowanie do serwisu Pygmalion przestało działać.** Restart serwera Marinara czyści te dane logowania. Otwórz okno **Log In** jeszcze raz i wklej token ponownie.
 
 **Źródło CharacterTavern pokazuje tylko komunikat.** Tak ma być. Jak zaimportować karty z tego serwisu jako pliki, opisuje sekcja [CharacterTavern](#charactertavern).
+
+**Serwis PlotLight zgłasza, że jest zajęty.** Serwis PlotLight ogranicza, jak często aplikacje mogą wysyłać do niego zapytania. Odczekaj liczbę sekund podaną w komunikacie, a potem spróbuj ponownie.
+
+**Serwis PlotLight nie udostępnia karty ani persony do pobrania.** Autor może nie zezwalać na pobieranie albo wynik może już nie być publiczny. Użyj linku **View on PlotLight**, żeby sprawdzić go w serwisie.
 
 **Wyszukiwanie się nie udaje albo źródło przestaje działać.** Publiczne strony mogą w każdej chwili zmienić swoje podstrony lub zablokować dostęp. Spróbuj później. Jeśli źródło zawodzi uparcie, otwórz postać bezpośrednio na stronie i pobierz kartę samodzielnie. Potem wczytaj ją zwykłą drogą importu. Zobacz [Importowanie i eksportowanie kart postaci](import-export.md).
 
