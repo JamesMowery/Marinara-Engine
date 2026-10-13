@@ -13,6 +13,8 @@ Die Einstellung dafür steckt in **Settings** (Einstellungen), im Tab **Appearan
 
 Standardmäßig ist **Default (Inter)** eingestellt. Inter ist eine klare Schriftart, ausgelegt aufs Lesen am Bildschirm. Eigene Schriftarten landen im selben **Font**-Dropdown-Menü, unterhalb der Standardoption.
 
+Solange die Standardschriftart eingestellt ist, verwenden die Prompt-Felder im Preset-Editor und das Feld Example Dialogue eines Charakters eine Monospace-Schriftart. Wählst du irgendeine andere Schriftart, übernehmen sie diese ebenfalls. Andere Prompt-Felder, etwa die Prompt-Vorlage eines Agenten, bleiben bei der Monospace-Schriftart.
+
 Die gewählte Schriftart wird zwischen Geräten synchronisiert. Sobald du sie änderst, stellt jeder Browser und jedes Gerät am selben Marinara-Server ebenfalls um. Wie diese Synchronisierung funktioniert, erklärt die Anleitung [Übersicht der Einstellungen](../settings/settings-overview.md).
 
 ## Eigene Schriftarten hinzufügen

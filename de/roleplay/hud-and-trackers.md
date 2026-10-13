@@ -122,6 +122,8 @@ Am Telefon oder Tablet fügt das Einschalten eine Tracker-Panel-Schaltfläche zu
 
 Die Namen eigener Felder legen den Aufbau fest und bleiben über alle Tracker-Durchläufe hinweg stabil. Die Tracker-Agenten aktualisieren die Werte, sobald die Geschichte sie verändert; lässt ein Agent ein Feld in seiner Ausgabe weg, bleibt dein Feld trotzdem erhalten.
 
+Sobald der Character Tracker eine Bildverbindung hat, kann die große Karte eines Charakters ein neues Porträt erstellen. Bei einer kompakten Karte klickst du auf **Feature character card** (Charakterkarte hervorheben), um die große Karte zu öffnen. Das Trackers-Fenster am Computer zeigt immer große Karten. Fahr mit der Maus über das Porträt und klick auf die Schaltfläche mit dem Auge, um ein neues Porträt aus dem Feld **Look** zu erstellen, oder auf die Schaltfläche mit dem Hemd, um eines aus den Feldern **Look** und **Outfit** zu erstellen. Die Schaltfläche mit dem Hemd erscheint nur, wenn der Charakter ein Outfit hat. Das alte Porträt bleibt, bis das neue fertig ist – und auch dann, wenn das Erstellen fehlschlägt. Charaktere, die mit dem Avatar ihrer Karte oder einem Ausdrucks-Sprite angezeigt werden, haben diese Schaltflächen nicht.
+
 Diese Einstellungen steuern das Panel:
 
 - **Tracker Panel**: der Hauptschalter, den auch der Würfel in Chat Settings bedient. Er ist standardmäßig an. Ist er an, lautet die Beschriftung „Shown in the Roleplay HUD“. Ist er aus, erscheinen die Tracker am Computer im Trackers-Fenster.

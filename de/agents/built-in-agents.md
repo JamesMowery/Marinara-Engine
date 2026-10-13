@@ -159,7 +159,7 @@ Kehrt ein wiederkehrender Charakter nach dem Verlassen der Szene zurück, verwen
 
 - **Phase**: Post-Processing.
 - **Wo er funktioniert**: Roleplay.
-- **Wichtige Einstellungen**: **Add as Prompt Section** (standardmäßig an) und die optionale Einstellung **Auto-Generate NPC Avatars** mit eigener Auswahl für die Bild-Verbindung.
+- **Wichtige Einstellungen**: **Add as Prompt Section** (standardmäßig an) und die optionale Einstellung **Auto-Generate NPC Avatars** mit eigener Auswahl für die Bild-Verbindung. Darunter ist der Schalter **Include the outfit in portraits** (Kleidung in Porträts einbeziehen) standardmäßig an, sodass neue Porträts neben dem Aussehen auch die Kleidung zeigen, die der Tracker notiert hat. Schaltest du ihn aus, entstehen Porträts allein aus dem Aussehen.
 
 ### Beholder
 
