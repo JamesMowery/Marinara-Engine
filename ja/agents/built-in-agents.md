@@ -161,7 +161,7 @@ Knowledge Retrievalより費用を抑えられる代替手段です。要約す�
 
 - **フェーズ**: Post-Processing。
 - **使える場所**: Roleplay。
-- **主な設定**: **Add as Prompt Section**(デフォルトでオン)と、任意の**Auto-Generate NPC Avatars**設定です。後者には画像生成用の接続を選ぶ欄が付いています。
+- **主な設定**: **Add as Prompt Section**(デフォルトでオン)と、任意の**Auto-Generate NPC Avatars**設定です。後者には画像生成用の接続を選ぶ欄が付いています。その下にある**Include the outfit in portraits**(ポートレートに服装を含める)はデフォルトでオンで、新しいポートレートには外見に加えて、トラッカーが記録した服装も描かれます。オフにすると、外見だけをもとにポートレートを描きます。
 
 ### Beholder
 
