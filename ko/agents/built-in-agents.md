@@ -159,7 +159,7 @@ Tracker 에이전트는 장면, 캐릭터, 스탯의 현재 상태를 계속 기
 
 - **단계**: Post-Processing.
 - **사용 가능한 곳**: Roleplay.
-- **주요 설정**: **Add as Prompt Section**(기본 켜짐), 그리고 선택 사항인 **Auto-Generate NPC Avatars**(NPC 아바타 자동 생성) 설정(전용 이미지 연결 선택기가 따로 있습니다).
+- **주요 설정**: **Add as Prompt Section**(기본 켜짐), 그리고 선택 사항인 **Auto-Generate NPC Avatars**(NPC 아바타 자동 생성) 설정(전용 이미지 연결 선택기가 따로 있습니다). 그 아래의 **Include the outfit in portraits**(초상화에 복장 포함)는 기본으로 켜져 있어서, 새 초상화에 외형뿐 아니라 트래커가 기록한 복장도 나타납니다. 외형만으로 초상화를 그리려면 끄세요.
 
 ### Beholder
 
