@@ -161,7 +161,7 @@ Kiedy powracająca postać znów pojawia się w scenie, Character Tracker używa
 
 - **Faza**: Post-Processing.
 - **Gdzie działa**: Roleplay.
-- **Najważniejsze ustawienia**: **Add as Prompt Section** (domyślnie włączone) oraz opcjonalne ustawienie **Auto-Generate NPC Avatars** z własną listą wyboru połączenia do obrazów.
+- **Najważniejsze ustawienia**: **Add as Prompt Section** (domyślnie włączone) oraz opcjonalne ustawienie **Auto-Generate NPC Avatars** z własną listą wyboru połączenia do obrazów. Pod nim przełącznik **Include the outfit in portraits** (uwzględnianie stroju na portretach) jest domyślnie włączony, więc nowe portrety pokazują oprócz wyglądu także strój zapisany przez tracker. Wyłącz go, żeby portrety powstawały na podstawie samego wyglądu.
 
 ### Beholder
 

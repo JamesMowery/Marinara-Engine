@@ -13,6 +13,8 @@ La opción de fuente está en **Settings** (Configuración), en la pestaña **Ap
 
 La opción predeterminada es **Default (Inter)**. Inter es una fuente limpia elegida para leer en pantalla. Cualquier fuente personalizada que añadas aparece en el mismo menú desplegable **Font**, debajo de la opción predeterminada.
 
+Los campos de prompt del editor de presets y el Example Dialogue de un personaje usan una fuente monoespaciada mientras está seleccionada la fuente predeterminada. Si eliges cualquier otra fuente, también la usan. Otros campos de prompt, como la plantilla de prompt de un agente, siguen siendo monoespaciados.
+
 Tu elección de fuente se sincroniza entre dispositivos. Cuando eliges una fuente, cada navegador y dispositivo conectado al mismo servidor de Marinara cambia a ella. Para saber cómo funciona esta sincronización, consulta la guía [Resumen de Settings](../settings/settings-overview.md).
 
 ## Añadir tus propias fuentes

@@ -13,6 +13,8 @@ Ustawienie czcionki znajduje się w panelu **Settings** (Ustawienia), w zakładc
 
 Domyślnie ustawiona jest opcja **Default (Inter)**. Inter to czysty krój wybrany z myślą o czytaniu z ekranu. Dodane własne czcionki pojawiają się na tej samej liście rozwijanej **Font**, pod opcją domyślną.
 
+Pola promptów w edytorze presetów i pole Example Dialogue na karcie postaci używają czcionki o stałej szerokości znaków, dopóki wybrana jest czcionka domyślna. Wybierz dowolną inną czcionkę, a te pola też będą jej używać. Pozostałe pola promptów, na przykład szablon promptu agenta, zostają przy czcionce o stałej szerokości znaków.
+
 Wybór czcionki synchronizuje się między urządzeniami. Po wybraniu czcionki przełącza się na nią każda przeglądarka i każde urządzenie połączone z tym samym serwerem Marinara. Jak działa ta synchronizacja, wyjaśnia przewodnik [Przegląd ustawień](../settings/settings-overview.md).
 
 ## Dodawanie własnych czcionek
