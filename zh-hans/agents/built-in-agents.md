@@ -161,7 +161,7 @@ Knowledge Retrieval 的省钱替代方案。它不做摘要，而是读取世界
 
 - **阶段**：Post-Processing。
 - **适用范围**：Roleplay。
-- **主要设置**：**Add as Prompt Section**(默认开启)，以及可选的 **Auto-Generate NPC Avatars**(自动生成 NPC 头像) 设置，它有自己的图像连接选择器。
+- **主要设置**：**Add as Prompt Section**(默认开启)，以及可选的 **Auto-Generate NPC Avatars**(自动生成 NPC 头像) 设置，它有自己的图像连接选择器。它下方的 **Include the outfit in portraits**(在肖像中包含服装) 默认开启，新肖像除了外貌，还会画出追踪器记下的服装。关闭后，肖像只按外貌来画。
 
 ### Beholder
 
