@@ -1,6 +1,6 @@
 {
   "language": "ru",
-  "sourceCommit": "1c0e7e1b11d0344ea73f9f0ae7cb391dcfc073e1",
+  "sourceCommit": "41e403e24b9c38523b98c00e6427b9b56d524860",
   "files": [
     {
       "path": "CONFIGURATION.md",
@@ -44,8 +44,8 @@
     },
     {
       "path": "agents/built-in-agents.md",
-      "sha256": "0914eb4a7f272a03fb39d3f91ad9edd1e194d44d55c786b82f98a3fe4bac687a",
-      "bytes": 57459
+      "sha256": "d6fc47932f02a46924ffb7b84274e09c5fe9243e2353436df6099fd1bdfab814",
+      "bytes": 57901
     },
     {
       "path": "agents/custom-agents.md",
@@ -89,8 +89,8 @@
     },
     {
       "path": "appearance/fonts.md",
-      "sha256": "bc0ec042b70f8c41f89bbd2f28db4965f82ab0b5dd3e1de2e183a95c8b40b0e8",
-      "bytes": 6563
+      "sha256": "c042c3b1eac694a2a698c3d51d1ab8c1ec8f45ba07eab5eb176fb607abecd7a9",
+      "bytes": 7061
     },
     {
       "path": "characters/bot-browser.md",
@@ -669,8 +669,8 @@
     },
     {
       "path": "roleplay/hud-and-trackers.md",
-      "sha256": "8fbe8e6de735ee762edbf6ee6cbccf71c02872684dac303a810730a06ab736d7",
-      "bytes": 26196
+      "sha256": "48d0827eeb15374b49788e1a7d441377ea04070b0f5d215b44d56f585ab7d8d3",
+      "bytes": 27448
     },
     {
       "path": "roleplay/narrative-director.md",
