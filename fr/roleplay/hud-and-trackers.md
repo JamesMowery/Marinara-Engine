@@ -122,6 +122,8 @@ Les contrôles de l'en-tête du panneau permettent aussi de personnaliser la str
 
 Les noms des champs personnalisés définissent la structure et restent stables d'un passage de tracker à l'autre. Les trackers mettent leurs valeurs à jour quand l'histoire les fait évoluer, et un agent qui n'en dit rien n'efface pas les champs que tu as créés.
 
+La grande carte d'un personnage permet de créer un nouveau portrait dès que Character Tracker dispose d'une connexion d'images. Sur une carte compacte, clique sur **Feature character card** (mettre en avant la carte du personnage) pour ouvrir la grande carte. Sur ordinateur, la fenêtre Trackers affiche toujours de grandes cartes. Survole le portrait et clique sur le bouton en forme d'œil pour créer un nouveau portrait à partir du champ **Look**, ou sur le bouton en forme de chemise pour en créer un à partir des champs **Look** et **Outfit**. Le bouton en forme de chemise n'apparaît que si le personnage a une tenue. L'ancien portrait reste en place jusqu'à ce que le nouveau soit prêt, et il reste aussi si la création échoue. Les personnages affichés avec l'avatar de leur fiche ou un sprite d'expression n'ont pas ces boutons.
+
 Voici les réglages disponibles :
 
 - **Tracker Panel** : l'interrupteur principal, le même que contrôle le dé de Chat Settings. Il est activé par défaut. Quand il est actif, l'étiquette indique "Shown in the Roleplay HUD". Quand il est désactivé, les trackers sur ordinateur apparaissent dans la fenêtre Trackers.

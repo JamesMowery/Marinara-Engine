@@ -13,6 +13,8 @@ Le réglage de la police se trouve dans **Settings** (Paramètres), sous l'ongle
 
 La valeur par défaut est **Default (Inter)**. Inter est une police sobre, retenue pour le confort de lecture à l'écran. Les polices que tu ajoutes apparaissent dans ce même menu déroulant **Font**, sous l'option par défaut.
 
+Les champs de prompt de l'éditeur de presets et le champ Example Dialogue d'un personnage utilisent une police à chasse fixe tant que la police par défaut est sélectionnée. Choisis n'importe quelle autre police et ils l'utilisent aussi. Les autres champs de prompt, comme le modèle de prompt d'un agent, restent en chasse fixe.
+
 Le choix de police se synchronise entre les appareils. Dès que tu sélectionnes une police, tous les navigateurs et appareils connectés au même serveur Marinara l'adoptent. Pour comprendre le fonctionnement de cette synchronisation, consulte le guide [Vue d'ensemble des paramètres](../settings/settings-overview.md).
 
 ## Ajouter tes propres polices

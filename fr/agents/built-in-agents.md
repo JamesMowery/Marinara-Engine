@@ -159,7 +159,7 @@ Quand un personnage récurrent revient après avoir quitté la scène, Character
 
 - **Phase** : **Post-Processing**.
 - **Où ça marche** : Roleplay.
-- **Réglages clés** : **Add as Prompt Section** (activé par défaut) et le réglage facultatif **Auto-Generate NPC Avatars**, avec son propre sélecteur de connexion image.
+- **Réglages clés** : **Add as Prompt Section** (activé par défaut) et le réglage facultatif **Auto-Generate NPC Avatars**, avec son propre sélecteur de connexion image. Juste en dessous, le réglage **Include the outfit in portraits** (inclure la tenue dans les portraits) est activé par défaut : les nouveaux portraits montrent ainsi la tenue notée par le tracker en plus de l'apparence. Désactive-le pour dessiner les portraits à partir de l'apparence seule.
 
 ### Beholder
 
