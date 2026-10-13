@@ -1,6 +1,6 @@
 {
   "language": "ja",
-  "sourceCommit": "b3ee44672fffbb04e652ddcb791637262ac69f9e",
+  "sourceCommit": "1c0e7e1b11d0344ea73f9f0ae7cb391dcfc073e1",
   "files": [
     {
       "path": "CONFIGURATION.md",
@@ -419,8 +419,8 @@
     },
     {
       "path": "extending/writing-rulesets.md",
-      "sha256": "60afb83f24d773bbbb5d1544c00c73a2719aac95a62656299523a20d80bce0bd",
-      "bytes": 118283
+      "sha256": "0bbaa8105ee70f1cf3f02f44ac5e53c64d4e14a9a9a67b6a2abff82e341fb01c",
+      "bytes": 250175
     },
     {
       "path": "game/combat.md",
