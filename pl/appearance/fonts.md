@@ -15,6 +15,8 @@ Domyślnie ustawiona jest opcja **Default (Inter)**. Inter to czysty krój wybra
 
 Pola promptów w edytorze presetów i pole Example Dialogue na karcie postaci używają czcionki o stałej szerokości znaków, dopóki wybrana jest czcionka domyślna. Wybierz dowolną inną czcionkę, a te pola też będą jej używać. Pozostałe pola promptów, na przykład szablon promptu agenta, zostają przy czcionce o stałej szerokości znaków.
 
+Widgety czatu mają osobną opcję **Font** w sekcji **Settings → Appearance → App → Chat widget style** (ustawienia, wygląd, aplikacja, styl widgetów czatu). Włącz w tym samym miejscu przełącznik **Apply preset font** (zastosowanie czcionki presetu), aby ta czcionka była używana także w wiadomościach, polach wpisywania i kontrolkach czatu. Gdy przełącznik jest wyłączony, zachowują one zwykłą czcionkę. Zobacz [Gotowe style okien czatu](custom-css-themes.md#ready-made-chat-window-styles).
+
 Wybór czcionki synchronizuje się między urządzeniami. Po wybraniu czcionki przełącza się na nią każda przeglądarka i każde urządzenie połączone z tym samym serwerem Marinara. Jak działa ta synchronizacja, wyjaśnia przewodnik [Przegląd ustawień](../settings/settings-overview.md).
 
 ## Dodawanie własnych czcionek

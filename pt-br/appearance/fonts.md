@@ -15,6 +15,8 @@ A opção padrão é **Default (Inter)**. Inter é uma fonte limpa, pensada para
 
 Os campos de prompt do editor de presets e o Example Dialogue de um personagem usam uma fonte monoespaçada enquanto a fonte padrão está selecionada. Escolha qualquer outra fonte e eles também passam a usá-la. Os outros campos de prompt, como o modelo de prompt de um agente, continuam monoespaçados.
 
+Os widgets do chat têm uma opção **Font** própria em **Settings → Appearance → App → Chat widget style** (Configurações → Aparência → Aplicativo → Estilo dos widgets do chat). Ative **Apply preset font** (aplicar fonte do preset) nessa mesma seção para usar essa fonte também nas mensagens, nos campos de entrada e nos controles do chat. Deixe esse botão liga/desliga desativado para que eles mantenham a fonte habitual. Veja [Estilos prontos para janelas de chat](custom-css-themes.md#ready-made-chat-window-styles).
+
 A fonte escolhida é sincronizada entre os dispositivos. Ao escolher uma fonte, todos os navegadores e dispositivos ligados ao mesmo servidor Marinara passam a usá-la. Para entender como essa sincronização funciona, veja o guia [Visão geral das configurações](../settings/settings-overview.md).
 
 ## Como adicionar fontes próprias

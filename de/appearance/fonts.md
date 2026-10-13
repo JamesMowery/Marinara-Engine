@@ -15,6 +15,8 @@ Standardmäßig ist **Default (Inter)** eingestellt. Inter ist eine klare Schrif
 
 Solange die Standardschriftart eingestellt ist, verwenden die Prompt-Felder im Preset-Editor und das Feld Example Dialogue eines Charakters eine Monospace-Schriftart. Wählst du irgendeine andere Schriftart, übernehmen sie diese ebenfalls. Andere Prompt-Felder, etwa die Prompt-Vorlage eines Agenten, bleiben bei der Monospace-Schriftart.
 
+Chat-Widgets haben unter **Settings > Appearance > App > Chat widget style** (Einstellungen, Darstellung, App, Chat-Widget-Stil) eine eigene **Font**-Auswahl. Schaltest du dort **Apply preset font** (Preset-Schrift anwenden) ein, gilt diese Auswahl auch für Nachrichten, Eingabefelder und Chat-Bedienelemente. Lässt du den Schalter aus, behalten diese Bereiche ihre übliche Schriftart. Siehe [Fertige Stile für Chat-Fenster](custom-css-themes.md#ready-made-chat-window-styles).
+
 Die gewählte Schriftart wird zwischen Geräten synchronisiert. Sobald du sie änderst, stellt jeder Browser und jedes Gerät am selben Marinara-Server ebenfalls um. Wie diese Synchronisierung funktioniert, erklärt die Anleitung [Übersicht der Einstellungen](../settings/settings-overview.md).
 
 ## Eigene Schriftarten hinzufügen

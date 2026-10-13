@@ -15,6 +15,8 @@
 
 选用默认字体时，预设编辑器里的提示词字段和角色的 Example Dialogue(对话示例) 使用等宽字体。改选其他任何字体，它们也会跟着换成那款字体。其他提示词字段，例如智能体的提示词模板，始终使用等宽字体。
 
+聊天组件另有单独的 **Font** 选项，位于 **Settings > Appearance > App > Chat widget style**(设置 → 外观 → 应用 → 聊天组件样式)。在那里开启 **Apply preset font**(应用预设字体)，消息、输入框和聊天控件也会使用这款字体。保持关闭时，它们沿用原本的字体。见[现成的聊天窗口样式](custom-css-themes.md#ready-made-chat-window-styles)。
+
 字体选择会跨设备同步。选定一款字体后，连到同一台 Marinara 服务器的所有浏览器和设备都会跟着切换。想了解同步的原理，见[设置总览](../settings/settings-overview.md)。
 
 ## 添加自己的字体
