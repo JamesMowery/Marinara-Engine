@@ -159,7 +159,7 @@ Quando um personagem recorrente volta depois de sair da cena, Character Tracker 
 
 - **Fase**: Post-Processing.
 - **Onde funciona**: Roleplay.
-- **Configurações principais**: **Add as Prompt Section** (ativado por padrão) e a configuração opcional **Auto-Generate NPC Avatars**, com seletor próprio de conexão de imagem.
+- **Configurações principais**: **Add as Prompt Section** (ativado por padrão) e a configuração opcional **Auto-Generate NPC Avatars**, com seletor próprio de conexão de imagem. Abaixo dela, a opção **Include the outfit in portraits** (incluir a roupa nos retratos) vem ativada por padrão, então os novos retratos mostram a roupa que o tracker registrou, além da aparência. Desative-a para desenhar os retratos só a partir da aparência.
 
 ### Beholder
 

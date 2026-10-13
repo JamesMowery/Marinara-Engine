@@ -13,6 +13,8 @@ A opção de fonte fica em **Settings** (Configurações), na aba **Appearance**
 
 A opção padrão é **Default (Inter)**. Inter é uma fonte limpa, pensada para leitura na tela. As fontes personalizadas que você adiciona aparecem no mesmo menu suspenso **Font**, logo abaixo da opção padrão.
 
+Os campos de prompt do editor de presets e o Example Dialogue de um personagem usam uma fonte monoespaçada enquanto a fonte padrão está selecionada. Escolha qualquer outra fonte e eles também passam a usá-la. Os outros campos de prompt, como o modelo de prompt de um agente, continuam monoespaçados.
+
 A fonte escolhida é sincronizada entre os dispositivos. Ao escolher uma fonte, todos os navegadores e dispositivos ligados ao mesmo servidor Marinara passam a usá-la. Para entender como essa sincronização funciona, veja o guia [Visão geral das configurações](../settings/settings-overview.md).
 
 ## Como adicionar fontes próprias
