@@ -697,3 +697,37 @@ Cycle precedent for the #7382, #7396, #7372 and #7309 sync:
   model** in `agents/memory.md`): the one-time gloss moves to the new first use and
   the later mention drops it (§3.2), as with **Reset Noodle Timeline** (2026-10-03).
   The label stays glossed exactly once per document.
+
+## Rulesets catch-up: items, live states, pool fights (2026-10-13)
+
+Cycle precedent for the #7492 catch-up of `extending/writing-rulesets.md`:
+
+- *Live state* (both the generic "live state" and a `live.states` entry) is
+  **der Live-Zustand**, as in `development/game-rulesets-and-sheets-implementation.md`;
+  keep it apart from *condition*, **der Zustand**. A *live read* is **ein
+  Live-Lesezugriff**. A *live pool* stays **laufender Pool**, as the file already had it.
+- Items: **der Gegenstand**, *item stat* **der Gegenstandswert**, an item's `slots`
+  **der Trageplatz** (never `Zauberplatz`, which is a spell slot), *worn*
+  **getragen/angelegt** against *carried* **mitgeführt**, *bag* **die Tasche** (as in
+  `game/combat.md`), *stack* **der Stapel**, *bind/cursed* **binden/verflucht**,
+  *encumbered* **belastet**, the carry stat **der Traglastwert**, *charges*
+  **Ladungen**, `clip` **das Magazin**, *off hand* **die Nebenhand**, *floor*
+  **Untergrenze/Mindestschaden**.
+- Money and markets: *coin* **die Münze**, a currency *family* **die Familie**, a
+  buyer's *purse* **der Geldbeutel**, a place's `purse` **die Kasse**, *seller* **der
+  Händler**, *market day* **der Markttag**, *loot table* **die Beutetabelle**, a loot
+  *pick* **die Ziehung**.
+- Combat: *contest* **die vergleichende Probe** (cf. `development/game-combat-roadmap.md`),
+  grab/shove/break free **Packen/Stoßen/Losreißen**; *soak* **die Schadensminderung**
+  (noun) and **absorbieren** (verb); *hardness* **die Härte**; initiative styles that
+  take or spend are **nehmender/ausgebender Stil**, so *a spending blow* is **ein Schlag
+  im ausgebenden Stil**; *crash* **der Zusammenbruch/zusammengebrochen**; *untrained*
+  **ohne Ausbildung**; a skill's `cap` **die Obergrenze**; *counter* **der Konter**;
+  *parry* **die Parade**.
+- Example content: ruleset labels (Guard, Burden, Bulk, Dawn bell, Rattled, Hand axe)
+  stay English. Lowercase descriptive mentions are translated (Handaxt, Jagdbogen,
+  Witwenring, Morgenglocke). Fight-log sentences are translated with labels kept
+  English, following this file's existing practice. Item-detail and Game Master strings
+  in inline code, and quoted UI strings, stay English.
+- New prose in this file uses „…“. Older paragraphs of `extending/writing-rulesets.md`
+  still use straight quotes; that is a documented residual, not swept here (R4).
