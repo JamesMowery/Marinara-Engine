@@ -122,6 +122,8 @@ Dzięki kontrolkom w nagłówku panelu można też zmienić strukturę trackeró
 
 Nazwy własnych pól wyznaczają strukturę i nie zmieniają się między uruchomieniami trackerów. Trackery aktualizują wartości, kiedy zmienia je fabuła, a pominięcie pola w odpowiedzi agenta nie kasuje pól utworzonych ręcznie.
 
+Na dużej karcie postaci da się utworzyć nowy portret, gdy agent Character Tracker ma połączenie do obrazów. Na kompaktowej karcie kliknij przycisk **Feature character card** (wyróżnienie karty postaci), żeby otworzyć dużą kartę. Na komputerze okno Trackers zawsze pokazuje duże karty. Najedź na portret i kliknij przycisk z ikoną oka, żeby utworzyć nowy portret na podstawie pola **Look**, albo przycisk z ikoną koszuli, żeby utworzyć go na podstawie pól **Look** i **Outfit**. Przycisk z ikoną koszuli pojawia się tylko wtedy, gdy postać ma strój. Stary portret zostaje, dopóki nowy nie będzie gotowy, i zostaje także wtedy, gdy tworzenie nowego się nie powiedzie. Postacie pokazywane z awatarem karty albo ze sprite'em wyrazu twarzy nie mają tych przycisków.
+
 Odpowiadają za to następujące ustawienia:
 
 - **Tracker Panel**: główny przełącznik panelu, ten sam, którym steruje kostka w Chat Settings. Domyślnie jest włączony. Po włączeniu etykieta brzmi "Shown in the Roleplay HUD". Po wyłączeniu na komputerze trackery pojawiają się w oknie Trackers.
