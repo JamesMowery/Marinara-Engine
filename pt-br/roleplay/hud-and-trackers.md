@@ -122,6 +122,8 @@ Os controles no cabeçalho do painel também permitem mudar a estrutura dos trac
 
 Os nomes dos campos personalizados definem a estrutura e continuam estáveis entre as execuções dos trackers. Os agentes de tracker atualizam os valores quando a história muda alguma coisa, e o que o agente deixa de fora não apaga os campos que você criou.
 
+O card grande de um personagem pode criar um retrato novo assim que o agente Character Tracker tiver uma conexão de imagem. Em um card compacto, clique em **Feature character card** (destacar o card do personagem) para abrir o card grande. A janela Trackers no computador sempre mostra cards grandes. Passe o mouse sobre o retrato e clique no botão de olho para criar um retrato novo a partir do **Look**, ou no botão de camisa para criar um a partir do **Look** e do **Outfit**. O botão de camisa só aparece quando o personagem tem uma roupa. O retrato antigo continua no lugar até o novo ficar pronto, e continua também se a criação falhar. Personagens exibidos com o avatar do próprio card ou com um sprite de expressão não têm esses botões.
+
 Estas configurações controlam o painel:
 
 - **Tracker Panel**: o botão liga/desliga principal, o mesmo controlado pelo dado de Chat Settings. Vem ativado por padrão. Quando ativo, o rótulo diz "Shown in the Roleplay HUD". Quando desligado, os trackers do computador aparecem na janela Trackers.
