@@ -159,7 +159,7 @@ Cuando un personaje recurrente vuelve después de salir de la escena, Character 
 
 - **Fase**: Post-Processing.
 - **Dónde funciona**: Roleplay.
-- **Ajustes clave**: **Add as Prompt Section** (activado de forma predeterminada) y un ajuste opcional **Auto-Generate NPC Avatars** (generar automáticamente avatares de NPC) con su propio selector de conexión de imágenes.
+- **Ajustes clave**: **Add as Prompt Section** (activado de forma predeterminada) y un ajuste opcional **Auto-Generate NPC Avatars** (generar automáticamente avatares de NPC) con su propio selector de conexión de imágenes. Debajo de él, **Include the outfit in portraits** (Incluir el atuendo en los retratos) está activado de forma predeterminada, así que los retratos nuevos muestran el atuendo que anotó el rastreador además de la apariencia. Desactívalo para dibujar los retratos solo a partir de la apariencia.
 
 ### Beholder
 
